@@ -1,0 +1,31 @@
+- name: munin | install munin
+  tags: [packages]
+  apt: pkg=munin state=latest
+
+- name: munin | install munin-html
+  tags: [services]
+  copy: src=munin-html dest=/etc/init.d/munin-html mode=755
+
+- name: munin | install munin-graph
+  tags: [services]
+  copy: src=munin-graph dest=/etc/init.d/munin-graph mode=755
+
+- name: munin | configure munin
+  tags: [config]
+  template: src=munin.conf dest=/etc/munin/munin.conf
+
+- name: munin | create html directory
+  tags: []
+  file: dest=/var/www/munin mode=755 owner=munin group=www-data state=directory
+
+- name: munin | enable munin
+  tags: [services]
+  service: name=munin enabled=yes
+
+- name: munin | enable and start munin-html
+  tags: [services]
+  service: name=munin-html enabled=yes state=started pattern=munin-cgi-html
+
+- name: munin | enable and start munin-graph
+  tags: [services]
+  service: name=munin-graph enabled=yes state=started pattern=munin-cgi-graph

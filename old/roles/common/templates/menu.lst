@@ -1,0 +1,19 @@
+{% if kernel_extract %}
+{% set kernel_type = 'vmlinux' %}
+{% else %}
+{% set kernel_type = 'vmlinuz' %}
+{% endif %}
+
+hiddenmenu
+default 0
+timeout 3
+
+title   Debian GNU/Linux {{ kernel_version.stdout }}
+root    (hd{{ loader_root }})
+kernel  /boot/{{ kernel_type }}-{{ kernel_version.stdout }} root={{ kernel_root }} console=hvc0
+initrd  /boot/initrd.img-{{ kernel_version.stdout }}
+
+title   Debian GNU/Linux {{ kernel_version.stdout }} (single-user)
+root    (hd{{ loader_root }})
+kernel  /boot/{{ kernel_type }}-{{ kernel_version.stdout }} root={{ kernel_root }} console=hvc0 single
+initrd  /boot/initrd.img-{{ kernel_version.stdout }}

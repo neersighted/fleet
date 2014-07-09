@@ -1,0 +1,7 @@
+- hosts: all
+  sudo: yes
+  roles:
+    - role: common
+      tags: [common]
+    - role: monitor/node
+      tags: [monitor, monitor-node]

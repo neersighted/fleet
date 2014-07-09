@@ -1,0 +1,23 @@
+- name: kernel | install linux
+  tags: [packages]
+  apt: pkg=linux-image-amd64 state=latest
+
+- name: kernel | get kernel version
+  tags: [loader, packages]
+  shell: dpkg -s linux-image-amd64|awk '/Depends/{sub(/linux-image-/,""); print $2}'
+  register: kernel_version
+  changed_when: false
+
+- name: kernel | check for uncompressed kernel
+  tags: [kernel]
+  stat: path=/boot/vmlinux-{{ kernel_version.stdout }}
+  when: kernel_extract == true
+  register: vmlinux
+
+- name: kernel | extract kernel
+  tags: [kernel]
+  script: >
+    files/extract-vmlinux
+    /boot/vmlinuz-{{ kernel_version.stdout }} >
+    /boot/vmlinux-{{ kernel_version.stdout }}
+  when: kernel_extract == true and vmlinux.stat.exists == false

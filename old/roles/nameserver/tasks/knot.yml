@@ -1,0 +1,23 @@
+- name: knot | install knot
+  tags: [packages]
+  apt: pkg=knot state=latest
+
+- name: knot | configure knot
+  tags: [config]
+  template: >
+    src=knot.conf dest=/etc/knot/knot.conf
+    owner=knot
+    validate='knotc checkconf -c %s'
+  notify: knot | restart knotd
+
+- name: knot | generate zones
+  tags: [config]
+  template: >
+    src=zonefile.zone dest=/var/lib/knot/{{ item.key }}.zone
+    owner=knot
+  with_dict: nameserver_zones
+  notify: knot | reload knotd
+
+- name: knot | enable and start knot
+  tags: [services]
+  service: name=knot state=started enabled=yes

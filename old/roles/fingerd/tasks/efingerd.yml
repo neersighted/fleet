@@ -1,0 +1,16 @@
+- name: efingerd | install efingerd
+  tags: [packages]
+  apt: pkg=efingerd state=latest
+
+- name: efingerd | configure xinetd to run efingerd
+  tags: [config]
+  copy: src=finger.xin dest=/etc/xinetd.d/efingerd
+  notify: xinetd | restart
+
+- name: efingerd | configure efingerd
+  tags: [config]
+  template: src={{ item }} dest=/etc/efingerd/{{ item }} mode=0755
+  with_items:
+    - list
+    - luser
+    - nouser

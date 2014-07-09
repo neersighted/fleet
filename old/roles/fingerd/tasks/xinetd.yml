@@ -1,0 +1,7 @@
+- name: xinetd | install xinetd
+  tags: [packages]
+  apt: pkg=xinetd state=latest
+
+- name: xinetd | enable and start xinetd
+  tags: [services]
+  service: name=xinetd state=started enabled=yes

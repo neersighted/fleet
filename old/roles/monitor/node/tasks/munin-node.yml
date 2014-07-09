@@ -1,0 +1,12 @@
+- name: munin-node | install munin-node
+  tags: [packages]
+  apt: pkg=munin-node state=latest
+
+- name: munin-node | configure munin-node
+  tags: [config]
+  template: src=munin-node.conf dest=/etc/munin/munin-node.conf
+  notify: munin-node | restart
+
+- name: munin-node | enable and start munin-node
+  tags: [services]
+  service: name=munin-node state=started enabled=yes

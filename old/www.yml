@@ -1,0 +1,9 @@
+- hosts: www
+  sudo: yes
+  roles:
+    - role: firewall
+      tags: [firewall]
+    - role: webserver
+      tags: [webserver]
+    - role: fingerd
+      tags: [fingerd]

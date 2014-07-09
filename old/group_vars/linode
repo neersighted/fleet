@@ -1,0 +1,6 @@
+# packages_mirror: http://mirrors.kernel.org/debian
+packages_mirror: http://mirrors.linode.com/debian
+
+kernel_extract: yes
+
+loader_root: 0

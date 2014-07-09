@@ -1,0 +1,4 @@
+webserver_workers: 1
+webserver_connections: 1024
+webserver_keepalive: 30
+webserver_vhosts: {}

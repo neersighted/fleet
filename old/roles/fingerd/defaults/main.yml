@@ -1,0 +1,9 @@
+fingerd_info:
+  date: |
+    $(date)
+  time: |
+    $(date)
+  uname: |
+    $(uname -a)
+  uptime: |
+    $(uptime)

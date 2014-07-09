@@ -1,0 +1,13 @@
+- name: accounts | configure knot group
+  tags: []
+  group: >
+    name=knot
+    system=yes
+
+- name: accounts | configure knot user
+  tags: []
+  user: >
+    name=knot
+    group=knot
+    home=/var/lib/knot
+    system=yes

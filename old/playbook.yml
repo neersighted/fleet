@@ -1,0 +1,4 @@
+- include: all.yml
+- include: dns.yml
+- include: mon.yml
+- include: www.yml

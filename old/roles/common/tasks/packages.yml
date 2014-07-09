@@ -1,0 +1,16 @@
+- name: packages | configure apt sources
+  tags: [config]
+  template: src=sources.list dest=/etc/apt/sources.list
+
+- name: packages | update apt cache
+  tags: [cache]
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: packages | upgrade packages
+  tags: []
+  apt: upgrade=safe
+
+- name: packages | install packages
+  tags: []
+  apt: pkg={{ item.key }} state={{ item.value.state }}
+  with_dict: packages_list

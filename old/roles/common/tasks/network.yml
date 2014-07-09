@@ -1,0 +1,19 @@
+- name: network | set hostname
+  tags: []
+  hostname: name={{ inventory_hostname }}
+
+- name: network | configure search domain(s)
+  tags: []
+  lineinfile: >
+      dest=/etc/resolv.conf
+      state=present
+      regexp='^search'
+      line='search {{ network_searchdomain }} '
+
+- name: network | configure local domain
+  tags: []
+  lineinfile: >
+      dest=/etc/resolv.conf
+      state=present
+      regexp='^domain'
+      line='domain {{ network_searchdomain }}'
