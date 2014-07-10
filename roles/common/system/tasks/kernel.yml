@@ -1,0 +1,20 @@
+- name: kernel | install linux (apt)
+  apt: pkg=linux-image-amd64 state=latest
+  when: ansible_pkg_mgr == 'apt'
+
+- name: kernel | get kernel version
+  shell: dpkg -s linux-image-amd64|awk '/Depends/{sub(/linux-image-/,""); print $2}'
+  register: kernel_version
+  changed_when: false
+
+- name: kernel | check for uncompressed kernel
+  stat: path=/boot/vmlinux-{{ kernel_version.stdout }}
+  register: vmlinux
+  when: extract_kernel == true
+
+- name: kernel | extract kernel
+  script: >
+    files/extract-vmlinux
+    /boot/vmlinuz-{{ kernel_version.stdout }} >
+    /boot/vmlinux-{{ kernel_version.stdout }}
+  when: extract_kernel == true and vmlinux.stat.exists == false

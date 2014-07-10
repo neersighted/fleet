@@ -1,0 +1,11 @@
+- name: fstab | remove swap
+  lineinfile: >
+    dest=/etc/fstab
+    regexp=swap
+    state=absent
+
+- name: fstab | remove procfs
+  lineinfile: >
+    dest=/etc/fstab
+    regexp=proc
+    state=absent

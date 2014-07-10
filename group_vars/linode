@@ -1,0 +1,3 @@
+debian_mirror: http://mirrors.linode.com/debian
+
+extract_kernel: yes

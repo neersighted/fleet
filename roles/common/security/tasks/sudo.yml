@@ -1,0 +1,2 @@
+- name: sudo | configure sudoers
+  template: src=sudo/sudoers dest=/etc/sudoers validate='visudo -cf %s'

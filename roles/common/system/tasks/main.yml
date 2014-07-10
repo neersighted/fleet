@@ -1,0 +1,4 @@
+- include: kernel.yml
+
+- include: xen.yml
+  when: ansible_virtualization_type == 'xen'

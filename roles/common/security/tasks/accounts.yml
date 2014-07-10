@@ -1,0 +1,23 @@
+- name: accounts | configure groups
+  with_dict: account_groups
+  group: >
+    name={{ item.key }}
+    {% if item.value.gid is defined %}gid={{ item.value.gid }}{% endif %}
+    {% if item.value.system is defined %}system={{ item.value.system }}{% endif %}
+    state={{ item.value.state }}
+
+- name: accounts | configure users
+  with_dict: accounts
+  user: >
+    name={{ item.key }}
+    {% if item.value.home is defined %}home={{ item.value.home }}{% endif %}
+    {% if item.value.createhome is defined %}home={{ item.value.createhome }}{% endif %}
+    {% if item.value.uid is defined %}uid={{ item.value.uid }}{% endif %}
+    {% if item.value.shell is defined %}shell={{ item.value.shell }}{% endif %}
+    {% if item.value.password is defined %}password={{ item.value.pass }}{% endif %}
+    {% if item.value.group is defined %}group={{ item.value.group }}{% endif %}
+    {% if item.value.groups is defined %}groups={{','.join(item.value.groups)}}{% endif %}
+    {% if item.value.append is defined %}append={{ item.value.append }}{% endif %}
+    {% if item.value.comment is defined %}comment={{ item.value.comment }}{% endif %}
+    {% if item.value.system is defined %}system={{ item.value.system }}{% endif %}
+    state={{ item.value.state }}

@@ -1,0 +1,13 @@
+Defaults lecture=never
+Defaults timestamp_timeout=0
+
+Defaults env_reset, always_set_home, set_home, set_logname
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+Defaults mail_badpass
+
+root    ALL=(ALL:ALL) NOPASSWD: ALL
+ansible ALL=(ALL:ALL) NOPASSWD: ALL
+%wheel  ALL=(ALL:ALL) LOG_INPUT: LOG_OUTPUT: ALL
+
+#includedir /etc/sudoers.d

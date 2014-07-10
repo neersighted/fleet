@@ -1,0 +1,2 @@
+- name: debian | configure apt sources
+  template: src=debian/sources.list dest=/etc/apt/sources.list

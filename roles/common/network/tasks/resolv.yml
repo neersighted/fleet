@@ -1,0 +1,13 @@
+- name: resolv | configure search domain(s)
+  lineinfile: >
+    dest=/etc/resolv.conf
+    regexp='^search'
+    line='search {{ domain }}'
+    state=present
+
+- name: resolv | configure local domain
+  lineinfile: >
+    dest=/etc/resolv.conf
+    regexp='^domain'
+    line='domain {{ domain }}'
+    state=present

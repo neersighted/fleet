@@ -1,0 +1,2 @@
+- name: xen | configure (pv)grub
+  template: src=xen/menu.lst dest=/boot/grub/menu.lst owner=root

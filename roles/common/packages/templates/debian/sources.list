@@ -1,0 +1,2 @@
+deb {{ debian_mirror }} {{ debian_release }} main
+deb-src {{ debian_mirror }} {{ debian_release }} main

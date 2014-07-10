@@ -13,17 +13,6 @@ alert.neersighted.com
 taxi.neersighted.com
 
 #
-# Technology
-#
-
-[xen:children]
-linode
-prgmr
-[kvm:children]
-crissic
-ramnode
-
-#
 # Hosts
 #
 
@@ -41,7 +30,7 @@ matrix.neersighted.com
 [linode-new]
 indigo.neersighted.com
 
-[prgmr]
+[prgmr.com]
 scarlet.neersighted.com
 
 [ramnode:children]

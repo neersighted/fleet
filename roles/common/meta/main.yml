@@ -1,0 +1,7 @@
+dependencies:
+  - role: common/packages
+  - role: common/security
+  - role: common/network
+  - role: common/storage
+  - role: common/info
+  - role: common/system

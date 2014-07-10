@@ -1,0 +1,9 @@
+- name: apt | update cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: apt | install packages
+  with_dict: packages
+  apt: pkg={{ item.key }} state={{ item.value }} purge=yes
+
+- name: apt | upgrade packages
+  apt: upgrade=dist
