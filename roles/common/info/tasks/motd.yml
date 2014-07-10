@@ -1,5 +1,6 @@
 - name: motd | generate art
   local_action: command figlet -w 120 {{ ansible_fqdn }}
+  sudo: false
   register: art
   changed_when: false
 
