@@ -1,7 +1,8 @@
 dependencies:
+  - role: common/info
   - role: common/packages
   - role: common/security
   - role: common/network
   - role: common/storage
-  - role: common/info
+  - role: common/tuning
   - role: common/system

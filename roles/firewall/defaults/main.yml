@@ -1,0 +1,5 @@
+firewall:
+  ssh: {port: 22, proto: tcp, rule: allow}
+
+firewall_default_in: deny
+firewall_default_out: allow

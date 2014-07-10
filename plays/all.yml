@@ -2,3 +2,4 @@
   sudo: yes
   roles:
     - role: common
+    - role: firewall

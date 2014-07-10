@@ -1,0 +1,54 @@
+### BEGIN INIT INFO
+# Provides:          zram
+# Required-Start:    $local_fs
+# Required-Stop:     $local_fs
+# Default-Start:     S
+# Default-Stop:      0 1 6
+# Short-Description: Use RAM as swap
+# Description:       Use compressed RAM as in-memory swap.
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+MEM=$(perl -ne '/^MemTotal:\s+(\d+)/ && print $1*1024;' < /proc/meminfo)
+CPU=$(grep -c processor /proc/cpuinfo)
+FRAC=75
+
+ZMEM=$(( MEM * FRAC / 100 / CPU ))
+
+case "$1" in
+  start)
+    modprobe zram $(modinfo zram|grep num_devices|cut -f2 -d:|tr -d ' ')=$CPU
+
+    for n in $(seq $CPU); do
+      i=$((n - 1))
+
+      echo $ZMEM > /sys/block/zram${i}/disksize
+      mkswap /dev/zram${i}
+      swapon /dev/zram${i} -p 10
+    done
+    ;;
+  stop)
+    for n in $(seq $CPU); do
+      i=$((n - 1))
+
+      swapoff /dev/zram${i}
+      echo 1 > /sys/block/zram${i}/reset
+    done
+    wait; sleep .5;
+
+    modprobe -r zram
+    ;;
+  status)
+    if lsmod | grep zram; then
+      echo "ZRam is running"
+    else
+      echo "ZRam is not running"
+      exit 1
+    fi
+    ;;
+  *)
+    echo "Usage: $(basename $0) {start|stop|status}"
+    exit 1
+    ;;
+esac
