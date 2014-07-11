@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo
+
+{% for handle, info in finger.iteritems() %}
+if test "$3" = "{{ handle }}"; then
+  cat <<- EOI
+  {{ info }}
+  EOI
+  exit 0
+fi
+{% endfor %}
+
+echo no data
+exit 1

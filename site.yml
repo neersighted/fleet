@@ -1,1 +1,2 @@
 - include: plays/all.yml
+- include: plays/web.yml

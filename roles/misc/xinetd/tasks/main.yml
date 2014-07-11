@@ -1,0 +1,6 @@
+- name: install xinetd (apt)
+  apt: pkg=xinetd state=latest
+  when: ansible_pkg_mgr == 'apt'
+
+- name: enable and start xinetd
+  service: name=xinetd state=started enabled=yes
