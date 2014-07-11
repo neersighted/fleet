@@ -16,6 +16,11 @@ taxi.neersighted.com
 # Hosts
 #
 
+[buyvm:children]
+buyvm-lv
+[buyvm-lv]
+pasta.neersighted.com
+
 [crissic]
 alert.neersighted.com
 

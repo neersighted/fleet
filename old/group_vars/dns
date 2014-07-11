@@ -27,7 +27,7 @@ nameserver_zones:
     ttl: 5m
     email: bjorn.neersighted.com
     primary: ns1.neersighted.com
-    serial: 2014070912
+    serial: 2014071101
     records: |
       ns1 A 173.255.230.140 ; indigo
       ns2 A 74.207.242.71 ; matrix
@@ -47,6 +47,8 @@ nameserver_zones:
       indigo AAAA 2600:3c03::f03c:91ff:fe73:bb00
       matrix A 74.207.242.71
       matrix AAAA 2600:3c01::f03c:91ff:fe73:cb9f
+      pasta A 209.141.61.108
+      pasta AAAA 2605:6400:0020:2cc3::dead:bea7
       scarlet A 71.19.150.113
       scarlet AAAA 2605:2700:0:5::4713:9671
       taxi A 198.58.114.99

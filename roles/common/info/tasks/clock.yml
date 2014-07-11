@@ -4,7 +4,7 @@
 
 - name: clock | configure ntp
   template: src=clock/ntp.conf dest=/etc/ntp.conf
-  notify: ntp | restart ntpd
+  notify: restart ntpd
 
 - name: clock | set timezone to pacific time
   file: src=/usr/share/zoneinfo/PST8PDT dest=/etc/localtime state=link force=yes
