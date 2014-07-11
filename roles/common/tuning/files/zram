@@ -1,11 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 
 ### BEGIN INIT INFO
 # Provides:          zram
 # Required-Start:    $local_fs
 # Required-Stop:     $local_fs
+# Should-Start:      $all
+# Should-Stop:       $all
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
+# X-Interactive:     false
 # Short-Description: Compressed swap pages in memory
 # Description:       Boost performance with compressed swap pages in memory
 ### END INIT INFO
@@ -21,23 +24,12 @@ start() {
   else
     cpus=$ZRAM_DEVICES
   fi
-  [ "$cpus" != 0 ] || cpus=1
 
-  param=$(/usr/bin/env modinfo --parameters zram | head -1 | cut -d: -f1)
-  found=$?
+  kparam=$(/usr/bin/env modinfo --parameters zram | head -1 | cut -d: -f1)
 
-    # load dependency modules
-  if [ "$found" == 0 ]; then
-    log_begin_msg "Loading Zram"
-    modprobe zram ${param}=${cpus}
-    log_end_msg $?
-  else
-    log_failure_msg "Failed to load Zram"
-    exit $found
-  fi
-
-  mem_kb=$(fgrep MemTotal /proc/meminfo | grep -E --only-matching '[[:digit:]]+')
-  mem=$((mem_kb * 1024))
+  log_begin_msg "Loading zRAM"
+  modprobe zram ${kparam}=${cpus}
+  log_end_msg $?
 
   if [ -z "$ZRAM_PERCENT" ] || [ "$ZRAM_PERCENT" -le "0" ] || [ "$ZRAM_PERCENT" -gt "100" ]; then
     mem_percent=75
@@ -45,6 +37,7 @@ start() {
     mem_percent=$ZRAM_PERCENT
   fi
 
+  mem=$((1024 * $(fgrep MemTotal /proc/meminfo | grep -E --only-matching '[[:digit:]]+')))
   zmem=$((mem_percent * mem / cpus / 100))
 
   for i in $(seq 0 $((cpus - 1))); do
@@ -55,30 +48,44 @@ start() {
 
   for i in $(seq 0 $((cpus - 1))); do
     msg="Making swap on /dev/zram${i}"
-    mkswap -p $page_size /dev/zram${i}
-    [ "$?" -eq "0" ] && log_success_msg $msg || log_failure_msg $msg
+
+    mkswap -p $page_size /dev/zram${i} >/dev/null 2>&1
+    [ "$?" -eq 0 ] && log_success_msg $msg || log_failure_msg $msg
   done
 
   for i in $(seq 0 $((cpus - 1))); do
     msg="Activating swap on /dev/zram${i}"
-    swapon -p 100 /dev/zram${i}
-    [ "$?" -eq "0" ] && log_success_msg $msg || log_failure_msg $msg
-  done
 
-  log_end_msg 0
+    swapon -p 100 /dev/zram${i} >/dev/null 2>&1
+    [ "$?" -eq 0 ] && log_success_msg $msg || log_failure_msg $msg
+  done
 }
 
 stop() {
-    for zswap in $(fgrep /dev/zram /proc/swaps | cut -d' ' -f1); do
-      swapoff $zswap
-    done
+  for zswap in $(fgrep /dev/zram /proc/swaps | cut -d' ' -f1); do
+    msg="Deactivating swap on $zswap"
 
-    [ -z "$(fgrep zram /proc/modules)" ] || rmmod zram
+    swapoff $zswap
+    [ "$?" -eq 0 ] && log_success_msg $msg || log_failure_msg $msg
+  done
+
+  log_begin_msg "Unloading zram"
+  rmmod zram
+  log_end_msg $?
+}
+
+status() {
+  if lsmod | grep zram >/dev/null 2>&1; then
+    log_success_msg 'zRAM is running'
+  else
+    log_failure_msg 'zRAM is not running'; exit 3
+  fi
 }
 
 case "$1" in
     start) start ;;
     stop) stop ;;
     restart) stop; sleep 3; start ;;
-    *) echo "Usage: $0 {start|stop|restart}" ;;
+    status) status ;;
+    *) echo "Usage: $0 {start|stop|restart|status}" ;;
 esac
