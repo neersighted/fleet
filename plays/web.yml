@@ -1,4 +1,4 @@
 - hosts: web
   sudo: yes
   roles:
-    - role: misc/finger
+    - role: info/finger
