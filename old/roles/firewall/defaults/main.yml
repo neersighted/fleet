@@ -1,3 +1,0 @@
-firewall_default_in: allow
-firewall_default_out: allow
-firewall_rules: {}

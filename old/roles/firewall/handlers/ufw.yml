@@ -1,2 +1,0 @@
-- name: ufw | reload
-  ufw: state=reloaded

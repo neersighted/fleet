@@ -1,9 +1,0 @@
-- hosts: mon
-  sudo: yes
-  roles:
-    - role: firewall
-      tags: [firewall]
-    - role: webserver
-      tags: [webserver]
-    - role: monitor/master
-      tags: [monitor, monitor-master]

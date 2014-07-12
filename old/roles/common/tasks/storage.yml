@@ -1,6 +1,0 @@
-- name: storage | remove swap devices from fstab
-  tags: [config]
-  lineinfile: >
-    dest=/etc/fstab
-    state=absent
-    regexp='swap'

@@ -1,4 +1,0 @@
-- name: loader | xen | configure (pv)grub
-  tags: [config]
-  template: src=menu.lst dest=/boot/grub/menu.lst owner=root
-  when: inventory_hostname in groups.xen

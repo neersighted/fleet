@@ -1,2 +1,0 @@
-- name: clock | restart ntpd
-  service: name=ntp state=restarted

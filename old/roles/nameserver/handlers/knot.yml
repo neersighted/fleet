@@ -1,5 +1,0 @@
-- name: knot | reload knotd
-  service: name=knot state=reloaded
-
-- name: knot | restart knotd
-  service: name=knot state=restarted

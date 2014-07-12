@@ -12,7 +12,7 @@ accounts:
     state: present
     group: wheel
     shell: /bin/bash
-    pass: '$1$apzPfkZy$xOweKuYyECt.nbOmsATnh.'
+    password: '$1$pa63/RVm$SCXeuSPhNWn8FEyMzpNUP.'
 account_groups:
   wheel: { state: present }
   sudo: { state: absent }

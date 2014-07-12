@@ -1,2 +1,0 @@
-deb {{ packages_mirror }} unstable main
-deb-src {{ packages_mirror }} unstable main

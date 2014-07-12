@@ -1,3 +1,0 @@
-packages_mirror: http://mirrors.kernel.org/debian
-
-kernel_root: /dev/xvda2

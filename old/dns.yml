@@ -1,7 +1,0 @@
-- hosts: dns
-  sudo: yes
-  roles:
-    - role: firewall
-      tags: [firewall]
-    - role: nameserver
-      tags: [nameserver]
