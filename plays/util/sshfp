@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cipher[1]='rsa'
+cipher[2]='dsa'
+cipher[3]='ecdsa'
+
+hashalg[1]='sha1'
+hashalg[2]='sha256'
+
+for (( i_hash = 1 ; i_hash <= ${#hashalg[@]} ; i_hash++ ));do
+  for (( i_ciph = 1 ; i_ciph <= ${#cipher[@]} ; i_ciph++ ));do
+    test -f /etc/ssh/ssh_host_${cipher[$i_ciph]}_key.pub || continue
+
+    HASH="$(awk '{print $2}' /etc/ssh/ssh_host_${cipher[$i_ciph]}_key.pub | openssl base64 -d -A | openssl ${hashalg[$i_hash]}|awk '{print $2}')"
+    echo -n "$(hostname) IN SSHFP ${i_ciph} ${i_hash} ${HASH}"
+    echo " ; ${cipher[$i_ciph]}/${hashalg[$i_hash]}"
+  done
+done
