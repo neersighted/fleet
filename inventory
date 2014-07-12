@@ -3,14 +3,11 @@
 #
 
 [dns]
-matrix.neersighted.com
-indigo.neersighted.com
-
-[mon]
-alert.neersighted.com
+carbon.neersighted.com
+oxygen.neersighted.com
 
 [web]
-taxi.neersighted.com
+hydrogen.neersighted.com
 
 #
 # Hosts
@@ -19,26 +16,26 @@ taxi.neersighted.com
 [buyvm:children]
 buyvm-lv
 [buyvm-lv]
-pasta.neersighted.com
+boron.neersighted.com
 
 [crissic]
-alert.neersighted.com
+neon.neersighted.com
 
 [linode:children]
 linode-dal
 linode-fre
 linode-new
 [linode-dal]
-taxi.neersighted.com
+hydrogen.neersighted.com
 [linode-fre]
-matrix.neersighted.com
+oxygen.neersighted.com
 [linode-new]
-indigo.neersighted.com
+carbon.neersighted.com
 
 [prgmr.com]
-scarlet.neersighted.com
+helium.neersighted.com
 
 [ramnode:children]
 ramnode-nl
 [ramnode-nl]
-antenna.neersighted.com
+nitrogen.neersighted.com
