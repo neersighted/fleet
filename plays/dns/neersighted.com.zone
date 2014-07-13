@@ -38,8 +38,8 @@ ns1 AAAA 2600:3c03::f03c:91ff:fe73:bb00
 cobalt A 209.141.61.108
 cobalt AAAA 2605:6400:0020:2cc3::dead:bea7
 
-helium A 71.19.150.113
-helium AAAA 2605:2700:0:5::4713:9671
+helium A 65.49.73.111
+helium AAAA 2605:2700:0:3::4713:9ad1
 
 hydrogen A 198.58.114.99
 hydrogen AAAA 2600:3c00::f03c:91ff:fe73:bbd8

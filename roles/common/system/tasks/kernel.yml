@@ -14,7 +14,7 @@
 
 - name: kernel | extract kernel
   script: >
-    files/extract-vmlinux
+    extract-vmlinux
     /boot/vmlinuz-{{ kernel_version.stdout }} >
     /boot/vmlinux-{{ kernel_version.stdout }}
   when: extract_kernel == true and vmlinux.stat.exists == false

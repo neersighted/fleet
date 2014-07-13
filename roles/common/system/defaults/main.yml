@@ -1,6 +1,6 @@
 # Xen
-boot_device: hd0
-root_device: xvda
+boot_device: hd0,0
+root_device: xvda1
 console_device: hvc0
 
 # Kernel
