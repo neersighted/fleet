@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014071211
+      2014071601
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -35,4 +35,4 @@ morganna A 107.170.57.65
 
 
 ; CRYPTO
-@ TXT "keybase-site-verification=ytghLyZzV8lSYZpjPCS1v--qEpcjJMqz7HXovrkf2ic"
+@ TXT "keybase-site-verification=pTGKWlC_XagoJ7MWLxJbgpQKRwG1gqqJOPBsiQKgQ0I"
