@@ -1,0 +1,14 @@
+- name: nginx | add nginx repo (apt)
+  apt_repository: repo='deb http://nginx.org/packages/debian/ wheezy nginx' state=present
+  when: ansible_pkg_mgr == 'apt'
+
+- name: nginx| add nginx repo key (apt)
+  apt_key: url=https://ftp-master.debian.org/keys/archive-key-6.0.asc state=present
+  when: ansible_pkg_mgr == 'apt'
+
+- name: nginx | install nginx (apt)
+  apt: pkg=nginx state=latest
+  when: ansible_pkg_mgr == 'apt'
+
+- name: nginx | enable and start nginx
+  service: name=nginx state=started enabled=yes
