@@ -1,9 +1,9 @@
 firewall:
-  dns:
+  dnsU:
     port: 53
     proto: udp
     rule: allow
-  dns-tcp:
+  dnsT:
     port: 53
     proto: tcp
     rule: allow

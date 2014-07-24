@@ -1,11 +1,13 @@
-packages_list:
-  mosh: {state: latest}
-  htop: {state: latest}
-  iotop: {state: latest}
-  iftop: {state: latest}
-  curl: {state: latest}
-  nfs-common: {state: absent}
-  rpcbind: {state: absent}
+packages:
+  mosh: latest
+  htop: latest
+  iotop: latest
+  iftop: latest
+  apt-listchanges: latest
+  apt-file: latest
+  curl: latest
+  nfs-common: absent
+  rpcbind: absent
 
 accounts:
   neersighted:
@@ -29,13 +31,3 @@ firewall:
     port: 60000:61000
     proto: udp
     rule: allow
-  munin4:
-    port: 4949
-    proto: tcp
-    rule: allow
-    src: 107.150.9.211
-  munin6:
-    port: 4949
-    proto: tcp
-    rule: allow
-    src: 2602:ffea:a::536c:b804
