@@ -8,7 +8,7 @@
 
 - name: knot | configure zones
   with_dict: zones
-  template: src=zonefile.zone dest=/var/lib/knot/{{ item.key }}.zone owner=knot
+  template: src=zone.db dest=/var/lib/knot/{{ item.key }}.db owner=knot
   notify: reload knotd
 
 - name: knot | enable and start knot

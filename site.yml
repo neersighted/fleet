@@ -1,3 +1,0 @@
-- include: plays/all.yml
-- include: plays/dns.yml
-- include: plays/web.yml
