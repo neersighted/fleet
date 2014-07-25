@@ -2,22 +2,13 @@
   apt: pkg=knot state=latest
   when: ansible_pkg_mgr == 'apt'
 
-- name: knot | scan for zones
-  local_action: >
-    command find dns/
-    -type f
-    -name '*.zone'
-    -exec basename {} \;
-  changed_when: false
-  register: zones
-
 - name: knot | configure knot
   template: src=knot.conf dest=/etc/knot/knot.conf owner=knot
   notify: restart knotd
 
-- name: knot | install zones
-  with_items: zones.stdout_lines
-  copy: src=dns/{{ item }} dest=/var/lib/knot/ owner=knot
+- name: knot | configure zones
+  with_dict: zones
+  template: src=zonefile.zone dest=/var/lib/knot/{{ item.key }}.zone owner=knot
   notify: reload knotd
 
 - name: knot | enable and start knot

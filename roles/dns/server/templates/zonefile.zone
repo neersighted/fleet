@@ -1,0 +1,26 @@
+; GLOBALS
+$ORIGIN {{ item.key }}.
+$TTL {{ item.value.ttl }}
+
+; AUTHORITY
+@ SOA {{ item.value.nameservers|first }}. {{ item.value.admin }}. (
+      {{ item.value.serial }} ; serial
+      1h         ; refresh
+      15m        ; retry
+      2w         ; expire
+      1h )       ; minimum/negative
+
+; NAMESERVERS
+{{ item.value.nameservers }}
+
+; MAILSERVERS
+{{ item.value.mailservers }}
+
+; HOSTS
+{{ item.value.hosts }}
+
+; CRYPTO
+{{ item.value.crypto }}
+
+; MISC
+{{ item.value.crypto }}
