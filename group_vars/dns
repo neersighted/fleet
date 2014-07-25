@@ -7,12 +7,15 @@ firewall:
     port: 53
     proto: tcp
     rule: allow
-
+slaves:
+  ns1.linode.com: ["69.93.127.10", "2600:3c00::a"]
+  ns5.linode.com: ["109.74.194.10", "2a01:7e00::a"]
 zones:
   neersighted.com:
     ttl: 300
     serial: 2014072501
     admin: bjorn@neersighted.com
+    primary: ns1.neersighted.com
     nameservers: |
       @ NS ns1.neersighted.com.
       @ NS ns2.neersighted.com.
@@ -23,20 +26,23 @@ zones:
       * MX 20 in2-smtp.messagingengine.com.
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
+
       @ TXT "v=spf1 include:spf.messagingengine.com ?all"
       mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
     hosts: |
-      @ A 198.58.114.99 # hydrogen
-      @ AAAA 2600:3c00::f03c:91ff:fe73:bbd8 # hydrogen
+      @ A 198.58.114.99 ; hydrogen
+      @ AAAA 2600:3c00::f03c:91ff:fe73:bbd8 ; hydrogen
       www CNAME @
-      ns1 A 173.255.230.140 # carbon
-      ns1 AAAA 2600:3c03::f03c:91ff:fe73:bb00 # carbon
-      ns2 A 74.207.242.71 # oxygen
-      ns2 AAAA 2600:3c01::f03c:91ff:fe73:cb9f # oxygen
-      ns3 A 69.93.127.10 # ns1.linode.com
-      ns3 AAAA 2600:3c00::a # ns1.linode.com
-      ns4 A 109.74.194.10 # ns5.linode.com
-      ns4 AAAA 2a01:7e00::a # ns5.linode.com
+
+      ns1 A 173.255.230.140 ; carbon
+      ns1 AAAA 2600:3c03::f03c:91ff:fe73:bb00 ; carbon
+      ns2 A 74.207.242.71 ; oxygen
+      ns2 AAAA 2600:3c01::f03c:91ff:fe73:cb9f ; oxygen
+      ns3 A 69.93.127.10 ; ns1.linode.com
+      ns3 AAAA 2600:3c00::a ; ns1.linode.com
+      ns4 A 109.74.194.10 ; ns5.linode.com
+      ns4 AAAA 2a01:7e00::a ; ns5.linode.com
+
       carbon A 173.255.230.140
       carbon AAAA 2600:3c03::f03c:91ff:fe73:bb00
       cobalt A 209.141.61.108
@@ -56,42 +62,49 @@ zones:
       @ TXT "keybase-site-verification=a_LJ0l7lJXhU-eI0dLcOcBHB-30NjSxeUdjtTdKXuiw"
       n._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
       bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
+
       carbon.neersighted.com. IN SSHFP 1 1 CB2C2989294156DBD7564A5092F8E5516B5E26A3
       carbon.neersighted.com. IN SSHFP 1 2 F0D5EF3CCD9051A8FA14AD9591788EB63DF365110A681CC0121C473BB58ED7CD
       carbon.neersighted.com. IN SSHFP 2 1 4B62BCF61F47F8AB6ECFE78B64399754BECAE740
       carbon.neersighted.com. IN SSHFP 2 2 3BF43EB6826729AED79ABBD0A2C6668EAE0E7B88E9C1BA68C51B2C8466E78E0A
       carbon.neersighted.com. IN SSHFP 3 1 16643FEE2F60ED52C1D0507E9C95B95AD004BB47
       carbon.neersighted.com. IN SSHFP 3 2 8C3D1E4BBE986F8EBF85751AB4C2ED6CA25182D84B8CA1DE2D10E562889DFDD8
+
       cobalt.neersighted.com. IN SSHFP 1 1 8F502FB8FC06F1530979AA450995079282163EF1
       cobalt.neersighted.com. IN SSHFP 1 2 373A0BD5E1D93439778BCB3552E8A9B8C4BE77D0EA5C5FD011B0381EE55C0B44
       cobalt.neersighted.com. IN SSHFP 2 1 96D25B1728E24B92B5B733CC3BBDF1E4347E7C43
       cobalt.neersighted.com. IN SSHFP 2 2 12A0A631BDF51B707339FD20970FB0163E2AB8826038D5CA934CE91815D77F83
       cobalt.neersighted.com. IN SSHFP 3 1 AD9F5D52D7AE61F46546B1C1E5AE8A0F9DEB9828
       cobalt.neersighted.com. IN SSHFP 3 2 218FCE80CCF9A1BA76F444ABB5CF48FD8B1570E1306F1062FE09A0640A4DC9F4
+
       helium.neersighted.com. IN SSHFP 1 1 7D42D2FC2386EB0CEB488AACDB4FA7E16D414D9B
       helium.neersighted.com. IN SSHFP 1 2 99E2E0514FB5231CCE3E856298EED07945A97854169F497EF80C88C8BF95A8B8
       helium.neersighted.com. IN SSHFP 2 1 E82CDF8C95EF1F4222751B3CD007E8CD1442B9E1
       helium.neersighted.com. IN SSHFP 2 2 8E9CE576DBC1E3047AEA797C91DA63BE44E86E41E06BFD51E482DDC5ABBF2A2A
       helium.neersighted.com. IN SSHFP 3 1 0B7ED89EE80B6F1FAD250CAC1FE9B02F5A1273F7
       helium.neersighted.com. IN SSHFP 3 2 B1619B97859E1A252935EC0D24FCF7FD70DA595B062E21019EB6C775A2CA5368
+
       hydrogen.neersighted.com. IN SSHFP 1 1 767335EC3239544D3126E6627F982FF62200AB19
       hydrogen.neersighted.com. IN SSHFP 1 2 941F6C03BBC1A9082051C7516B7CC91409C0EBBC7AF9D21A97570D49C1A39072
       hydrogen.neersighted.com. IN SSHFP 2 1 37AAF9BCA097880EC80F811ACA8ACBA09246301C
       hydrogen.neersighted.com. IN SSHFP 2 2 F27ADB451DD89C323E276ED2B0D96D9EC0260CAF648E1748285C2AFFDFD56560
       hydrogen.neersighted.com. IN SSHFP 3 1 F00E67BF8AAF607A2686C92C6AC041B3BE38912F
       hydrogen.neersighted.com. IN SSHFP 3 2 19933AF37CE1B73B26294FF51508299996EA6C550F87C5C45360FBCE108676C2
+
       neon.neersighted.com. IN SSHFP 1 1 1496072C9BE6B624D4053E27AE553A0FC5790B9A
       neon.neersighted.com. IN SSHFP 1 2 131E794FC8C6CB5F3200634DD735CE300FADF8D3A8734EE756691F72998875FB
       neon.neersighted.com. IN SSHFP 2 1 C81734FB1C44C7A2BD50A7C00828D2E115F14FE3
       neon.neersighted.com. IN SSHFP 2 2 3C16678448A8F280142231D04693ECAC5513F437D24B4E91F801092B632C413F
       neon.neersighted.com. IN SSHFP 3 1 C0E05860805091722F201A92EB4F67463549E4D3
       neon.neersighted.com. IN SSHFP 3 2 23B46C391EAD8DB05AC1360876A4BD675F77A7EDD0CF9EC7E0A570C55F17F3B9
+
       nitrogen.neersighted.com. IN SSHFP 1 1 708E80D29E37516E87043A7F080CB2FEE8B688AA
       nitrogen.neersighted.com. IN SSHFP 1 2 7CEF33D4B4A30588A47CB360F6712B17D8F8FB369BC3E7BCE4005753A8B3BFAD
       nitrogen.neersighted.com. IN SSHFP 2 1 DDE91BB612AA2EAF8EB19854C44D3E2783667AAF
       nitrogen.neersighted.com. IN SSHFP 2 2 A8D0D6798AB8CD281452F3BD1A6CFF3BD75099DBFE6A7E18AA6A729B9BBD6ECE
       nitrogen.neersighted.com. IN SSHFP 3 1 2197503CDF94EA38B60D3D71D0783F9561A30D98
       nitrogen.neersighted.com. IN SSHFP 3 2 CBE3024B71DEEA28F5EF95BB85F0A65C6A357A20179ABE01DC54DAD7E037AD86
+
       oxygen.neersighted.com. IN SSHFP 1 1 C56BC803FF0A74DFA120170EB5DD092799BE228E
       oxygen.neersighted.com. IN SSHFP 1 2 E0897F692C56FF02FF1FFA529F0A65ADAE818FB6EFFBBE13723DB2383D01B697
       oxygen.neersighted.com. IN SSHFP 2 1 E67F426422420C34FA4C05E68383A84B1593BC96
@@ -103,6 +116,7 @@ zones:
     ttl: 300
     serial: 2014072501
     admin: bjorn@neersighted.com
+    primary: ns1.neersighted.com
     nameservers: |
       @ NS ns1.neersighted.com.
       @ NS ns2.neersighted.com.
@@ -113,11 +127,12 @@ zones:
       * MX 20 in2-smtp.messagingengine.com.
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
+
       @ TXT "v=spf1 include:spf.messagingengine.com ?all"
       mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
     hosts: |
-      @ A 198.58.114.99 # hydrogen.neersighted.com
-      @ AAAA 2600:3c00::f03c:91ff:fe73:bbd8 # hydrogen.neersighted.com
+      @ A 198.58.114.99 ; hydrogen.neersighted.com
+      @ AAAA 2600:3c00::f03c:91ff:fe73:bbd8 ; hydrogen.neersighted.com
       www CNAME @
     crypto: |
       @ TXT "keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"
@@ -127,6 +142,7 @@ zones:
     ttl: 300
     serial: 2014072501
     admin: bjorn@neersighted.com
+    primary: ns1.neersighted.com
     nameservers: |
       @ NS ns1.neersighted.com.
       @ NS ns2.neersighted.com.
@@ -137,10 +153,11 @@ zones:
       * MX 20 in2-smtp.messagingengine.com.
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
+
       @ TXT "v=spf1 include:spf.messagingengine.com ?all"
       mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
     hosts: |
-      @ A 107.170.57.65 # morganna
+      @ A 107.170.57.65 ; morganna
       www CNAME @
       morganna A 107.170.57.65
     crypto: |
@@ -150,6 +167,7 @@ zones:
     ttl: 300
     serial: 2014072501
     admin: bjorn@neersighted.com
+    primary: ns1.neersighted.com
     nameservers: |
       @ NS ns1.neersighted.com.
       @ NS ns2.neersighted.com.
@@ -160,13 +178,16 @@ zones:
       * MX 20 in2-smtp.messagingengine.com.
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
+
       @ TXT "v=spf1 include:spf.messagingengine.com ?all"
       mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
     hosts: |
-      @ A 208.146.35.33 # hosted25.nfoservers.com
-      _minecraft._tcp SRV 0 0 25565 play
+      @ A 208.146.35.33 ; hosted25.nfoservers.com
+
       play CNAME singulo.game.nfoservers.com
       vox CNAME singulo.murmur.nfoservers.com
+
+      _minecraft._tcp SRV 0 0 25565 play
     crypto: |
       @ TXT "keybase-site-verification=X-EW78_CUYwdkEQdTjKJOmHLQSq44yrH0OcX1DjPZK0"
     misc: |

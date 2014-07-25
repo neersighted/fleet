@@ -1,0 +1,38 @@
+firewall:
+  web:
+    port: 80,443
+    proto: tcp
+    rule: allow
+
+vhosts:
+  localhost: |
+    listen 127.0.0.1:80 default_server;
+    listen [::1]:80 default_server;
+    server_name localhost 127.0.0.1 ::1;
+
+    stub_status on;
+  neersighted.com: |
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name neersighted.com;
+
+    root /var/www/neersighted.com;
+    index index.html;
+  www.neersighted.com: |
+    listen 80;
+    listen [::]:80;
+    server_name www.neersighted.com;
+
+    return 301 $scheme://neersighted.com$request_uri;
+  neergaard.me: |
+    listen 80;
+    listen [::]:80;
+    server_name neergaard.me;
+
+    return 301 $scheme://neersighted.com$request_uri;
+  www.neergaard.me: |
+    listen 80;
+    listen [::]:80;
+    server_name www.neergaard.me;
+
+    return 301 $scheme://neergaard.me$request_uri;

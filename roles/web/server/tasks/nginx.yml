@@ -10,5 +10,13 @@
   apt: pkg=nginx state=latest
   when: ansible_pkg_mgr == 'apt'
 
+- name: nginx | configure nginx
+  template: src=nginx.conf dest=/etc/nginx/nginx.conf
+
+- name: knot | configure vhosts
+  with_dict: vhosts
+  template: src=vhost.conf dest=/var/www/{{ item.key }}.conf owner=nginx
+  notify: reload nginx
+
 - name: nginx | enable and start nginx
   service: name=nginx state=started enabled=yes
