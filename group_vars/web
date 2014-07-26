@@ -8,31 +8,63 @@ vhosts:
   localhost: |
     listen 127.0.0.1:80 default_server;
     listen [::1]:80 default_server;
+
     server_name localhost 127.0.0.1 ::1;
 
     stub_status on;
-  neersighted.com: |
-    listen 80 default_server;
-    listen [::]:80 default_server;
+  neersighted.com-80: |
+    listen 80;
+    listen [::]:80;
+
     server_name neersighted.com;
+
+    return 301 https://neersighted.com$request_uri;
+  neersighted.com-443:
+    listen 443 ssl spdy;
+    listen [::]:443 ssl spdy;
+
+    ssl_certificate ssl/neersighted.com.pem;
+    ssl_certificate_key ssl/neersighted.com.pem;
+
+    server_name neersighted.com;
+
+    add_header Strict-Transport-Security max-age=3600;
 
     root /var/www/neersighted.com;
     index index.html;
   www.neersighted.com: |
     listen 80;
     listen [::]:80;
+    listen 443 ssl spdy;
+    listen [::]:443 ssl spdy;
+
+    ssl_certificate ssl/neersighted.com.pem;
+    ssl_certificate_key ssl/neersighted.com.pem;
+
     server_name www.neersighted.com;
 
     return 301 $scheme://neersighted.com$request_uri;
   neergaard.me: |
     listen 80;
     listen [::]:80;
+    listen 443 ssl spdy;
+    listen [::]:443 ssl spdy;
+
+    ssl_certificate ssl/neergaard.me.pem;
+    ssl_certificate_key ssl/neergaard.me.pem;
+
     server_name neergaard.me;
 
     return 301 $scheme://neersighted.com$request_uri;
   www.neergaard.me: |
     listen 80;
     listen [::]:80;
+    listen 443 ssl spdy;
+    listen [::]:443 ssl spdy;
+
+    ssl_certificate ssl/neergaard.me.pem;
+    ssl_certificate_key ssl/neergaard.me.pem;
+
     server_name www.neergaard.me;
 
     return 301 $scheme://neergaard.me$request_uri;

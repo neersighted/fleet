@@ -12,10 +12,15 @@
 
 - name: nginx | configure nginx
   template: src=nginx.conf dest=/etc/nginx/nginx.conf
+  notify: restart nginx
 
-- name: knot | configure vhosts
+- name: nginx | configure vhosts
   with_dict: vhosts
-  template: src=vhost.conf dest=/var/www/{{ item.key }}.conf owner=nginx
+  template: src=vhost.conf dest=/etc/nginx/conf.d/{{ item.key }}.conf owner=nginx
+  notify: reload nginx
+
+- name: nginx | copy ssl bundles
+  copy: src=files/web/ssl/ dest=/etc/nginx/ssl/ owner=nginx
   notify: reload nginx
 
 - name: nginx | enable and start nginx
