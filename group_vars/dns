@@ -12,8 +12,8 @@ slaves:
   ns5.linode.com: ["109.74.194.10", "2a01:7e00::a"]
 zones:
   neersighted.com:
-    ttl: 300
-    serial: 2014072501
+    ttl: 3600
+    serial: 2015072605
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     nameservers: |
@@ -27,7 +27,6 @@ zones:
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
 
-      @ TXT "v=spf1 include:spf.messagingengine.com ?all"
       mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
     hosts: |
       @ A 198.58.114.99 ; hydrogen
@@ -59,6 +58,8 @@ zones:
       oxygen A 74.207.242.71
       oxygen AAAA 2600:3c01::f03c:91ff:fe73:cb9f
     crypto: |
+      @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
+
       @ TXT "keybase-site-verification=a_LJ0l7lJXhU-eI0dLcOcBHB-30NjSxeUdjtTdKXuiw"
       n._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
       bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
@@ -92,7 +93,7 @@ zones:
       hydrogen.neersighted.com. IN SSHFP 3 2 19933AF37CE1B73B26294FF51508299996EA6C550F87C5C45360FBCE108676C2
 
       neon.neersighted.com. IN SSHFP 1 1 1496072C9BE6B624D4053E27AE553A0FC5790B9A
-      neon.neersighted.com. IN SSHFP 1 2 131E794FC8C6CB5F3200634DD735CE300FADF8D3A8734EE756691F72998875FB
+      neon.neersighted.com. IN SSHFP 1 2 131E794FC8C6CB5F3200634DD735CE3600FADF8D3A8734EE756691F72998875FB
       neon.neersighted.com. IN SSHFP 2 1 C81734FB1C44C7A2BD50A7C00828D2E115F14FE3
       neon.neersighted.com. IN SSHFP 2 2 3C16678448A8F280142231D04693ECAC5513F437D24B4E91F801092B632C413F
       neon.neersighted.com. IN SSHFP 3 1 C0E05860805091722F201A92EB4F67463549E4D3
@@ -113,8 +114,8 @@ zones:
       oxygen.neersighted.com. IN SSHFP 3 2 71D4B400C76279F6F548D4818701E5031985E4C5D60B949315DBDA630DD912A2
     misc:
   neergaard.me:
-    ttl: 300
-    serial: 2014072501
+    ttl: 3600
+    serial: 2015072605
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     nameservers: |
@@ -128,19 +129,20 @@ zones:
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
 
-      @ TXT "v=spf1 include:spf.messagingengine.com ?all"
       mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
     hosts: |
       @ A 198.58.114.99 ; hydrogen.neersighted.com
       @ AAAA 2600:3c00::f03c:91ff:fe73:bbd8 ; hydrogen.neersighted.com
       www CNAME @
     crypto: |
+      @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
+
       @ TXT "keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"
       bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
     misc: |
   royalspades.co:
-    ttl: 300
-    serial: 2014072501
+    ttl: 3600
+    serial: 2015072605
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     nameservers: |
@@ -154,18 +156,19 @@ zones:
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
 
-      @ TXT "v=spf1 include:spf.messagingengine.com ?all"
       mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
     hosts: |
       @ A 107.170.57.65 ; morganna
       www CNAME @
       morganna A 107.170.57.65
     crypto: |
+      @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
+
       @ TXT "keybase-site-verification=pTGKWlC_XagoJ7MWLxJbgpQKRwG1gqqJOPBsiQKgQ0I"
     misc: |
   singulo.co:
-    ttl: 300
-    serial: 2014072501
+    ttl: 3600
+    serial: 2015072605
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     nameservers: |
@@ -179,7 +182,6 @@ zones:
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
 
-      @ TXT "v=spf1 include:spf.messagingengine.com ?all"
       mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
     hosts: |
       @ A 208.146.35.33 ; hosted25.nfoservers.com
@@ -189,5 +191,7 @@ zones:
 
       _minecraft._tcp SRV 0 0 25565 play
     crypto: |
+      @ NSEC3PARAM 1 0 1600 6E65657273696768746564
+
       @ TXT "keybase-site-verification=X-EW78_CUYwdkEQdTjKJOmHLQSq44yrH0OcX1DjPZK0"
     misc: |

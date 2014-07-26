@@ -11,5 +11,8 @@
   template: src=zone.db dest=/var/lib/knot/{{ item.key }}.db owner=knot
   notify: reload knotd
 
+- name: knot | copy dnssec keys
+  copy: src=files/dns/keys/ dest=/var/lib/knot/keys/ owner=knot
+
 - name: knot | enable and start knot
   service: name=knot state=started enabled=yes
