@@ -13,7 +13,7 @@ slaves:
 zones:
   neersighted.com:
     ttl: 3600
-    serial: 2015072610
+    serial: 2015072615
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     nameservers: |
@@ -59,6 +59,9 @@ zones:
       oxygen AAAA 2600:3c01::f03c:91ff:fe73:cb9f
     crypto: |
       @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
+
+      _443._tcp.neersighted.com. IN TLSA 3 0 1 0f39a5aeae8d9dd697433276a39f0f427d63ad70a910146ae5c093d965ccd4ec
+      _443._tcp.www.neersighted.com. IN TLSA 3 0 1 0f39a5aeae8d9dd697433276a39f0f427d63ad70a910146ae5c093d965ccd4ec
 
       @ TXT "keybase-site-verification=a_LJ0l7lJXhU-eI0dLcOcBHB-30NjSxeUdjtTdKXuiw"
       n._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
@@ -108,7 +111,7 @@ zones:
       oxygen.neersighted.com. IN SSHFP 3 2 71D4B400C76279F6F548D4818701E5031985E4C5D60B949315DBDA630DD912A2
   neergaard.me:
     ttl: 3600
-    serial: 2015072610
+    serial: 2015072615
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     nameservers: |
@@ -129,6 +132,9 @@ zones:
       www CNAME @
     crypto: |
       @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
+
+      _443._tcp.neergaard.me. IN TLSA 3 0 1 c54904e3902f7b4fc49ef5583e1f3214c81671e57d18afd6e64de30bb1a70d40
+      _443._tcp.www.neergaard.me. IN TLSA 3 0 1 c54904e3902f7b4fc49ef5583e1f3214c81671e57d18afd6e64de30bb1a70d40
 
       @ TXT "keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"
       bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
