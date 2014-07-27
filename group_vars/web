@@ -12,59 +12,61 @@ vhosts:
     server_name localhost 127.0.0.1 ::1;
 
     stub_status on;
-  neersighted.com-80: |
-    listen 80;
-    listen [::]:80;
-
-    server_name neersighted.com;
+  neersighted.com-redirect: |
+    listen 69.164.204.41:80;
+    listen [2600:3c00:e000:008c:4d50::1]:80;
+    server_name neersighted.com www.neersighted.com;
 
     return 301 https://neersighted.com$request_uri;
-  neersighted.com-443:
-    listen 443 ssl spdy;
-    listen [::]:443 ssl spdy;
+  neersighted.com: |
+    listen 69.164.204.41:443 ssl spdy;
+    listen [2600:3c00:e000:008c:4d50::1]:443 ssl spdy;
+    server_name neersighted.com www.neersighted.com;
 
+    ssl_dhparam ssl/dhparam.pem;
     ssl_certificate ssl/neersighted.com.pem;
     ssl_certificate_key ssl/neersighted.com.pem;
+    ssl_trusted_certificate ssl/gandi-ca.pem;
 
-    server_name neersighted.com;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA384:EECDH+ECDSA+SHA256:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH:EDH+aRSA:!3DES:!RC4:!SEED:!CAMELLIA:!DSS:!MD5:!EXP:!PSK:!SRP:!LOW:!aNULL:!eNULL;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+    ssl_session_cache shared:neersighted.com:15m;
+    ssl_session_timeout 10m;
 
-    add_header Strict-Transport-Security max-age=3600;
+    add_header X-Frame-Options SAMEORIGIN;
+    add_header Strict-Transport-Security max-age=31536000;
 
     root /var/www/neersighted.com;
     index index.html;
-  www.neersighted.com: |
-    listen 80;
-    listen [::]:80;
-    listen 443 ssl spdy;
-    listen [::]:443 ssl spdy;
+  neergaard.me-redirect: |
+    listen 198.58.114.99:80;
+    listen [2600:3c00:e000:008c:4d50::2]:80;
+    server_name neergaard.me www.neergaard.me;
 
-    ssl_certificate ssl/neersighted.com.pem;
-    ssl_certificate_key ssl/neersighted.com.pem;
-
-    server_name www.neersighted.com;
-
-    return 301 $scheme://neersighted.com$request_uri;
+    return 301 https://neergaard.me$request_uri;
   neergaard.me: |
-    listen 80;
-    listen [::]:80;
-    listen 443 ssl spdy;
-    listen [::]:443 ssl spdy;
+    listen 198.58.114.99:443 ssl spdy;
+    listen [2600:3c00:e000:008c:4d50::2]:443 ssl spdy;
+    server_name neergaard.me www.neergaard.me;
 
+    ssl_dhparam ssl/dhparam.pem;
     ssl_certificate ssl/neergaard.me.pem;
     ssl_certificate_key ssl/neergaard.me.pem;
+    ssl_trusted_certificate ssl/gandi-ca.pem;
 
-    server_name neergaard.me;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA384:EECDH+ECDSA+SHA256:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH:EDH+aRSA:!3DES:!RC4:!SEED:!CAMELLIA:!DSS:!MD5:!EXP:!PSK:!SRP:!LOW:!aNULL:!eNULL;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+    ssl_session_cache shared:neergaard.me:15m;
+    ssl_session_timeout 10m;
 
-    return 301 $scheme://neersighted.com$request_uri;
-  www.neergaard.me: |
-    listen 80;
-    listen [::]:80;
-    listen 443 ssl spdy;
-    listen [::]:443 ssl spdy;
+    add_header X-Frame-Options SAMEORIGIN;
+    add_header Strict-Transport-Security max-age=31536000;
 
-    ssl_certificate ssl/neergaard.me.pem;
-    ssl_certificate_key ssl/neergaard.me.pem;
-
-    server_name www.neergaard.me;
-
-    return 301 $scheme://neergaard.me$request_uri;
+    root /var/www/neergaard.me;
+    index index.html;

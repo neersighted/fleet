@@ -3,6 +3,7 @@ packages:
   htop: latest
   iotop: latest
   iftop: latest
+  apt-listbugs: latest
   apt-listchanges: latest
   apt-file: latest
   curl: latest

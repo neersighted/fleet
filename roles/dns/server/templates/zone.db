@@ -26,7 +26,3 @@ $TTL {{ item.value.ttl }}
 
 ; CRYPTO
 {{ item.value.crypto }}
-
-
-; MISC
-{{ item.value.crypto }}

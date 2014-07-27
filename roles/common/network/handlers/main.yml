@@ -1,0 +1,2 @@
+- name: restart network
+  shell: ifdown -a && ifup -a

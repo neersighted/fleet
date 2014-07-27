@@ -1,0 +1,4 @@
+- name: interfaces | configure interfaces
+  template: src=interfaces dest=/etc/network/interfaces
+  when: interfaces is defined
+  notify: restart network

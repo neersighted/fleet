@@ -8,4 +8,4 @@
 
 - name: ssh | install authorized keys
   with_dict: authorized_keys
-  authorized_key: user={{ item.key }} key='{{ item.value }}'
+  authorized_key: user="{{ item.key }}" key="{{ item.value }}"
