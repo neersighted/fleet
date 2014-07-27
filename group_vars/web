@@ -69,7 +69,7 @@ vhosts:
   neergaard.me: |
     listen 198.58.114.99:443 ssl spdy default_server;
     listen [2600:3c00:e000:008c:4d50::2]:443 ssl spdy default_server;
-    server_name neergaard.me www.neergaard.me;
+    server_name neergaard.me;
 
     ssl_dhparam ssl/dhparam.pem;
     ssl_certificate ssl/neergaard.me.pem;
