@@ -1,5 +1,6 @@
 mail:
   to: admin@neersighted.com
   from: fleet@neersighted.com
+mail_auth:
   user: bjorn@neersighted.com
   pass: 9K2k6758tey9HD56
