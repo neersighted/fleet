@@ -13,7 +13,7 @@ slaves:
 zones:
   neersighted.com:
     ttl: 3600
-    serial: 2014072811
+    serial: 2014072812
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -53,6 +53,9 @@ zones:
       hydrogen A 96.126.118.209
       hydrogen A 198.58.114.99
       hydrogen AAAA 2600:3c00::f03c:91ff:fe73:bbd8
+      hydrogen AAAA 2600:3c00:e000:008c:4d50::1
+      hydrogen AAAA 2600:3c00:e000:008c:4d50::2
+      hydrogen AAAA 2600:3c00:e000:008c:4d50::3
       neon A 107.150.9.211
       neon AAAA 2602:ffea:a::536c:b804
       nitrogen A 81.4.110.116
@@ -113,7 +116,7 @@ zones:
       oxygen.neersighted.com. SSHFP 3 2 71D4B400C76279F6F548D4818701E5031985E4C5D60B949315DBDA630DD912A2
   neer.io:
     ttl: 3600
-    serial: 2014072811
+    serial: 2014072812
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -135,6 +138,9 @@ zones:
       www CNAME @
     crypto: |
       @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
+
+      _443._tcp.neer.io. TLSA 3 0 1 e795b30a7c5b92a528fce703257e5c49f753c5ae5e73d7e1a19868fb9a739d36
+      _443._tcp.www.neer.io. TLSA 3 0 1 e795b30a7c5b92a528fce703257e5c49f753c5ae5e73d7e1a19868fb9a739d36
 
       @ TXT "keybase-site-verification=zL78_Fypnnjh5TyG0t3-JOFjSRf1P3Kct7WVRBZ2Nh4"
       bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"

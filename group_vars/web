@@ -36,8 +36,10 @@ vhosts:
     ssl_session_cache shared:neersighted.com:15m;
     ssl_session_timeout 10m;
 
-    add_header X-Frame-Options SAMEORIGIN;
-    add_header Strict-Transport-Security max-age=31536000;
+    add_header X-XSS-Protection '1';
+    add_header X-Content-Type-Options 'nosniff';
+    add_header X-Frame-Options 'SAMEORIGIN';
+    add_header Strict-Transport-Security 'max-age=31536000';
 
     root /var/www/neersighted.com;
     index index.html;
@@ -84,8 +86,10 @@ vhosts:
     ssl_session_cache shared:neer.io:15m;
     ssl_session_timeout 10m;
 
-    add_header X-Frame-Options SAMEORIGIN;
-    add_header Strict-Transport-Security max-age=31536000;
+    add_header X-XSS-Protection '1';
+    add_header X-Content-Type-Options 'nosniff';
+    add_header X-Frame-Options 'SAMEORIGIN';
+    add_header Strict-Transport-Security 'max-age=31536000';
 
     root /var/www/neer.io;
     index index.html;
@@ -132,8 +136,10 @@ vhosts:
     ssl_session_cache shared:neergaard.me:15m;
     ssl_session_timeout 10m;
 
-    add_header X-Frame-Options SAMEORIGIN;
-    add_header Strict-Transport-Security max-age=31536000;
+    add_header X-XSS-Protection '1';
+    add_header X-Content-Type-Options 'nosniff';
+    add_header X-Frame-Options 'SAMEORIGIN';
+    add_header Strict-Transport-Security 'max-age=31536000';
 
     root /var/www/neergaard.me;
     index index.html;
