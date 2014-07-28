@@ -9,3 +9,9 @@ interfaces: |
   iface eth0 inet6 static
     address 2602:ffea:a::536c:b804
     netmask 64
+  iface eth0 inet6 static
+    address 2602:ffea:a::cd71:2162
+    netmask 64
+  iface eth0 inet6 static
+    address 2602:ffea:a::fdef:901b
+    netmask 64

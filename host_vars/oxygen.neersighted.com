@@ -10,17 +10,17 @@ interfaces: |
     address 2600:3c01::f03c:91ff:fe73:cb9f
     netmask 64
   iface eth0 inet6 static
-    address 2600:3c00:e000:008c:ca5b::1
+    address 2600:3c01:e000:00ae:0063::1
     netmask 64
   iface eth0 inet6 static
-    address 2600:3c00:e000:008c:ca5b::2
+    address 2600:3c01:e000:00ae:0063::2
     netmask 64
   iface eth0 inet6 static
-    address 2600:3c00:e000:008c:ca5b::3
+    address 2600:3c01:e000:00ae:0063::3
     netmask 64
   iface eth0 inet6 static
-    address 2600:3c00:e000:008c:ca5b::4
+    address 2600:3c01:e000:00ae:0063::4
     netmask 64
   iface eth0 inet6 static
-    address 2600:3c00:e000:008c:ca5b::5
+    address 2600:3c01:e000:00ae:0063::5
     netmask 64

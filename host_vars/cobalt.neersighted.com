@@ -7,5 +7,6 @@ interfaces: |
     netmask 24
 
   iface eth0 inet6 static
+    gateway 2605:6400:0020::1
     address 2605:6400:0020:2cc3::dead:bea7
-    netmask 64
+    netmask 48
