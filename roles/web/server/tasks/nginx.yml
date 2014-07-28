@@ -11,12 +11,12 @@
   when: ansible_pkg_mgr == 'apt'
 
 - name: nginx | configure nginx
-  template: src=nginx.conf dest=/etc/nginx/nginx.conf validate='/etc/init.d/nginx configtest'
+  template: src=nginx.conf dest=/etc/nginx/nginx.conf validate='nginx -tc /etc/nginx/nginx.conf'
   notify: restart nginx
 
 - name: nginx | configure vhosts
   with_dict: vhosts
-  template: src=vhost.conf dest=/etc/nginx/conf.d/{{ item.key }}.conf validate='/etc/init.d/nginx configtest'
+  template: src=vhost.conf dest=/etc/nginx/conf.d/{{ item.key }}.conf
   notify: reload nginx
 
 - name: nginx | copy ssl bundles
