@@ -11,7 +11,7 @@
   when: ansible_pkg_mgr == 'apt'
 
 - name: nginx | configure nginx
-  template: src=nginx.conf dest=/etc/nginx/nginx.conf validate='nginx -tc /etc/nginx/nginx.conf'
+  template: src=nginx.conf dest=/etc/nginx/nginx.conf validate='nginx -tc %s'
   notify: restart nginx
 
 - name: nginx | configure vhosts
