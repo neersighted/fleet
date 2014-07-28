@@ -5,4 +5,5 @@ dependencies:
   - role: common/storage
   - role: common/tuning
   - role: common/system
+  - role: common/mail
   - role: common/info
