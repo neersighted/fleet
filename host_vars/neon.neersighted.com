@@ -7,6 +7,7 @@ interfaces: |
     netmask 24
 
   iface eth0 inet6 static
+    gateway 2602:ffea:a::1
     address 2602:ffea:a::536c:b804
     netmask 64
   iface eth0 inet6 static
