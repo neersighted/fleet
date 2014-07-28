@@ -6,6 +6,9 @@ interfaces: |
     address 69.164.204.41
     netmask 24
   iface eth0 inet static
+    address 96.126.118.209
+    netmask 24
+  iface eth0 inet static
     address 198.58.114.99
     netmask 24
 

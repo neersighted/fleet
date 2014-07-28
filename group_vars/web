@@ -61,15 +61,15 @@ vhosts:
 
     return 301 https://neersighted.com$request_uri;
   neer.io-redirect: |
-    listen 198.58.114.99:80 default_server;
-    listen [2600:3c00:e000:008c:4d50::2]:80 default_server;
+    listen 96.126.118.209:80 default_server;
+    listen [2600:3c00:e000:008c:4d50::3]:80 default_server;
     server_name neer.io www.neer.io;
 
     return 301 https://neer.io$request_uri;
   neer.io: |
-    listen 198.58.114.99:443 ssl spdy default_server;
-    listen [2600:3c00:e000:008c:4d50::2]:443 ssl spdy default_server;
-    server_name neersighted.com;
+    listen 96.126.118.209:443 ssl spdy default_server;
+    listen [2600:3c00:e000:008c:4d50::3]:443 ssl spdy default_server;
+    server_name neer.io;
 
     ssl_dhparam ssl/dhparam.pem;
     ssl_certificate ssl/neer.io.pem;
@@ -90,9 +90,9 @@ vhosts:
     root /var/www/neer.io;
     index index.html;
   www.neer.io: |
-    listen 198.58.114.99:443 ssl spdy;
+    listen 96.126.118.209:443 ssl spdy;
     listen [2600:3c00:e000:008c:4d50::2]:443 ssl spdy;
-    server_name www.neersighted.com;
+    server_name www.neer.io;
 
     ssl_dhparam ssl/dhparam.pem;
     ssl_certificate ssl/neer.io.pem;
@@ -108,3 +108,51 @@ vhosts:
     ssl_session_timeout 10m;
 
     return 301 https://neer.io$request_uri;
+  neergaard.me-redirect: |
+    listen 198.58.114.99:80 default_server;
+    listen [2600:3c00:e000:008c:4d50::2]:80 default_server;
+    server_name neergaard.me www.neergaard.me;
+
+    return 301 https://neergaard.me$request_uri;
+  neergaard.me: |
+    listen 198.58.114.99:443 ssl spdy default_server;
+    listen [2600:3c00:e000:008c:4d50::2]:443 ssl spdy default_server;
+    server_name neergaard.me;
+
+    ssl_dhparam ssl/dhparam.pem;
+    ssl_certificate ssl/neergaard.me.pem;
+    ssl_certificate_key ssl/neergaard.me.pem;
+    ssl_trusted_certificate ssl/gandi-ca.pem;
+
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA384:EECDH+ECDSA+SHA256:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH:EDH+aRSA:!3DES:!RC4:!SEED:!CAMELLIA:!DSS:!MD5:!EXP:!PSK:!SRP:!LOW:!aNULL:!eNULL;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+    ssl_session_cache shared:neergaard.me:15m;
+    ssl_session_timeout 10m;
+
+    add_header X-Frame-Options SAMEORIGIN;
+    add_header Strict-Transport-Security max-age=31536000;
+
+    root /var/www/neergaard.me;
+    index index.html;
+  www.neergaard.me: |
+    listen 198.58.114.99:443 ssl spdy;
+    listen [2600:3c00:e000:008c:4d50::2]:443 ssl spdy;
+    server_name www.neergaard.me;
+
+    ssl_dhparam ssl/dhparam.pem;
+    ssl_certificate ssl/neergaard.me.pem;
+    ssl_certificate_key ssl/neergaard.me.pem;
+    ssl_trusted_certificate ssl/gandi-ca.pem;
+
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA384:EECDH+ECDSA+SHA256:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH:EDH+aRSA:!3DES:!RC4:!SEED:!CAMELLIA:!DSS:!MD5:!EXP:!PSK:!SRP:!LOW:!aNULL:!eNULL;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+    ssl_session_cache shared:neergaard.me:15m;
+    ssl_session_timeout 10m;
+
+    return 301 https://neergaard.me$request_uri;
