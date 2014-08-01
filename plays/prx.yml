@@ -1,0 +1,4 @@
+- hosts: prx
+  sudo: yes
+  roles:
+    - role: irc/proxy

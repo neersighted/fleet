@@ -1,0 +1,21 @@
+- name: nbnc | fetch nbnc sources
+  sudo_user: nbnc
+  git: repo=git://github.com/neersighted/nbnc dest=/srv/nbnc/src/github.com/neersighted/nbnc
+  register: git
+
+- name: nbnc | build and install nbnc
+  when: git.changed
+  sudo_user: nbnc
+  environment:
+    GOPATH: /srv/nbnc
+  shell: >
+    cd $GOPATH/src/github.com/neersighted/nbnc &&
+    go get &&
+    go install
+  notify: restart nbnc
+
+- name: nbnc | install nbnc service
+  template: src=nbnc dest=/etc/init.d/nbnc mode=755
+
+- name: nbnc | enable and start nbnc
+  service: name=nbnc state=started enabled=yes

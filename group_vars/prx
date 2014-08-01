@@ -1,0 +1,12 @@
+firewall:
+  nbnc:
+    port: 6661:6665
+    proto: tcp
+    rule: allow
+
+nbnc:
+  6661: {ip: irc.ipv6.esper.net, port: 6667, 6: yes}
+  6662: {ip: irc.ipv6.freenode.net, port: 6667, 6: yes}
+  6663: {ip: irc.oftc.net, port: 6667, 4: yes}
+  6664: {ip: irc6.quakenet.org, port: 6667, 6: yes}
+  6665: {ip: irc6.rizon.net, port: 6667, 6: yes}

@@ -2,4 +2,4 @@
   group: name=nginx system=yes
 
 - name: accounts | configure nginx user
-  user: name=nginx group=nginx home=/var/www system=yes
+  user: name=nginx group=nginx home=/srv/web system=yes
