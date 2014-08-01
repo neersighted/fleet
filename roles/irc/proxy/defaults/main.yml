@@ -1,1 +1,5 @@
-nbnc_password: 4831213e43179e28d1283bf307d353f80f1af06daeb8d5ccb62592b00c122ddd
+nbnc: {}
+nbnc_ip:
+  4: 0.0.0.0
+  6: '::'
+nbnc_pass: changeme

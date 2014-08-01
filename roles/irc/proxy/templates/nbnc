@@ -16,15 +16,27 @@
 . /lib/lsb/init-functions
 
 start() {
-{% for listen, net in nbnc.iteritems() %}
+{% for listen, net in nbnc.iteritems() if net.4 is defined %}
 start-stop-daemon -S -c nbnc \
   -x /srv/nbnc/bin/nbnc \
   -p /var/run/nbnc.{{ listen }}.pid -m  \
   -b \
-  -- {% if net.6 is defined %} -6 {% endif %} {% if net.4 is defined %} -4 {% endif %} \
+  -- \
   -L {{ listen }} \
-  -c {{ net.ip }} -C {{ net.port }} \
-  -p {{ nbnc_password }}
+  -r {{ net.ip }} -R {{ net.port }} \
+  -o {{ nbnc_ip.4 }} -4 \
+  -p {{ nbnc_pass }}
+{% endfor %}
+{% for listen, net in nbnc.iteritems() if net.6 is defined %}
+start-stop-daemon -S -c nbnc \
+  -x /srv/nbnc/bin/nbnc \
+  -p /var/run/nbnc.{{ listen }}.pid -m  \
+  -b \
+  -- \
+  -L {{ listen }} \
+  -r {{ net.ip }} -R {{ net.port }} \
+  -o {{ nbnc_ip.6 }} -6 \
+  -p {{ nbnc_pass }}
 {% endfor %}
 }
 
