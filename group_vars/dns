@@ -11,9 +11,9 @@ slaves:
   ns1.linode.com: ["69.93.127.10", "2600:3c00::a"]
   ns5.linode.com: ["109.74.194.10", "2a01:7e00::a"]
 zones:
-  neersighted.com:
+  neer.io:
     ttl: 3600
-    serial: 2014072812
+    serial: 2014080201
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -28,7 +28,37 @@ zones:
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
 
-      mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
+      mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKHkayj0jloRLhViPBHEH+7Tu32wEcgCZpu84XV6Se1Excnk36NdIeOpFKpAGMdjh7luL689NHPWaQIs3V1xV7yzZVH0wpV59uY00v/oVAYCXKz0s6DvC90tZXbkjvWA+iAvfU228Xxylapz37l4r6FPW8K5wgYx4v22DBmPuFswIDAQAB"
+    hosts: |
+      @ A 96.126.118.209 ; hydrogen.neersighted.com
+      @ AAAA 2600:3c00:e000:008c:4d50::3 ; hydrogen.neersighted.com
+      www CNAME @
+    crypto: |
+      @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
+
+      _443._tcp.neer.io. TLSA 3 0 1 e795b30a7c5b92a528fce703257e5c49f753c5ae5e73d7e1a19868fb9a739d36
+      _443._tcp.www.neer.io. TLSA 3 0 1 e795b30a7c5b92a528fce703257e5c49f753c5ae5e73d7e1a19868fb9a739d36
+
+      @ TXT "keybase-site-verification=zL78_Fypnnjh5TyG0t3-JOFjSRf1P3Kct7WVRBZ2Nh4"
+      bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
+  neersighted.com:
+    ttl: 3600
+    serial: 2014080201
+    admin: bjorn@neersighted.com
+    primary: ns1.neersighted.com
+    dnssec: yes
+    nameservers: |
+      @ NS ns1.neersighted.com.
+      @ NS ns2.neersighted.com.
+      @ NS ns3.neersighted.com.
+      @ NS ns4.neersighted.com.
+    mailservers: |
+      * MX 10 in1-smtp.messagingengine.com.
+      * MX 20 in2-smtp.messagingengine.com.
+      @ MX 10 in1-smtp.messagingengine.com.
+      @ MX 20 in2-smtp.messagingengine.com.
+
+      mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsix0DtMAEDUAM3XX2sfpU9nRPF8iWSlHBBKUbBqBfqaYEZ1tZxWKqxA9UWaKrPgJm8Ry+J+rjCiFZM3GjvXCgq4uKZEmGWHgHl8eiEJB4fxaJCzhl1NuJHgr+nWTB1YS3utf50G2HeTp5rPkvxWeH7CvyZtPZcNmRq8G0+AqZtQIDAQAB"
     hosts: |
       @ A 69.164.204.41
       @ AAAA 2600:3c00:e000:008c:4d50::1
@@ -114,39 +144,9 @@ zones:
       oxygen.neersighted.com. SSHFP 2 2 C16BD678DA1A3FA4F5BA782E487E8699F1A67C518A139EA112D61C90D979499C
       oxygen.neersighted.com. SSHFP 3 1 D40B4B5180FE993DFAC6C51459BF7D34F38EA9F4
       oxygen.neersighted.com. SSHFP 3 2 71D4B400C76279F6F548D4818701E5031985E4C5D60B949315DBDA630DD912A2
-  neer.io:
-    ttl: 3600
-    serial: 2014072812
-    admin: bjorn@neersighted.com
-    primary: ns1.neersighted.com
-    dnssec: yes
-    nameservers: |
-      @ NS ns1.neersighted.com.
-      @ NS ns2.neersighted.com.
-      @ NS ns3.neersighted.com.
-      @ NS ns4.neersighted.com.
-    mailservers: |
-      * MX 10 in1-smtp.messagingengine.com.
-      * MX 20 in2-smtp.messagingengine.com.
-      @ MX 10 in1-smtp.messagingengine.com.
-      @ MX 20 in2-smtp.messagingengine.com.
-
-      mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
-    hosts: |
-      @ A 96.126.118.209 ; hydrogen.neersighted.com
-      @ AAAA 2600:3c00:e000:008c:4d50::3 ; hydrogen.neersighted.com
-      www CNAME @
-    crypto: |
-      @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
-
-      _443._tcp.neer.io. TLSA 3 0 1 e795b30a7c5b92a528fce703257e5c49f753c5ae5e73d7e1a19868fb9a739d36
-      _443._tcp.www.neer.io. TLSA 3 0 1 e795b30a7c5b92a528fce703257e5c49f753c5ae5e73d7e1a19868fb9a739d36
-
-      @ TXT "keybase-site-verification=zL78_Fypnnjh5TyG0t3-JOFjSRf1P3Kct7WVRBZ2Nh4"
-      bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
   neergaard.me:
     ttl: 3600
-    serial: 2014072811
+    serial: 2014080201
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -161,7 +161,7 @@ zones:
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
 
-      mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
+      mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDR4gWyapi2MTG5cWbpOduoqwBJaH4JO74HNDLBWDheu329HtRcyvakBumpmycSh2/zN7oRKHRNBT222kMy/qAsqwWNFfo+UdI9dnlKy17mFdRdozEv+tBVk6BtYUb/lIvxg9au1izYPDAj1+wQXh+j0lfdP7hi6riIjhZVDjoH+QIDAQAB"
     hosts: |
       @ A 198.58.114.99 ; hydrogen.neersighted.com
       @ AAAA 2600:3c00:e000:008c:4d50::2 ; hydrogen.neersighted.com
@@ -176,7 +176,7 @@ zones:
       bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
   royalspades.co:
     ttl: 3600
-    serial: 2014072810
+    serial: 2014080201
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -191,7 +191,7 @@ zones:
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
 
-      mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
+      mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOcK4dexX1qZ+dLO7ksrSGnzhrkcK8op6nWcIDuN8d2GS1nQ64wzW2aCxNIOaIfd8J4iJje4ryXUVAyXbxc/FWybkeFQ0tzQ9J9Ponu/N9OoE7NUNGIlhtXTH7UtTVTylltt/5A5KWgbiW0PMt/n5MhP/0SwSKAXzjS2kYmEpJHwIDAQAB"
     hosts: |
       @ A 107.170.57.65 ; morganna
       www CNAME @
@@ -199,7 +199,7 @@ zones:
     crypto: |
   singulo.co:
     ttl: 3600
-    serial: 2014072810
+    serial: 2014080201
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -214,7 +214,7 @@ zones:
       @ MX 10 in1-smtp.messagingengine.com.
       @ MX 20 in2-smtp.messagingengine.com.
 
-      mesmtp._domainkey TXT "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtBpW3K4Y6lynn64yfTZywlfcTWh5NBhse6ltKfCem5D/CmC+nOsGGlj3QuflmaTeQA12FgQdhvEZxA/xXK7r3QGks2Bpm45LhcO0QHVUsrTM9fe9xX6R1JqVec7NVZv6iTiWuZ3q3m6iWo9sU/Ft4018Lz4IoKBy2aeixDVRM/wIDAQAB"
+      mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIhEqSIsM7F7W0nLOUJFAJmLJl8wOPejvcq8hoJhZgzfMFHiaKcgu7n3AIFzxMPy3oNk2gfeVaoKcKXYRDv8atQR9UINPGy8zk7AsgKTj1pnIHdkOeQwa04i3LWLWdGkTUA9h+NZrbIbUXfyC6v2uD79314PBBGIT7ayuLLuvFTQIDAQAB"
     hosts: |
       @ A 208.146.35.33 ; hosted25.nfoservers.com
 
@@ -223,4 +223,3 @@ zones:
 
       _minecraft._tcp SRV 0 0 25565 play
     crypto: |
-      @ TXT "keybase-site-verification=X-EW78_CUYwdkEQdTjKJOmHLQSq44yrH0OcX1DjPZK0"
