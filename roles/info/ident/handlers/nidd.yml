@@ -1,0 +1,2 @@
+- name: restart nidd
+  service: name=nidd state=restarted

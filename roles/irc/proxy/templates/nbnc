@@ -16,7 +16,7 @@
 . /lib/lsb/init-functions
 
 start() {
-{% for listen, net in nbnc.iteritems() if net.4 is defined %}
+{% for listen, net in nbncs.iteritems() if net.4 is defined %}
 start-stop-daemon -S -c nbnc \
   -x /srv/nbnc/bin/nbnc \
   -p /var/run/nbnc.{{ listen }}.pid -m  \
@@ -27,7 +27,7 @@ start-stop-daemon -S -c nbnc \
   -o {{ nbnc_ip.4 }} -4 \
   -p {{ nbnc_pass }}
 {% endfor %}
-{% for listen, net in nbnc.iteritems() if net.6 is defined %}
+{% for listen, net in nbncs.iteritems() if net.6 is defined %}
 start-stop-daemon -S -c nbnc \
   -x /srv/nbnc/bin/nbnc \
   -p /var/run/nbnc.{{ listen }}.pid -m  \
@@ -35,13 +35,13 @@ start-stop-daemon -S -c nbnc \
   -- \
   -L {{ listen }} \
   -r {{ net.ip }} -R {{ net.port }} \
-  -o {{ nbnc_ip.6 }} -6 \
+  -o [{{ nbnc_ip.6 }}] -6 \
   -p {{ nbnc_pass }}
 {% endfor %}
 }
 
 stop() {
-{% for listen in nbnc %}
+{% for listen in nbncs %}
 start-stop-daemon -K -c nbnc \
   -x /srv/nbnc/bin/nbnc \
   -p /var/run/nbnc.{{ listen }}.pid

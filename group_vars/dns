@@ -13,7 +13,7 @@ slaves:
 zones:
   neer.io:
     ttl: 3600
-    serial: 2014080201
+    serial: 4161563859
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -33,6 +33,8 @@ zones:
       @ A 96.126.118.209 ; hydrogen.neersighted.com
       @ AAAA 2600:3c00:e000:008c:4d50::3 ; hydrogen.neersighted.com
       www CNAME @
+
+      be AAAA 2602:ffea:a::fdef:901b ; neon.neersighted.com, vanity rdns
     crypto: |
       @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
 
@@ -43,7 +45,7 @@ zones:
       bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
   neersighted.com:
     ttl: 3600
-    serial: 2014080201
+    serial: 4161563859
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -72,6 +74,8 @@ zones:
       ns3 AAAA 2600:3c00::a ; ns1.linode.com
       ns4 A 109.74.194.10 ; ns5.linode.com
       ns4 AAAA 2a01:7e00::a ; ns5.linode.com
+
+      am AAAA 2602:ffea:a::cd71:2162 ; neon.neersighted.com, vanity rdns
 
       carbon A 173.255.230.140
       carbon AAAA 2600:3c03::f03c:91ff:fe73:bb00
@@ -146,7 +150,7 @@ zones:
       oxygen.neersighted.com. SSHFP 3 2 71D4B400C76279F6F548D4818701E5031985E4C5D60B949315DBDA630DD912A2
   neergaard.me:
     ttl: 3600
-    serial: 2014080201
+    serial: 4161563857
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -176,7 +180,7 @@ zones:
       bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
   royalspades.co:
     ttl: 3600
-    serial: 2014080201
+    serial: 4161563857
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -199,7 +203,7 @@ zones:
     crypto: |
   singulo.co:
     ttl: 3600
-    serial: 2014080201
+    serial: 4161563857
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no

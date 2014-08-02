@@ -1,3 +1,2 @@
-- include: go.yml
 - include: accounts.yml
 - include: nbnc.yml
