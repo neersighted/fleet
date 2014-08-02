@@ -7,13 +7,11 @@ firewall:
     port: 53
     proto: tcp
     rule: allow
-slaves:
-  ns1.linode.com: ["69.93.127.10", "2600:3c00::a"]
-  ns5.linode.com: ["109.74.194.10", "2a01:7e00::a"]
+
 zones:
   neer.io:
-    ttl: 3600
-    serial: 4161563859
+    ttl: 300
+    serial: 2014080250
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -42,10 +40,9 @@ zones:
       _443._tcp.www.neer.io. TLSA 3 0 1 e795b30a7c5b92a528fce703257e5c49f753c5ae5e73d7e1a19868fb9a739d36
 
       @ TXT "keybase-site-verification=zL78_Fypnnjh5TyG0t3-JOFjSRf1P3Kct7WVRBZ2Nh4"
-      bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
   neersighted.com:
-    ttl: 3600
-    serial: 4161563859
+    ttl: 300
+    serial: 2014080250
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -103,8 +100,8 @@ zones:
       _443._tcp.www.neersighted.com. TLSA 3 0 1 0f39a5aeae8d9dd697433276a39f0f427d63ad70a910146ae5c093d965ccd4ec
 
       @ TXT "keybase-site-verification=a_LJ0l7lJXhU-eI0dLcOcBHB-30NjSxeUdjtTdKXuiw"
-      n._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
-      bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
+      n._pka TXT "v=PKA1; fpr=EF5352EC46885C8D88EA6437F13812806D922AB5; uri=http://neersighted.com/key.asc"
+      bjorn._pka TXT "v=PKA1; fpr=EF5352EC46885C8D88EA6437F13812806D922AB5; uri=http://neersighted.com/key.asc"
 
       carbon.neersighted.com. SSHFP 1 1 CB2C2989294156DBD7564A5092F8E5516B5E26A3
       carbon.neersighted.com. SSHFP 1 2 F0D5EF3CCD9051A8FA14AD9591788EB63DF365110A681CC0121C473BB58ED7CD
@@ -149,8 +146,8 @@ zones:
       oxygen.neersighted.com. SSHFP 3 1 D40B4B5180FE993DFAC6C51459BF7D34F38EA9F4
       oxygen.neersighted.com. SSHFP 3 2 71D4B400C76279F6F548D4818701E5031985E4C5D60B949315DBDA630DD912A2
   neergaard.me:
-    ttl: 3600
-    serial: 4161563857
+    ttl: 300
+    serial: 2014080250
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -177,10 +174,9 @@ zones:
       _443._tcp.www.neergaard.me. TLSA 3 0 1 c54904e3902f7b4fc49ef5583e1f3214c81671e57d18afd6e64de30bb1a70d40
 
       @ TXT "keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"
-      bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=http://neersighted.com/key.asc"
   royalspades.co:
-    ttl: 3600
-    serial: 4161563857
+    ttl: 300
+    serial: 2014080250
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -202,8 +198,8 @@ zones:
       morganna A 107.170.57.65
     crypto: |
   singulo.co:
-    ttl: 3600
-    serial: 4161563857
+    ttl: 300
+    serial: 2014080250
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -227,3 +223,14 @@ zones:
 
       _minecraft._tcp SRV 0 0 25565 play
     crypto: |
+slaves:
+  - 69.93.127.10
+  - 2600:3c00::a
+  - 65.19.178.10
+  - 2600:3c01::a
+  - 75.127.96.10
+  - 2600:3c02::a
+  - 207.192.70.10
+  - 2600:3c03::a
+  - 109.74.194.10
+  - 2a01:7e00::a

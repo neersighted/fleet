@@ -12,15 +12,20 @@ interfaces: |
   iface eth0 inet6 static
     address 2600:3c01:e000:00ae:0063::1
     netmask 64
+    up ip addr change 2600:3c01:e000:00ae:0063::1/64 preferred_lft 0 dev eth0
   iface eth0 inet6 static
     address 2600:3c01:e000:00ae:0063::2
     netmask 64
+    up ip addr change 2600:3c01:e000:00ae:0063::2/64 preferred_lft 0 dev eth0
   iface eth0 inet6 static
     address 2600:3c01:e000:00ae:0063::3
     netmask 64
+    up ip addr change 2600:3c01:e000:00ae:0063::3/64 preferred_lft 0 dev eth0
   iface eth0 inet6 static
     address 2600:3c01:e000:00ae:0063::4
     netmask 64
+    up ip addr change 2600:3c01:e000:00ae:0063::4/64 preferred_lft 0 dev eth0
   iface eth0 inet6 static
     address 2600:3c01:e000:00ae:0063::5
     netmask 64
+    up ip addr change 2600:3c01:e000:00ae:0063::5/64 preferred_lft 0 dev eth0

@@ -1,5 +1,5 @@
-- name: accounts | configure knot group
-  group: name=knot system=yes
+- name: accounts | configure nsd group
+  group: name=nsd system=yes
 
-- name: accounts | configure knot user
-  user: name=knot group=knot home=/var/lib/knot system=yes
+- name: accounts | configure nsd user
+  user: name=nsd group=nsd home=/srv/dns system=yes

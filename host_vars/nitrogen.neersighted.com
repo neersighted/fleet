@@ -12,6 +12,8 @@ interfaces: |
   iface eth0 inet6 static
     address 2a00:d880:3:2::7a71:af49
     netmask 64
+    up ip addr change 2a00:d880:3:2::7a71:af49/64 preferred_lft 0 dev eth0
   iface eth0 inet6 static
     address 2a00:d880:3:2::da65:1bd0
     netmask 64
+    up ip addr change 2a00:d880:3:2::da65:1bd0/64 preferred_lft 0 dev eth0

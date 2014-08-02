@@ -13,9 +13,11 @@ interfaces: |
   iface eth0 inet6 static
     address 2602:ffea:a::cd71:2162
     netmask 64
+    up ip addr change 2602:ffea:a::cd71:2162/64 preferred_lft 0 dev eth0
   iface eth0 inet6 static
     address 2602:ffea:a::fdef:901b
     netmask 64
+    up ip addr change 2602:ffea:a::fdef:901b/64 preferred_lft 0 dev eth0
 
 nbnc_ip:
   4: 107.150.9.211
