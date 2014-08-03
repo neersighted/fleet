@@ -2,7 +2,7 @@
   apt: pkg=nsd state=latest
   when: ansible_pkg_mgr == 'apt'
 
-- name: nsd | install ldns (apt)
+- name: nsd | install ldnsutils (apt)
   apt: pkg=ldnsutils state=latest
   when: ansible_pkg_mgr == 'apt'
 

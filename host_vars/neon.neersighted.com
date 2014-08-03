@@ -10,10 +10,12 @@ interfaces: |
     gateway 2602:ffea:a::1
     address 2602:ffea:a::536c:b804
     netmask 64
+  # am.neersighted.com
   iface eth0 inet6 static
     address 2602:ffea:a::cd71:2162
     netmask 64
     up ip addr change 2602:ffea:a::cd71:2162/64 preferred_lft 0 dev eth0
+  # be.neer.io
   iface eth0 inet6 static
     address 2602:ffea:a::fdef:901b
     netmask 64
