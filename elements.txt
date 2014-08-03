@@ -11,7 +11,7 @@ fluorine
 sodium
 magnesium
 aluminum
-#silicon
+silicon
 phosphorus
 sulfur
 chlorine
@@ -25,7 +25,7 @@ chromium
 manganese
 iron
 #cobalt
-nickel
+#nickel
 #copper
 zinc
 gallium

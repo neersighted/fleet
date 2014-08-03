@@ -27,12 +27,12 @@ cobalt.neersighted.com
 [crissic]
 neon.neersighted.com
 
-[digitalocean:chldren]
-digitalocean-london
-digitalocean-singapore
-[digitalocean-london]
-silicon.neersighted.com
-[digitalocean-singapore]
+[digitalocean:children]
+digitalocean-lon
+digitalocean-sgp
+[digitalocean-lon]
+nickel.neersighted.com
+[digitalocean-sgp]
 copper.neersighted.com
 
 [linode:children]
