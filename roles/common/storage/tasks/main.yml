@@ -1,1 +1,1 @@
-- include: fstab.yml
+- include: fstab.yml tags=fstab

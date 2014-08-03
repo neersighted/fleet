@@ -1,2 +1,2 @@
-- include: accounts.yml
-- include: nbnc.yml
+- include: accounts.yml tags=accounts
+- include: nbnc.yml tags=nbnc

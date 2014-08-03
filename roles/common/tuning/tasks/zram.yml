@@ -1,0 +1,6 @@
+- name: zram | install zram
+  copy: src=zram dest=/etc/init.d/zram mode=755
+  notify: restart zram
+
+- name: zram | enable and start zram
+  service: name=zram state=started enabled=yes

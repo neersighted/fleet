@@ -1,0 +1,5 @@
+- name: reload charybdis
+  service: name=charybdis state=reloaded
+
+- name: restart nsd
+  service: name=charybdis state=restarted

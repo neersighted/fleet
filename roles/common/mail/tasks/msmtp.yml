@@ -1,0 +1,12 @@
+- name: install msmtp (apt)
+  with_items:
+    - msmtp
+    - msmtp-mta
+  apt: pkg={{ item }} state=latest
+  when: ansible_pkg_mgr == 'apt'
+
+- name: configure msmtp
+  template: src=msmtprc dest=/etc/msmtprc
+
+- name: configure aliases
+  template: src=aliases dest=/etc/aliases

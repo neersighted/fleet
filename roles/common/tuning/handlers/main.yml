@@ -1,0 +1,2 @@
+- name: restart zram
+  service: name=zram state=restarted

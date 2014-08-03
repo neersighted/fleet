@@ -16,6 +16,7 @@
 
 - name: nbnc | install nbnc service
   template: src=nbnc dest=/etc/init.d/nbnc mode=755
+  notify: restart nbnc
 
 - name: nbnc | enable and start nbnc
   service: name=nbnc state=started enabled=yes

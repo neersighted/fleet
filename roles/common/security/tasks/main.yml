@@ -1,3 +1,3 @@
-- include: sudo.yml
-- include: accounts.yml
-- include: ssh.yml
+- include: accounts.yml tags=accounts
+- include: sudo.yml tags=sudo
+- include: ssh.yml tags=ssh

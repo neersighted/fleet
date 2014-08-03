@@ -1,2 +1,2 @@
-- include: accounts.yml
-- include: nsd.yml
+- include: accounts.yml tags=accounts
+- include: nsd.yml tags=nsd

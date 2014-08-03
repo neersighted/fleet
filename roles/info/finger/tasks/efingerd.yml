@@ -1,0 +1,14 @@
+- name: efingerd | install efingerd (apt)
+  apt: pkg=efingerd state=latest
+  when: ansible_pkg_mgr == 'apt'
+
+- name: efingerd | configure xinetd to run efingerd
+  copy: src=finger.xin dest=/etc/xinetd.d/efingerd
+  notify: restart xinetd
+
+- name: efingerd | configure efingerd
+  with_items:
+    - list
+    - luser
+    - nouser
+  template: src={{ item }} dest=/etc/efingerd/{{ item }} mode=0755

@@ -1,5 +1,5 @@
 - name: clock | install ntp (apt)
-  apt: pkg=ntp state=installed
+  apt: pkg=ntp state=latest
   when: ansible_pkg_mgr == 'apt'
 
 - name: clock | configure ntp

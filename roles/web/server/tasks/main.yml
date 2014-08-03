@@ -1,2 +1,2 @@
-- include: accounts.yml
-- include: nginx.yml
+- include: accounts.yml tags=accounts
+- include: nginx.yml tags=nginx
