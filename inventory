@@ -6,6 +6,9 @@
 carbon.neersighted.com
 oxygen.neersighted.com
 
+[irc]
+helium.neersighted.com
+
 [prx]
 neon.neersighted.com
 
@@ -23,6 +26,14 @@ cobalt.neersighted.com
 
 [crissic]
 neon.neersighted.com
+
+[digitalocean:chldren]
+digitalocean-london
+digitalocean-singapore
+[digitalocean-london]
+silicon.neersighted.com
+[digitalocean-singapore]
+copper.neersighted.com
 
 [linode:children]
 linode-dal

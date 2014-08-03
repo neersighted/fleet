@@ -1,0 +1,4 @@
+- hosts: irc
+  sudo: yes
+  roles:
+    - role: irc/server

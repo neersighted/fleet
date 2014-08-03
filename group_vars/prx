@@ -1,15 +1,19 @@
 firewall:
   nbnc:
-    port: 6661:6665
+    port: 6611:6619
     proto: tcp
     rule: allow
 
 nbncs:
-  6661: {6: yes, ip: irc.ipv6.esper.net, port: 6667}
-  6662: {6: yes, ip: irc.ipv6.freenode.net, port: 6667}
-  6663: {6: yes, ip: irc6.oftc.net, port: 6667}
-  6664: {6: yes, ip: irc6.quakenet.org, port: 6667}
-  6665: {6: yes, ip: irc6.rizon.net, port: 6667}
+  6611: {6: yes, ip: irc.esper.net, port: 6667}
+  6612: {6: yes, ip: irc.freenode.net, port: 6667}
+  6613: {6: yes, ip: irc.oftc.net, port: 6667}
+  6614: {6: yes, ip: irc.atheme.org, port: 6667}
+  6615: {6: yes, ip: irc.netchat.io, port: 6667}
+  6616: {6: yes, ip: irc.dairc.net, port: 6667}
+  6617: {6: yes, ip: irc.irccloud.com, port: 6667}
+  6618: {6: yes, ip: irc.ipv6.quakenet.org, port: 6667}
+  6619: {6: yes, ip: irc.rizon.net, port: 6667}
 nbnc_pass: 4831213e43179e28d1283bf307d353f80f1af06daeb8d5ccb62592b00c122ddd
 
 nidd_ident: i

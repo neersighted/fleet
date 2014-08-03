@@ -1,4 +1,5 @@
 packages:
+  vim-nox: latest
   mosh: latest
   htop: latest
   iotop: latest
