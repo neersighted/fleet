@@ -11,7 +11,7 @@ firewall:
 zones:
   neer.io:
     ttl: 300
-    serial: 2014080250
+    serial: 2014080201
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -42,7 +42,7 @@ zones:
       @ TXT "keybase-site-verification=zL78_Fypnnjh5TyG0t3-JOFjSRf1P3Kct7WVRBZ2Nh4"
   neersighted.com:
     ttl: 300
-    serial: 2014080250
+    serial: 2014080201
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -147,7 +147,7 @@ zones:
       oxygen.neersighted.com. SSHFP 3 2 71D4B400C76279F6F548D4818701E5031985E4C5D60B949315DBDA630DD912A2
   neergaard.me:
     ttl: 300
-    serial: 2014080250
+    serial: 2014080201
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -176,7 +176,7 @@ zones:
       @ TXT "keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"
   royalspades.co:
     ttl: 300
-    serial: 2014080250
+    serial: 2014080201
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -199,7 +199,7 @@ zones:
     crypto: |
   singulo.co:
     ttl: 300
-    serial: 2014080250
+    serial: 2014080201
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no

@@ -3,11 +3,11 @@ packages:
   htop: latest
   iotop: latest
   iftop: latest
-  apt-listbugs: latest
-  apt-listchanges: latest
-  apt-file: latest
-  curl: latest
   ack-grep: latest
+  apt-file: latest
+  tcpdump: latest
+  curl: latest
+  git: latest
   nfs-common: absent
   rpcbind: absent
 

@@ -10,14 +10,14 @@
   template: src=nsd.conf dest=/etc/nsd/nsd.conf owner=nsd validate='nsd-checkconf %s'
   notify: restart nsd
 
+- name: nsd | transfer keys
+  copy: src=files/dns/keys/ dest=/srv/dns/keys/ owner=knot
+
 - name: nsd | transfer zones
   with_dict: zones
   template: src=zone.db dest=/srv/dns/{{ item.key }}.db owner=nsd
   notify: reload nsd
   register: zonetransfer
-
-- name: knot | copy dnssec keys
-  copy: src=files/dns/keys/ dest=/srv/dns/keys owner=knot
 
 - name: nsd | sign zones
   with_dict: zones
