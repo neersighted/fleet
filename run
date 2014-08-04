@@ -9,4 +9,4 @@ else
 fi
 
 
-ansible-playbook plays/${playbook}.yml --vault-password-file .vault $@
+ansible-playbook plays/${playbook}.yml $@

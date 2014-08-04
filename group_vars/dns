@@ -42,7 +42,7 @@ zones:
       @ TXT "keybase-site-verification=zL78_Fypnnjh5TyG0t3-JOFjSRf1P3Kct7WVRBZ2Nh4"
   neersighted.com:
     ttl: 300
-    serial: 2014080307
+    serial: 2014080308
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
