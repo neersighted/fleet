@@ -11,7 +11,7 @@ firewall:
 zones:
   neer.io:
     ttl: 300
-    serial: 2014080306
+    serial: 2014080401
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -29,7 +29,7 @@ zones:
       mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKHkayj0jloRLhViPBHEH+7Tu32wEcgCZpu84XV6Se1Excnk36NdIeOpFKpAGMdjh7luL689NHPWaQIs3V1xV7yzZVH0wpV59uY00v/oVAYCXKz0s6DvC90tZXbkjvWA+iAvfU228Xxylapz37l4r6FPW8K5wgYx4v22DBmPuFswIDAQAB"
     hosts: |
       @ A 96.126.118.209 ; hydrogen.neersighted.com
-      @ AAAA 2600:3c00:e000:008c:4d50::3 ; hydrogen.neersighted.com
+      @ AAAA 2600:3c00:e000:008c::3 ; hydrogen.neersighted.com
       www CNAME @
 
       be AAAA 2602:ffea:a::fdef:901b ; neon.neersighted.com, vanity rdns
@@ -42,7 +42,7 @@ zones:
       @ TXT "keybase-site-verification=zL78_Fypnnjh5TyG0t3-JOFjSRf1P3Kct7WVRBZ2Nh4"
   neersighted.com:
     ttl: 300
-    serial: 2014080308
+    serial: 2014080401
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -60,7 +60,7 @@ zones:
       mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsix0DtMAEDUAM3XX2sfpU9nRPF8iWSlHBBKUbBqBfqaYEZ1tZxWKqxA9UWaKrPgJm8Ry+J+rjCiFZM3GjvXCgq4uKZEmGWHgHl8eiEJB4fxaJCzhl1NuJHgr+nWTB1YS3utf50G2HeTp5rPkvxWeH7CvyZtPZcNmRq8G0+AqZtQIDAQAB"
     hosts: |
       @ A 69.164.204.41
-      @ AAAA 2600:3c00:e000:008c:4d50::1
+      @ AAAA 2600:3c00:e000:008c::1
       www CNAME @
 
       ns1 A 173.255.230.140 ; carbon
@@ -77,7 +77,7 @@ zones:
       carbon A 173.255.230.140
       carbon AAAA 2600:3c03::f03c:91ff:fe73:bb00
       cobalt A 209.141.61.108
-      cobalt AAAA 2605:6400:0020:2cc3::dead:bea7
+      cobalt AAAA 2605:6400:0020:2cc3::1
       copper A 128.199.253.245
       copper AAAA 2400:6180:0:d0::db:8001
       helium A 71.19.154.209
@@ -86,9 +86,9 @@ zones:
       hydrogen A 96.126.118.209
       hydrogen A 198.58.114.99
       hydrogen AAAA 2600:3c00::f03c:91ff:fe73:bbd8
-      hydrogen AAAA 2600:3c00:e000:008c:4d50::1
-      hydrogen AAAA 2600:3c00:e000:008c:4d50::2
-      hydrogen AAAA 2600:3c00:e000:008c:4d50::3
+      hydrogen AAAA 2600:3c00:e000:008c::1
+      hydrogen AAAA 2600:3c00:e000:008c::2
+      hydrogen AAAA 2600:3c00:e000:008c::3
       iron A 107.150.19.150
       iron AAAA 2602:ffea:a::951e:f853
       neon A 107.150.9.211
@@ -153,7 +153,7 @@ zones:
       oxygen.neersighted.com. SSHFP 3 2 71D4B400C76279F6F548D4818701E5031985E4C5D60B949315DBDA630DD912A2
   neergaard.me:
     ttl: 300
-    serial: 2014080306
+    serial: 2014080401
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -171,7 +171,7 @@ zones:
       mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDR4gWyapi2MTG5cWbpOduoqwBJaH4JO74HNDLBWDheu329HtRcyvakBumpmycSh2/zN7oRKHRNBT222kMy/qAsqwWNFfo+UdI9dnlKy17mFdRdozEv+tBVk6BtYUb/lIvxg9au1izYPDAj1+wQXh+j0lfdP7hi6riIjhZVDjoH+QIDAQAB"
     hosts: |
       @ A 198.58.114.99 ; hydrogen.neersighted.com
-      @ AAAA 2600:3c00:e000:008c:4d50::2 ; hydrogen.neersighted.com
+      @ AAAA 2600:3c00:e000:008c::2 ; hydrogen.neersighted.com
       www CNAME @
     crypto: |
       @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
@@ -182,7 +182,7 @@ zones:
       @ TXT "keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"
   royalspades.co:
     ttl: 300
-    serial: 2014080306
+    serial: 2014080401
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -205,7 +205,7 @@ zones:
     crypto: |
   singulo.co:
     ttl: 300
-    serial: 2014080306
+    serial: 2014080401
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -231,7 +231,7 @@ zones:
     crypto: |
   saynay.me:
     ttl: 300
-    serial: 2014080306
+    serial: 2014080401
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes

@@ -19,13 +19,13 @@ vhosts:
     stub_status on;
   neersighted.com-redirect: |
     listen 69.164.204.41:80 default_server;
-    listen [2600:3c00:e000:008c:4d50::1]:80 default_server;
+    listen [2600:3c00:e000:008c::1]:80 default_server;
     server_name neersighted.com www.neersighted.com;
 
     return 301 https://neersighted.com$request_uri;
   neersighted.com: |
     listen 69.164.204.41:443 ssl spdy default_server;
-    listen [2600:3c00:e000:008c:4d50::1]:443 ssl spdy default_server;
+    listen [2600:3c00:e000:008c::1]:443 ssl spdy default_server;
     server_name neersighted.com;
 
     ssl_dhparam ssl/dhparam.pem;
@@ -50,7 +50,7 @@ vhosts:
     index index.html;
   www.neersighted.com: |
     listen 69.164.204.41:443 ssl spdy;
-    listen [2600:3c00:e000:008c:4d50::1]:443 ssl spdy;
+    listen [2600:3c00:e000:008c::1]:443 ssl spdy;
     server_name www.neersighted.com;
 
     ssl_dhparam ssl/dhparam.pem;
@@ -69,13 +69,13 @@ vhosts:
     return 301 https://neersighted.com$request_uri;
   neer.io-redirect: |
     listen 96.126.118.209:80 default_server;
-    listen [2600:3c00:e000:008c:4d50::3]:80 default_server;
+    listen [2600:3c00:e000:008c::3]:80 default_server;
     server_name neer.io www.neer.io;
 
     return 301 https://neer.io$request_uri;
   neer.io: |
     listen 96.126.118.209:443 ssl spdy default_server;
-    listen [2600:3c00:e000:008c:4d50::3]:443 ssl spdy default_server;
+    listen [2600:3c00:e000:008c::3]:443 ssl spdy default_server;
     server_name neer.io;
 
     ssl_dhparam ssl/dhparam.pem;
@@ -100,7 +100,7 @@ vhosts:
     index index.html;
   www.neer.io: |
     listen 96.126.118.209:443 ssl spdy;
-    listen [2600:3c00:e000:008c:4d50::2]:443 ssl spdy;
+    listen [2600:3c00:e000:008c::2]:443 ssl spdy;
     server_name www.neer.io;
 
     ssl_dhparam ssl/dhparam.pem;
@@ -119,13 +119,13 @@ vhosts:
     return 301 https://neer.io$request_uri;
   neergaard.me-redirect: |
     listen 198.58.114.99:80 default_server;
-    listen [2600:3c00:e000:008c:4d50::2]:80 default_server;
+    listen [2600:3c00:e000:008c::2]:80 default_server;
     server_name neergaard.me www.neergaard.me;
 
     return 301 https://neergaard.me$request_uri;
   neergaard.me: |
     listen 198.58.114.99:443 ssl spdy default_server;
-    listen [2600:3c00:e000:008c:4d50::2]:443 ssl spdy default_server;
+    listen [2600:3c00:e000:008c::2]:443 ssl spdy default_server;
     server_name neergaard.me;
 
     ssl_dhparam ssl/dhparam.pem;
@@ -150,7 +150,7 @@ vhosts:
     index index.html;
   www.neergaard.me: |
     listen 198.58.114.99:443 ssl spdy;
-    listen [2600:3c00:e000:008c:4d50::2]:443 ssl spdy;
+    listen [2600:3c00:e000:008c::2]:443 ssl spdy;
     server_name www.neergaard.me;
 
     ssl_dhparam ssl/dhparam.pem;
