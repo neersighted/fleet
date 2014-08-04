@@ -1,2 +1,2 @@
 dependencies:
-  - role: tools/go
+  - role: lang/go

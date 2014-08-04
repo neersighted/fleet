@@ -1,4 +1,4 @@
-- name: nginx| add nginx repo key (apt)
+- name: nginx | add nginx repo key (apt)
   apt_key: id=7BD9BF62 url=http://nginx.org/keys/nginx_signing.key state=present
   when: ansible_pkg_mgr == 'apt'
 
