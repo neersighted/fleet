@@ -11,7 +11,7 @@
   notify: restart nsd
 
 - name: nsd | transfer keys
-  copy: src=files/dns/keys/ dest=/srv/dns/keys/ owner=knot
+  copy: src=files/dns/keys/ dest=/srv/dns/keys/ owner=nsd
 
 - name: nsd | transfer zones
   with_dict: zones
@@ -23,6 +23,7 @@
   with_dict: zones
   when: zonetransfer.changed and item.value.dnssec
   script: signzone {{ item.key }}
+  notify: restart nsd
 
 - name: nsd | enable and start nsd
   service: name=nsd state=started enabled=yes

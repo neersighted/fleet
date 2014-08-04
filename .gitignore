@@ -3,3 +3,9 @@
 #
 
 .ansible.log
+
+#
+# Secret Keys
+#
+
+.vault

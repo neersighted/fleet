@@ -1,7 +1,7 @@
 mail:
-  to: admin@neersighted.com
-  from: fleet@neersighted.com
-  server: mail.messagingengine.com
+  to: to@change.me
+  from: from@change.me
+  server: mail.change.me
 mail_auth:
-  user: bjorn@neersighted.com
-  pass: 9K2k6758tey9HD56
+  user: changeme
+  pass: changeme

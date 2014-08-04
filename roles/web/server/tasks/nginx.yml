@@ -19,7 +19,7 @@
   template: src=vhost.conf dest=/etc/nginx/conf.d/{{ item.key }}.conf
   notify: reload nginx
 
-- name: nginx | transfer ssl bundles
+- name: nginx | transfer keys
   copy: src=files/web/ssl/ dest=/etc/nginx/ssl/ owner=nginx
   notify: reload nginx
 

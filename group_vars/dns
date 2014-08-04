@@ -11,7 +11,7 @@ firewall:
 zones:
   neer.io:
     ttl: 300
-    serial: 2014080201
+    serial: 2014080306
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -42,7 +42,7 @@ zones:
       @ TXT "keybase-site-verification=zL78_Fypnnjh5TyG0t3-JOFjSRf1P3Kct7WVRBZ2Nh4"
   neersighted.com:
     ttl: 300
-    serial: 2014080301
+    serial: 2014080307
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -89,8 +89,12 @@ zones:
       hydrogen AAAA 2600:3c00:e000:008c:4d50::1
       hydrogen AAAA 2600:3c00:e000:008c:4d50::2
       hydrogen AAAA 2600:3c00:e000:008c:4d50::3
+      iron A 107.150.19.150
+      iron AAAA 2602:ffea:a::951e:f853
       neon A 107.150.9.211
       neon AAAA 2602:ffea:a::536c:b804
+      nickel A 178.62.26.231
+      nickel AAAA 2a03:b0c0:1:d0::80:4001
       nitrogen A 81.4.110.116
       nitrogen AAAA 2a00:d880:3:2::324b:e9a1
       oxygen A 74.207.242.71
@@ -149,7 +153,7 @@ zones:
       oxygen.neersighted.com. SSHFP 3 2 71D4B400C76279F6F548D4818701E5031985E4C5D60B949315DBDA630DD912A2
   neergaard.me:
     ttl: 300
-    serial: 2014080201
+    serial: 2014080306
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: yes
@@ -178,7 +182,7 @@ zones:
       @ TXT "keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"
   royalspades.co:
     ttl: 300
-    serial: 2014080201
+    serial: 2014080306
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -201,7 +205,7 @@ zones:
     crypto: |
   singulo.co:
     ttl: 300
-    serial: 2014080201
+    serial: 2014080306
     admin: bjorn@neersighted.com
     primary: ns1.neersighted.com
     dnssec: no
@@ -225,6 +229,27 @@ zones:
 
       _minecraft._tcp SRV 0 0 25565 play
     crypto: |
+  saynay.me:
+    ttl: 300
+    serial: 2014080306
+    admin: bjorn@neersighted.com
+    primary: ns1.neersighted.com
+    dnssec: yes
+    nameservers: |
+      @ NS ns1.neersighted.com.
+      @ NS ns2.neersighted.com.
+      @ NS ns3.neersighted.com.
+      @ NS ns4.neersighted.com.
+    mailservers: |
+      * MX 10 in1-smtp.messagingengine.com.
+      * MX 20 in2-smtp.messagingengine.com.
+      @ MX 10 in1-smtp.messagingengine.com.
+      @ MX 20 in2-smtp.messagingengine.com.
+    hosts: |
+      mail A 66.111.4.55
+      mail A 66.111.4.56
+    crypto: |
+      @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
 slaves:
   - 69.93.127.10
   - 2600:3c00::a

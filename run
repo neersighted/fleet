@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [ "$1" != "" ]; then
+  playbook=$1
+  shift
+else
+  echo "Must specify a playbook!"
+  exit 1
+fi
+
+
+ansible-playbook plays/${playbook}.yml --vault-password-file .vault $@
