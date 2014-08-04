@@ -9,7 +9,7 @@ nbncs:
   6612: {6: yes, ip: irc.freenode.net, port: 6667}
   6613: {6: yes, ip: irc.oftc.net, port: 6667}
   6614: {6: yes, ip: irc.atheme.org, port: 6667}
-  6615: {6: yes, ip: irc.netchat.io, port: 6667}
+# 6615
   6616: {6: yes, ip: irc.dairc.net, port: 6667}
   6617: {6: yes, ip: irc.irccloud.com, port: 6667}
   6618: {6: yes, ip: irc.ipv6.quakenet.org, port: 6667}
