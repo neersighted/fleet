@@ -4,10 +4,10 @@
 
 - name: java | add java repo (apt)
   apt_repository: repo='deb http://ppa.launchpad.net/webupd8team/java/ubuntu utopic main' state=present
-  register: java_repo
   when: ansible_pkg_mgr == 'apt'
+  register: java_repo
 
-- name: java | accept java license (apt)
+- name: accept java license (apt)
   shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
   when: ansible_pkg_mgr == 'apt' and java_repo.changed
 

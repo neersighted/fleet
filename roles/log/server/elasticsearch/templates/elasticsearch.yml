@@ -1,4 +1,6 @@
 node.name: {{ ansible_fqdn }}
-script.disable_dynamic: true
+
 network.host: localhost
 discovery.zen.ping.multicast.enabled: false
+
+script.disable_dynamic: true

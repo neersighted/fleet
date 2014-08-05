@@ -1,0 +1,5 @@
+firewall:
+  lumberjack:
+    port: 5000
+    proto: tcp
+    rule: allow
