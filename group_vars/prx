@@ -3,6 +3,10 @@ firewall:
     port: 6611:6619
     proto: tcp
     rule: allow
+  ident:
+    port: 113
+    proto: tcp
+    rule: allow
 
 nbncs:
   6611: {6: yes, ip: irc.esper.net, port: 6667}
