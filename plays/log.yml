@@ -1,4 +1,5 @@
-- hosts: log
+- name: Log Servers (log)
+  hosts: log
   sudo: yes
   roles:
     - role: log/server

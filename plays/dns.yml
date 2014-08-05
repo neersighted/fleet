@@ -1,4 +1,5 @@
-- hosts: dns
+- name: DNS Servers (dns)
+  hosts: dns
   sudo: yes
   roles:
     - role: dns/server

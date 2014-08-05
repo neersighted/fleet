@@ -1,4 +1,5 @@
-- hosts: web
+- name: Web Servers (web)
+  hosts: web
   sudo: yes
   roles:
     - role: web/server

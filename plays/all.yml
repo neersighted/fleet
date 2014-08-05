@@ -1,4 +1,5 @@
-- hosts: all
+- name: Common (all)
+  hosts: all
   sudo: yes
   roles:
     - role: common

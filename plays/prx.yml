@@ -1,4 +1,5 @@
-- hosts: prx
+- name: Proxy Servers (prx)
+  hosts: prx
   sudo: yes
   roles:
     - role: irc/proxy
