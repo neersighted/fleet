@@ -8,7 +8,7 @@
 
 - name: nsd | configure nsd
   tags: [nsd, server, dns]
-  template: src=nsd.conf dest=/etc/nsd/nsd.conf owner=nsd validate='nsd-checkconf %s'
+  template: src=nsd.conf dest=/etc/nsd/nsd.conf validate='nsd-checkconf %s'
   notify: restart nsd
 
 - name: nsd | enable and start nsd

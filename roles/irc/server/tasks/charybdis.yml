@@ -3,11 +3,11 @@
   when: ansible_pkg_mgr == 'apt'
 
 - name: charybdis | transfer config
-  copy: src=files/irc/{{ inventory_hostname }}.conf dest=/etc/charybdis/ircd.conf owner=root group=charybdis
+  copy: src=files/irc/{{ inventory_hostname }}.conf dest=/etc/charybdis/ircd.conf
   notify: reload charybdis
 
 - name: charybdis | transfer motd
-  copy: src=files/irc/{{ inventory_hostname }}.motd dest=/etc/charybdis/ircd.motd owner=root group=charybdis
+  copy: src=files/irc/{{ inventory_hostname }}.motd dest=/etc/charybdis/ircd.motd
   notify: reload charybdis
 
 - name: charybdis | enable and start charybdis
