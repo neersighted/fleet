@@ -8,7 +8,7 @@
 
 - name: nsd | configure nsd.conf.d
   tags: [nsd, server, dns]
-  file: path=/etc/nsd/nsd.conf.d.conf state=touch
+  file: path=/etc/nsd/nsd.conf.d.conf state=file
 
 - name: nsd | configure nsd
   tags: [nsd, server, dns]
