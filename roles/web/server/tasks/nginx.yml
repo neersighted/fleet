@@ -1,30 +1,9 @@
-- name: nginx | add nginx repo key (apt)
-  apt_key: id=7BD9BF62 url=http://nginx.org/keys/nginx_signing.key state=present
-  when: ansible_pkg_mgr == 'apt'
-
-- name: nginx | add nginx repo (apt)
-  apt_repository: repo='deb http://nginx.org/packages/mainline/debian wheezy nginx' state=present
-  when: ansible_pkg_mgr == 'apt'
-
-- name: nginx | install nginx (apt)
-  apt: pkg=nginx state=latest
-  when: ansible_pkg_mgr == 'apt'
+- name: nginx | configure nginx.conf.d
+  file: path=/etc/nginx/nginx.conf.d state=directory
 
 - name: nginx | configure nginx
   template: src=nginx.conf dest=/etc/nginx/nginx.conf validate='nginx -tc %s'
   notify: restart nginx
-
-- name: nginx| set up vhosts directory
-  file: path=/etc/nginx/sites.d state=directory
-
-- name: nginx | configure vhosts
-  with_dict: vhosts
-  template: src=vhost.conf dest=/etc/nginx/sites.d/{{ item.key }}.conf
-  notify: reload nginx
-
-- name: nginx | transfer keys
-  copy: src=files/web/ssl/ dest=/etc/nginx/ssl/ owner=nginx
-  notify: reload nginx
 
 - name: nginx | enable and start nginx
   service: name=nginx state=started enabled=yes

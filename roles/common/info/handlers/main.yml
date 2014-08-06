@@ -1,1 +1,2 @@
-- include: ntp.yml
+- name: restart ntp
+  service: name=ntp state=restarted

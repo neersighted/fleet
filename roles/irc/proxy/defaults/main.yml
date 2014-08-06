@@ -1,0 +1,5 @@
+nbncs: {}
+nbnc_ip:
+  4: 0.0.0.0
+  6: '::'
+nbnc_pass: changeme

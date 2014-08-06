@@ -1,1 +1,2 @@
-- include: ssh.yml
+- name: restart ssh
+  service: name=ssh state=restarted

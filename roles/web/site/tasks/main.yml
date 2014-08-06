@@ -1,0 +1,3 @@
+- name: configure site {{ site }}
+  tags: [zone, dns]
+  copy: src={{ conf }} dest=/etc/nginx/nginx.conf.d/{{ conf|basename }}

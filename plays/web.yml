@@ -3,7 +3,9 @@
   sudo: yes
   roles:
     - { role: web/server }
+    - { role: web/site, site: localhost, conf: files/web/localhost.conf }
+    - { role: web/site, site: neer.io, conf: files/web/neer.io.conf }
+    - { role: web/site, site: neergaard.me, conf: files/web/neergaard.me.conf }
+    - { role: web/site, site: neersighted.com, conf: files/web/neersighted.com.conf }
     - { role: firewall/rule, rule: { rule: allow, port: http } }
     - { role: firewall/rule, rule: { rule: allow, port: https } }
-    - { role: info/finger }
-    - { role: firewall/rule, rule: { rule: allow, port: finger } }
