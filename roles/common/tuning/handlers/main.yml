@@ -1,2 +1,1 @@
-- name: restart zram
-  service: name=zram state=restarted
+- include: zram.yml

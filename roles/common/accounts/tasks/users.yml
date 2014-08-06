@@ -1,0 +1,5 @@
+- name: users | create ansible user
+  user: name=ansible state=present
+
+- name: users | create admin user
+  user: name={{ admin_user }} password={{ admin_pass }} state=present

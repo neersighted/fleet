@@ -1,7 +1,5 @@
-# Xen
+extract_kernel: false
+
 boot_device: hd0,0
 root_device: xvda1
 console_device: hvc0
-
-# Kernel
-extract_kernel: false

@@ -1,0 +1,5 @@
+- name: update | update index (apt)
+  apt: update_cache=yes
+
+- name: update | upgrade system (apt)
+  apt: upgrade=dist

@@ -1,0 +1,13 @@
+- name: utils | install utilities
+  with_items:
+    - mosh
+    - git
+    - curl
+    - vim-nox
+    - ack-grep
+    - apt-file
+    - htop
+    - iotop
+    - iftop
+    - tcpdump
+  apt: pkg={{ item }} state=latest

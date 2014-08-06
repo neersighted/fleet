@@ -8,12 +8,12 @@ hiddenmenu
 default 0
 timeout 3
 
-title   Debian GNU/Linux {{ kernel_version.stdout }}
+title   Linux {{ kernel_version.stdout }}
 root    ({{ boot_device }})
 kernel  /boot/{{ kernel_name }}-{{ kernel_version.stdout }} root=/dev/{{ root_device }} console={{ console_device }}
 initrd  /boot/initrd.img-{{ kernel_version.stdout }}
 
-title   Debian GNU/Linux {{ kernel_version.stdout }} (single-user)
+title   Linux {{ kernel_version.stdout }} (single-user)
 root    ({{ boot_device }})
 kernel  /boot/{{ kernel_name }}-{{ kernel_version.stdout }} root=/dev/{{ root_device }} console={{ console_device }} single
 initrd  /boot/initrd.img-{{ kernel_version.stdout }}

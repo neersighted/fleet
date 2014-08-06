@@ -1,5 +1,5 @@
 - include: debian.yml tags=debian
   when: ansible_os_family == 'Debian'
 
-- include: apt.yml tags=apt
-  when: ansible_pkg_mgr == 'apt'
+- include: update.yml tags=update
+- include: utils.yml tags=utils

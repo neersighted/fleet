@@ -1,9 +1,0 @@
-- name: apt | update cache
-  apt: update_cache=yes
-
-- name: apt | install packages
-  with_dict: packages
-  apt: pkg={{ item.key }} state={{ item.value }} purge=yes
-
-- name: apt | upgrade packages
-  apt: upgrade=dist

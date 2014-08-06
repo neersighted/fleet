@@ -1,2 +1,2 @@
-- name: ssh | restart sshd
+- name: restart ssh
   service: name=ssh state=restarted

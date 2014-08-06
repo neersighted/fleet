@@ -1,9 +1,0 @@
-- name: accounts | configure groups
-  with_dict: account_groups
-  action: group name={{ item.key }}
-  args: item.value
-
-- name: accounts | configure users
-  with_dict: accounts
-  action: user name={{ item.key }}
-  args: item.value
