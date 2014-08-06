@@ -3,3 +3,4 @@
   sudo: yes
   roles:
     - { role: log/server }
+    - { role: firewall/rule, rule: { rule: allow, port: 5000, proto: tcp } }
