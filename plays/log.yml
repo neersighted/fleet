@@ -2,4 +2,4 @@
   hosts: log
   sudo: yes
   roles:
-    - role: log/server
+    - { role: log/server }

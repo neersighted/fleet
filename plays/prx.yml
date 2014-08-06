@@ -2,5 +2,5 @@
   hosts: prx
   sudo: yes
   roles:
-    - role: irc/proxy
-    - role: info/ident
+    - { role: irc/proxy }
+    - { role: info/ident }

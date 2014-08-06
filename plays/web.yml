@@ -2,5 +2,5 @@
   hosts: web
   sudo: yes
   roles:
-    - role: web/server
-    - role: info/finger
+    - { role: web/server }
+    - { role: info/finger }

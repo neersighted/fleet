@@ -1,10 +1,10 @@
 dependencies:
-  - role: common/packages
-  - role: common/accounts
-  - role: common/security
-  - role: common/network
-  - role: common/storage
-  - role: common/tuning
-  - role: common/system
-  - role: common/mail
-  - role: common/info
+  - common/packages
+  - common/accounts
+  - common/security
+  - common/network
+  - common/storage
+  - common/tuning
+  - common/system
+  - common/mail
+  - common/info

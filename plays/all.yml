@@ -2,7 +2,7 @@
   hosts: all
   sudo: yes
   roles:
-    - role: common
-    - role: log/forwarder
-    - role: firewall
-    - role: tools
+    - { role: common }
+    - { role: log/forwarder }
+    - { role: firewall }
+    - { role: tools }

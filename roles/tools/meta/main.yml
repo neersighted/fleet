@@ -1,10 +1,10 @@
 dependencies:
-  - role: tools/git
-  - role: tools/curl
-  - role: tools/ack-grep
-  - role: tools/apt-file
-  - role: tools/htop
-  - role: tools/iftop
-  - role: tools/iotop
-  - role: tools/tcpdump
-  - role: tools/mosh
+  - tools/git
+  - tools/curl
+  - tools/ack-grep
+  - tools/apt-file
+  - tools/htop
+  - tools/iftop
+  - tools/iotop
+  - tools/tcpdump
+  - tools/mosh

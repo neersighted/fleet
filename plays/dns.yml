@@ -2,7 +2,7 @@
   hosts: dns
   sudo: yes
   roles:
-    - role: dns/server
+    - { role: dns/server }
     - { role: dns/zone, zone: neer.io, zonefile: files/dns/neer.io.zone }
     - { role: dns/zone, zone: neergaard.me, zonefile: files/dns/neergaard.me.zone }
     - { role: dns/zone, zone: neersighted.com, zonefile: files/dns/neersighted.com.zone }
