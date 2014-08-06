@@ -14,9 +14,12 @@
   template: src=nginx.conf dest=/etc/nginx/nginx.conf validate='nginx -tc %s'
   notify: restart nginx
 
+- name: nginx| set up vhosts directory
+  file: dest=/etc/nginx/sites.d state=directory
+
 - name: nginx | configure vhosts
   with_dict: vhosts
-  template: src=vhost.conf dest=/etc/nginx/conf.d/{{ item.key }}.conf
+  template: src=vhost.conf dest=/etc/nginx/sites.d/{{ item.key }}.conf
   notify: reload nginx
 
 - name: nginx | transfer keys

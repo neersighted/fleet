@@ -1,3 +1,4 @@
 dependencies:
   - log/server/elasticsearch
   - log/server/logstash
+  - log/server/kibana

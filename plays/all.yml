@@ -4,3 +4,4 @@
   roles:
     - role: common
     - role: firewall
+    - role: log/forwarder

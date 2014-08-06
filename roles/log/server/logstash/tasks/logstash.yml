@@ -18,6 +18,7 @@
 
 - name: logstash | configure logstash
   copy: src=conf.d/ dest=/etc/logstash/conf.d/
+  notify: restart logstash
 
 - name: logstash | enable and start logstash
   service: name=logstash state=started enabled=yes
