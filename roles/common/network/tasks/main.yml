@@ -1,3 +1,3 @@
-- include: resolv.yml tags=resolv
+- include: resolvconf.yml tags=resolvconf
 - include: hostname.yml tags=hostname
 - include: interfaces.yml tags=interfaces

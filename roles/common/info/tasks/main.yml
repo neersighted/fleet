@@ -1,2 +1,2 @@
-- include: clock.yml tags=clock
+- include: ntp.yml tags=ntp
 - include: motd.yml tags=motd

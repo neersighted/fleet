@@ -21,3 +21,7 @@ nbncs:
 nbnc_pass: 4831213e43179e28d1283bf307d353f80f1af06daeb8d5ccb62592b00c122ddd
 
 nidd_ident: i
+
+nbnc_ip:
+  4: 107.150.9.211
+  6: 2602:ffea:a::fdef:901b

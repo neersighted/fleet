@@ -1,4 +1,3 @@
 - name: interfaces | configure interfaces
-  template: src=interfaces dest=/etc/network/interfaces
-  when: interfaces is defined
+  copy: src=files/all/network/{{ ansible_fqdn }}.iface dest=/etc/network/interfaces
   notify: restart network

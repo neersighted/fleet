@@ -1,7 +1,1 @@
-mail:
-  to: to@change.me
-  from: from@change.me
-  server: mail.change.me
-mail_auth:
-  user: changeme
-  pass: changeme
+mail_to: admin@neersighted.com

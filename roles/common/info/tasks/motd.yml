@@ -1,8 +1,2 @@
-- name: motd | generate art
-  local_action: command figlet -w 180 {{ ansible_fqdn }}
-  sudo: false
-  register: art
-  changed_when: false
-
 - name: motd | configure motd
-  template: src=motd/motd dest=/etc/motd
+  copy: content={{ ansible_fqdn }} dest=/etc/motd

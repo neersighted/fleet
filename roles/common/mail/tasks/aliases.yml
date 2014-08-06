@@ -1,0 +1,2 @@
+- name: aliases | configure aliases
+  template: src=aliases/aliases dest=/etc/aliases
