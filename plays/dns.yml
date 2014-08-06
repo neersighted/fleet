@@ -3,3 +3,9 @@
   sudo: yes
   roles:
     - role: dns/server
+    - { role: dns/zone, zone: neer.io, zonefile: files/dns/neer.io.zone }
+    - { role: dns/zone, zone: neergaard.me, zonefile: files/dns/neergaard.me.zone }
+    - { role: dns/zone, zone: neersighted.com, zonefile: files/dns/neersighted.com.zone }
+    - { role: dns/zone, zone: royalspades.co, zonefile: files/dns/royalspades.co.zone }
+    - { role: dns/zone, zone: saynay.me, zonefile: files/dns/saynay.me.zone }
+    - { role: dns/zone, zone: singulo.co, zonefile: files/dns/singulo.co.zone }

@@ -6,9 +6,13 @@
   apt: pkg={{ item }} state=latest
   when: ansible_pkg_mgr == 'apt'
 
+- name: nsd | stub nsd.conf.d
+  tags: [nsd, server, dns]
+  command: touch /etc/nsd/nsd.conf.d.conf creates=/etc/nsd/nsd.conf.d.conf
+
 - name: nsd | configure nsd
   tags: [nsd, server, dns]
-  template: src=nsd.conf dest=/etc/nsd/nsd.conf validate='nsd-checkconf %s'
+  template: src=nsd/nsd.conf dest=/etc/nsd/nsd.conf validate='nsd-checkconf %s'
   notify: restart nsd
 
 - name: nsd | enable and start nsd

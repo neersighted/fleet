@@ -1,1 +1,17 @@
-- name: transfer zone
+- name: transfer zone {{ zone }}
+  tags: [zone, dns]
+  copy: src={{ zonefile }} dest=/srv/dns/{{ zonefile|basename }}
+
+- name: configure zone {{ zone }}
+  tags: [zone, dns]
+  template: src=zone.conf dest=/etc/nsd/nsd.conf.d/{{ zone }}.conf
+  notify: reload nsd
+
+- name: include zone {{ zone }}
+  tags: [zone, dns]
+  lineinfile: >
+    dest=/etc/nsd/nsd.conf.d.conf
+    regexp="^include: /etc/nsd/nsd.conf.d/{{ zone }}.conf"
+    line="include: /etc/nsd/nsd.conf.d/{{ zone }}.conf"
+    insertafter=EOF
+  notify: reload nsd
