@@ -6,9 +6,9 @@
   apt: pkg={{ item }} state=latest
   when: ansible_pkg_mgr == 'apt'
 
-- name: nsd | stub nsd.conf.d
+- name: nsd | configure nsd.conf.d
   tags: [nsd, server, dns]
-  command: touch /etc/nsd/nsd.conf.d.conf creates=/etc/nsd/nsd.conf.d.conf
+  file: path=/etc/nsd/nsd.conf.d.conf state=touch
 
 - name: nsd | configure nsd
   tags: [nsd, server, dns]

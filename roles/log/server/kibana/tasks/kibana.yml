@@ -1,9 +1,5 @@
-- name: kibana | install unzip (apt)
-  apt: pkg=unzip state=latest
-  when: ansible_pkg_mgr == 'apt'
-
 - name: kibana | create kibana directory
-  file: dest=/srv/kibana state=directory owner=nginx
+  file: path=/srv/kibana state=directory
 
 - name: kibana | extract kibana
   unarchive: src=kibana.zip dest=/srv/kibana/ creates=/srv/kibana/config.js

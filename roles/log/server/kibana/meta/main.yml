@@ -1,2 +1,3 @@
 dependencies:
   - web/server
+  - tools/unzip

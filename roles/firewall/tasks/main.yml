@@ -8,11 +8,6 @@
   ufw: policy=deny direction=incoming
   notify: reload firewall
 
-- name: allow incoming ssh
-  tags: [firewall]
-  ufw: port=ssh rule=allow
-  notify: reload firewall
-
 - name: activate ufw
   tags: [firewall]
   ufw: state=enabled

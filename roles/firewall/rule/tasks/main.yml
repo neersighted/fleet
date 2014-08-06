@@ -1,4 +1,4 @@
-- name: activate rule
+- name: activate rule {{ rule }}
   tags: [rule, firewall]
   action: ufw
   args: rule

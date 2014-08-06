@@ -15,7 +15,7 @@
   notify: restart nginx
 
 - name: nginx| set up vhosts directory
-  file: dest=/etc/nginx/sites.d state=directory
+  file: path=/etc/nginx/sites.d state=directory
 
 - name: nginx | configure vhosts
   with_dict: vhosts
