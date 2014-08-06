@@ -1,4 +1,0 @@
-- name: install mosh (apt)
-  tags: [mosh, tools]
-  apt: pkg=mosh state=latest
-  when: ansible_pkg_mgr == 'apt'

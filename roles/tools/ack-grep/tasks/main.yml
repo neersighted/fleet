@@ -1,4 +1,0 @@
-- name: install ack-grep (apt)
-  tags: [ack-grep, tools]
-  apt: pkg=ack-grep state=latest
-  when: ansible_pkg_mgr == 'apt'

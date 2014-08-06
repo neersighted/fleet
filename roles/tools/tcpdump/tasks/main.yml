@@ -1,4 +1,0 @@
-- name: install tcpdump (apt)
-  tags: [tcpdump, tools]
-  apt: pkg=tcpdump state=latest
-  when: ansible_pkg_mgr == 'apt'

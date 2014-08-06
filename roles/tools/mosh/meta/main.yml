@@ -1,2 +1,0 @@
-dependencies:
-  - { role: firewall/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }

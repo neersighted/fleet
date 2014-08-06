@@ -5,4 +5,11 @@
     - { role: common }
     - { role: log/forwarder }
     - { role: firewall }
-    - { role: tools }
+    - { role: firewall/rule, rule: { rule: allow, port: ssh, proto: tcp } }
+    - { role: firewall/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
+    - { role: package/install, package: mosh }
+    - { role: package/install, package: git }
+    - { role: package/install, package: apt-file }
+    - { role: package/install, package: curl }
+    - { role: package/install, package: htop }
+    - { role: package/install, package: tcpdump }
