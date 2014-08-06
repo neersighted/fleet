@@ -1,13 +1,16 @@
 - name: kernel | install linux (apt)
+  tags: [kernel, system, common]
   apt: pkg=linux-image-amd64 state=latest
   when: ansible_pkg_mgr == 'apt'
 
 - name: kernel | get kernel version
+  tags: [kernel, system, common]
   shell: dpkg -s linux-image-amd64|awk '/Depends/{sub(/linux-image-/,""); print $2}'
   register: kernel_version
   changed_when: false
 
 - name: kernel | extract kernel
+  tags: [kernel, system, common]
   script: >
     kernel/extract-vmlinux.sh
     /boot/vmlinuz-{{ kernel_version.stdout }} >

@@ -1,1 +1,2 @@
-- include: msmtp.yml tags=msmtp
+- include: aliases.yml
+- include: msmtp.yml

@@ -1,0 +1,4 @@
+- name: install apt-file (apt)
+  tags: [apt-file, tools]
+  apt: pkg=apt-file-nox state=latest
+  when: ansible_pkg_mgr == 'apt'

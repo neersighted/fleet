@@ -1,2 +1,2 @@
-- include: ssh.yml tags=ssh
-- include: sudo.yml tags=sudo
+- include: ssh.yml
+- include: sudo.yml

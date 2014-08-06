@@ -1,2 +1,3 @@
 - name: hostname | set hostname
+  tags: [hostname, network, common]
   hostname: name={{ inventory_hostname }}

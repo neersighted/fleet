@@ -1,0 +1,4 @@
+- name: install git (apt)
+  tags: [git, tools]
+  apt: pkg=git state=latest
+  when: ansible_pkg_mgr == 'apt'

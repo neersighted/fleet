@@ -1,8 +1,0 @@
-timezone: PST8PDT
-
-firewall_default_in: deny
-firewall:
-  mosh:
-    port: 60000:61000
-    proto: udp
-    rule: allow

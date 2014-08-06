@@ -1,28 +1,18 @@
 - name: install ufw (apt)
+  tags: [firewall]
   apt: pkg=ufw state=latest
   when: ansible_pkg_mgr == 'apt'
 
-- name: enable ipv6
-  lineinfile: >
-    dest=/etc/default/ufw
-    state=present
-    regexp='^IPV6'
-    line='IPV6=yes'
+- name: restrict incoming connections
+  tags: [firewall]
+  ufw: policy=deny direction=incoming
   notify: reload firewall
 
-- name: configure rules
-  with_dict: firewall
-  action: ufw
-  args: item.value
+- name: allow incoming ssh
+  tags: [firewall]
+  ufw: port=ssh rule=allow
   notify: reload firewall
 
-- name: configure default incoming rule
-  ufw: default={{ firewall_default_in}} direction=incoming
-  notify: reload firewall
-
-- name: configure default outgoing rule
-  ufw: default={{ firewall_default_out}} direction=outgoing
-  notify: reload firewall
-
-- name: ufw | enable ufw
+- name: activate ufw
+  tags: [firewall]
   ufw: state=enabled

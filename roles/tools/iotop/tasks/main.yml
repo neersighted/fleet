@@ -1,0 +1,4 @@
+- name: install iotop (apt)
+  tags: [iotop, tools]
+  apt: pkg=iotop state=latest
+  when: ansible_pkg_mgr == 'apt'

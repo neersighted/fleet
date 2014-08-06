@@ -1,0 +1,4 @@
+- name: install vim (apt)
+  tags: [vim, tools]
+  apt: pkg=vim-nox state=latest
+  when: ansible_pkg_mgr == 'apt'

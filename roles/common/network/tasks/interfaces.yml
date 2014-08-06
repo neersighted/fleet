@@ -1,3 +1,4 @@
 - name: interfaces | configure interfaces
+  tags: [interfaces, network, common]
   copy: src=files/all/network/{{ ansible_fqdn }}.iface dest=/etc/network/interfaces
   notify: restart network

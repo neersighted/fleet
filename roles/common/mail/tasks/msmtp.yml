@@ -1,4 +1,5 @@
 - name: msmtp | install msmtp (apt)
+  tags: [msmtp, mail, common]
   with_items:
     - msmtp
     - msmtp-mta
@@ -6,4 +7,5 @@
   when: ansible_pkg_mgr == 'apt'
 
 - name: msmtp | configure msmtp
+  tags: [msmtp, mail, common]
   template: src=msmtp/msmtprc dest=/etc/msmtprc

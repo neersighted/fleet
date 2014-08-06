@@ -1,4 +1,5 @@
 - name: ssh | disable password authentication
+  tags: [ssh, security, common]
   lineinfile: >
     dest=/etc/ssh/sshd_config
     regexp='^#?PasswordAuthentication'

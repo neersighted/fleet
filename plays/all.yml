@@ -3,5 +3,6 @@
   sudo: yes
   roles:
     - role: common
-    - role: firewall
     - role: log/forwarder
+    - role: firewall
+    - role: tools

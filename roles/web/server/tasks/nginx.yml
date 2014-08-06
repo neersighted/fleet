@@ -3,7 +3,7 @@
   when: ansible_pkg_mgr == 'apt'
 
 - name: nginx | add nginx repo (apt)
-  apt_repository: repo='deb http://nginx.org/packages/mainline/debian/ wheezy nginx' state=present
+  apt_repository: repo='deb http://nginx.org/packages/mainline/debian wheezy nginx' state=present
   when: ansible_pkg_mgr == 'apt'
 
 - name: nginx | install nginx (apt)

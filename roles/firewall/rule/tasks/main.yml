@@ -1,0 +1,5 @@
+- name: activate rule
+  tags: [rule, firewall]
+  action: ufw
+  args: rule
+  notify: reload firewall

@@ -1,5 +1,7 @@
 - name: groups | create ansible group
+  tags: [groups, accounts, common]
   group: name=ansible state=present
 
 - name: groups | create admin group
+  tags: [groups, accounts, common]
   group: name=wheel state=present

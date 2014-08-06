@@ -1,4 +1,4 @@
-- include: kernel.yml tags=kernel
+- include: kernel.yml
 
-- include: xen.yml tags=xen
+- include: xen.yml
   when: ansible_virtualization_type == 'xen'

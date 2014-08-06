@@ -1,5 +1,7 @@
 - name: users | create ansible user
+  tags: [users, accounts, common]
   user: name=ansible state=present
 
 - name: users | create admin user
-  user: name={{ admin_user }} password={{ admin_pass }} state=present
+  tags: [users, accounts, common]
+  user: name={{ admin_user }} password={{ admin_pass }} group=wheel state=present

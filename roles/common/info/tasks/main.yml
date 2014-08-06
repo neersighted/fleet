@@ -1,2 +1,2 @@
-- include: ntp.yml tags=ntp
-- include: motd.yml tags=motd
+- include: ntp.yml
+- include: motd.yml

@@ -1,6 +1,8 @@
 - name: sudo | install sudo (apt)
+  tags: [sudo, security, common]
   apt: pkg=sudo state=latest
   when: ansible_pkg_mgr == 'apt'
 
 - name: sudo | configure sudoers
+  tags: [sudo, security, common]
   template: src=sudo/sudoers dest=/etc/sudoers validate='visudo -cf %s'

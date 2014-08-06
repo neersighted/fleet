@@ -1,10 +1,12 @@
 - name: fstab | remove procfs
+  tags: [fstab, storage, common]
   lineinfile: >
     dest=/etc/fstab
     regexp=proc
     state=absent
 
 - name: fstab | remove swap devices
+  tags: [fstab, storage, common]
   lineinfile: >
     dest=/etc/fstab
     regexp=swap

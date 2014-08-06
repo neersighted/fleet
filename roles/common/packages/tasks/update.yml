@@ -1,5 +1,9 @@
 - name: update | update index (apt)
+  tags: [update, packages, common]
   apt: update_cache=yes
+  when: ansible_pkg_mgr == 'apt'
 
 - name: update | upgrade system (apt)
+  tags: [update, packages, common]
   apt: upgrade=dist
+  when: ansible_pkg_mgr == 'apt'
