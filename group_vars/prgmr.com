@@ -1,3 +1,3 @@
-debian_mirror: http://mirror.prgmr.com/pub/debian
+debian_mirror: http://mirrors.ocf.berkeley.edu/debian
 
 extract_kernel: yes

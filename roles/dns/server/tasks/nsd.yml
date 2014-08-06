@@ -1,29 +1,16 @@
 - name: nsd | install nsd (apt)
-  apt: pkg=nsd state=latest
-  when: ansible_pkg_mgr == 'apt'
-
-- name: nsd | install ldnsutils (apt)
-  apt: pkg=ldnsutils state=latest
+  tags: [nsd, server, dns]
+  with_items:
+    - nsd
+    - ldnsutils
+  apt: pkg={{ item }} state=latest
   when: ansible_pkg_mgr == 'apt'
 
 - name: nsd | configure nsd
+  tags: [nsd, server, dns]
   template: src=nsd.conf dest=/etc/nsd/nsd.conf owner=nsd validate='nsd-checkconf %s'
   notify: restart nsd
 
-- name: nsd | transfer keys
-  copy: src=files/dns/keys/ dest=/srv/dns/keys/ owner=nsd
-
-- name: nsd | transfer zones
-  with_dict: zones
-  template: src=zone.db dest=/srv/dns/{{ item.key }}.db owner=nsd
-  notify: reload nsd
-  register: zonetransfer
-
-- name: nsd | sign zones
-  with_dict: zones
-  when: zonetransfer.changed and item.value.dnssec
-  script: signzone {{ item.key }}
-  notify: restart nsd
-
 - name: nsd | enable and start nsd
+  tags: [nsd, server, dns]
   service: name=nsd state=started enabled=yes

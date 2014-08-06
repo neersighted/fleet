@@ -1,1 +1,1 @@
-default: {{ mail.to }}
+default: {{ mail_to }}

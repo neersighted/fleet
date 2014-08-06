@@ -1,5 +1,7 @@
 - name: accounts | configure nsd group
+  tags: [accounts, server, dns]
   group: name=nsd system=yes
 
 - name: accounts | configure nsd user
+  tags: [accounts, server, dns]
   user: name=nsd group=nsd home=/srv/dns system=yes

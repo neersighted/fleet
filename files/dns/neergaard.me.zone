@@ -1,0 +1,45 @@
+; GLOBALS
+$ORIGIN neergaard.me.
+$TTL 300
+
+
+; AUTHORITY
+@ SOA ns1.neersighted.com. bjorn.neersighted.com. (
+      2014080601 ; serial
+      1h         ; refresh
+      15m        ; retry
+      2w         ; expire
+      1h )       ; negative
+
+
+; NAMESERVERS
+@ NS ns1.neersighted.com.
+@ NS ns2.neersighted.com.
+@ NS ns3.neersighted.com.
+@ NS ns4.neersighted.com.
+
+
+; MAILSERVERS
+* MX 10 in1-smtp.messagingengine.com.
+* MX 20 in2-smtp.messagingengine.com.
+@ MX 10 in1-smtp.messagingengine.com.
+@ MX 20 in2-smtp.messagingengine.com.
+
+mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDR4gWyapi2MTG5cWbpOduoqwBJaH4JO74HNDLBWDheu329HtRcyvakBumpmycSh2/zN7oRKHRNBT222kMy/qAsqwWNFfo+UdI9dnlKy17mFdRdozEv+tBVk6BtYUb/lIvxg9au1izYPDAj1+wQXh+j0lfdP7hi6riIjhZVDjoH+QIDAQAB"
+
+
+; HOSTS
+www CNAME @
+@ A 96.126.118.209 ; hydrogen.neersighted.com
+@ AAAA 2600:3c00:e000:008c::2 ; hydrogen.neersighted.com
+
+be AAAA 2602:ffea:a::fdef:901b ; neon.neersighted.com
+
+
+; CRYPTO
+@ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
+
+_443._tcp.neergaard.me. TLSA 3 0 1 c54904e3902f7b4fc49ef5583e1f3214c81671e57d18afd6e64de30bb1a70d40
+_443._tcp.www.neergaard.me. TLSA 3 0 1 c54904e3902f7b4fc49ef5583e1f3214c81671e57d18afd6e64de30bb1a70d40
+
+@ TXT "keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"
