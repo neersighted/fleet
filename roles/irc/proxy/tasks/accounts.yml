@@ -1,5 +1,0 @@
-- name: accounts | configure nbnc group
-  group: name=nbnc system=yes
-
-- name: accounts | configure nbnc user
-  user: name=nbnc group=nbnc home=/srv/nbnc system=yes

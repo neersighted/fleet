@@ -1,1 +1,12 @@
-- include: logstash-forwarder.yml tags=logstash-forwarder
+- name: install logstash-forwarder init script
+  copy: src=logstash-forwarder.init dest=/etc/init.d/logstash-forwarder
+
+- name: install logstash-forwarder certificate
+  copy: src={{ cert }} dest=/etc/logstash-forwarder.crt
+
+- name: configure logstash-forwarder
+  template: src=logstash-forwarder.conf dest=/etc/logstash-forwarder
+  notify: restart logstash-forwarder
+
+- name: enable and start logstash-forwarder
+  service: name=logstash-forwarder state=started enabled=yes

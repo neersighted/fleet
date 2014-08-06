@@ -3,9 +3,9 @@
   sudo: yes
   roles:
     - { role: common }
-    - { role: log/forwarder }
+    - { role: log/forwarder, cert: files/log/logstash.crt }
     - { role: firewall }
-    - { role: firewall/rule, rule: { rule: allow, port: ssh, proto: tcp } }
+    - { role: firewall/rule, rule: { rule: allow, port: ssh } }
     - { role: firewall/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
     - { role: package/install, package: mosh }
     - { role: package/install, package: git }

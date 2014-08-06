@@ -3,4 +3,6 @@
   sudo: yes
   roles:
     - { role: irc/proxy }
-    - { role: info/ident }
+    - { role: firewall/rule, rule: { rule: allow, port: '6610:6619', proto: tcp } }
+    - { role: irc/ident }
+    - { role: firewall/rule, rule: { rule: allow, port: ident } }

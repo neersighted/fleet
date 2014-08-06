@@ -1,0 +1,2 @@
+- name: add repo '{{ repo }}'
+  apt_repository: repo='{{ repo }}' update_cache=yes state=present

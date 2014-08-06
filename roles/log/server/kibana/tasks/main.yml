@@ -1,1 +1,11 @@
-- include: kibana.yml tags=kibana
+- name: kibana | create kibana directory
+  tags: [kibana, server, log]
+  file: path=/srv/kibana state=directory
+
+- name: kibana | extract kibana
+  tags: [kibana, server, log]
+  unarchive: src=kibana.tgz dest=/srv/kibana/ creates=/srv/kibana/config.js
+
+- name: kibana | configure nginx
+  tags: [kibana, server, log]
+  copy: src=kibana.conf dest=/etc/nginx/sites.d/kibana.conf

@@ -1,2 +1,0 @@
-- name: restart nbnc
-  service: name=nbnc state=restarted

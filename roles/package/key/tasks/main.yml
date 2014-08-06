@@ -1,0 +1,3 @@
+- name: add key {{ key }}
+  action: apt_key state=present
+  args: key

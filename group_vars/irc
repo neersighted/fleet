@@ -1,5 +1,0 @@
-firewall:
-  irc:
-    port: 6665:6669
-    proto: tcp
-    rule: allow

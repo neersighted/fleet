@@ -1,2 +1,2 @@
-- name: install {{ package }}
+- name: install package '{{ package }}'
   apt: pkg={{ package }} state=latest

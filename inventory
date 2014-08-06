@@ -1,26 +1,20 @@
-#
-# Usage
-#
-
 [dns]
 carbon.neersighted.com
 oxygen.neersighted.com
 
-[irc]
-helium.neersighted.com
 
 [log]
 iron.neersighted.com
 
+
 [prx]
 neon.neersighted.com
+
 
 [web]
 hydrogen.neersighted.com
 
-#
-# Hosts
-#
+
 
 [buyvm:children]
 buyvm-lv

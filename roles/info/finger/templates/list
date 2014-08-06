@@ -1,5 +1,0 @@
-#!/bin/sh
-
-echo
-echo no data
-exit 1

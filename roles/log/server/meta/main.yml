@@ -1,4 +1,5 @@
 dependencies:
-  - log/server/elasticsearch
-  - log/server/logstash
-  - log/server/kibana
+  - { role: package/install, package: openjdk-7-jre }
+  - { role: log/server/elasticsearch }
+  - { role: log/server/logstash }
+  - { role: log/server/kibana }

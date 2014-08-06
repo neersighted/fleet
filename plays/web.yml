@@ -3,4 +3,7 @@
   sudo: yes
   roles:
     - { role: web/server }
+    - { role: firewall/rule, rule: { rule: allow, port: http } }
+    - { role: firewall/rule, rule: { rule: allow, port: https } }
     - { role: info/finger }
+    - { role: firewall/rule, rule: { rule: allow, port: finger } }

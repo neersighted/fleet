@@ -1,8 +1,3 @@
-- name: install ufw (apt)
-  tags: [firewall]
-  apt: pkg=ufw state=latest
-  when: ansible_pkg_mgr == 'apt'
-
 - name: restrict incoming connections
   tags: [firewall]
   ufw: policy=deny direction=incoming
