@@ -1,7 +1,0 @@
-- name: accounts | configure nginx group
-  tags: [accounts, web, server]
-  group: name=nginx system=yes
-
-- name: accounts | configure nginx user
-  tags: [accounts, web, server]
-  user: name=nginx group=nginx home=/srv/web system=yes

@@ -1,13 +1,13 @@
-- name: logstash | transfer logstash keys
+- name: transfer logstash keys
   tags: [logstash, server, log]
-  with_items: [key, cert]
+  with_items: ['{{ key }}', '{{ cert }}']
   copy: src={{ item }} dest=/etc/logstash/{{ item|basename }}
 
-- name: logstash | configure logstash
+- name: configure logstash
   tags: [logstash, server, log]
   copy: src=conf.d/ dest=/etc/logstash/conf.d/
   notify: restart logstash
 
-- name: logstash | enable and start logstash
+- name: enable and start logstash
   tags: [logstash, server, log]
   service: name=logstash state=started enabled=yes

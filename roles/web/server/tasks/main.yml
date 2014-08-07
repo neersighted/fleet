@@ -1,2 +1,12 @@
-- include: accounts.yml
-- include: nginx.yml
+- name: configure nginx.conf.d
+  tags: [server, web]
+  file: path=/etc/nginx/nginx.conf.d state=directory
+
+- name: configure nginx
+  tags: [server, web]
+  template: src=nginx.conf dest=/etc/nginx/nginx.conf validate='nginx -tc %s'
+  notify: restart nginx
+
+- name: enable and start nginx
+  tags: [server, web]
+  service: name=nginx state=started enabled=yes
