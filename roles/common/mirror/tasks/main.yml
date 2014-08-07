@@ -1,0 +1,3 @@
+- name: configure package sources
+  tags: [mirror, common]
+  template: src=sources.list dest=/etc/apt/sources.list

@@ -1,3 +1,0 @@
-- name: debian | configure package sources
-  tags: [debian, packages, common]
-  template: src=debian/sources.list dest=/etc/apt/sources.list

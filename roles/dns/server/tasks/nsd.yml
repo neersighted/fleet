@@ -1,11 +1,3 @@
-- name: nsd | install nsd (apt)
-  tags: [nsd, server, dns]
-  with_items:
-    - nsd
-    - ldnsutils
-  apt: pkg={{ item }} state=latest
-  when: ansible_pkg_mgr == 'apt'
-
 - name: nsd | configure nsd.conf.d
   tags: [nsd, server, dns]
   file: path=/etc/nsd/nsd.conf.d.conf state=file

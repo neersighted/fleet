@@ -1,6 +1,7 @@
 dependencies:
-  - common/packages
   - common/accounts
+  - common/mirror
+  - common/update
   - common/security
   - common/network
   - common/storage

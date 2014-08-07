@@ -1,4 +1,4 @@
-- name: install logstash-forwarder init script
+- name: install logstash-forwarder service
   tags: [forwarder, log]
   copy: src=logstash-forwarder.init dest=/etc/init.d/logstash-forwarder
 

@@ -1,2 +1,3 @@
+allow_duplicates: true
 dependencies:
-  - lang/go
+  - { role: package/install, package: golang }

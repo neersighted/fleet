@@ -1,8 +1,3 @@
-- name: ntp | install ntp (apt)
-  tags: [ntp, info, common]
-  apt: pkg=ntp state=latest
-  when: ansible_pkg_mgr == 'apt'
-
 - name: ntp | configure ntp
   tags: [ntp, info, common]
   template: src=ntp/ntp.conf dest=/etc/ntp.conf

@@ -1,4 +1,0 @@
-packages: {}
-
-debian_mirror: http://mirrors.kernel.org/debian
-debian_release: unstable

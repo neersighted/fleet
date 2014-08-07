@@ -1,14 +1,18 @@
 - name: nidd | fetch nidd sources
+  tags: [nidd, ident, irc]
   git: repo=git://github.com/neersighted/nidd dest=/srv/nidd
   register: git
 
 - name: nidd | build and install nidd
-  when: git.changed
+  tags: [nidd, ident, irc]
   shell: cd /srv/nidd && go build
   notify: restart nidd
+  when: git.changed
 
 - name: nidd | install nidd service
-  template: src=nidd dest=/etc/init.d/nidd mode=755
+  tags: [nidd, ident, irc]
+  copy: src=nidd/nidd.service dest=/etc/init.d/nidd mode=755
 
 - name: nidd | enable and start nidd
+  tags: [nidd, ident, irc]
   service: name=nidd state=started enabled=yes

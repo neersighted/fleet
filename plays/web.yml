@@ -7,5 +7,6 @@
     - { role: web/site, site: neer.io, conf: files/web/neer.io.conf }
     - { role: web/site, site: neergaard.me, conf: files/web/neergaard.me.conf }
     - { role: web/site, site: neersighted.com, conf: files/web/neersighted.com.conf }
+    - { role: web/site, site: gapps.itvends.com, conf: files/web/gapps.itvends.com.conf }
     - { role: firewall/rule, rule: { rule: allow, port: http } }
     - { role: firewall/rule, rule: { rule: allow, port: https } }

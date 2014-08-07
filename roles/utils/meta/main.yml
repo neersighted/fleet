@@ -1,0 +1,7 @@
+depdendencies:
+  - { role: package/install, package: mosh }
+  - { role: package/install, package: git }
+  - { role: package/install, package: apt-file }
+  - { role: package/install, package: curl }
+  - { role: package/install, package: htop }
+  - { role: package/install, package: tcpdump }

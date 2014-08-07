@@ -1,0 +1,3 @@
+dependencies:
+  - { role: web/server }
+  - { role: web/site, site: kibana, conf: roles/log/server/kibana/files/kibana.conf }
