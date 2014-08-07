@@ -2,9 +2,42 @@
   hosts: all
   sudo: yes
   roles:
-    - { role: common }
+    - { role: packages/mirror, release: unstable, mirror: '{{ debian_mirror }}' }
+    - { role: packages/upgrade, type: dist }
+    - { role: packages/install, package: linux-image-amd64 }
+
+    - { role: network/hostname }
+    - { role: network/resolvconf }
+    - { role: network/resolvconf }
+
     - { role: firewall }
-    - { role: log/forwarder, cert: files/log/logstash.crt }
-    - { role: utils }
+    - { role: security/ssh}
     - { role: firewall/rule, rule: { rule: allow, port: ssh } }
+    - { role: packages/install, package: mosh }
     - { role: firewall/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
+    - { role: security/sudo }
+
+    - { role: accounts/add_group, group: { name: deploy, system: true } }
+    - { role: accounts/add_user, user: { name: ansible, group: deploy, system: true } }
+    - { role: security/auth_key, user: ansible, key: "{{ lookup('file', '../.ssh/deploy_key.pub') }}" }
+    - { role: security/add_sudoer, user: ansible, perms: 'ALL=(ALL) NOPASSWD: ALL' }
+    - { role: accounts/add_group, group: { name: wheel } }
+    - { role: accounts/add_user, user: { name: neersighted, group: wheel, password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.' } }
+    - { role: security/auth_key, user: neersighted, key: "{{ lookup('file', '../.ssh/neersighted_key.pub') }}" }
+    - { role: security/add_sudoer, user: neersighted, perms: 'ALL=(ALL) ALL' }
+
+    - { role: system/extract_kernel }
+    - { role: system/pvgrub, when: ansible_virtualization_type == 'xen', boot: '{{ boot_device }}', root: '{{ root_device }}', console: '{{ console_device }}' }
+    - { role: system/tuning, zram_percent: 75 }
+
+    - { role: system/motd }
+    - { role: system/ntp, timezone: PST8PDT }
+
+    - { role: mail/nullmailer, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', to: admin@neersighted.com, from: '{{ ansible_hostname }}@fleet.neersighted.com' }
+
+    - { role: log/forwarder, cert: files/log/logstash.crt }
+
+    - { role: packages/install, package: git }
+    - { role: packages/install, package: curl }
+    - { role: packages/install, package: htop }
+    - { role: packages/install, package: tcpdump }

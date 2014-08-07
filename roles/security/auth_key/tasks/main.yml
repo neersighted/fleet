@@ -1,0 +1,3 @@
+- name: add key for {{ user }}
+  tags: [auth_key, security]
+  authorized_key: user={{ user }} key='{{ key }}' state=present

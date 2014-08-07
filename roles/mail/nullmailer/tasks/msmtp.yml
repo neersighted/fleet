@@ -1,0 +1,3 @@
+- name: msmtp | configure msmtp
+  tags: [msmtp, nullmailer, mail]
+  template: src=msmtp/msmtprc dest=/etc/msmtprc

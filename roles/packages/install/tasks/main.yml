@@ -1,0 +1,3 @@
+- name: install package {{ package }}
+  tags: [install, package]
+  apt: pkg={{ package }} state=latest

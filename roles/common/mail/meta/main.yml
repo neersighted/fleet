@@ -1,3 +1,0 @@
-dependencies:
-  - { role: package/install, package: msmtp }
-  - { role: package/install, package: msmtp-mta }

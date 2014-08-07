@@ -1,0 +1,2 @@
+deb {{ mirror }} {{ release }} main
+deb-src {{ mirror }} {{ release }} main

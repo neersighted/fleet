@@ -1,0 +1,13 @@
+- name: configure ntp
+  tags: [ntp, system]
+  template: src=ntp.conf dest=/etc/ntp.conf
+  notify: restart ntp
+
+- name: set timezone
+  tags: [ntp, system]
+  file: src=/usr/share/zoneinfo/{{ timezone }} dest=/etc/localtime state=link force=yes
+  notify: restart ntp
+
+- name: enable and start ntp
+  tags: [ntp, system]
+  service: name=ntp state=running enabled=yes

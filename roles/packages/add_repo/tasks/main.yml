@@ -1,0 +1,3 @@
+- name: add repo '{{ repo }}'
+  tags: [add_repo, package]
+  apt_repository: repo='{{ repo }}' update_cache=yes state=present

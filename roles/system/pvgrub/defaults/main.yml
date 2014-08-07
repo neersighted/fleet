@@ -1,0 +1,3 @@
+boot: hd0,0
+root: xvda1
+console: hvc0

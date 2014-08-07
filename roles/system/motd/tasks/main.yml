@@ -1,0 +1,3 @@
+- name: motd | configure motd
+  tags: [motd, system]
+  copy: content={{ ansible_fqdn }} dest=/etc/motd

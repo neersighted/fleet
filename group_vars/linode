@@ -2,5 +2,3 @@ debian_mirror: http://mirrors.linode.com/debian
 
 boot_device: hd0
 root_device: xvda
-
-extract_kernel: yes

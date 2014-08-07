@@ -1,0 +1,8 @@
+- name: zram | install zram service
+  tags: [zram, tuning, system]
+  template: src=zram/zram.service dest=/etc/init.d/zram mode=755
+  notify: restart zram
+
+- name: zram | enable and start zram
+  tags: [zram, tuning, system]
+  service: name=zram state=started enabled=yes

@@ -1,0 +1,9 @@
+- name: config | get kernel version
+  tags: [config, pvgrub, system]
+  shell: dpkg -s linux-image-amd64|awk '/Depends/{sub(/linux-image-/,""); print $2}'
+  register: kernel_version
+  changed_when: false
+
+- name: config | configure (pv)grub
+  tags: [config, pvgrub, system]
+  template: src=menu.lst dest=/boot/grub/menu.lst

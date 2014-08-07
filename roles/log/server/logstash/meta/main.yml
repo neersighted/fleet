@@ -1,4 +1,4 @@
 dependencies:
-  - { role: package/key, key: D88E42B4, url: 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch' }
-  - { role: package/repo, repo: 'deb http://packages.elasticsearch.org/logstash/1.4/debian stable main' }
-  - { role: package/install, package: logstash }
+  - { role: packages/add_key, key: D88E42B4, url: 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch' }
+  - { role: packages/add_repo, repo: 'deb http://packages.elasticsearch.org/logstash/1.4/debian stable main' }
+  - { role: packages/install, package: logstash }

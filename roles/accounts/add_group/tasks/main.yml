@@ -1,0 +1,4 @@
+- name: create group {{ group }}
+  tags: [add_group, accounts]
+  action: group state=present
+  args: group

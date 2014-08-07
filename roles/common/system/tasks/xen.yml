@@ -1,3 +1,0 @@
-- name: xen | configure (pv)grub
-  tags: [xen, system, common]
-  template: src=xen/menu.lst dest=/boot/grub/menu.lst

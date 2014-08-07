@@ -1,0 +1,3 @@
+- name: add key {{ key }}
+  tags: [add_key, package]
+  apt_key: id={{ key }} url='{{ url }}' state=present

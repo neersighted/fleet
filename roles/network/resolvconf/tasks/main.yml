@@ -1,0 +1,7 @@
+- name: configure search domain(s)
+  tags: [resolvconf, network]
+  lineinfile: >
+    dest=/etc/resolv.conf
+    regexp='^search'
+    line='search {{ searchdomains }}'
+    state=present

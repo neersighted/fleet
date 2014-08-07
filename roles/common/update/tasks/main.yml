@@ -1,7 +1,0 @@
-- name: update index (apt)
-  tags: [update, common]
-  apt: update_cache=yes
-
-- name: upgrade system (apt)
-  tags: [update, common]
-  apt: upgrade=dist

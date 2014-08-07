@@ -1,8 +1,6 @@
 - name: logstash | transfer logstash keys
   tags: [logstash, server, log]
-  with_items:
-    - files/log/logstash.crt
-    - files/log/logstash.key
+  with_items: [key, cert]
   copy: src={{ item }} dest=/etc/logstash/{{ item|basename }}
 
 - name: logstash | configure logstash

@@ -2,5 +2,5 @@
   hosts: log
   sudo: yes
   roles:
-    - { role: log/server }
+    - { role: log/server, cert: files/log/logstash.crt, key: files/log/logstash.key }
     - { role: firewall/rule, rule: { rule: allow, port: 5000, proto: tcp } }

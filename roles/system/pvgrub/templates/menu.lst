@@ -1,0 +1,13 @@
+hiddenmenu
+default 0
+timeout 3
+
+title   Debian GNU/Linux {{ kernel_version.stdout }}
+root    ({{ boot }})
+kernel  /boot/vmlinux-{{ kernel_version.stdout }} root=/dev/{{ root }} console={{ console }}
+initrd  /boot/initrd.img-{{ kernel_version.stdout }}
+
+title   Debian GNU/Linux {{ kernel_version.stdout }} (single-user)
+root    ({{ boot }})
+kernel  /boot/vmlinux-{{ kernel_version.stdout }} root=/dev/{{ root }} console={{ console }} single
+initrd  /boot/initrd.img-{{ kernel_version.stdout }}

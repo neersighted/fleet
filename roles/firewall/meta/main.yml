@@ -1,2 +1,2 @@
 dependencies:
-  - { role: package/install, package: ufw }
+  - { role: packages/install, package: ufw }

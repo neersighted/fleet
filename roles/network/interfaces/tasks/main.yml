@@ -1,0 +1,4 @@
+- name: configure interfaces
+  tags: [interfaces, network]
+  copy: src='{{ conf }}' dest=/etc/network/interfaces
+  notify: restart network

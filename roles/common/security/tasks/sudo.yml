@@ -1,3 +1,0 @@
-- name: sudo | configure sudoers
-  tags: [sudo, security, common]
-  template: src=sudo/sudoers dest=/etc/sudoers validate='visudo -cf %s'
