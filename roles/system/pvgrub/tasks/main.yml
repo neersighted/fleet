@@ -1,1 +1,13 @@
-- include: config.yml
+- name: get kernel version
+  tags: [pvgrub, system]
+  shell: dpkg -s linux-image-amd64|awk '/Depends/{sub(/linux-image-/,""); print $2}'
+  register: kernel_version
+  changed_when: false
+
+- name: create (pv)grub directory
+  tags: [pvgrub, system]
+  file: path=/boot/grub state=directory
+
+- name: configure (pv)grub
+  tags: [pvgrub, system]
+  template: src=menu.lst dest=/boot/grub/menu.lst

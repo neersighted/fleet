@@ -33,8 +33,6 @@ www CNAME @
 @ A 96.126.118.209 ; hydrogen.neersighted.com
 @ AAAA 2600:3c00:e000:008c::3 ; hydrogen.neersighted.com
 
-be AAAA 2602:ffea:a::fdef:901b ; neon.neersighted.com
-
 
 ; CRYPTO
 @ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D

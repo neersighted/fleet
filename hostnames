@@ -4,10 +4,10 @@ lithium
 beryllium
 boron
 #carbon
-nitrogen
+#nitrogen
 #oxygen
 fluorine
-#neon
+neon
 sodium
 magnesium
 aluminum
@@ -23,11 +23,11 @@ titanium
 vanadium
 chromium
 manganese
-#iron
-#cobalt
+iron
+cobalt
 #nickel
 #copper
-#zinc
+zinc
 gallium
 germanium
 arsenic
