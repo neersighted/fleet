@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014080601 ; serial
+      2014080906 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -35,6 +35,9 @@ www CNAME @
 
 
 ; CRYPTO
+@ DNSKEY 256 3 10 AwEAAaW2+v65+GJxtGlnHpPoZnh4gcMrSLZtMU9FGhlZ4FzVK3vG6NOE dsNZZYMGVO4QRGGiLfKMMq0SV78nsxdUDZh0efaOileQYW5AiC3x/ajz LxJhRer7P3CNBOO4LgqCmaUkQushhEppRZHAEjVfE0lB057f+cmCyces bsE8CeMcgAkkK9pLhCkNXpiyNJ2lthQvtUl9/328Bc3QZakR/UMBaeEl ZQgpIGqleXctTAkr5Gp+VmzlsbgYDl13+WZxDBdhl/IIhU/T0Tidr2wZ pBXzsKO2lTIp+0b4mL79GEfUgRhGektxLigOvOzOttvhwA1gW9+WTFRm oW+5bS71oJs=
+@ DNSKEY 257 3 10 AwEAAZcqJ93R64Z+Qxm6Ni0SWNK/ugWqDegWK8MrFvOmgsiuHxUuX3cN hDn1QBVetFUPJjQSLfIIl3/yws6KLk2k3p97n425+RIBPgJ8ShTe9gOY pPbt7iro4wRwXowlAd/krTLMJzORVsGSd/XAzGhHi4LeB1yIOUtpug3F dFWtVkqymqJe5QUZkguI9PwEcRWsvO/GKHWYIoueALBgkbKgdh1IZiaX U2ol2Bqc4V8HLQvyQuEaw/+JjpYhosFdrBVnqKKe//wQ/lz/vxHhV2z+ ex7vvuvEAXOJZ4qy6GeQUgtUhO4Rg4DRLJsIXJokcivoxFAtZwzo0Wyw V3jryfBFTUU=
+
 _443._tcp.neer.io. TLSA 3 0 1 e795b30a7c5b92a528fce703257e5c49f753c5ae5e73d7e1a19868fb9a739d36
 _443._tcp.www.neer.io. TLSA 3 0 1 e795b30a7c5b92a528fce703257e5c49f753c5ae5e73d7e1a19868fb9a739d36
 

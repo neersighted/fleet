@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014080601 ; serial
+      2014080906 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -35,6 +35,9 @@ www CNAME @
 
 
 ; CRYPTO
+@ DNSKEY 256 3 10 AwEAAe6sdJMsOR5G5g/rpSSeexRKs3r0NDwgcnCJEniMDtGK7rSOIpIo v0IIVW51o9Fktb+fFqmfnO6Wh5bwUj+VyfHSqJri52o7ubuug8ogPkCq i2ZMecr0YfAJ/1T6Sewk2n1SAxy/8rhtvaJRnmdMyy7Ng/pmB6ihhKUA 8Hym2P1HM7nfTD9NZk5snJyPF9vby18TmbzT7SwXh+zna/8X9PmlxsKR nyPn50t/qr5bZZXXtQ/mcxWm1s51gay9pFxVUwTLs9Sw2ussjiG30UNP e8LP2PbxWOlsUyB5HVHDFmpHxl+7bW8vaxLLMdM+5Jqy4PtzAiOsONMs KbOKKoJU+Ms=
+@ DNSKEY 257 3 10 AwEAAbhQdyRhMx0zyC4Llb1P5Kezqbbr1AZRWMwF3Rwdy8ucZj3qqUG9 CNlvPmOCFDQsM6AlmIooKDqa/NCMADT97Dti7z0ZO4Be12Vo2H9nOlzR ysY1EjclaFjQaNP89T5PYRChVRlCOGixfnJLzO1qKKFlNyfp/lxPKphI BqPGGFmi+LkK9Uo4oTRpmSHedGACCXh+0hVzxZGZmTxZsZmjaDrlat5v aQoC98bS+ib3/0DEygVrNvZMN5sSUGNWDj9pmGkHT28EaY8+vAc1Ffrv yMtrim2V8fX+j/l3orcXYj57+Tgvrusb/iZXE6fKIqA1I1W6JGY3c8Rq bhQC82ctnUU=
+
 _443._tcp.neergaard.me. TLSA 3 0 1 c54904e3902f7b4fc49ef5583e1f3214c81671e57d18afd6e64de30bb1a70d40
 _443._tcp.www.neergaard.me. TLSA 3 0 1 c54904e3902f7b4fc49ef5583e1f3214c81671e57d18afd6e64de30bb1a70d40
 

@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014080901 ; serial
+      2014080907 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -31,3 +31,8 @@ mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD
 ; HOSTS
 mail A 66.111.4.55 ; mail.fastmail.fm
 mail A 66.111.4.56 ; mail.fastmail.fm
+
+
+; CRYPTO
+@ DNSKEY 256 3 10 AwEAAb56sWxu6GMWtsg3uCNPk2DC6KcxGTFzkFHwvVTryBA8X63x7uuQ arvPIGFRewxSNFjoez1qYwaVwXnsuuq8tDk1yBhmlu7UuUFt+dQbeONe 3coEBbMlCOhwWi3lon5iyRGbX/ln1xg7KqKYGktaTf7+/uwMB6tjF0lf zSgq9qGyrZLfJgCNzZrL6hp1R4rUu50EtrcK761KYUB/aidxrWWlhTlm AcnO/UvFywN+b/uNFv3+EjZP0v2UTeOfkrBw8g5Umw7DCDgF6SjpX378 yH/bnojp6eS7KAoHnj3JAOi2BMaeGKaxpawgw4tKwvtzv2hNVQogPv3C F4G6KI/drH0=
+@ DNSKEY 257 3 10 AwEAAbjOZXa9dh1uIt01RX8n9O7lwrgNdG0oG5DUSDZEBjh0it0XuPZk zzkhQhaYD8DjOUJulPRFzgjubrC4GLWKI9Q4IIlr6CVmS2bu815/aoHI B3emU+30tO5zt6oMgA5FzpgJsifMe5EhL+4HRvxBo0s5iFc1ETzRN/97 1Vsq2s/C+9IguvZug733siAxDn7PoLEWDrdofWJoDgKAL4cj5RB0QPEc rASLj1FM7ffeMbe+/97KYZQZdYsRPM3+8ci5EZZTwJRRxwUHRBr5GAiN xACwAi7ghWMjTaStNqyb1sEMyREZKGOcqYaKmHHT7op2iCrpyWuREnIB Ck5c8fMxqLs=
