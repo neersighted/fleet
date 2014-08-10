@@ -1,6 +1,6 @@
 dependencies:
+  - { role: accounts/add_group, group: { name: nginx, system: yes } }
+  - { role: accounts/add_user, user: { name: nginx, group: nginx, home: /srv/web, system: yes } }
   - { role: packages/add_key, key: 7BD9BF62, url: 'http://nginx.org/keys/nginx_signing.key' }
   - { role: packages/add_repo, repo: 'deb http://nginx.org/packages/mainline/debian wheezy nginx' }
   - { role: packages/install, package: nginx }
-  - { role: accounts/add_group, group: { name: nginx, system: yes } }
-  - { role: accounts/add_user, user: { name: nginx, group: nginx, home: /srv/web, system: yes } }

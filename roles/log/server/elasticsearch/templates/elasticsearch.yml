@@ -1,4 +1,4 @@
-node.name: {{ ansible_fqdn }}
+node.name: {{ inventory_hostname }}
 
 network.host: localhost
 discovery.zen.ping.multicast.enabled: false

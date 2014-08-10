@@ -8,7 +8,7 @@
 
     - { role: network/hostname }
     - { role: network/resolvconf }
-    - { role: network/resolvconf }
+    - { role: network/interfaces, conf: 'files/all/network/{{ inventory_hostname }}.iface' }
 
     - { role: firewall }
     - { role: security/ssh}
@@ -31,7 +31,7 @@
     - { role: system/tuning, zram_percent: 75 }
 
     - { role: system/motd }
-    - { role: system/ntp, timezone: PST8PDT }
+    - { role: system/ntp, timezone: UTC }
 
     - { role: mail/nullmailer, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', to: admin@neersighted.com, from: '{{ ansible_hostname }}@fleet.neersighted.com' }
 

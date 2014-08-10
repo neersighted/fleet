@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014080906 ; serial
+      2014081001 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -30,7 +30,7 @@ mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD
 
 ; HOSTS
 www CNAME @
-@ A 96.126.118.209 ; hydrogen.neersighted.com
+@ A 198.58.114.99 ; hydrogen.neersighted.com
 @ AAAA 2600:3c00:e000:008c::2 ; hydrogen.neersighted.com
 
 

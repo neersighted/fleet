@@ -8,4 +8,4 @@
 
 - name: configure nginx
   tags: [kibana, server, log]
-  copy: src=kibana.conf dest=/etc/nginx/sites.d/kibana.conf
+  copy: src=kibana.conf dest=/etc/nginx/nginx.conf.d/kibana.conf
