@@ -1,6 +1,7 @@
 - name: transfer zone {{ zone }}
   tags: [zone, dns]
   copy: src={{ zonefile }} dest=/srv/dns/{{ zonefile|basename }}
+  notify: reload nsd
 
 - name: configure zone {{ zone }}
   tags: [zone, dns]

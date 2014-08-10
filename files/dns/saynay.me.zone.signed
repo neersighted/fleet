@@ -1,0 +1,227 @@
+; File written on Sat Aug  9 21:12:58 2014
+; dnssec_signzone version 9.10.0-P2
+saynay.me.		300	IN SOA	ns1.neersighted.com. bjorn.neersighted.com. (
+					2014080901 ; serial
+					3600       ; refresh (1 hour)
+					900        ; retry (15 minutes)
+					1209600    ; expire (2 weeks)
+					3600       ; minimum (1 hour)
+					)
+			300	RRSIG	SOA 10 2 300 (
+					20140909031258 20140810031258 47888 saynay.me.
+					ooyG5Ta2naqdxulfwKFbW5mw4PJFVIGO9msU
+					yUq6CvvxAGq6k6RkjB3lvgfDyfhzmxXGXDub
+					pfqkLk6d5AhsgPwD4SuR0aTE5iZn6B+6qKQ4
+					+vv0aYoMaGLI/8qFNw2CXUxzPZdPjZentMWC
+					r+GJFAaMsRRmNI6xV5r1/1NalQx8GpqWoW22
+					YmzjiGb0wWR6O0N2uXoxjaNteTrHjCT07z3A
+					D2arn0zSgcN2TE//o8ExI2K0lfRsY129OLpz
+					i1yZEkwIpdyWF62o/ff1imqOB1g/v78t6A+9
+					qUrkKFdFoM+ygO0Oi21eRd+NSKLKszCe/CFm
+					PIX8jQ//6y52VbnBYA== )
+			300	NS	ns1.neersighted.com.
+			300	NS	ns2.neersighted.com.
+			300	NS	ns3.neersighted.com.
+			300	NS	ns4.neersighted.com.
+			300	RRSIG	NS 10 2 300 (
+					20140909031258 20140810031258 47888 saynay.me.
+					lOOCdmCZDzv6hr3KvArQ61nZ3vWcTwlqg+6I
+					fNrD+w5gCkIqMbhHEL43UlaxohgPHFXO6hCb
+					4EgIYilzyGEx2QMWYKtcpfqjYrHTSmDQ+Bzf
+					sL8h/Qt3OBMZ2ElwB9s8RKZ9Ee72mU1bV8W+
+					MQQ9MDj7C7Lw6C9SaN/J8QNY6Wmm+bzlvzNB
+					8m6i2zNBwpRonDqUl/5dDTq43fcy5YfVc8Jq
+					BG4yQOsoc8RfWDg2IP88d1Ukn3UPizovWY/j
+					oIXwaBQFZc0HqZNAui44jISiMIyVOQ5R9Iva
+					NJXaUJ6/9Gb4KFV1eaICOt0I2MSQ3AE043Bm
+					qSxjGjdYDAgGZpeIXg== )
+			300	MX	10 in1-smtp.messagingengine.com.
+			300	MX	20 in2-smtp.messagingengine.com.
+			300	RRSIG	MX 10 2 300 (
+					20140909031258 20140810031258 47888 saynay.me.
+					H2AsStVtMPoUT+lJR046w3DKnnQEczxb/mlw
+					p1pwPYZBU/SLmXDrkhBsxj0Q7voNTVpQcU0t
+					P/LMFBXS0bdnJk2Cgg00K3a4D/ATYU8tuZDu
+					+98pqPEqJEF/8jd0QGGCyh7ej7Lk1RBcLVy4
+					kb3DCkpfeqdHQmF6Q5VaQFB/kTTrW4vh5Mgk
+					Te4DoT32E2dR+AQthm8VXlQXGY7wfKowdxpk
+					WTFGVx4gZYkP6Pd+zZFH2OY0GfJvRl1FiPWY
+					qPkJ8MGEZnxapWlCxiaHvVI4k4Dra3+DDgsm
+					gH7cQalZhvax/cqY15uxculVmn8LwKxyOLdO
+					PrYw2wyAk7gKVYt6Dg== )
+			300	DNSKEY	256 3 10 (
+					AwEAAb56sWxu6GMWtsg3uCNPk2DC6KcxGTFz
+					kFHwvVTryBA8X63x7uuQarvPIGFRewxSNFjo
+					ez1qYwaVwXnsuuq8tDk1yBhmlu7UuUFt+dQb
+					eONe3coEBbMlCOhwWi3lon5iyRGbX/ln1xg7
+					KqKYGktaTf7+/uwMB6tjF0lfzSgq9qGyrZLf
+					JgCNzZrL6hp1R4rUu50EtrcK761KYUB/aidx
+					rWWlhTlmAcnO/UvFywN+b/uNFv3+EjZP0v2U
+					TeOfkrBw8g5Umw7DCDgF6SjpX378yH/bnojp
+					6eS7KAoHnj3JAOi2BMaeGKaxpawgw4tKwvtz
+					v2hNVQogPv3CF4G6KI/drH0=
+					) ; ZSK; alg = RSASHA512; key id = 47888
+			300	DNSKEY	257 3 10 (
+					AwEAAbjOZXa9dh1uIt01RX8n9O7lwrgNdG0o
+					G5DUSDZEBjh0it0XuPZkzzkhQhaYD8DjOUJu
+					lPRFzgjubrC4GLWKI9Q4IIlr6CVmS2bu815/
+					aoHIB3emU+30tO5zt6oMgA5FzpgJsifMe5Eh
+					L+4HRvxBo0s5iFc1ETzRN/971Vsq2s/C+9Ig
+					uvZug733siAxDn7PoLEWDrdofWJoDgKAL4cj
+					5RB0QPEcrASLj1FM7ffeMbe+/97KYZQZdYsR
+					PM3+8ci5EZZTwJRRxwUHRBr5GAiNxACwAi7g
+					hWMjTaStNqyb1sEMyREZKGOcqYaKmHHT7op2
+					iCrpyWuREnIBCk5c8fMxqLs=
+					) ; KSK; alg = RSASHA512; key id = 6996
+			300	RRSIG	DNSKEY 10 2 300 (
+					20140909031258 20140810031258 6996 saynay.me.
+					U1ioeOe0IPIsj2TuaQW1Bn3LTXPV0LSap/QE
+					7emNs2ve+3FqXlUIEg6/YEn2JXCyZ+AxCH0h
+					ZnshL/qwfjT0O8UBEFtN7iLlPRGPue7/uM9C
+					ffQ/CSJyo3Gdxlvxufyx97JtYMyes9cNvJHi
+					kgEeicz5J4DammonaXn4SNruCBKX/KADAouO
+					FsL2kwxD5ZcPt0IrPifO9wjXYEGkWS55v/4U
+					qiOnl8JuvxahqrW4Qzj6SoDoi0y8eN6x/B/p
+					WWL/KGXnBQCDWE9iBwCKBEV9Gl0Ah6Z2Y+9A
+					OMOTFd7hBkug0Ikz2olvAIl9konjBmT4Uer6
+					QhxkvJUxKjJTIXreDQ== )
+			300	RRSIG	DNSKEY 10 2 300 (
+					20140909031258 20140810031258 47888 saynay.me.
+					s4xdmQZ5g0xViJdyEOT/bQtVSIgxyIQ/bJL1
+					+eAZSKlnI+ces4D4KtWod43aXforWArc0o5k
+					fPUJZTeqkVRxXu+jGpnNM6gMukVKfv+16RpC
+					jsL+gvunfDdi9QJ0XLRl4RUtSUlwhsNtYf1w
+					jgmLGv8zkL0kppaj0tH8oLfTUMdRwePL06F6
+					O4kp3r0+btSj+kea/5klW4ouuaoYxoN99WsN
+					2Ig1BWCEClN+s8/NWBDwBBvmpvmB24jDOW2d
+					zdjB2lhmpG46nUw1OBv/4SIriVwqx8fOGTy6
+					tRUQyvu65NcsRY03R/1hS9gQSxclV6mQXbc4
+					wNxoAO1tXjTLu6MLLQ== )
+			0	NSEC3PARAM 1 0 10 5EAAECC651269CD4
+			0	RRSIG	NSEC3PARAM 10 2 0 (
+					20140909031258 20140810031258 47888 saynay.me.
+					anfj5eTIbg15IzCOGrmSf46qgLwUcqnammAi
+					dACW9nOYb1tbL5+2M0Mos+iQcxTtnnkJ1i/6
+					+eViFH6EfCuFw6BQTr+i8g3yTuRHmnfyZLwh
+					+sM1TW8idQvODa49KKmuWmQWU6HT3oQxtp1p
+					p7rvRbQITmKjJBu5+IRdqKFpLRFTXLRhkAoq
+					n02USgevQdybnp4R2+gAOLeKmEi3NLi7yhoO
+					zVdkd8C5t1jhPNGieFuKsFEUSlZEYRa64NMP
+					bBVeDnvW5QwNjrB2vEFBIhcLtLI9fLzPh9gm
+					eTvkYEZBccbDs3dyt88MeJYK/Hx5p0gIjOOG
+					ILRdKEIN8M+hzJ0nCQ== )
+*.saynay.me.		300	IN MX	10 in1-smtp.messagingengine.com.
+			300	IN MX	20 in2-smtp.messagingengine.com.
+			300	RRSIG	MX 10 2 300 (
+					20140909031258 20140810031258 47888 saynay.me.
+					WzKcpLWozsp4uCDHfKXX/DlNq8iYk/eeshLT
+					jXHjLblVEQbT/peqI+lHN1TgOgh6tn1a2kaS
+					5OFZ7LkA4vod56rdJbzAqRBFdHAHPES75QAf
+					ehPqIwVbkGV76C/HnCAXRqNwVfVBMbKL2yLy
+					1+JX8yOlClRItZ1gW8y+q9KFA8K01riaK/T8
+					wzG28Bt5Mgx/TAMAfpmUjL6ZUpQC53lFSKwf
+					1J6MAnLfeNBt/mDrCKRymuVn1g0Xuumb0q93
+					4SIUAC7FUR6Jye/mgZdf2HKa2n812PhBOvUA
+					sGrmyGcVdOWSP1k4sCYFRxcXAow77hp13lVl
+					IyK1sSVRJ58Xe3abQg== )
+mesmtp._domainkey.saynay.me. 300 IN TXT	"v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIhEqSIsM7F7W0nLOUJFAJmLJl8wOPejvcq8hoJhZgzfMFHiaKcgu7n3AIFzxMPy3oNk2gfeVaoKcKXYRDv8atQR9UINPGy8zk7AsgKTj1pnIHdkOeQwa04i3LWLWdGkTUA9h+NZrbIbUXfyC6v2uD79314PBBGIT7ayuLLuvFTQIDAQAB"
+			300	RRSIG	TXT 10 4 300 (
+					20140909031258 20140810031258 47888 saynay.me.
+					W128Xpe31hMrpIt0W1EVe36pmrtz26Jfnwpi
+					FwtqpFHOuc6EVDjheowPxvNU+o5kZuouPH8H
+					2fYur2IlPXulW5NAT1YhTzGBEm9Z2rc6jheX
+					w9Ej+XPjJimQd5x9L85M4t2z6B9QEscq1nHu
+					58/pYw9p/oJEjd6mgvNOag2KAF7VNYzHOyXe
+					wswb5hu+RqtRJye5QpW5QzO+9C6vEElYi/Qb
+					WTLb4btGywWPvk4+VmDwYPYluq61Nrhj11EJ
+					CciuGzRr/Wwp6Ry0tCpFv5JwGlaQfvqRPQna
+					V1Sg7XQcb6MET0RAUy70HtxgvigqkL8AhKBW
+					dVAiNJObfqNe9tc4jQ== )
+mail.saynay.me.		300	IN A	66.111.4.55
+			300	IN A	66.111.4.56
+			300	RRSIG	A 10 3 300 (
+					20140909031258 20140810031258 47888 saynay.me.
+					gnYntUp/SCwlJL1bt+UL22sDXBZuD7P+l5/u
+					Gz29GgPdJaSFR90scZiDFBFGa9kK3lOEhE8T
+					ulnXFaIZ1vckxlA+6MgQ6uTGK//Nydcem3ES
+					OdXoubKzZtHsBLZFNGhRdV1xMuifxkWICDha
+					CCdi44eAT+KjCDWUnjIsJ/ozteHNF81zKOXp
+					NpmWXthXqj6n9tem249BgVDthRm48RNqtwkm
+					IC0S11W789n1vEpv/NhKHgxwaWKIWEn/PbzW
+					/MztHUoCkAxZpaWR7XslirS9CjnDKkCpD5s2
+					OSBdv7wZUi1wFhGZX62GOk5cbU41zoIIfmaZ
+					wWgTaQVXfVzqxk7zFg== )
+92N1SASMUH21T868EPVRUB5STR0QA5V7.saynay.me. 3600 IN NSEC3 1 0 10 5EAAECC651269CD4 (
+					BEKUHK4UNJECA8FF0LL72QLUO2GL1I1G )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140909031258 20140810031258 47888 saynay.me.
+					vXdLiih3EbRuA9NGozxUeCnHr8UxW2ZBkcm1
+					ZfuLxAfQ0snOO1KJB6nfv5Y3X9Jti0RFJSDl
+					n4YnplO6/LsedNsQzzdIzUn43JPE5Y1q1VXG
+					UeYw5KxDYpC1j/9fzDT2NIoDspprTpBku4MV
+					T78hCmSW1vHliY8kNgwAicZEfY2ymLcyjMhj
+					7852W0Ha8xQa7FnRxN43KOE8EsJrEIiGvcSg
+					6eHim/ueKVnl3c66nHBZQ/Ih+2Mg6bZQDqiI
+					3Kp3OpZpRFmM1ps9DOgk92o4l1IyVm4JLq3f
+					8xvw4BTV593mtyd3Q8wA/caP7wKWnAJ0bvN0
+					JF59mQojv0U2L7RI/Q== )
+G80GO2FUPCQR87M75O3O4L8GPPS313G6.saynay.me. 3600 IN NSEC3 1 0 10 5EAAECC651269CD4 (
+					P373LPDLFEB62T3RUL1776TIOOUNLGSG
+					TXT RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140909031258 20140810031258 47888 saynay.me.
+					KMnacwGSsAqSbmNSUZtZZD5vngN0IrX1fNfT
+					g8zxYirUFnl4G95vOodTjO/4/8LYBTpLHAfE
+					FN/r/rO7Pu8roJhcFhtEZkkoeogasabf4hrX
+					tZSY2R2JxO4QW2xSuxt0ljv/fSC/e1W6E2UX
+					KRDdkALtqgVEG/YcKC8AFqvyDL/eYzYDNvuy
+					kjgWjsnmv9TbaK19e2iJYRg6rc1xx1SzTuJy
+					DhW1PwEZJYg4gfBOvuuwG6OKUtG1AfukgXj4
+					i8F25y+0ypUPi0O6+bpGBh6j18vWZ1cGuHO/
+					DPLdxrJZbHlhCXvmC5zNCQKnaWHNtS4UK4fn
+					1/5iJlbgK4+1M4j2kg== )
+P373LPDLFEB62T3RUL1776TIOOUNLGSG.saynay.me. 3600 IN NSEC3 1 0 10 5EAAECC651269CD4 (
+					VG8L7C5OCJ539BUU98LVN9CMTHCCC540
+					NS SOA MX RRSIG DNSKEY NSEC3PARAM )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140909031258 20140810031258 47888 saynay.me.
+					WXss1qmMaRNW2FVwlohToiEaRaJnjRgPysXV
+					91EH51upNf1xnNTLXASfY+Dt0EdRe/HzVA0E
+					JKPEhgIQ9e4o/KGlVSUrW7+inMn/uoR5AC7w
+					SRk5SLedChMEltuPaL/5w0IBTjdIclbaiAmm
+					jQ1lEXd3P36WwypjImQTZsY3uqCFe0qubWcs
+					uVXGJPa9axNhs+Jok8JhVGHjSPqUapctuWhG
+					H6BnYl0EhH+FLggM8l2ggHKA/c+MRTTghV9h
+					NtgfoKLrB8MN4P3+3a9keC9e2Yxy5TsedQ6Y
+					rH70hgfrSHaPoHnNZ/ogo7Bv8VxW5/BnJ56U
+					ktCzc9mpIgr/HWd1cw== )
+BEKUHK4UNJECA8FF0LL72QLUO2GL1I1G.saynay.me. 3600 IN NSEC3 1 0 10 5EAAECC651269CD4 (
+					G80GO2FUPCQR87M75O3O4L8GPPS313G6
+					A RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140909031258 20140810031258 47888 saynay.me.
+					AeRQDl7czOK/R6dvYl5v9uMZx4XX8GyqD7WM
+					nBtE0xQoIg1ywAnyaEqYrwA2EGkWVop4eZ7I
+					oWUCvzXNZvJTMl+5aEzmI6Aw/j4qVLPqX4cP
+					eZkVGT17kEAtBnuKe5IGKrJPHvf2eK70BqQ9
+					W4uTdqtZ2UuENAx25mNLr9bJVEg0zfvlyult
+					POwGHCY8qdbn8IDCAmhPx8irIdXZDTM7tyHo
+					uDy4m7ZR3t1DR/nt3Nj/JBcejkohS0dFutAw
+					LB0Do2w9MYIAO1zGasuJxIcXIZV2PsppPw4r
+					X4jDnrEGRu3NYF3tNlvg6WCdiKgUPdP8Fygy
+					+JTKx+wth7DrMAFUiw== )
+VG8L7C5OCJ539BUU98LVN9CMTHCCC540.saynay.me. 3600 IN NSEC3 1 0 10 5EAAECC651269CD4 (
+					92N1SASMUH21T868EPVRUB5STR0QA5V7
+					MX RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140909031258 20140810031258 47888 saynay.me.
+					FdmoWshRn0BbeOnefAcX8uDJ03dmyKboEX1L
+					0oQLLCVjJA2MuBbJPq6+/U+6FRfYHnjPZsG1
+					R+TeLeF6dxPAQcbzP6mpCfiW1DkqsBl9QPFb
+					IijXkg/N47THRyVjFAVtsw+eiH/NbkNlS1iX
+					AIe+8bRPAw08jS08idB5Ap2QDqEtIVdNIEHG
+					tOxoCVNwqQU/W0Ji7XSyHz2T5yIK2W5l022K
+					jxRa8Fm4EGx+0ZaiHAkCJifeM/PqX11VTMcL
+					7WU65ocXnfncuCNqL5nE2SMeUgHrcnHUxFJg
+					m4KU1uTTP/3IlE+PJl/cVm+NLorESYYr7yk3
+					d/tqTci1LEmeT+hrOA== )

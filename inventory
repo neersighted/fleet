@@ -3,22 +3,11 @@ carbon.neersighted.com
 oxygen.neersighted.com
 
 [log]
-iron.neersighted.com
-
-[prx]
 nitrogen.neersighted.com
 
 [web]
 hydrogen.neersighted.com
 
-
-[digitalocean:children]
-digitalocean-lon
-digitalocean-sgp
-[digitalocean-lon]
-nickel.neersighted.com       ansible_ssh_host=178.62.26.231
-[digitalocean-sgp]
-copper.neersighted.com       ansible_ssh_host=128.199.253.245
 
 [linode:children]
 linode-dal
@@ -26,9 +15,8 @@ linode-fre
 linode-new
 [linode-dal]
 hydrogen.neersighted.com     ansible_ssh_host=69.164.204.41
-iron.neersighted.com         ansible_ssh_host=96.126.118.120
 [linode-fre]
-nitrogen.neersighted.com     ansible_ssh_host=23.239.21.125
+nitrogen.neersighted.com     ansible_ssh_host=96.126.118.120
 oxygen.neersighted.com       ansible_ssh_host=74.207.242.71
 [linode-new]
 carbon.neersighted.com       ansible_ssh_host=173.255.230.140

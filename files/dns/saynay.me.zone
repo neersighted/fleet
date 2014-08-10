@@ -1,11 +1,11 @@
 ; GLOBALS
-$ORIGIN singulo.co.
+$ORIGIN saynay.me.
 $TTL 300
 
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014080601 ; serial
+      2014080901 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -31,7 +31,3 @@ mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD
 ; HOSTS
 mail A 66.111.4.55 ; mail.fastmail.fm
 mail A 66.111.4.56 ; mail.fastmail.fm
-
-
-; CRYPTO
-@ NSEC3PARAM 1 0 1600 6E656572736967687465642E636F6D
