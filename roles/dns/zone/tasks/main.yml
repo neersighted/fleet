@@ -12,7 +12,6 @@
   tags: [zone, dns]
   lineinfile: >
     dest=/etc/nsd/nsd.conf.d.conf
-    regexp="^include: /etc/nsd/nsd.conf.d/{{ zone }}.conf"
     line="include: /etc/nsd/nsd.conf.d/{{ zone }}.conf"
     insertafter=EOF
   notify: reload nsd

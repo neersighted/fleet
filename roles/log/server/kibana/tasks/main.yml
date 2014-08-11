@@ -5,7 +5,3 @@
 - name: extract kibana
   tags: [kibana, server, log]
   unarchive: src=kibana.tgz dest=/srv/kibana/ creates=/srv/kibana/config.js
-
-- name: configure nginx
-  tags: [kibana, server, log]
-  copy: src=kibana.conf dest=/etc/nginx/nginx.conf.d/kibana.conf

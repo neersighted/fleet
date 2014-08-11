@@ -1,0 +1,1 @@
+NGINXUSER [a-zA-Z\.\@\-\+_%]+

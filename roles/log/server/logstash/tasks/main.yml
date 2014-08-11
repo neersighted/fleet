@@ -3,6 +3,11 @@
   with_items: ['{{ key }}', '{{ cert }}']
   copy: src={{ item }} dest=/etc/logstash/{{ item|basename }}
 
+- name: configure logstash grok patterns
+  tags: [logstash, server, log]
+  copy: src=patterns/ dest=/opt/logstash/patterns/
+  notify: restart logstash
+
 - name: configure logstash
   tags: [logstash, server, log]
   copy: src=conf.d/ dest=/etc/logstash/conf.d/

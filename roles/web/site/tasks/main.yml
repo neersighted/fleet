@@ -1,3 +1,4 @@
 - name: configure site {{ site }}
-  tags: [zone, dns]
+  tags: [web, site]
   copy: src={{ conf }} dest=/etc/nginx/nginx.conf.d/{{ conf|basename }}
+  notify: reload nginx
