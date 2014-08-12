@@ -13,6 +13,11 @@
   copy: src=conf.d/ dest=/etc/logstash/conf.d/
   notify: restart logstash
 
+- name: validate logstash config
+  tags: [logstash, server, log]
+  command: /opt/logstash/bin/logstash agent --config /etc/logstash/conf.d/ --configtest
+  changed_when: false
+
 - name: enable and start logstash
   tags: [logstash, server, log]
   service: name=logstash state=started enabled=yes

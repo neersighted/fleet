@@ -1,89 +1,66 @@
 #!/bin/sh
 #
 ### BEGIN INIT INFO
-# Provides:          skeleton
+# Provides:          logstash-forwarder
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Log Forwarder
-# Description:       Lumberjack, the Logstash log shippe
+# Short-Description: Lumberjack log shipper
+# Description:       Lumberjack, the lightweight Logstash log shipper
 ### END INIT INFO
 
-PATH=/sbin:/usr/sbin:/bin:/usr/bin
-NAME=logstash-forwarder
-DAEMON=/opt/logstash-forwarder/bin/logstash-forwarder
-DAEMON_ARGS="-config /etc/logstash-forwarder -spool-size 128"
-PIDFILE=/var/run/$NAME.pid
-SCRIPTNAME=/etc/init.d/$NAME
-
-[ -r /etc/default/$NAME ] && . /etc/default/$NAME
-. /lib/init/vars.sh
+set -e
 . /lib/lsb/init-functions
 
-COMMAND="cd /var/run; exec $DAEMON $DAEMON_ARGS"
+NAME=logstash-forwarder
+DESC="Lumberjack log shipper"
+DAEMON=/opt/logstash-forwarder/bin/logstash-forwarder
+DAEMON_ARGS="-config=/etc/logstash-forwarder -spool-size=1024"
+PIDFILE=/var/run/$NAME.pid
+LOGFILE=/var/log/$NAME.log
+
+test -x $DAEMON || exit 0
 
 do_start() {
-  # Skip if it's already running
-  start-stop-daemon --start --quiet --pidfile $PIDFILE --exec /bin/sh --test > /dev/null || return 1
-
-  cd /var/run
-  # Actually start it now.
-  start-stop-daemon --start --quiet --make-pidfile --background \
-    --pidfile $PIDFILE --exec /bin/sh -- -c "$COMMAND" || return 2
+  log_daemon_msg "$DESC" $NAME
+  start-stop-daemon --start \
+    --pidfile $PIDFILE --make-pidfile \
+    --exec $DAEMON \
+    --background --no-close \
+    -- $DAEMON_ARGS >>$LOGFILE 2>&1
+  log_end_msg $?
 }
 
-do_stop()
-{
-  start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --pidfile $PIDFILE
-  RETVAL="$?"
-  [ "$RETVAL" = 2 ] && return 2
-  start-stop-daemon --stop --quiet --oknodo --retry=0/30/KILL/5 --exec $DAEMON
-  [ "$?" = 2 ] && return 2
-  rm -f $PIDFILE
-  return "$RETVAL"
+do_stop() {
+  log_daemon_msg "$DESC" $NAME
+  start-stop-daemon --stop \
+    --pidfile $PIDFILE \
+    --exec $DAEMON \
+    --retry TERM/5/KILL/10
+  log_end_msg $?
+}
+
+do_restart() {
+  do_stop
+  do_start
+}
+
+check_status() {
+    status_of_proc -p $PIDFILE $DAEMON $NAME
+}
+
+print_usage() {
+  echo "Usage: $0 {start|stop|restart|force-reload|status}"
+  return 1
 }
 
 case "$1" in
-  start)
-    [ "$VERBOSE" != no ] && log_daemon_msg "Starting $NAME"
-    do_start
-    case "$?" in
-      0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
-      2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
-    esac
-    ;;
-  stop)
-    [ "$VERBOSE" != no ] && log_daemon_msg "Stopping $NAME"
-    do_stop
-    case "$?" in
-      0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
-      2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
-    esac
-    ;;
-  status)
-    status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
-    ;;
-  restart|force-reload)
-    log_daemon_msg "Restarting $NAME"
-    do_stop
-    case "$?" in
-      0|1)
-        do_start
-        case "$?" in
-          0) log_end_msg 0 ;;
-          1) log_end_msg 1 ;; # Old process is still running
-          *) log_end_msg 1 ;; # Failed to start
-        esac
-      ;;
-      *)
-        # Failed to stop
-        log_end_msg 1
-      ;;
-    esac
-    ;;
-  *)
-    echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}" >&2
-    exit 3
-    ;;
+  start)                do_start ;;
+  stop)                 do_stop ;;
+  restart|force-reload) do_restart ;;
+  status)               check_status ;;
+  *)                    print_usage ;;
 esac
+
+exit 0

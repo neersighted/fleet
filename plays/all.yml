@@ -12,7 +12,7 @@
 
     - { role: firewall }
     - { role: security/ssh}
-    - { role: firewall/rule, rule: { rule: allow, port: ssh } }
+    - { role: firewall/rule, rule: { rule: limit, port: ssh } }
     - { role: packages/install, package: mosh }
     - { role: firewall/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
     - { role: security/sudo }

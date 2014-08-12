@@ -14,6 +14,8 @@ iface eth0 inet6 static
   gateway fe80::1
   address 2600:3c00::f03c:91ff:fe50:fd52
   netmask 64
+  pre-up echo 0 > /proc/sys/net/ipv6/conf/$IFACE/accept_ra
+  pre-up echo 0 > /proc/sys/net/ipv6/conf/$IFACE/forwarding
 iface eth0 inet6 static
   address 2600:3c00:e000:009c::1
   netmask 64
