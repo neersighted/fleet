@@ -36,6 +36,8 @@ git diff --cached --name-only | grep -v "signed" | grep -v "dsset" | if grep --q
         then
             echo -e "\e[1;34m----> Signing [\e[0;32m${zone}\e[1;34m] (\e[0;32m${zonefile}\e[1;34m)\e[0m"
             dnssec-signzone -K "${KEYS}" -3 "$(head -c 1000 /dev/random | sha1sum | cut -b 1-16)" -N INCREMENT -o "${zone}" -t "${ZONES}/${zonefile}"
+            mv "dsset-${zone}" "${ZONES}"
+
             git add "${ZONES}/${zonefile}"
             git add "${ZONES}/${zonefile}.signed"
             git add "${ZONES}/dsset-${zone}"
