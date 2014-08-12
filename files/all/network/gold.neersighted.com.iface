@@ -1,0 +1,11 @@
+auto lo
+
+iface lo inet loopback
+
+
+auto eth0
+
+iface eth0 inet static
+  gateway 107.150.19.1
+  address 107.150.19.176
+  netmask 24
