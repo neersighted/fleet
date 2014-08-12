@@ -3,6 +3,6 @@ Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 Defaults lecture=never, timestamp_timeout=0
 
 root    ALL=(ALL:ALL) NOPASSWD: ALL
-%deploy ALL=(ALL:ALL) NOPASSWD: ALL
+ansible ALL=(ALL:ALL) NOPASSWD: ALL
 
 #includedir /etc/sudoers.d

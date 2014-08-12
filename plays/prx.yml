@@ -1,8 +1,0 @@
-- name: Proxy Servers (prx)
-  hosts: prx
-  sudo: yes
-  roles:
-    - { role: irc/proxy }
-    - { role: firewall/rule, rule: { rule: allow, port: '6610:6619', proto: tcp } }
-    - { role: irc/ident }
-    - { role: firewall/rule, rule: { rule: allow, port: ident } }

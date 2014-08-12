@@ -1,4 +1,4 @@
 - include: all.yml
 - include: dns.yml
-- include: prx.yml
+- include: log.yml
 - include: web.yml
