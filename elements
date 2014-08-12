@@ -23,10 +23,10 @@ titanium
 vanadium
 chromium
 manganese
-iron
+#iron
 cobalt
 nickel
-copper
+#copper
 zinc
 gallium
 germanium
@@ -44,7 +44,7 @@ technetium
 ruthenium
 rhodium
 palladium
-silver
+#silver
 cadmium
 indium
 tin
@@ -76,7 +76,7 @@ rhenium
 osmium
 iridium
 platinum
-gold
+#gold
 mercury
 thallium
 lead

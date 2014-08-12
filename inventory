@@ -9,17 +9,19 @@ nitrogen.neersighted.com
 hydrogen.neersighted.com
 
 
+[crissic]
+
 [linode:children]
 linode-dal
 linode-fre
 linode-new
 [linode-dal]
-hydrogen.neersighted.com     ansible_ssh_host=69.164.204.41
+hydrogen.neersighted.com
 [linode-fre]
-nitrogen.neersighted.com     ansible_ssh_host=96.126.118.120
-oxygen.neersighted.com       ansible_ssh_host=74.207.242.71
+nitrogen.neersighted.com
+oxygen.neersighted.com
 [linode-new]
-carbon.neersighted.com       ansible_ssh_host=173.255.230.140
+carbon.neersighted.com
 
 [prgmr.com]
-helium.neersighted.com       ansible_ssh_host=71.19.154.209
+helium.neersighted.com

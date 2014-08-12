@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014080909 ; serial
+      2014081101 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -34,6 +34,10 @@ carbon AAAA 2600:3c03::f03c:91ff:fe73:bb00
 ns1 A 173.255.230.140
 ns1 AAAA 2600:3c03::f03c:91ff:fe73:bb00
 
+copper A 107.150.9.211
+
+gold A 107.150.19.176
+
 helium A 71.19.154.209
 helium AAAA 2605:2700:0:3::4713:9ad1
 
@@ -48,6 +52,8 @@ www CNAME @
 @ A 69.164.204.41
 @ AAAA 2600:3c00:e000:008c::1
 
+iron A 107.150.19.150
+
 nitrogen A 96.126.118.120
 nitrogen AAAA 2600:3c00::f03c:91ff:fe50:fd52
 
@@ -55,6 +61,8 @@ oxygen A 74.207.242.71
 oxygen AAAA 2600:3c01::f03c:91ff:fe73:cb9f
 ns2 A 74.207.242.71
 ns2 AAAA 2600:3c01::f03c:91ff:fe73:cb9f
+
+silver A 107.150.19.177
 
 ns3 A 69.93.127.10 ; ns1.linode.com
 ns3 AAAA 2600:3c00::a ; ns1.linode.com
