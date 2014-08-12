@@ -41,3 +41,6 @@
     - { role: packages/install, package: curl }
     - { role: packages/install, package: htop }
     - { role: packages/install, package: tcpdump }
+
+    - { role: packages/remove, package: nfs-common }
+    - { role: packages/remove, package: rpcbind }
