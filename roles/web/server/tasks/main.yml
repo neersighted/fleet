@@ -4,7 +4,7 @@
 
 - name: configure nginx
   tags: [server, web]
-  template: src=nginx.conf dest=/etc/nginx/nginx.conf validate='nginx -tc %s'
+  template: src=nginx.conf dest=/etc/nginx/nginx.conf
   notify: restart nginx
 
 - name: enable and start nginx
