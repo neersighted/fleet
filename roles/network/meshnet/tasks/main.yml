@@ -32,7 +32,7 @@
   with_items:
     - tinc-up
     - tinc-down
-  template: src={{ item }} dest=/etc/tinc/{{ item }} mode=0755
+  template: src={{ item }} dest=/etc/tinc/{{ item }} mode=755
   notify: restart tinc
 
 - name: transfer hosts
@@ -45,7 +45,7 @@
   with_items:
     - pub
     - priv
-  copy: src={{ conf }}/keys/{{ host }}.{{ item }} dest=/etc/tinc/rsa_key.{{ item }} mode=0600
+  copy: src={{ conf }}/keys/{{ host }}.{{ item }} dest=/etc/tinc/rsa_key.{{ item }} mode=600
   notify: restart tinc
 
 - name: enable and start tinc

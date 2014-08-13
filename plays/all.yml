@@ -41,7 +41,7 @@
 
     - { role: mail/nullmailer, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', to: admin@neersighted.com, from: '{{ ansible_hostname }}@fleet.neersighted.com' }
 
-    - { role: log/forwarder, server: '10.13.37.69:3333', cert: files/log/logstash.crt }
+    - { role: log/beaver, server: '10.13.37.69:6379' }
 
     - { role: packages/install, package: vim-nox }
     - { role: packages/install, package: git }
