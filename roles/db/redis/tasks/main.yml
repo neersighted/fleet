@@ -1,0 +1,7 @@
+- name: enable aof
+  tags: [redis, db]
+  lineinfile: >
+    dest=/etc/redis/redis.conf
+    regexp='^appendonly'
+    line='appendonly yes'
+    state=present

@@ -3,3 +3,4 @@ dependencies:
   - { role: packages/add_repo, repo: 'deb http://packages.elasticsearch.org/logstash/1.4/debian stable main' }
   - { role: packages/install, package: logstash }
   - { role: packages/install, package: logstash-contrib }
+  - { role: db/redis }

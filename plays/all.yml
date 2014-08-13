@@ -5,6 +5,7 @@
     - { role: packages/mirror, release: unstable, mirror: '{{ debian_mirror }}' }
     - { role: packages/upgrade, type: dist }
     - { role: packages/install, package: linux-image-amd64 }
+    - { role: packages/install, package: python-pip }
 
     - { role: firewall }
 
