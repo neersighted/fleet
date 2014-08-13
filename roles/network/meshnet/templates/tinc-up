@@ -1,0 +1,4 @@
+#!/bin/sh
+ip link set $INTERFACE up
+ip addr add {{ subnet6.stdout }} dev $INTERFACE
+ip addr add {{ subnet4.stdout }} dev $INTERFACE

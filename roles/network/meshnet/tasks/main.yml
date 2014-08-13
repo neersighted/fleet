@@ -1,0 +1,53 @@
+- name: get ipv6 subnet
+  tags: [meshnet, network]
+  local_action: command awk '/^Subnet = fd/ {sub("/128", "/64"); print $3}' {{ conf }}/hosts/{{ host }}
+  register: subnet6
+  changed_when: false
+
+- name: get ipv4 subnet
+  tags: [meshnet, network]
+  local_action: command awk '/^Subnet = 10/ {sub("/32", "/24"); print $3}' {{ conf }}/hosts/{{ host }}
+  register: subnet4
+  changed_when: false
+
+
+- name: create directories
+  tags: [meshnet, network]
+  with_items:
+    - /etc/tinc/hosts
+  file: path={{ item }} state=directory
+
+- name: install tinc service
+  tags: [meshnet, network]
+  copy: src=tinc.service dest=/etc/init.d/tinc
+  notify: restart tinc
+
+- name: configure tinc
+  tags: [meshnet, network]
+  template: src=tinc.conf dest=/etc/tinc/tinc.conf
+  notify: restart tinc
+
+- name: transfer tinc scripts
+  tags: [meshnet, network]
+  with_items:
+    - tinc-up
+    - tinc-down
+  template: src={{ item }} dest=/etc/tinc/{{ item }} mode=0755
+  notify: restart tinc
+
+- name: transfer hosts
+  tags: [meshnet, network]
+  copy: src={{ conf }}/hosts dest=/etc/tinc/hosts/
+  notify: restart tinc
+
+- name: transfer keys
+  tags: [meshnet, network]
+  with_items:
+    - pub
+    - priv
+  copy: src={{ conf }}/keys/{{ host }}.{{ item }} dest=/etc/tinc/rsa_key.{{ item }} mode=0600
+  notify: restart tinc
+
+- name: enable and start tinc
+  tags: [meshnet, network]
+  service: name=tinc state=started enabled=yes

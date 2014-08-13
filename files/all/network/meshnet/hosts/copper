@@ -1,0 +1,18 @@
+Address = copper.neersighted.com
+Subnet = fd00:dead:beef::f00d/128
+Subnet = 10.13.37.86/32
+
+-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2ppqYamwIgR2fcBBziWA
+48ZPymbpEc2HP59sbYtxcQw+8PwSlOqgjKgWwXdHqA+IY7kzIvMajBitutJ2u4wo
+/AciMmUhjCNew2ZT4bcJslwDp/4mwFPzlkeW7YnGnCvEG2SURCHvyakypgFV6j4N
+yjU4mb2a1CZt/E3HRbu9OpvAsArhZC5VfBQWWiyty2QOWwySqjhZRm2oOQFZNhCJ
+gGvI8wLygunbPnQJrtqkaJENVzA3O1DDriHFUqiFsZzPumwGRWNGWaseJIgF61kV
+zBYk1RMRfxP+fQ3Bm0BKyW+VJYcm0HaaiUBUt++VyT2FNKMXmTgM2rvFwI7n2Kup
+vfzW4iLxkYXsfquGEjmPo6pf7iIXIu1CWZLlSaQXVC0bngLHsMKtQBqzXABUYhOZ
+IKoKouow2M8FUp1JsY+RhcdkifoF4oq4aXW1Kr9XCEEhPIzrei0OJlme6eqU5nnz
+Un2hNKBh1iGXKxNigoTdo3tF+Ykhuu0nGR7gUhLpdlwZl8+ntH/O+JVTKueORz4o
+Totj1ktLPx4fOttpH2vPD3fbDaDl3bxXAytb6U2OM4NNQswFCO3kA7rNmdIeskkq
+SCVbLvnfHJtn7SS0ErTLqnlpnddw8jV9Sm+TzLZlLONUJNIRE2cL+f/U9BITYdB+
+R1R7rIz2zJuJ4YPv546a22ECAwEAAQ==
+-----END PUBLIC KEY-----

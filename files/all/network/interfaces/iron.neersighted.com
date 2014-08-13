@@ -13,4 +13,4 @@ iface eth0 inet static
 iface eth0 inet6 static
   gateway 2602:ffea:1::1
   address 2602:ffea:1:3::1
-  netmask 64
+  netmask 48
