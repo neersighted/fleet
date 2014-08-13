@@ -37,6 +37,7 @@
 
     - { role: log/forwarder, cert: files/log/logstash.crt }
 
+    - { role: packages/install, package: vim-nox }
     - { role: packages/install, package: git }
     - { role: packages/install, package: curl }
     - { role: packages/install, package: htop }

@@ -14,7 +14,7 @@ set -e
 . /lib/lsb/init-functions
 
 NAME=logstash-forwarder
-DESC="Lumberjack log shipper"
+DESC="lumberjack log shipper"
 DAEMON=/opt/logstash-forwarder/bin/logstash-forwarder
 DAEMON_ARGS="-config=/etc/logstash-forwarder -spool-size=1024"
 PIDFILE=/var/run/$NAME.pid
@@ -23,7 +23,7 @@ LOGFILE=/var/log/$NAME.log
 test -x $DAEMON || exit 0
 
 do_start() {
-  log_daemon_msg "$DESC" $NAME
+  log_daemon_msg "Starting $DESC" $NAME
   start-stop-daemon --start \
     --pidfile $PIDFILE --make-pidfile \
     --exec $DAEMON \
@@ -33,7 +33,7 @@ do_start() {
 }
 
 do_stop() {
-  log_daemon_msg "$DESC" $NAME
+  log_daemon_msg "Stopping $DESC" $NAME
   start-stop-daemon --stop \
     --pidfile $PIDFILE \
     --exec $DAEMON \
