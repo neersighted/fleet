@@ -1,0 +1,6 @@
+node.name: {{ inventory_hostname }}
+cluster.name: {{ cluster }}
+
+discovery.zen.ping.multicast.address: {{ ipv4.private }}
+
+bootstrap.mlockall: true

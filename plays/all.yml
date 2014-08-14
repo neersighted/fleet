@@ -19,9 +19,9 @@
     - { role: firewall/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
     - { role: security/sudo }
 
-    - { role: network/meshnet, conf: files/all/network/meshnet, host: '{{ inventory_hostname|replace(".neersighted.com", "") }}', entry: [nitrogen, oxygen, carbon, helium, iron] }
+    - { role: network/meshnet, conf: files/all/network/meshnet }
     - { role: firewall/rule, rule: { rule: allow, port: 655 } }
-    - { role: firewall/rule, rule: { rule: allow, interface: tun0, direction: in } }
+    - { role: firewall/rule, rule: { rule: allow, interface: tinc0, direction: in } }
 
     - { role: accounts/add_group, group: { name: deploy, system: true } }
     - { role: accounts/add_user, user: { name: ansible, group: deploy, system: true } }
@@ -47,6 +47,8 @@
     - { role: packages/install, package: git }
     - { role: packages/install, package: curl }
     - { role: packages/install, package: htop }
+
+    - { role: packages/install, package: socat }
     - { role: packages/install, package: tcpdump }
 
     - { role: packages/remove, package: nfs-common }

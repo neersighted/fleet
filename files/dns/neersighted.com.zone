@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014081211 ; serial
+      2014081301 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -53,6 +53,7 @@ hydrogen AAAA 2600:3c00:e000:008c::3
 www CNAME @
 @ A 69.164.204.41
 @ AAAA 2600:3c00:e000:008c::1
+kibana A 69.164.204.41
 
 iron A 107.150.19.150
 silver AAAA 2602:ffea:1:3::1

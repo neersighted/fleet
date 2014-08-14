@@ -1,5 +1,0 @@
-dependencies:
-  - { role: packages/install, package: openjdk-7-jre }
-  - { role: log/server/elasticsearch }
-  - { role: log/server/logstash }
-  - { role: log/server/kibana }

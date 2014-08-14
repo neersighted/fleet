@@ -2,4 +2,7 @@
   hosts: log
   sudo: yes
   roles:
-    - { role: log/server, cert: files/log/logstash.crt, key: files/log/logstash.key }
+  - { role: packages/install, package: openjdk-7-jre }
+  - { role: db/elasticsearch, cluster: log }
+  - { role: log/logstash, cluster: log }
+  - { role: log/kibana }

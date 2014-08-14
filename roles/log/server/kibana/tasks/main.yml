@@ -1,7 +1,0 @@
-- name: create kibana directory
-  tags: [kibana, server, log]
-  file: path=/srv/kibana state=directory
-
-- name: extract kibana
-  tags: [kibana, server, log]
-  unarchive: src=kibana.tgz dest=/srv/kibana/ creates=/srv/kibana/config.js

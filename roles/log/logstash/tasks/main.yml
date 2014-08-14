@@ -1,0 +1,27 @@
+- name: configure logstash grok patterns
+  tags: [logstash, log]
+  copy: src=patterns dest=/opt/logstash/patterns/custom
+  notify: restart logstash
+
+- name: configure logstash
+  tags: [logstash, log]
+  with_items:
+    - 1-input.conf
+    - 50-filter-auth.conf
+    - 50-filter-dns.conf
+    - 50-filter-logstash-forwarder.conf
+    - 50-filter-nginx.conf
+    - 50-filter-syslog.conf
+    - 50-filter-ufw.conf
+    - 99-output.conf
+  template: src=conf.d/{{ item }} dest=/etc/logstash/conf.d/{{ item }}
+  notify: restart logstash
+
+- name: validate logstash config
+  tags: [logstash, log]
+  command: /opt/logstash/bin/logstash agent --config /etc/logstash/conf.d/ --configtest
+  changed_when: false
+
+- name: enable and start logstash
+  tags: [logstash, log]
+  service: name=logstash state=started enabled=yes

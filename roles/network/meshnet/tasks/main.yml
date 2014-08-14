@@ -1,16 +1,3 @@
-- name: get ipv6 subnet
-  tags: [meshnet, network]
-  local_action: command awk '/^Subnet = fd/ {sub("/128", "/64"); print $3}' {{ conf }}/hosts/{{ host }}
-  register: subnet6
-  changed_when: false
-
-- name: get ipv4 subnet
-  tags: [meshnet, network]
-  local_action: command awk '/^Subnet = 10/ {sub("/32", "/24"); print $3}' {{ conf }}/hosts/{{ host }}
-  register: subnet4
-  changed_when: false
-
-
 - name: create directories
   tags: [meshnet, network]
   with_items:
@@ -37,15 +24,13 @@
 
 - name: transfer hosts
   tags: [meshnet, network]
-  copy: src={{ conf }}/hosts dest=/etc/tinc/hosts/
+  with_items: groups['all']
+  template: src=host dest=/etc/tinc/hosts/{{ hostvars[item].mesh.name }}
   notify: restart tinc
 
-- name: transfer keys
+- name: transfer key
   tags: [meshnet, network]
-  with_items:
-    - pub
-    - priv
-  copy: src={{ conf }}/keys/{{ host }}.{{ item }} dest=/etc/tinc/rsa_key.{{ item }} mode=600
+  copy: src={{ conf }}/{{ inventory_hostname }}.priv dest=/etc/tinc/rsa_key.priv mode=600
   notify: restart tinc
 
 - name: enable and start tinc

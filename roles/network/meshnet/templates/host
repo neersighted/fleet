@@ -1,0 +1,5 @@
+Address = {{ hostvars[item].inventory_hostname }}
+Subnet = {{ hostvars[item].ipv4.private }}/32
+Subnet = {{ hostvars[item].ipv6.private }}/128
+
+{{ lookup('file', conf + '/' + item + '.pub') }}

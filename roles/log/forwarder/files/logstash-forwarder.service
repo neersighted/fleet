@@ -16,9 +16,9 @@ set -e
 NAME=logstash-forwarder
 DESC="lumberjack log shipper"
 DAEMON=/opt/logstash-forwarder/bin/logstash-forwarder
-DAEMON_ARGS="-config=/etc/logstash-forwarder -spool-size=1024"
 PIDFILE=/var/run/$NAME.pid
 LOGFILE=/var/log/$NAME.log
+DAEMON_ARGS="-config=/etc/logstash-forwarder -spool-size=1024"
 
 test -x $DAEMON || exit 0
 

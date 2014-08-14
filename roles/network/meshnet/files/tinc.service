@@ -16,8 +16,8 @@ set -e
 NAME=tinc
 DESC="mesh network"
 DAEMON=/usr/sbin/tincd
-DAEMON_ARGS=
 PIDFILE=/var/run/$NAME.pid
+DAEMON_ARGS=
 
 test -x $DAEMON || exit 0
 
