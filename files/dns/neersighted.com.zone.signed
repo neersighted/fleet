@@ -1,93 +1,93 @@
-; File written on Thu Aug 14 07:55:02 2014
+; File written on Thu Aug 14 10:34:48 2014
 ; dnssec_signzone version 9.10.0-P2
 neersighted.com.	300	IN SOA	ns1.neersighted.com. bjorn.neersighted.com. (
-					2014081402 ; serial
+					2014081403 ; serial
 					3600       ; refresh (1 hour)
 					900        ; retry (15 minutes)
 					1209600    ; expire (2 weeks)
 					3600       ; minimum (1 hour)
 					)
 			300	RRSIG	SOA 10 2 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					Jny7UFydXQjM9MB1eYZra8QlOWoRB9AgICkm
-					ikRzsqmrQ89SgUe3s950ejbOwP2AkFjvXVEO
-					UNRJavBlsiKHdmNR5xpMgJizkfZwh50IOuBO
-					6ktdr1Mjdh8FlFPaTUOH4zrJ1l3fm5TFsKNU
-					I8B90zjPIZ2MpSKRmCQ0pnBR0AQ1EXY+SUuu
-					urO31gHsCTiUSnYZOUt/nEYfTYPZVewvn12g
-					djHUssy9S2UIKzVJibGzVFkWWC0pQMDo91b8
-					8qAFhH+JsEy2pBpfEFFe0nG0XRVJE8ufmjOG
-					WTgRvg+zFORZcKSrkC1NDi0JSFdBZwk/WbTE
-					aTTaqCTlVtX4eDBQBQ== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					EZVhq/P++ay5ajf+fTlokOmk0UYId6KG9UCG
+					XReYeOY4Vc8r4bWi7tN0ftFz1J5tuFghX5yz
+					kg/xaCJ+kk/s7Q0rpHwIV0KIJGUmn9mbrJZs
+					PhAXHhS6LhMTnAEwy5rxfoc+PmcDBgsiLn0R
+					SPwdl8lTcNe5bMQTcdC+mg4J452yFzjxSwqA
+					el5PID7zASZT84c/2L3NMgGlnggiuSe8Rj18
+					Aw3N1NtXqApTYhKUu/Pob3k2cGdbJWYANUVc
+					fGfDXr+FaNianbFcWh7xgm5spm/CiumbIksB
+					1fnJp2HJ0Mi2ZQ3+OkM8JH656Rk/3x61sENB
+					UUYklJjFckzhV3A3lg== )
 			300	NS	ns1.neersighted.com.
 			300	NS	ns2.neersighted.com.
 			300	NS	ns3.neersighted.com.
 			300	NS	ns4.neersighted.com.
 			300	RRSIG	NS 10 2 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					pDlSBrVivxYIS5g4e+lTGgrD5JFboAW+ODrb
-					UloShbqnrQG3WMsU5ReYGHP5mTFZYK9t6d3O
-					Hh45sQJeTu9CRqYTyw1h9NHZBvdzc8ghhXqx
-					NGnL5REkdPxsSLbwRpw4b8ABo5rHjvx1mS3l
-					TWtY9WWO2YuWuAzyaaJi2JRwuc7y8y829LlN
-					XaOiyY0iU8VRsRc1NDUIXORAVh43hWCe8BJ0
-					5TD3MrM8ngR9C+0RYSjkemwjjnOIuG+fRRig
-					CvTNc3iQF98s9rAss6ZA4OdDcXKIaNv3UPVm
-					vV7YM22wNdNO5mXSp100JV8GJ7A3P5B+eO71
-					tz5cNHl9XXp5hMXyag== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					HvM+Cbh2vBoE7lDRYed2lilRk6wUfnRE62Sj
+					qJr4LJB0GjW7jVGc6hYS2RCvY2mNz/jO7a6W
+					7M8+OSzhSdDjpTi3AazsGmER48YHJ+zNkeao
+					FNeRwSiXyNLPDlk1Ick7JOXL+6PTj7Wl2MK0
+					mPqAvacflru8tYgdiDlOji+FFMWVLLi/OhQd
+					eFH2G8ElDcsWArF9fajmCHjrAAEWPbCx2Zn1
+					/KIMpP/JkcZ674x9xUGpXNdeRXw7jlN9hNte
+					u6ztkKgC+b3vujO201psEfowBEKa+52asiCl
+					CC2RoAbQLbtVjz/5rcBrpw/IVcMVBwmE8GV8
+					A0JXuv4GhpS/miGPAw== )
 			300	A	69.164.204.41
 			300	RRSIG	A 10 2 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					OzfxwqkQmkLm82AW17kzGJLiZ9LSMpsYeMN9
-					ssyQxiLmuG8Gyl/3GBR+ZHpmYwQZLF5imEyv
-					VPim+uZQEJyhXbyTWMS9TAhlWBXEuPnnxu79
-					e1gaKqGLJFCfvG4RBlvlRaLh9N396vP8u13/
-					oQjjjV0WZnmJcn7za3EHouITOqcsuK3+GymW
-					4RRy/usaqfJzFNOyrLHyvhc1UCnKMewag1qr
-					aZd2gnCYxCy7TNPsDsn3FpopTWMaS5K/p4HC
-					nTVAaACRj02w89C4xBI3Kfy75RU70RRHZjBZ
-					ycN3cvmYplZLYJYgLHnvklQKW81eb57KzVA6
-					Aslj1UzpOPCtWw8EdA== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					BVdEfOwY5lotG+w8aXEPezayxG/6ApvB4Lxg
+					hYXeSZuHaLQvHD4LpvGRt3rqe0/QFDloYgMq
+					RfJZj8OlfXwI2kgKscftpKfj16lNDBxmC2pr
+					b+H7wM/hq4PK7/QO8SiPAZnZBq/ylpk5Dbrs
+					zuvc91TrotLywwSBBUiUdXKwIpI/DXJ0ZQej
+					t4Xk9tzhMIMnixOHMlj8cEWw9b3cAVdjkqUf
+					WMQL8frBztieY0bynXziA6vTa2JdKJWjM85+
+					jRLV68p9NN1l48gYoUmRf2SnU7O2hTA/Jphb
+					cP6yeVFKQOFplNZaOwM7bP3eTbXQK4Jr7KP7
+					DrdC4jB+yq5gC9b0dg== )
 			300	MX	10 in1-smtp.messagingengine.com.
 			300	MX	20 in2-smtp.messagingengine.com.
 			300	RRSIG	MX 10 2 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					CodF4NOOz4fCNby7tjF29MfU0gsOchGP3ugI
-					AUaM4atPEnlKVw97J5xolBo7DKTXEdk0n9Hw
-					ZAnoA0jVjsVUBs/75L+D8ANhggtAe8vVTXY1
-					PUQJrugn3cQ3TOG/XkWn+qWuQltSbXuXP83/
-					aWy06nh84Zceb+lfO9+eFljN3++24698qvYp
-					1ljbIzzFF54jDcT+URA1ruM3ulmuRRnGBZ+h
-					mig7J1HyQnM7NhqGWHyssnBteGAbDrR7DFxa
-					3Hp5e2Th474DrX8ItKVU4XYHxxLj/8CpIqml
-					eeZYx1XEm3c8gmUtranO35w8+i95506RxWFH
-					ASx3M3FpOxURpMXY7A== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					nMPWNLLTwwaUg+t0F12K4ESNTznDHgqF1B0G
+					6ZYd/hDK/Rszv2vwqu1CZLqtJYE8KQu/6Qjp
+					VgtBVmdJFlTGyonbShA8UrwLJ0bRNy5PGe6C
+					iTg46JbJwSSOmYDkK+nLn5C7cL367AAWTG6K
+					MY8h7EW255W3ukBOAcrE2BX8XeZwzyTQpCBw
+					acA0tuT31kGdKlm2zlI73/CRtxhA5MaSstJh
+					9iyPSOuUdr3OE4ljvUagLq4PSuRl8fwSsbrB
+					2VxTU0JrhBivaGCkDqHS4ChHzqdlfplyV4sM
+					Se0yW5z3jiVw0gQ3cmTRLSR+40OAWq/biXuE
+					KI3Lh6lOIeSBp06LAg== )
 			300	TXT	"keybase-site-verification=a_LJ0l7lJXhU-eI0dLcOcBHB-30NjSxeUdjtTdKXuiw"
 			300	RRSIG	TXT 10 2 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					e7/cZx0b7C/A3zTAe4rUfBTOtyecaPi3x8Ka
-					T5zXGdQxUHj4g9gmcJ6LviVSh1pAtJbIIJcu
-					uherpdPdgtAsOi2kIUFM9LskWUOd2ZHTC+S/
-					CIIkZ575JeaKowPHwlSrEu9ubW+sm349r/OJ
-					x8w8rfKroRx4ygx4NisLkFReveNmdBJj4pha
-					9X7sO8uUsEQCS13skCLzR6AxKUwDhJjtFrKG
-					i+dNw18s9p5NCutrSWbKCOsckW14fv+v24X9
-					iooVrGfcivu7FGF0akNwA6ppprKTY85MXJGq
-					xMFoNsQB/MzJy3nLORPGWdBqU8szqgeARk8x
-					XFeydgY2Ew4Lv2eSOA== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					EWXlFDxICC48HzD0G2mHq+swi4unxKdtStrn
+					zo0H1W4Vq+pVGsWZNBbNStOvaG7OFWx1KSkx
+					jd+koYT7C4YaUEzvH14a7hdNuLxW5nG/Jl7m
+					NG/WO9EcRu4+BpHl7Rshs41dCiXcjyvXRcEl
+					MaqW2GvDbXIopxNDSKQsyJHzeOxtD0rbL3jY
+					kIrCr2w1bkWxkxbBbNKC2HatXF1/djbFqcqw
+					e6Gq4tR5qPtDJyKQ5cy9Ygz4o7++/J4uzuyE
+					nxiu+xih5F0o7zZQUy2k4fx+cDDyuWtFgfsY
+					XtfYcvNIwE1EuWLfGzBurHX7LG297oI/0c6V
+					p8SmzWzvOZJnFqVHCQ== )
 			300	AAAA	2600:3c00:e000:8c::1
 			300	RRSIG	AAAA 10 2 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					Oh0PqiZWWkCV2yfL79EHtovqTOBaQ5+TXeO9
-					tBhNEtseI2I2KHjq+WI9gWPi/X7upOGNcPwf
-					n02zEe36qaZM7UcKwkUtAIk05JTOD6OqvU55
-					exsXKV0QxSXm69A2hAYJLVckDz9lcEktcVUB
-					+uokmJ6jVKOENtGW5A7fpfMArDft6v4To7E8
-					9QXq/7PCjxUyHtwjn+ynJzwjgsrQA5GYixFc
-					y3FWxYudl6i363R2Yf5CuJY0vZ0jPfnwcLMY
-					9XcrGrrAC9Aflc5fEA8kD37AudvmvNCR0jVm
-					f5HB0rHTKqsaLVaI7AB9nnQDikS7spoUyrnp
-					FmaYS4ZJheaBEOr3CQ== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					V8O5aB2/TMcq7RPoWlVaUMCiUnymJjz+T2tV
+					+cG9WVE97lwzwzQttzr1L9q0S2fo6t/4JQQk
+					dxPRB3QeMIkrLO1VrNcBntkIP1IUEwDKZkSo
+					U+vjnPRh3Xdfvc+sY1XQ6AKfCPXlKNj2holX
+					qSHeNNSb9HNXi0UytbnM5w6yQ+RBksc+oD9V
+					eFLb6yESv17ZvfGvCKVo5+GnjoTwrl6glL2w
+					4O6RypJ5oXp7Hh4/80N++/DiWG5sXsD3UukR
+					T8LN2TQLeYcbrdB6m/eP92hcjoOT4G4ZZ4C1
+					H/5iQggX+wZjVV6B+R0QgHjuq7rRUnYyOClX
+					VPyuFnddcG0gJ/3EOw== )
 			300	DNSKEY	256 3 10 (
 					AwEAAb1u/cwqJeSGjRlhF3EDo9/AM7fWCevj
 					6ZwQ9UYtJiFtCtmZucBYp6U3d2wl90zvM7w4
@@ -113,179 +113,123 @@ neersighted.com.	300	IN SOA	ns1.neersighted.com. bjorn.neersighted.com. (
 					d7tyKfgBJIwkrOtO4lZDiX8=
 					) ; KSK; alg = RSASHA512; key id = 55143
 			300	RRSIG	DNSKEY 10 2 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					U6Iuy3Yp2iELputLidkegPRmmC+F5rINScRv
-					jSJy+4jA0SY4o7J5CwjupqtUH8gcJh06WSDD
-					6TiJ3/ZGVwljhSjPlE/z6yJpOabPRE/dcks2
-					5/ZMFnm8ScZAvlImSImxsA2CZsrfiXkntvwu
-					WMfvIPMIpK/dXoqId28B1HvIGJWyoe0xZKDV
-					Cz7OJ28OfYL79yOzGyU1jY8m81RYpoJo+Pb0
-					Ps/Y2fyBaBcvnHHHEx34YgyAQeD6QgN1EGfM
-					KBGpbZGLoted6WrQwCmWFOMDMCdslrBVUtGY
-					d0uUo/XmyI5EyZBLqMST0wk37R2iLztIq/sP
-					bM4X/Vpv6/YkkBincA== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					F4ZZ+KjK2drwyuMxTTFXQUoH6Z3UhavcLQ+A
+					FIv2xin3hKt5JNtFg7c7bQx8f1jOlTh6pNxU
+					pp8hr7TjKj1m9kQ76s8axg/WC6f7cZ/JW1Bk
+					NQL1zrCBapGqWgmHSmZbgdxYy7GGEIHXakhY
+					/oapLX2euQqZCXNsa5oFiTNShwb/Tcmo4zk1
+					Xw/6/flEscXd0yejFxEN9vyI8QKdWLMhPy5Z
+					/4zhOa/d13L4cZoc6lczm2xNYH0okWRPcrGM
+					ztdrt/+6dqJ1fiiI4obej7F9MM5ANJhYGBWk
+					04H9gclIritBsMbOneyhIMhy/VYlDEtZ+5v6
+					CVVeuJ8iqyF1gSgIUA== )
 			300	RRSIG	DNSKEY 10 2 300 (
-					20140913135502 20140814135502 55143 neersighted.com.
-					T4Z0zjMZPI0yaVWtN17LkFRoucbRrQmykVHB
-					89+ed9EYv7K5k1UPhHyN4yL3hma5cKUogxWQ
-					YlKapQh+3ffNKvftDY0HfuhD1JjsjuTR3gWE
-					Z0F1hnL0tpUAXyGXSqouoyhv4dit/OgEwD/Q
-					2O27IdzOI5R74iTlNUYbwH1RDLTAWpp4LfwQ
-					m9kd25VpjqJdNCJ00hgY/OWeqLDX9y0ss53r
-					T0rk+JM/UrBH9te6tbloHS1ZoEf93iDisdqg
-					KNPTFuLqZ6sYkOXTOlzqf+cn32mB1yS8wBBP
-					llxWkj1GXbhda1A3gsF1+fSCnAP2s7S9Lo/K
-					jTV7KygJjitKDq2K4g== )
-			0	NSEC3PARAM 1 0 10 B1BBA7C8EA99CE2E
+					20140913163448 20140814163448 55143 neersighted.com.
+					q98BeoXCgK7uRwyiKTBe2Ys7HT2n/hGqt31g
+					84tMvp0QGj1o/Lhgyh396TurSu5dF/DK/tjx
+					kw3pnZo2tSCmW+ZuskgPuXDFSQ9wQICej7CF
+					58eL3mLdNU9G5TKeYJ9aGqRUAsqWiBhg4h56
+					nzi50lhbbCxBlIf8rMVCVOFadD7SYSbJkFDR
+					IfgxGJl05eoOZlUrLjm3Xvvv70tdSNOasW0q
+					W4HYwtale+UoWshuE/03yMVhAxhfaz8Uq4Br
+					0/X1g4/a20pzYdRRJdEz+J5cx22/cmO28qWp
+					XgWGOyS0KXcMNZ9y2Z7Iu+mY4iqXyrs++78x
+					Ik+KphKSZLOOeLlyNg== )
+			0	NSEC3PARAM 1 0 10 912315B6A3B20CE0
 			0	RRSIG	NSEC3PARAM 10 2 0 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					c4NnaE7Nda+EQ81tFmD8eRGbhXe2aoDJANrv
-					Rj/xjrcuCP3LpSDLhy9DwRDuXPzK8bCQw2qw
-					eHT5wyISyf0YqROmCGQXiGAOILD3PPvelGzX
-					hc8TdLRzkdENV71IvHMiV43P1DAJcpXcHBgC
-					q6/VRWimefJGvAQIOHZZsn6Zw1hGf7GRsAed
-					+4h4Tc71GWhLT8GMD/gZQqZ+pofmvvLrUEok
-					9QE6zjOFd7Pv+q+yln/5dL++G1LwgaSzTRcA
-					bbvi9zmsPsq4Ks74ad8UF09+yXSJls7rYSIR
-					o4QPmKscC4W2Fj4zno8BuDiAdlJ0oJS8Mqn2
-					BRuRX65WdKceaCgVdw== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					iUJGiN7E1lvL/4Yz8RBZWp9EbS6uMy5WTfAt
+					y4DT16qJy+LdACe3zNNaEI6VsPtrI8HwCoGs
+					8+2ktirYqwPaVz+KqYoYf2kq0x84cpjOULK1
+					uhpWcyXBlTKPyWjBrle2idp8/q/nqI1A4rpy
+					SLXsyZ8rKYam7GagGBQPX3mwEnNRDRtjzxfC
+					tXOuawFEclyAY2qe1j5DoAxZ/KTf7jXcRjeK
+					r+mvIGKdztVEDz/c/NuZHwuTn3ObXBZqL59P
+					5uO2S7eU/wfK72TNT6VIvTKWQrtp3fmnPHVW
+					Prp9NJz0UgP9tH5yQg2JWdcZ+tSvTEar7s7V
+					38sBVua5rdp2mdlixg== )
+n._pka.neersighted.com.	300	IN TXT	"v=PKA1\; fpr=EF5352EC46885C8D88EA6437F13812806D922AB5\; uri=http://neersighted.com/key.asc"
+			300	RRSIG	TXT 10 4 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					huEM7hnk8RjMlRkQo/A7fvprBo/rac1LMXcf
+					6U12YzE9sJvPoYF9ZH6Xgj80rcVRMGkcOVlG
+					+l/Hbr2PWaqDiYp4EnP82Alreclswpijip8I
+					a9aTB0DSRD/Jzv3sYsVwWze63LwHdeUAAtAd
+					bCY8aUZv6YJ0WCRnsiYNMAeyANibF96OBCMt
+					1q46Tf9BdkyvRQyh0D4v+1Ya5I0mpnee8nAm
+					DWN9/qofGi3UCuA5HfEQpbE6QxJCcO1ijGFS
+					LjxDsv5oEGXB+jVSjfORqPMdlqvupTTiEGFH
+					YzXiRcaCo867gfyi6OL0gW5BFCaGQ9GppOwk
+					tJaSQxV6TvxO4Rsrbw== )
+mesmtp._domainkey.neersighted.com. 300 IN TXT "v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsix0DtMAEDUAM3XX2sfpU9nRPF8iWSlHBBKUbBqBfqaYEZ1tZxWKqxA9UWaKrPgJm8Ry+J+rjCiFZM3GjvXCgq4uKZEmGWHgHl8eiEJB4fxaJCzhl1NuJHgr+nWTB1YS3utf50G2HeTp5rPkvxWeH7CvyZtPZcNmRq8G0+AqZtQIDAQAB"
+			300	RRSIG	TXT 10 4 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					YK1PF1ZQJk1NT3y6F1Sbf725PZ2GlEGVeUZo
+					egWYEfdZDzEXtjgENzCWO9rtk7piG1QhWNcS
+					ebkeihxx74eG6m7GBxm22HiXJytICCVjcwwe
+					NrgX7l9zd5QLFvFs5DEoeL33AGyw7g7AyHW7
+					sSek5QAbji2leeMnL32y75VQx23579B4VQ5M
+					yVMqcAMQXEDct7jNRkpf8sWZgQTXs0hgU3iq
+					vnGiCLY3aehrPVso0MQfUPXuylbNPQv0UaCF
+					qR8xgMxAm30dUYou1RJQVnM+tL7qqM+uHMzN
+					f9BSEre9uMAXWne+2Cw7jKBm6IfaFhmjn1S/
+					aMtsmJdMB4Z+p46xxA== )
 *.neersighted.com.	300	IN MX	10 in1-smtp.messagingengine.com.
 			300	IN MX	20 in2-smtp.messagingengine.com.
 			300	RRSIG	MX 10 2 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					RNJmuDU3imwc/qjD3GdYHgFmuZq3DfpJoa1i
-					/NpqhXR0ooWfFFj0zfQfPzqW1C6ZwOYd6UqO
-					aqR+yOI4DWYKAuRm5cl9LTOHJ5lCl/lGKTB9
-					cBeYeCrLVUmg96EKe/xBd4co9mmTNJIpFKR/
-					p3vVG4/xiYpvdirMvmYjlcTdO9CUIsv7BtQ/
-					6y7wGaowjBeNlICpNX0vT7ITcjKNPJx9BV6q
-					Yb+ZrOTeOCHou46wom74/e6TpDh3/UC9NGmJ
-					OmyHRNhLipMCpCLJTUFhsJ7id03P26vQhuNp
-					0pViNxYKY33XKD22IrL4+hywKTAv8wUW6y8v
-					e94KAj486BqgnhPloQ== )
-mesmtp._domainkey.neersighted.com. 300 IN TXT "v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsix0DtMAEDUAM3XX2sfpU9nRPF8iWSlHBBKUbBqBfqaYEZ1tZxWKqxA9UWaKrPgJm8Ry+J+rjCiFZM3GjvXCgq4uKZEmGWHgHl8eiEJB4fxaJCzhl1NuJHgr+nWTB1YS3utf50G2HeTp5rPkvxWeH7CvyZtPZcNmRq8G0+AqZtQIDAQAB"
-			300	RRSIG	TXT 10 4 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					ABmSv6uIaz/oX01dfd7Z2JIr3jl5mOlKbK/8
-					gUuSfMrJC2ZqfYaOxrx56QS0+kUTiWRONxd+
-					dUFhuIOIlPfYN72rxvE+aLxmcU1l9j367YSP
-					Im7YVIBX3o1CDDRhbzLuvxYh30vywPmeHNCM
-					ayNCw5o3HNFBphwxaRkGGWczhjRPyuzv3nzi
-					FLBauAnsNXyAgfLNqTkdqWU3c9TzTwMxy08Y
-					coHkZytNpZ6SG7x+Bjm3fZUUXb9wJYImqME2
-					oD3D/pMpIDOkAoGfvVlR6wyQLXHsRGUgDRen
-					t993LIWMKnr+Y76KnvasY2bRp0tk1AD33Ixu
-					bEmR3Rf4CXUuF4/udg== )
-bjorn._pka.neersighted.com. 300	IN TXT	"v=PKA1\; fpr=EF5352EC46885C8D88EA6437F13812806D922AB5\; uri=http://neersighted.com/key.asc"
-			300	RRSIG	TXT 10 4 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					H81QyjCkvsPJDXlzwXpbtcnkHvOlkgbPJBLt
-					Dh/9lZPjMpZD3jCgrGjFjUdOZphHPtuIVKwx
-					lKo27903BkrkG3xU1z53469Rn2d1/DXy/G3U
-					wNpWgMCnS516gHS0iBufKeVTCcXUEDGdbbCR
-					UoaI1OuxOlAMrcnxgXkZape6R5trPxYKmKhR
-					C4WNrhov4OAgA8ONM2Ih1xhNiKRuVAjsfA/s
-					0Dv1kCHpCSMleNtlXQJhoFPrASVJFqbdHSJU
-					G77IzaPoFeNDCwd/C1mVjUOQTTVs88W9LrJu
-					dF7gT78s0TPCntqnjOH5je2Qfpt3nSXsWlT6
-					jhercT8JpM52jCwSjw== )
-n._pka.neersighted.com.	300	IN TXT	"v=PKA1\; fpr=EF5352EC46885C8D88EA6437F13812806D922AB5\; uri=http://neersighted.com/key.asc"
-			300	RRSIG	TXT 10 4 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					k18Lly7PE/MA0LF21i3EQUkwZbAWq4LEZJ5t
-					Etd7bnXzjOw5k1WXVqwgFdAfSawzzYbF/aRe
-					Kbj6CyURnDemxqwvB41ob7soDM+xYst2Ujy3
-					egxuDnO5Neo3C5ZUsptR9ale5w5VccB8clH5
-					2J1C8mcxTwPgMgkltR8F35gLQqke9UVCSGSV
-					sdcOQMbZCE8zmyjHqmIY0a+F0OwBiXiomW6V
-					jMhlFV8P16bH1gPbiTgeM55bMyQJi/vvtHkh
-					iCiaq5fJM6ssQoiKxkyY0CRZbMsONmfgGmov
-					Fs0JrDzz7B6hSmpCwWuup8yUmZUBTZyeUIXD
-					kZFBAnbSoP9trkd58g== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					AUqPCpPkzLnM+EzeX+hoMGQXpqcL1iOEDhUQ
+					b15LamlngfMllWxTr4Tu6KOxGNIOi5gXro2y
+					I8cYG0Q8tc/ecvN01PpEme0nna7/D2n7tnTS
+					ySaWf9+7awgFaE+cFHibrOoFCPy/BmMm0Pj8
+					DXwIKAx8oLIdMeuEkVkW4N+r4s+KtkmPhKH0
+					FWkQBWccKbDc2QvCLAc2SzQY5rdrB30NsAs+
+					y+50264K1KtZ0KyjXBbX44JlHhfdyBNXu7qG
+					Gw710VDEFZGMhbsS/WEnVPDT9PJj9GSVgSgm
+					IsrR5O8qQbqRvwfFVUW+xiAg20IpzfIDFDqE
+					KntsO2Gi1RpeKhRCrg== )
 _443._tcp.neersighted.com. 300	IN TLSA	3 0 1 (
 					0F39A5AEAE8D9DD697433276A39F0F427D63
 					AD70A910146AE5C093D965CCD4EC )
 			300	RRSIG	TLSA 10 4 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					rN4qSrSWNowi5LNL0tbdj/2SMeMp44fqVADL
-					Qv5+CTHd5sr4Ozhp2NlvG+o0b5cUrzsCUVSp
-					oLiwiINaXqPe6TPbDU5g/hwyAUI3HR7Czg42
-					9mtW0H74QVgGQ+834uJQbLUa/gJ73hY3h758
-					D6Q1ZHpzrOaF0kyxwlv/NsfGJRTsiDlG70+O
-					KtUC7XV/FqbxNIh1Y0lw8blFp2Wh895wBCxy
-					luIiZtz69UuqE1IAul33kSWydnb+FsdatqzQ
-					x95ZaljKrj9QHkeBmzr4oKGfMVVhb86Jr7HS
-					uzKzJ9v3HIxj7vSqq1tyeKl729SiPK+gpsWg
-					nKRAsB8eHGn4ZSQ8iw== )
-copper.neersighted.com.	300	IN A	107.150.9.211
-			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					vDWumRyfjx9wlySNNRAL2vkm9pgLD6qz7Mln
-					0GDIGt9JJaXxx2zj5SNurRtooBwYKgbaD7Bw
-					AIESMiLpT6hmflmY2OrDkPA3nwvjcoWNA3sI
-					lqFxNMo84rzM5qqti5qk9d07Qg7wkNCj00w6
-					tF1YHMJsTdiy0c1QOlKEuI3kflWL5G6G7ibO
-					uukCWxoLpCelsNsOC2u2ouDMwsCfdlkK1eAA
-					Wy3EAyBePIFho34xNBZON7z4tPyrBA5EfVvr
-					ungB0QlSIzURdFrGZwgDTfNv6BRNMERbjWKC
-					Se5nas0RRMdRrOhNkjWt3brxmtY9x4qprZxM
-					hRkIHOdtYjbMHz+dBg== )
-			300	SSHFP	1 1 (
-					838D2269E56298BBEB8D798B17D30E98725B
-					5243 )
-			300	SSHFP	1 2 (
-					FC477E5B4DB5BE0CF93870D50EB478E80731
-					CC1EB6C5F588F803CE70A7F462BD )
-			300	SSHFP	2 1 (
-					8C85721C04FE0EC0FB0C95AE4A3A1FA71898
-					E8FF )
-			300	SSHFP	2 2 (
-					7A1F85445D23EFC17D627346D139A6AEBB2A
-					252D5AA448EF383DD916E1DA3D25 )
-			300	SSHFP	3 1 (
-					125689878383DE793142F0356791D50760B5
-					1715 )
-			300	SSHFP	3 2 (
-					07D485CC58457FD09ACFA0E7794488FDB73C
-					6A23291C908E84546884D884109A )
-			300	RRSIG	SSHFP 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					lBQOLNzWE/bfalusoSkUlvf7S1adqAPZ0kZS
-					JXP64O24Skemyu8V3YvsXZoLYnQJVOY/9C8c
-					5KW6EK2w7xjNUIH/WbgdEB1KCjM9guRZBPD+
-					a5i25puEZSXiqWkmjzqti8MjSgIeWSSRo+Ko
-					hapJJuiFhormlbHT/2A0/fWIeC9aDaxDvDoR
-					yHSuZEPPa0eplTMnhzUtNhheffbYznzK8RJN
-					EYh/VXwFHkciRmEP/UmSFh3BeK2toM3JB5e8
-					VbD4u0361qZXENYGh6QZPbeyHJA0Mf0t9oAI
-					wVs2zg2nkKSqEMA6bMqeqignhRcbCLbT7b77
-					XZlh6BA4tl/AhLlFtQ== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					XiWRoWCMTdcjlYqNwzfIorgLII+Kq1RKfPKS
+					TC+Ga/YIekD62RicK1fL14mozBqj99/FPg3J
+					Cazaw/S7g1ITOhad/bJqa5C75DUXlIpij1Vf
+					tU/ueElYstG0vnmH57kdjuYOx0z4MAu12Wkm
+					zefcLCNKsp9tgIoRbtF0zJ/0FQyXDqhzMV81
+					vIq4dgTne91zOq7ppDrkuetXontyR3AUY27r
+					f1PXpmEa4nQWnr+nLWuQJitzrI/APTNPJByH
+					sHCqs7+WHeKuJ1dYPtqKm7ZBt6tX91N9DLTG
+					AN/AhcOiMIrf2mX7+545mDZbzGquHCiBpBSi
+					9ZlveyIHsnvi9YkU6Q== )
 carbon.neersighted.com.	300	IN A	173.255.230.140
 			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					YeYLcKokwlW/smlM0MRiKwAFW74jxFzbtRIj
-					7lSLBS0Ebxlrj1dG1UyBrlzf8CKX1/mjDLzM
-					uA9o/M4/pINkxZFn7Q2DnKXhE6Pz/fj9Pyip
-					rrZuP6Apz6GzMUo0cRCYFzAgH7eZ/RTgxn2q
-					I6e6pCcqMkk65nCW6DwTJySvzpsmrDCtr8CS
-					bUdawKfFwVv+7dFQal56T2WTry2HGVkWpseX
-					HzK5rYoaGzW3whOskHBDU4VQtzAmE3CnRuES
-					lLIox7c22t01Ido8eaHIJp3EWJ+CMkDjTkwQ
-					yDNfk4lo73gOpfS7upBhUcZmsuu773/m22mV
-					H6vUCFWRTCUoquZF4A== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					SUE3/Nl2heR6sODR/GU3nSq+w8IhLD1Pvy+g
+					062DuO9DOaqhCy/J14lEpj+rSD5874tTpd8W
+					gTUR+YSKY1bPy41uFMSu/Uso+h0yvDDIyDpj
+					pPH1aePe0DBB4HVTRAM0WCtwX05qLdPRLgGC
+					HCND+MIs/mvhIuBLTJhbLvRWx9fJriYbXZ9g
+					pWtmuepYGRFR+VNS6GZCrnp7h1ITDvnkDz/I
+					y0vXwfIqLotbtKbBQflsFyOMKAoBkbtMwNyk
+					ZYqf53X52652Xg+8InT3aBpSvBSK3OW+uLNk
+					SVVvkjhXY2Dhiw0pMRdvnRIAUlcUe3YuLcju
+					kpi/dbs/IEgrLGQxDA== )
 			300	AAAA	2600:3c03::f03c:91ff:fe73:bb00
 			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					k9fpmdidGDPjnPF/be3X/0m5Dn4yapDMo7/G
-					JRhge2rCxtvZjg/IPWzESMXETDwxoltZxWIM
-					bLLEGjcEA/b1B/msMRs6bNEwZkG3sGaCroLB
-					/q3YnoRw+qfRlDN59zOMsHLkTDY1BVj++tJC
-					DbnDoq9RftrO0rYQ6MRC1DIRZ+VbknRo9WtN
-					68D3l0o+jHRXtBeWNEh9q6Eal7cDrwxkAXZk
-					iCD8bn95j7RoJNjrN0AiX9DPlwq56JZz4HOI
-					glYHOVbXY2/hZio3u3sMsgWoCnYbellG77V8
-					GxZ0XSor6v6wXLzZuWM24pRUi9CNUZ1qgZa5
-					AhnUUB7Gg+Ki0xuPCA== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					SkJoJgeJUpYpsqlS4yYTgjzkdEbRvv9IINV5
+					vEM6uDRbT+hVpNpNSNU1db8o3kihFy/XUG/V
+					LYc6G0kSqBK1iV4KPGTSeQBNCrDuCGqdjrbP
+					wBmSALmD+A6PEfXpZPJ/VnCOxph+I6MyQKB+
+					Sak95T8Fc2tbSsBk6zp6l5y2N3Ghx+eyWKGA
+					mTrmqE45oCCOoZFKz9/rbgzMZuhWUw2sN+zx
+					D6bsLM+7LFRH6n0Gi/4MxLopqPbyKqR/+tfo
+					Ljsf12M6npuy707V/Z65STSnA0VcWqC0hjJ9
+					U5Bc3QKfQzOfc2araVRQxJ3edI6fMCQ04aXX
+					NwEjKsqA6ZbCgvW8kg== )
 			300	SSHFP	1 1 (
 					CB2C2989294156DBD7564A5092F8E5516B5E
 					26A3 )
@@ -305,203 +249,130 @@ carbon.neersighted.com.	300	IN A	173.255.230.140
 					8C3D1E4BBE986F8EBF85751AB4C2ED6CA251
 					82D84B8CA1DE2D10E562889DFDD8 )
 			300	RRSIG	SSHFP 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					EdO61biRd8rSQScoUU1bwxKlTw/hHqt1r7OQ
-					y1ni1YXDhhJ83M91ZvaC4pomE6jVX2Su504Q
-					s96Tt83CZK0SMEQYk4CaHhqnHBgF5D2tUiy2
-					n+Mz00gez8TNHwr7L6G3TY7FmoGzVdFTHpyX
-					Ri5XRq3YEeXvCxSjUBEryKroAs5k2jvoxbOu
-					8rmc3jIfZEg/hAvsu8wrgs4965I0sqQtbXRa
-					eEoXK1FadMx2+bnxemLI4pDeBNGJ5dIEjSd9
-					Rcj2LVQTjyu43tMyfel7bVoM7ujlNgAgb0Pq
-					Juz00vXA+rgdUjXbW0egvD3pAOkY4JvomN12
-					UM3G6mUgEXNEV2+6aA== )
-gold.neersighted.com.	300	IN A	107.150.19.176
+					20140913163448 20140814163448 29357 neersighted.com.
+					k3Bx4jxXwFZ3lNArpR6fXeRMc4rqOxefr43r
+					LDRyt4CqEDRo+iARsspbL3/nafego7GMiNGA
+					Qx3LFG0Ec2aiF+lahSc+HhZ3Ifa0L3Xd7rmw
+					bzeIVdsXm08Tc8soJPRvjSj4REt77l9eMH/S
+					Bw6HIgUGS5iO55p5Q1FlJnHiyBwI3njpVg0Q
+					6bfBDu33kTeJI+kex48HHNfdj4wfbRL4BwwS
+					PuMtIDMnJ7f22zZ5zBYO2d49TqAku3Mwp3O8
+					sC9TkqUlr8F61e5sjRgYd+5d3WWeWSHaL+1j
+					xkBDOflZCJ6qumJGXNPkKDP+j/KUBaBSHQMP
+					gmC5OvPQ1qu9IEIQhw== )
+bjorn._pka.neersighted.com. 300	IN TXT	"v=PKA1\; fpr=EF5352EC46885C8D88EA6437F13812806D922AB5\; uri=http://neersighted.com/key.asc"
+			300	RRSIG	TXT 10 4 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					hTDFSjqFCvqP+sueTNFJYkDp1kC/M6FG/xLt
+					ufFBNlwbX29GVmE1z+Ia+rjdxkAT6QhB/idi
+					lyuHxnD2MSQlOntTtPZXrpMhVMG5CXFx+eMR
+					z5k8dLqoP1kJv/1FsA0gZ1shUTesJt4zMOR3
+					7mhfvo+7fcikbhrpupwCk0Ye84n5Q1pzDM1x
+					Te2k/BuoE9+c/IOh6Z50NSCY0ZiPQOdl34Zh
+					zTdbzpO149wDcJjT/WH4Sy8/JqhN3OckAwYY
+					aq98KSTUZBcBWwC6Tleo9ZjVqEG5lVvTmLo8
+					kYqoZ4gYpJxHUm+VIc5eclJPje/2XKV0xsUv
+					SZ8EWCt9exbaKm0oQA== )
+elasticsearch-hq.neersighted.com. 300 IN A 69.164.204.41
 			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					TSxMVuNeTTwozqfMZL9X7ZufJCXq0jOpUj+l
-					XHfzxifqcqC9sRsl2GKlMrIJ7x5rRootE0jl
-					5VhOQ1/TvVAMb88D7DZOc+WOwM76CQJHL0VH
-					hAlFpBi/yXBVdc2E6snkAb60M3p59TrPy8nK
-					6SUBlezcuypP1RJBfsudRNlgkeF2oFGnVu5q
-					brbbdQz1WW/5/C5rcduSG3kYLAISL75n98oF
-					upV1V2S9QqDFaaX0W0ODusyCJIvleeKZzxZI
-					ZPS8/0nQz37H3GZ5rW963WpVd6rkwCJOvGpy
-					aDM8urrwzkFifClR7gfgrp2cFzRO8jMwacgB
-					3VQLAVxeBcaGQ3btSA== )
-			300	AAAA	2602:ffea:1:dc::1
+					20140913163448 20140814163448 29357 neersighted.com.
+					jc7Q+MwuS76PlOZ8ya5tdZbDeuR39iMYrpq0
+					UzhLTzFWwns2kWKQYUcOSn/w0suqbdRK0GyR
+					5bl4PTUm1/dRMyergjy4TGz7jvvd4tWgGqCz
+					mu0x7VQjS8i7f4JyDMhpOwTf3k5iDGZGjayP
+					X9Fz6+jAZR+c8ptQRQE+Dd2Vw5CYhsoHaLQK
+					X3mxEiiK2os7mHOcn3TyA5aJ8WtxzvCn4SaY
+					asfnKUac6RZQNKq5YBSSKokZhDDkQ02KH5vY
+					epQLfM0C2ZDdjdvj8/Prtzav27+a25A4AD/h
+					vpZmY7qtP/os0hEfyEpWrghy5wFGlKUY6abm
+					jePhf9rVB+zR+RWdNA== )
+			300	AAAA	2600:3c00::f03c:91ff:fe73:bbd8
 			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					ZSsqXqc5NdvJT20F2HAXJPv1GCgMFe6sUHXA
-					E4jGRPzTtNngaJVIe6wZGDaIoqRZuqcSlY0+
-					ke9ZT2cduw7Yzj7Iy2DOXOXFDkPJ2rEZpLv4
-					eO3/DZjmWoswJQlB/grfteUfwq4lqc3wNPet
-					F9GUU5sPfnFqazyS83nznyoixQOEZN82G15L
-					BNaHz/Nj+SkCr4DxiTHGRkhfmKZBGtw8mX8Q
-					lqdCVHxDQj4OJ6otjlsg+Qe/EnzKOqT0hVCd
-					L/U1GL5h6SnVoluY82Hj5x0ejdu57GtKrerg
-					if1DWUsMDkE3A0dYet1rfrwUkAhkoO5kB6S7
-					fkPl9NHjK9h5CFHlxQ== )
-			300	SSHFP	1 1 (
-					AFD27A019B92689608DF7D1AB63FA3953B99
-					88B2 )
-			300	SSHFP	1 2 (
-					568C9980136985911FC9CC163C432892033E
-					DC611C69F9B29264DE844D55B906 )
-			300	SSHFP	2 1 (
-					D78227706B692919E8BDD57FDD1A387F0E6A
-					5E95 )
-			300	SSHFP	2 2 (
-					00FB2342E9C38458F25A63DEECEC69B42907
-					4CDE7D9B3A98D8CEB63E5BF813CF )
-			300	SSHFP	3 1 (
-					3A71B92EEBC829C72B22D0D5A92CB5622247
-					572B )
-			300	SSHFP	3 2 (
-					F15A1A3678B13D3B9E768D86E89D348B3D9B
-					D025076073D6417A2CB85326E344 )
-			300	RRSIG	SSHFP 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					l1pAdQbBPaMFHHSTzrbQqm4wFGyKkgxXdhFG
-					69L8VY5S8yLJSDzjouFk5PnPx5Oz57kGUpdK
-					r2VGgEDyMNXH2S6h5IilDB4pw057hVR+fnYn
-					6bkqoKbkzUV+QLCikANswv9bzbejEI/5y4+B
-					i0nzz2tN2h4Y4bTW1/zJpSgS8PWH6iFtW12Q
-					gMWTE1zyc8x4Ds1paYpuwSwRmtLmwxPI+CRI
-					2TfpAM7JhCx0ypf/ynYcz+gxRx6N5pv+gq6M
-					NXnGiUKBfMhooHd6pFy5DTASnUt8zQopmZEt
-					vcoMUoAlzX20xY7c67u/cZjUP3S18RBg+sWH
-					a4/twCaXTyYvDm5XHA== )
-helium.neersighted.com.	300	IN A	71.19.154.209
+					20140913163448 20140814163448 29357 neersighted.com.
+					tQB5mAzZMqMKP/Ee7InxLxLJtFHbtZWLZTJy
+					xBZ0pC1gxRuhUI+VWLUFpKICrMYmXaozlPWM
+					1V3NGktJpebGkZAkyKW1OHacoWV2KeFsp0p7
+					9drnCK8+t5r6m0QeHYzcxTiKX3cd283J2Jqc
+					TahwmxyCeXKUaBkdfBoM0yg4l/gigu2TEv1c
+					2tZaEVzng2RroaPL97vpzYHFj0Lf5pwVQddZ
+					Z+HbPRtRrbB0QpPPVy6gEaT1P49LPo/dY+gj
+					QHzFADH6VgG9HrJ398Ni/+FsNjGOKzpSmwJR
+					XYRgm8l40mcUMljEZEe2VFD+qR85aUmn237P
+					I/cy+D/2AJPZpby6Tw== )
+copper.neersighted.com.	300	IN A	107.150.9.211
 			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					Yb4wL4PAC8dXam248bimRNRVrwt8rSxLlFh+
-					IXFrKIOQpgiQmD/bb02VKD/+vyJbSagAVN9J
-					TamntELzcygsHXKzOkCBjMMBRuRoqjJEFFR6
-					Gx76xoTkYBwi9kuE4ZIFRDfZaDhRCzzp11UG
-					BQQdaD/BZr/VrNMu/mG5m5va1KvDz7bZ2MGZ
-					piXoYf6/CjUnhRGG+1IOn/VpbIXYT2OLdZGO
-					ORh7NQMXSGjzt6V7dsClpJ/fCf34Fwzbvclx
-					9X55hdayk5L2TMqACQziDcSG5jGxga1XTQbL
-					QGw6JWmlMzQiL20k+32E6B7KLGpG06+C/xOg
-					o+rTBUIDgqWDHg45nA== )
-			300	AAAA	2605:2700:0:3::4713:9ad1
-			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					md5eSaYhMnGTlycsvKZpze8GJImZYhAtp3p2
-					cu8KwEH1jghIYQyPDGi4+TYgql1uAlkP5oRC
-					729YImkAl07PhhsU3yr2nASfBAfsNr23RwlP
-					dDxBFr6sY31UZn+15vMwIYsW17dMdmMZWmMj
-					Bdqi8GHDYqXLO4Fbq6UGM0p9uac1AN/5CTqa
-					UQ0AOokctmSSyw1UhKJOoEBQhB/3pdyJddZg
-					FZr2x7a4SPQN8QYw8wkRB3YAuMRVM8kntdC5
-					IOxNlwsQ4asBrE13JOtqiVZkcSK7ZPmC0XrW
-					AQM621fny3d9KFCV6CSpzJbk7AlWoWzCUyh/
-					Df0Ni+GZHBiTid3TmQ== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					mQkHnbe5hskbGHg2AdyvgjeL28QvndwvMNjt
+					3ybHYlGVE83CrXIdZlKckfr/f0n1xVyMh5/l
+					EatJ+gTuatTMzeY0dn7yA9c955JJJNikvcde
+					UrSvpsckVnHN8T14+UefF5BPaydbpVtSIObf
+					eyW6B6yIZvifITLNfA7SUf/giNcngXwrqk3U
+					ILnORDuJzgxMle2j21SlY2RF4ga7GR/U1I4p
+					LnJUL5OYQ2xcgQDjURS+w8tL3MR0hv1luoPf
+					UqXcoj3OjKV3p9DPtqm7AHN5v4FSp1g/vHV9
+					S/OVCJf/gMRfocYOCxMNzxh+bVDKTQK6Brh6
+					rNm1c753LtK2tT4xuw== )
 			300	SSHFP	1 1 (
-					7D42D2FC2386EB0CEB488AACDB4FA7E16D41
-					4D9B )
+					838D2269E56298BBEB8D798B17D30E98725B
+					5243 )
 			300	SSHFP	1 2 (
-					99E2E0514FB5231CCE3E856298EED07945A9
-					7854169F497EF80C88C8BF95A8B8 )
+					FC477E5B4DB5BE0CF93870D50EB478E80731
+					CC1EB6C5F588F803CE70A7F462BD )
 			300	SSHFP	2 1 (
-					E82CDF8C95EF1F4222751B3CD007E8CD1442
-					B9E1 )
+					8C85721C04FE0EC0FB0C95AE4A3A1FA71898
+					E8FF )
 			300	SSHFP	2 2 (
-					8E9CE576DBC1E3047AEA797C91DA63BE44E8
-					6E41E06BFD51E482DDC5ABBF2A2A )
+					7A1F85445D23EFC17D627346D139A6AEBB2A
+					252D5AA448EF383DD916E1DA3D25 )
 			300	SSHFP	3 1 (
-					0B7ED89EE80B6F1FAD250CAC1FE9B02F5A12
-					73F7 )
+					125689878383DE793142F0356791D50760B5
+					1715 )
 			300	SSHFP	3 2 (
-					B1619B97859E1A252935EC0D24FCF7FD70DA
-					595B062E21019EB6C775A2CA5368 )
+					07D485CC58457FD09ACFA0E7794488FDB73C
+					6A23291C908E84546884D884109A )
 			300	RRSIG	SSHFP 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					ERDjPV+xndd5v/h1zvcAJqiBNy01REj+g9/a
-					Yf1S74khzQiKJFfZ+Be7H5HYdUNhCm6Hl1Ml
-					tMuZKDIv2yPrjQ5sZqlRgKWmAGNr0nLfHUDn
-					rywIQh85zsijiOBoj6AYkCZ1FZg3NeWZA5EZ
-					WE9X6bXQ3kLRN7eCAB3HV/y+0jydK9vge3L4
-					yORc+O1DlHXRk0bWxYIIzAF4SUt7f1PtjEmC
-					ZEYuTr6XQOsIjIbcNeumBFIvZ7z3hJ0ReMwt
-					MQZ5JvO8Y6UW7NGP2+yNglE0IHgVF+xoy/re
-					cOMrxnfcUEPJUkow3HO6Hx2ux6gZ8PprV1k1
-					288q20iA2f+bf50fhw== )
-iron.neersighted.com.	300	IN A	107.150.19.150
-			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					LefwkTjOX17PJ9qCjdQwzi8KjuDuCi188GUO
-					7e8lFHsx8amPc0NIgtSDq1ZPEIDQsZBhAH9T
-					SFhCdCphFqqbICVtttDOMpNunLKaZ8zhmNnU
-					a63x4vL6g+ZpoK4OVX44+WZ+ohnqnmqvRNUT
-					FbGZmJ9K98qfKkRJcFXLEXXhrpsu6v+exJpG
-					AjqPPBU1Gw5Jh6E3VJdc+Kw/SNIqZmEcSgJh
-					Yvqb17UOfGdHxzJQl7XJi4hFVY3/hTOzC9QQ
-					sZo5U2V9wxBp8Bu65G6L65FDdRDFScS8v847
-					KWFMir1qhqtF3BNQD0+w0HJsXBjoTtKlgPiM
-					cyXaOIcFCY6B0p03ag== )
-			300	SSHFP	1 1 (
-					EF3F36943F67C9B4B19B294BC54426E86EA5
-					5556 )
-			300	SSHFP	1 2 (
-					0DA4AECA0D4B4907CF951CE3DB21C8B48F24
-					2462DE3B399F3FB3AC24813AA79B )
-			300	SSHFP	2 1 (
-					10A3ABF152FEDD7DE10D28035500A7DE766E
-					AB3A )
-			300	SSHFP	2 2 (
-					AC8FC3D26DA57082F1DCEF68A5638E556802
-					0968AFEF95B8F5065356132D605C )
-			300	SSHFP	3 1 (
-					88751CFB9DF75E958498B0581215D7097B20
-					75EC )
-			300	SSHFP	3 2 (
-					C71A25FC3982756746CC2A3B5914DE1F1456
-					30DEB8A95B47AC85BA948477F10A )
-			300	RRSIG	SSHFP 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					XqzdQStMFsYqgyxRNoiHYxWrzvz0ttLWa7Do
-					8Ypp5T54XcmaxmRgGol8X7FwdhQ8RvFBXDbo
-					nox3pICdef70f6lTbbir0wvYnOqKtMRL+adi
-					kQ7hNG9d69bc5PDqXmdvlVIw8Eg8O5itoCcn
-					XOMhPqVU/iMqiCvHt+7CHgPzrwucJqxhKZO8
-					nBaaDlejiFzmkEgAgKe0aobOqG6voh//rDB5
-					ew5Vef//SXoEe6qefb1RtmYuv4y2SvQ2qMXF
-					4qFhnTAcLV9uPAPYj/aI6ITvO7WZ9ITXeSVO
-					cOdMSrNQf10DpChrJi8VholO8HoK3rxAS+eK
-					dAa/1pvMVv4R/JCEvg== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					P6xiNL4g/aeCpOKTE0KntpYgq/ziXbZHRmLo
+					Gq7QfUvMYtEFlZg7Z+q18up4g+21Q/FpHY30
+					ubsEAQF5FyXuCFxqm+VKUL0x4/gF4htw1mxE
+					p+GpTh+ebHYZAiavuhw5i7bx09AZPGFNyQbq
+					N60bPR2NUlDwrCYGr4nJ2HWpcM/JQaKZHznu
+					Ztsz+bU3YWDa88aRpR0vCe2GXBJmhGsCmJ5r
+					OVynlTtWZtF1ZiaEAqMRpJiClUM6R9TykHTT
+					jYr5jD5ikCCqx1KIq0AEaro8Y2m/kcx5m5o7
+					ZoggK8GGgQ78iXkpIiUjch+fMjfTq1M8S9aU
+					W5HMAa6ihKThnk+YJA== )
 hydrogen.neersighted.com. 300	IN A	69.164.204.41
 			300	IN A	96.126.118.209
 			300	IN A	198.58.114.99
 			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					Y7UkOfXvpLbzlw5d0wdKQFktzHTJ7xMlwXU5
-					f4wyw5nBDB/qX3qUk1a/O+ost3QoSOGTLdGV
-					3D7u5mao7UJHlYW9ZnTRXiFqUR4l0LIK9Isd
-					Wb2YzsabSweh5675977JS8LmNV2fTrtPRsEN
-					TV0zMkkZNP8+8fabimyIB8bXhegs9SQdWIfZ
-					PJ4dxAY+J21HIU4ROO0KsvCtMZBrCkPBwoKR
-					rGAd+gqbMK5YlpP6G/XjNkd4Wl8vOy3m+wbC
-					3FMRVbZpm5Pu+dqiSbRBRU2FG2Lhp4i6PKk4
-					0FSP5DVaxnOd6wadCFMmroQ5mZ3DtBj9RoDw
-					Q23aUuKvULQdh/Gsvg== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					ff8rOiMZZ7VtTgyVahmDgq3SG113Eqhj4Vff
+					4AbjkuJRHkrTG6nJw/JnnARWd84WrlTsRRvU
+					TyTuC/zDeLJ5zWvYvyMVkEg9RXKCKay2sivf
+					ZVuFDoYXKN1Nga/Yp30k9BnOBH3LTgkLc+Al
+					/f2XSFL2fG/f+nX/xgBeeG4doTjVbu38gkxX
+					309Sm8pLYCwQBeKsRIs350R/XfT+B2oA+tP4
+					Jp8LFclFkGxPSB12GhKyVsqDZr1d4PAPGbME
+					qaAhXQY/nTOcAFHFLZoUi72n6w41rwYtoL7I
+					9x4NWrw1gwtaVp5qmxFFW9p3zC0TxmmRaGvC
+					ytoUrw+5dpdVj6DU5Q== )
 			300	AAAA	2600:3c00::f03c:91ff:fe73:bbd8
 			300	AAAA	2600:3c00:e000:8c::1
 			300	AAAA	2600:3c00:e000:8c::2
 			300	AAAA	2600:3c00:e000:8c::3
 			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					CWt/1wJhnm+ZqyxMl6WserKvqAQ4QzuovAm/
-					fOYtw0LMfvx7NI5k26R73V1YVIwYzA3G6X5G
-					gU1+eD64BLKbpCeFWSbOZeRBJ7RfF/J1AKeL
-					E7utpIFlWU0cCWuSxkvV+Ww0QqKRpUfxtpW/
-					JKz/OrKtEB/mIicnuurXV0LU9IAEHDzAr2kU
-					d2341ZYalOQyXJ0PWxvwwpXTzwUbXwVLG94v
-					BtvADfKlBwdzSVbcqMgexfA2fmtXtvrf/GWL
-					4A+TufvvEo6vm/hoj7P6wsCDk8QpLmOQw4Hc
-					EFNwd84QAGHpiF0sivNQJkNckaCu1E3mX2Iw
-					zec0TkHYhKzj67K7RQ== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					GngeaggBhnffkCytt0AMzD4YVtZiG7WN3jUl
+					v4gc5uXbUMe0emgOHL71RWaHpcTVEAixJzYh
+					hcuquvzK1/JneJJ/tCuO+kDcaEzpySLCmlDN
+					p3oq9Kl3p7VEEkBJ6y5i++PdLn4nFII2mpxg
+					LMld54iqzFMzFmYzl0bmK4SORh4trn0+WL4s
+					6vhvWKMbRHSccm1j4g/n20JQtt/onSoQ/liR
+					kw8Lno22a8DmgoWfc4QTda6DYamnUSffDr55
+					XjLMaDfovBn0EMGBP6mqXxlQWnTltwdf+7dV
+					rcSVGXcaOvJYNvM5mLTl62CvKv8Yok4jwMpu
+					njt6CBmwzvtXDzNX3Q== )
 			300	SSHFP	1 1 (
 					767335EC3239544D3126E6627F982FF62200
 					AB19 )
@@ -521,69 +392,328 @@ hydrogen.neersighted.com. 300	IN A	69.164.204.41
 					19933AF37CE1B73B26294FF51508299996EA
 					6C550F87C5C45360FBCE108676C2 )
 			300	RRSIG	SSHFP 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					giw3iyy4OE+peGF6kxyYnuIRLYJZlv/PkyZA
-					hJAgMywVgZoRbMpf0ExTF7vXah3IkThTwccn
-					d+RRRVUrXobKJ/BQKVDT3qhnfvAe2UyVZBpb
-					2KRGbZOtyIoGjoJUC/oEjWCGSMY+P8urwX/B
-					qYkFAnKBKiGJuZzWAS8bAJW4TF8KGNQnF/CZ
-					fu5SD0vzHJo8FqKjQCDi5TQ7yYVxT/xYU3cH
-					LU67CM+F71CtB1lLMecZBijNHc0xxvsP87GP
-					+Z6UkJ9OJCA5bxrKefy7mksMxAR9Moz/8nqc
-					4PEN/CXYFzZB7dcpueSz6zzhEUmT+fcD+EXC
-					ewYEcrnDaDXBAZg1Qw== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					Xh4iSyrkl/uca8NziK7LviU10ogmQsS5fW3F
+					4Ntt2GsKHmkUSrwplo+SKnU3tvrLTtHzExEk
+					GZ7KDbl4kNkIq9UZ1Qiox2oE1WeiFxkuGN1U
+					gbxsnEWbLEkqrgonKxz0sj8Qcu/pqW+H7lmN
+					AAf1+uL6Rn2G5xOB4+FFccdf16ASwpCwnTiS
+					ZmA6QnGdtHfek/RI73SPxIAjr2ilvRI8C7uS
+					51YobtnvVzfsaGIz/5U21ojNf5IeHQjz/evc
+					VqYPDhClplTOZjaObqXVogocCc/JaOo7PwVG
+					j1lum4P6sF+J4mFLpLTeM+VtTRgWLpgCU3FH
+					WvVMEX1mTa8BFqbITw== )
+gold.neersighted.com.	300	IN A	107.150.19.176
+			300	RRSIG	A 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					XJJdftqAycJwN9+WzaitwZv9gea7xv4yqmF0
+					2ZOAtwNFWBAzTkLBUqR06PE7ezAMHpuoqfo5
+					bVREI67+aDbwtxCNOFTvW+ubghSmpENv8z5L
+					BE4XE/HrkTxPCRZMtVuh+aVvIgJECRo8lUXj
+					9korBq2XkInzin1EusjfTfFEXI2jSWiyk1yu
+					u0ajXiUFD9XFGAFxWivJetTPRpxE0qa/pplu
+					IZEI3BIzvcNEYsf374EO8qh5WAMGj51uAzYT
+					czaTJQDuE6Mx+vh5iuB9FvwXct8iCH809oP1
+					Gaao1Jhywu/HU1gQGe0t8JVHdMf9uqeV9M3E
+					VLzcjeoT53D1060jEQ== )
+			300	AAAA	2602:ffea:1:dc::1
+			300	RRSIG	AAAA 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					rfamRANLhG2DhR0tL71znXTHkANFYnMsheho
+					lQ+VJicaPl6uNQNllv3yfaDqUTF5TfdDK8jW
+					/8MouqvX/eeyLcS4j04JFK7YNZgRP9WN855w
+					L8ERN8bKPouDiAjM93EujiFuHGWs68UozySW
+					8pBys0Cr54awrMTtaNo/hp7SjXGxZWe2CJi/
+					F9JuHXbHHxg5y7dB8lTJJCkgieDOTSM152AR
+					LCeEa9e21iATCbp21G1E4CgQJx+lFgL8AkOo
+					85x9FsSzOHiKP2enen9XDalVSXsfzsmUXk3z
+					V+91pNhqbs7lqJS+8Zs5kgG3xRUXjDhq3vjz
+					TI7zPvYi6tXeE9C3/g== )
+			300	SSHFP	1 1 (
+					AFD27A019B92689608DF7D1AB63FA3953B99
+					88B2 )
+			300	SSHFP	1 2 (
+					568C9980136985911FC9CC163C432892033E
+					DC611C69F9B29264DE844D55B906 )
+			300	SSHFP	2 1 (
+					D78227706B692919E8BDD57FDD1A387F0E6A
+					5E95 )
+			300	SSHFP	2 2 (
+					00FB2342E9C38458F25A63DEECEC69B42907
+					4CDE7D9B3A98D8CEB63E5BF813CF )
+			300	SSHFP	3 1 (
+					3A71B92EEBC829C72B22D0D5A92CB5622247
+					572B )
+			300	SSHFP	3 2 (
+					F15A1A3678B13D3B9E768D86E89D348B3D9B
+					D025076073D6417A2CB85326E344 )
+			300	RRSIG	SSHFP 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					DKA0cdmAHQpLrm7ylcX8oE/FuEKcr4uxFJz7
+					fkrQzZBf8Y/VLv/lwVq++dZYAmYw3ew5Fizj
+					0Rd7e9lugv36tblNy+DtVeL4lrJFr5IIiMY+
+					9e1AM0qg3wyKVDfcWQ7TOMnxMd+0ffVvVzNE
+					gxxGNo/IWDJqBW2w0QQ+lOz9G+dWjwShmdaB
+					3W7IQQJ9FqvBzVsnKv95d0BbPZYbOizq18OP
+					3S7ym9o2D3+gBZdpC6Bqx6mmmyo+YPSZEhey
+					NlKZdJ4SGiL3R8o0ZpZorQ3WE5gNx0KyOp7s
+					f2cfRemhZCKZ1m1QgcAv8TUNOB4bAAHFp21a
+					GTyhyPxiWzcEORLG2Q== )
 kibana.neersighted.com.	300	IN A	69.164.204.41
 			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					U+o1e2Tdo6s+umLVHwGCzMasaoE/8Cm3tkOU
-					STwjNm0HgP3PX7MNWM/0Uf2aDJ3H00YEP9ti
-					jESRoUE+IWhrIOA8B3Yn3r4fMkMENzeYgSru
-					0n7k5itoTkxsAM2I37i/leWz6ZOG4UJp07Vu
-					1PuAt28ZSuYLZtAETmnM3kSz+KDrro/0bwFh
-					5T0N4rF7n/0tpRp68qmnfI/rcT2XFeao16pg
-					nD7nFKFBeWIu8xRNZ5X9prr16/Bx44KNU39X
-					ma89G2FfvX+CknUL4aO0cZPy+V62vccAzzdi
-					td0IVMJ2laoaZU8NJk7lrmi8+gkP3DBJVKJo
-					UOUsXH6gFs27THrptQ== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					I2lXDZzoXDsGH4gDTOHDJNSUjGi9mzfoSrgS
+					g9JDU8PkX/LDVCBXpIyUxIsVw124LnCQ9YPR
+					DYYdp7HdS/WNaSNO6vaE7kBlcPOEwY5typid
+					EGTqyGgPhtPn1UAZR2BgiclbN0f8bSy65Tuk
+					YLRNrkYjeycdKdK2TXIxiF4AoPX9rbCN1aKU
+					3hwdT4CyfAn4qpFlQ4agLsCyK4WwSv/Gh2oT
+					3EUPZWmPKnTXE2nNN44AWy/UOPOI18Cgh0jx
+					rDWJneY3TsNnU9zu/C6y+yyL0NLAH7rhO+fD
+					p1RQyS0loSOQbGyZIoGGmu9F4B/fXhDPRVYW
+					CT1Q9yFF880C6JJlVw== )
 			300	AAAA	2600:3c00::f03c:91ff:fe73:bbd8
 			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					H8NvqPHyWu2DTZRowAY7yGB1ZRUz1rmVfhhY
-					+svCYWH6skRNoT5z9GJ64nYapnOKQvySRAWV
-					IQ3Wdw0O2FJTkCFsq6CU34I3YiOj9J2V1YeU
-					KPwt5NPWXOijxaD2lJUoWofBDluQqWPB7DFo
-					9vI0HKLrzOZNnwGDapjF6xvZ8q+ZjsHodmIc
-					L+4BiURh4AvXaVf5qFFB2dgUA5bsH2V9uc29
-					PTqYvsv7vF1fRfuMdS+/6sq8TbFVYcy5jafH
-					OTqH/7ro1ezbEWcszdmj+BsFHpCCx/0YWU1G
-					EgjbnUzF37uoFewWJ4CvIn2gJGkhCQC3kmUp
-					tEdEpw7SCHu56z4XVg== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					P9dfKZFuJUnb0Zy2jBG5p+E/S0Wt9IaQzqjg
+					g9ugZq9V2yqA/2HbWGwsONFvDSlGA+IbYkF9
+					IyeZ+hwy7vxyGApngy+ZZh9AQY5phI954yb/
+					fJh39ZcSFhA6Gkuo5BaWrGFBT2TJa52WlNwF
+					ge+0SwtVzB5xfnMoFs/nWsTVdUKHLcPbvAgL
+					SHeYtpNfvGbb8UtYpRLNU+rZWwFyZ29QQtBU
+					u5YSnFDsAP6CSQbJW4OM0yCMn3JFmV5fQgy9
+					ylPDQsbp8xn0ikyJVcz2AX72BzYBDWvuGppw
+					QcUN33bFC/0J1gfvKV46vJTc4uHI9axYf1Cj
+					Tqfh4H7J9l03khesyg== )
+ns1.neersighted.com.	300	IN A	173.255.230.140
+			300	RRSIG	A 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					AMCfpdeA698oiRNLv7cKVJGt/mC30lOyyirm
+					jJSwfJuo3dlpqKGCmlKILVy/ckGrPHnQLbkY
+					se8Jzgo64xuWh0rah3Ew25L8k9XxS6Zw5w7X
+					RgyXLG9QoznqTB3MyAVRj1vvui2BMLFm0KPo
+					nWectIfdS8M4+uNltAl2Osfi6wcY+qr4ZNeA
+					+TRh9k6arqO/D80LdI6XEGUkGhYjXWuqQP0r
+					QyOssq4QhASSd5oXaUkK3riB1DPw1UP28/rr
+					WBWuO9E49IB9fLCJWi0Lbqvr16Km0vUJwKgQ
+					h5yMKdrg8ci7W2FnpYqhlDcMgR1EM5PGai3h
+					UO/D8iN5nfFmY9wlWQ== )
+			300	AAAA	2600:3c03::f03c:91ff:fe73:bb00
+			300	RRSIG	AAAA 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					MvoHclTYGohY1zWdGT70K7xvajv/7AmF59Rq
+					1vGEdrK4UrV8aWcxh7XOzV9MGmbJEDaoMXQ6
+					43Z60sT4kf9Ff0tbOlCPA8j4Ui6FOHY7wed7
+					OqtjOL+J9MJC65BhE2a76MPucfa1w3/sblsz
+					Q7wRma/5wgnFmm+Sc5qPa1K5QRSj9/dWUJ/K
+					1aKZojOOeGklHrX0a3y9yRlztqDlMVXnLMwk
+					rZ65NF9ClofxCv0nQks9DNlT/tDmegELyZh7
+					IJf7vKgNCsYxRCrif6YjxApp78DkRhFF/kuE
+					ca03hD2AEFXHUVTOjez+ao3dku6adNUbocc3
+					1tiKnEtuvGPdffXkGQ== )
+helium.neersighted.com.	300	IN A	71.19.154.209
+			300	RRSIG	A 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					Z5GuRlSBaJ4G7F5vsSNy7ugfWcYB51xEEUey
+					tEpjd36r5iNTaMaBRe6/fvDN8xY1J5vNqFPn
+					Pl9tEkVkyIEbsgx1sFqtPSww1VwC9QBXxFZ1
+					OrOE1eyOZvaDOiQuFvjJjCSFTtK91A79jrC8
+					2xrnM+f20mi/2nE6REYy8E1B4eHDtUmDXvHR
+					qH473BSILVDR4PglVbxpLOIoXW2szlk68n/J
+					C6bxFUHzDL8gRDZT/ayfsbjHNuMDMH6eLSE4
+					++yinVLz7uBzlZMv2Rbhq0i4bEvWdqyQ8zDI
+					GcMJ3ghOtJIgbP0fs7gtiwGezFR+8EWWiotk
+					uHtgWbjhFdqHyO0zXQ== )
+			300	AAAA	2605:2700:0:3::4713:9ad1
+			300	RRSIG	AAAA 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					rRZoc52weqUG1yF9J8rfbvUJd3OvYO9GhE6j
+					7g/NTe4f3zDU6MufjSLlrwgi8zEP5hrP88FY
+					bnU370TWlaedXQg0yQB6E+MXISbuTGGr0s4/
+					oAvppERPW0ztx+dHVEIN5+oyWxkNz7wsq6kI
+					6nR4Ksyl3VVYJZNSK9FnhAUi9k2e9mJeLQk6
+					YT5E4mnVG/A7GZSamRdyb3yncVgZjJ4ohPc1
+					MzsVfelHx/wPJarrp00/8NMa0z/fFrxweWST
+					WgKgSUZhmIwuib2yYr8Wk+sGw5ZVL2V3slLV
+					kjcxsUDvpe8QhtT0uXJZ3i1aMhjc+odhR2Mp
+					XZNdNZKHnOQsM6y1yQ== )
+			300	SSHFP	1 1 (
+					7D42D2FC2386EB0CEB488AACDB4FA7E16D41
+					4D9B )
+			300	SSHFP	1 2 (
+					99E2E0514FB5231CCE3E856298EED07945A9
+					7854169F497EF80C88C8BF95A8B8 )
+			300	SSHFP	2 1 (
+					E82CDF8C95EF1F4222751B3CD007E8CD1442
+					B9E1 )
+			300	SSHFP	2 2 (
+					8E9CE576DBC1E3047AEA797C91DA63BE44E8
+					6E41E06BFD51E482DDC5ABBF2A2A )
+			300	SSHFP	3 1 (
+					0B7ED89EE80B6F1FAD250CAC1FE9B02F5A12
+					73F7 )
+			300	SSHFP	3 2 (
+					B1619B97859E1A252935EC0D24FCF7FD70DA
+					595B062E21019EB6C775A2CA5368 )
+			300	RRSIG	SSHFP 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					sxzeaKGQeheOp3wiM99UfqnXCBB/aOPUF8al
+					Hu0MjMyfUB6ekdSNF6Y3HxZrAs4ljcG+Y/Vj
+					oVgdLGoa3XiohqwAbdHUxB3y3JnuIc4iZHPQ
+					2vfeUmfh/4yQzX5ctDzw1Rgi94g3M1AzMfiu
+					YXWDwoFXY9eaO+1i297lDbbVRTXIaxk3F6GQ
+					ulIWvt6jVOPUkVjPim8fctSREloCr7zvWwyQ
+					CUz9mUgUgnNNwcqSzd3t+0/AzkVt2ttTVJd8
+					CKGylbprK3DLOF6yvLWqqRIOu188qBE5I82l
+					V8gldotXXYUWupAHPS5+N0NlSYfEgRO2BGJu
+					OCnkiFceJELfERVn7w== )
+iron.neersighted.com.	300	IN A	107.150.19.150
+			300	RRSIG	A 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					copm12Pd16det3t7eYFEqDEl1OfMG0BmM1w0
+					pQS+y0BcJQMWgV6+lL3LQkl9K9Sd+zRVJxDD
+					yyWDNNTAEtIcpKzMwv1BrHLNsvplrnK6Ca26
+					yd7h3ndAy25lADvEgJt9VDYRdjWAmivw2HQu
+					foXVZO+49g+zYgdO1FPOQs1MsqoibpDzUXbU
+					L/nY/MA9F+T2+FR5i4SiLO+AK0+awvkFd1Dl
+					BmdLLUKELIJkz/BaKlFB/BYOw4yymshaUWDY
+					PfBrVVWgjKfLfWOh8c3Th72oJj3QV7X+7lcD
+					ioh0w/bmgCcfs895UrMWL5X9p5TS8BP/UfHa
+					9h3cMHE72s81oVZ6/w== )
+			300	SSHFP	1 1 (
+					EF3F36943F67C9B4B19B294BC54426E86EA5
+					5556 )
+			300	SSHFP	1 2 (
+					0DA4AECA0D4B4907CF951CE3DB21C8B48F24
+					2462DE3B399F3FB3AC24813AA79B )
+			300	SSHFP	2 1 (
+					10A3ABF152FEDD7DE10D28035500A7DE766E
+					AB3A )
+			300	SSHFP	2 2 (
+					AC8FC3D26DA57082F1DCEF68A5638E556802
+					0968AFEF95B8F5065356132D605C )
+			300	SSHFP	3 1 (
+					88751CFB9DF75E958498B0581215D7097B20
+					75EC )
+			300	SSHFP	3 2 (
+					C71A25FC3982756746CC2A3B5914DE1F1456
+					30DEB8A95B47AC85BA948477F10A )
+			300	RRSIG	SSHFP 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					s62Qz6fClFoT/XcSljtAoqnc7rLIL1FHnkPn
+					lcN4xXfNGGoOT3ehQzBa6lkLGPZchqV6FLE/
+					1NoPW8TwD1hXsLAYVSQsRf/w+WmtlcUXKV0e
+					J7tOmqqdYkaMqsBCvJekkAdpjMrAUlCxZxRf
+					jGLn/neIWqh9Dz4MMbxumx3fhvJirHVIlLY0
+					A3yzdGxRNZUop+GuYVdls5hMGtPyNLWYTNLi
+					MlLsH8NRb6iw9Q24jI7PlWeG4XGcynLKK0PQ
+					mpd7rHiMViWsXI5Kw2FaJtIuKuzybZPi/L+8
+					wNnAQo+TEh7s0W3px/tB+658fUWbVh7mISsb
+					Ow3BBTr2tBJoxK8ATA== )
+ns2.neersighted.com.	300	IN A	74.207.242.71
+			300	RRSIG	A 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					PcsFCOx4spzhHM4hoR6QokcPYzYEHFNiaj47
+					h1zcoj508jz2TY26FOU57ElEZfGLt3RJ7mkY
+					Wpt2tLE9zl9/y2F5+kywK8C8ZPWXsirMCYW1
+					3WLlyDpCdltT26upUGKSOwYok6Ak7oktzBdn
+					UHH9LOMwiMQ3HbokWzb5faGXQNeQ7GVZHb/T
+					UY1dlX3vFCyUSGWM72/okrn42dKfSOK3czFq
+					7bb/5ILvhMN1mINUjl2AhwMkVIKZVF8WyIy5
+					BogAuxpRbskea9C8WY8D6Ec9nzTXdFtvjuxR
+					4RfEB+vW+XQdD+YKtrP1xUiNLhHbjKlQ8ZkL
+					SXnfIUaQWhvrzx15jw== )
+			300	AAAA	2600:3c01::f03c:91ff:fe73:cb9f
+			300	RRSIG	AAAA 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					I+RAlM4u8/QDE/SbkjZl9kZ/YmVohTMxXjRQ
+					07+iZaSrh7qZDXlaaHnMuyZUYrxOlkGIzP+W
+					JOtixh8lRkCFsZITcDhUKBer1kmlFnhD26pb
+					spr3w646JHQnjVefWQ4THvlUt73T23VTwIAT
+					dB7zkJO0Da6OGztOtuI4AmPeDZCdd5SAM1IU
+					Jio3wzuUaFMlLOKAIItrHQyuMTD4xxM5KWbl
+					xuLhoOYhd/NzRsP2WYwLwGb85C32hICW6cGc
+					addBJauYXPe4PAYpWtRYFxigXcWbxIYtlMaJ
+					2jKIpallrdOeB3Fx2YUQQXNdASe5+PkWqezC
+					xQw1Tw0ztdFe/HnIQw== )
+ns4.neersighted.com.	300	IN A	109.74.194.10
+			300	RRSIG	A 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					FngUWjupdOxoD2hXAAuvYrbnr2wrHOrTrgi0
+					OPujXS7XLqCollFytYvR8Fiq4Th0ogMSRXw3
+					BIiPtXyKOYue8wib3OjB2ylZr5AJv93uxFGa
+					AP76MI6iZoY+z48CTj3HQ4aYkWQALRfTcmKh
+					T4M5OKMyO5LAajaI4zcnWypQEmjL+Z+VsDaq
+					YsMAmtnlRE+DifhR6SSbIUA9/zsa0e3NeZCJ
+					dEIrqxLC2INV7wozZSTrFF3GUkn2I/Ker9hZ
+					vWKd0WFQIMbJCi9rYOC7GZ3KmdGtq8OiXNV3
+					KSzRaZVurb5kjZ9/VHSScKH4psU428Sdv/xx
+					K6/JPM250imYr895+A== )
+			300	AAAA	2a01:7e00::a
+			300	RRSIG	AAAA 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					U7Adqlq7rtvch5ss6A7lbi/jtyGTBQADn/We
+					8lQMu4YWu/KEPSFKxoiKglxd76jbq/S10QfI
+					y0Mef0FhWkNQUhKtRZ8yturq6CzNIRQR765S
+					yR4G40MwdSuBCLp0L4nPkW1Upkj27ufJK/FO
+					fSj7yelS5PMpKevoZc+Vj6HgKOh/rCO36Vpy
+					u4+/U1N8xTUscvfVt24yyymgv3BO4vv+7IJI
+					kgMqQtnGA01w8QGmuk1NozP/D5rKlXiE1FGO
+					uV97ngVYFnNq+UrQIllK4qUE1H2EVNVskTnK
+					9Cu0OEL2UwHqZO4Lf7Sy14aQ2ba0PsbShDPU
+					UkDPME3w5Ku6RMAtYg== )
+ns3.neersighted.com.	300	IN A	69.93.127.10
+			300	RRSIG	A 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					VniuhBwYZvVcnfZGjdH35gOonN2/QJFOk25+
+					8pdSA9yiVSvErw+IYvervZsAKDdUu+HOMTbh
+					L8GZsg1g1iRYVgk1nWSw1QGTUxzorFR/1JAU
+					LoP5vSUF2pwNzMIiMquVHlgfowYafzzWzrXA
+					mzMaImLdKvF4vk5R6QgAI3pgPzLPjHSisAU4
+					hNW3w6bPhBINQqC/Ko2sK9Zl0kPiygq77nnm
+					JA+d41RRqt+7C5ejbw9IdClaM651JfUWC3Ht
+					lCJ3DuHRXatl92K8jBZ5hd2hDSG4jwZEFWEW
+					bDOqu5qDZy3+BNouoEi7CL+9EYVzfeMdHaD7
+					xl/brUimiIvcpUmjOg== )
+			300	AAAA	2600:3c00::a
+			300	RRSIG	AAAA 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					HnyurgJTtatGGXp+XEXuu+FJ4/M/BLjFJQQC
+					d+jyDEPzT3wu0gNOrixXQkvk95hVqeEHlfq6
+					oE3WXpICR+KXYg/6yefkbW2Cm3t2eyhMADyW
+					lHOX2NRnjbUy68Qp2WNV20LmeqaMw89JeuS2
+					YTLjd3bwyLq/G1BBzSEGdeGaJaVUIoNDn4CA
+					ADB/Josbgxd6ragOKo01F1d1CDx8RWZSOKCa
+					I6aaKRIW318ojqeUtOomj/w5OzAqFxEFj5MN
+					o/c/aUMSH6Rs2BByvVcAH0da6ctrfdlhiTt/
+					xz1Ki9ENQ2RHpo6yMXGyhnd24yG57jZT0bVz
+					9ld0WYdiDOMX297VgQ== )
 nitrogen.neersighted.com. 300	IN A	96.126.118.120
 			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					T1AJTtie9wNKHh4+atufzosO5dJoTXIk3OOd
-					YVAHBz+fGwnjCPcedCs5DXQxirso1tXWWNW1
-					lrwI9vsR5CkHIZ9c+wjL9flwwgS676ooVW57
-					MxruNJX7BU2D7RKn0zfJ5Zyn2H75vmwL12et
-					4Fak/OvDTvd7QDdYUEYAW5LXURJvLVHyLLxk
-					SBwkhknWJIojvibdWrwxJzcPNJXSXMh4eNHo
-					K4qxV0FcVqzZT5h8+PumuXlIb1YzsMhYVXCT
-					WrXRtcTbBlp0P6XMwG0ONovetqASv9JkugQZ
-					lE3gV+hqJu68BzBhTGp2MF4koidI2RPpzWg8
-					M/Xb+WkWsvpBKYa82Q== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					FciJmpK77zcxRk/xFIjd5/ihFS6/BFyVofqL
+					msu5glzcHvW5Bq/agg1/W5WOxyzsfBTXSRP4
+					KAFa0b+y+U0wfWK+oaAOreaHoBCkDfiDRENh
+					6/2S+PhBZKMa6VCKrCCrUu6SnhysJ6iGMEew
+					pns3BzzR25I1eBvbWHqRQ29Cayp5E5nFE9ly
+					KB8HJDoMg12AnEER9G/lFaBNJuz59h+2PViP
+					bn3nVs0SKX3rA1iv/Jy5OvuLcwJLhO0Br0kx
+					c8bbx9RGWl1lEGmwf0iSl6i2tKonhKQ5SkRr
+					xiamnzUcJLUAxlCxRV0bTzqbdW4OafHa2x5e
+					hb/44SaGb+QTxUMZKg== )
 			300	AAAA	2600:3c00::f03c:91ff:fe50:fd52
 			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					KnUqVUqyEUSDpMVjwpn4q0dUCUuZJ4H1EJvu
-					rMz/52H3KowyQ4VdFh0s1Jn9xvvk0M/cu/oi
-					8HmFKkNQDaVYeCfso2wwAaLX7Wfm159oEsSx
-					JeffAbugArnws6aMyVL7+hVzsdgXybDtb5xH
-					qTf0tdOYUQZO4qYxeER/EWBeTH3BgC0hJTDM
-					RLRbLg0li8hzUfS2ne/Ttju778oACgd+R1rP
-					TWTJW3eaByZrcjCrkaLpTfWyrHbcRn4XYB3l
-					wR/I+eNnHYrKBDW55snPtbZc2cjSlpUu3xUj
-					Tjd+nh3mcpx1GjWbkUAbXovdD7Hl41oma/Wv
-					p8WpRB6IlfQYoJ0kTA== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					rX3S4urMM2x7TyalFxJsNlT4DZtKD5/yX/QB
+					qVED3eCbz1aZKgZWRwr4HA85xc3B83XuwRdN
+					si/RIMiq8Vrh/RiXaYPFkbov1mmAJT1Rjaw2
+					g+dhKulMPmc6IzZIdf9dDRUzbMQjaYY04pWG
+					gxU6j1e/LiGctQGQ9KknEqrQFrWqeOiwkJVJ
+					NvRFsF3r6E7r7ZzsxUV9ctFkYvsRcW2jHpq6
+					TZslNFM3WZ8QuwJoaf1HbkCKbJ+iXYVediG0
+					zQA7ZjvouclfCCBHDUB4RTSgQDImdXk2eRSa
+					65rEL/UrNXpQNelOd8RHqneN20jUkVIr5c9e
+					hvz5s8Q922Y5ws6lEQ== )
 			300	SSHFP	1 1 (
 					87F3358C74FF4F1C83D6724623E2B45C2141
 					B06A )
@@ -603,160 +733,43 @@ nitrogen.neersighted.com. 300	IN A	96.126.118.120
 					100098A667DDDB92C89B4D9C01E748E2538A
 					6B710F80386B5074689E5CF7355B )
 			300	RRSIG	SSHFP 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					jQXnvmQGxNAfipTTfg7TB9vAkGnxPPpsmTZ2
-					N2vozesIqoTnvn5ArFswCahD+ZilCQKnzVcC
-					zM+zHZiLKDzOoX1C4Lkdj8QrOmDKtbs6Ycsk
-					EZsjuBgFyg2WUszsiOtyLGCPrzWvwbpwuxcO
-					Tn/Kf72DftpF2PdGvVlEcFxHD88zJghja+9A
-					3gbiZsQR02G9rSx8ik9vilRtVWdiKceQpwNF
-					oXbkwCs3a2Yu6GuoFy77PXFTHotcKOkcArCK
-					RpcD6Athz9SHtT7dI4rQnb/q9ALvMPTyTAEJ
-					iXP9Ff50Xo1DqLnv0y0trX15Zje2ywItEyct
-					/Dx41wG7I1gfnsxqYQ== )
-ns2.neersighted.com.	300	IN A	74.207.242.71
-			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					diCLlrtSbXunJhOkQ14qrhnBrDJd6/DxiQtH
-					zW4kd8988jqHjNnK1NtRk18fZCGKBbYgkyjD
-					pggxCB8UP3ujjLxD2GlTWc89Rcxy+BkzRJW9
-					LjRyFH8NURv+bpPMYtOTBvZzzWCyqkWelcra
-					CovreVNXKyUX6nCFErOqUwVMT1YJlRgv3jph
-					Y1YpfpnWYQK/r1dU8lPqjgCkxch84eqCHbw6
-					nHfZCdsBFtvOOIGu7wvI6i3jVmiU8fJrX7xb
-					5RISeMquhyqfIb99loAXHcvQv8qyU1Ouz9lw
-					Nu/sGyL/cx/fI92PXNlOBBVf60FqXenGujeo
-					5EgczpCLYBJhmU65Eg== )
-			300	AAAA	2600:3c01::f03c:91ff:fe73:cb9f
-			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					CeoMQDKbEjiDSYYepGlWhP56RXDtPlI6jPA/
-					uU/yVzR5pjm3si2V2WQEfWE3XfyEv+4WjR8X
-					HhZfFiW71GDhHyEkWTEFFw45j9ayR46DKdRD
-					1RKVBIqFBKwDP/ENix+cmo10b82TCjN3KSPY
-					sFzmAPtXzGp3fjv7NH7vuaDUJicwPVTTkT1D
-					Hp5bDBt6ChJaOFX3WLvqRlQuJtKXAkDLm0X4
-					Rbzn9GOFje9D23HV6UIU2TwTVKyY0gmFmWk5
-					wr+3TUIvZidH2oC09C+7A3WfVsmSaOGTSFjJ
-					WH2Q4lyUrWTRkh4MYmTIzJjGSpk4beEgK7h7
-					MtDH+2+2BLiOXiAmPA== )
-ns3.neersighted.com.	300	IN A	69.93.127.10
-			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					jXTPwtq7a0D6gBr875vMpAaVvxVYy3bcQaxO
-					2Hy7GCT6NDxMq/C6k8+eIrkBH5mOGg45ToJZ
-					0DY+Bnja6QP+TT/l3tOFIBUux1/0uTFuvhw5
-					zGJuFjdFdux/vmT4KnZ/q8hpN79e4ezrwVeg
-					MVLf95E5rzyJ5abE4IS/2HnbMYWjMWGUb/cM
-					crRht9gtIcjZWjWK6pj5b+cZmklpOJtyH93P
-					wvvznW8Ljkt7kOMNdiwnQfDJvdCRahs5ocpt
-					uFWmwLX1iymwgax1FyjNP5oLYG+F5cUb8VoE
-					KBJGbJumNt/nhBT+qaX1VeT8DomJckP334mu
-					twrbD4twTra598+sKw== )
-			300	AAAA	2600:3c00::a
-			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					L6xGzf6fJi5WJLSYcg+4I712lMMZ+sEw7/KB
-					H/seHIsr5sBVSCs+pOdQZQCzbQSWmfXJL6cq
-					faNSVXV4JIRm1vaMTHZTTl5+vzEmWPLzj4r4
-					qfz1P6aS0CafDCd2jnLmjMAzDM+Z0NN21q/b
-					nCjO8O5wUzl7itYBIk7KS2WrG/ckdz/nWHxd
-					jiJirpXpxWxhYZRX7pCWibrJUeVFBwvFgi8A
-					Y3a2jD2EQYxDoDDvpZH7l8g1lh5vzz2DnDvO
-					+tFld+K8IJ6PUH9VInOnuW0kpxMKMV09mlPK
-					zLECsH/w8tbwcWSTvyVMicDEZwW/tdEFX0bo
-					IFUpOuO9YzFk+amLMQ== )
-ns1.neersighted.com.	300	IN A	173.255.230.140
-			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					cRS0CkZ7UbRrRR9dGp/s8KR3w3o6bT66aGz2
-					3WswRqV/HnshIkG6S3JKmUws7MMtzNmNJO9n
-					5uHUOcuUPShYbGN2uGvpHLZY8rKvENEzXrc0
-					fqjdL6K5MF5TZD144InpG1u5djKhaw1y+2Zc
-					BX6PPdcFX4Rv/Vu27sWGM3LnHIhJjseLotIe
-					yV6yDe5VyDfaRJsClGdIXXnysObbZwjwXdOm
-					JuKbP0QBgEzGRDctZZW4U+FqNsdectkY0sRr
-					MQyvS+UUHyhw/6pZMDorKtPK3iGQNLOdw6k7
-					rs7erqtO65sbWASB+FsaaPZJSoD3arwatedJ
-					XwWlgTPE8l88WqbN/w== )
-			300	AAAA	2600:3c03::f03c:91ff:fe73:bb00
-			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					g8KoaS8a1NvliP2ix2aGWWo5PRXYOxzPpEnV
-					g8sbKtRWqWu2DagPMDNUDUcILRCrE22nqYx7
-					qPH06AZlQVmeXegmL82UMroeA/FZiCmDw7S1
-					8KhTPJi9ndpZghXRxeTjHSibVXzDOoLA2zNe
-					WhbGjy6Gjs7dWSjxApbF/f3vDZxx73QgJMMF
-					mLtvyy0xS9sifCRPqrGYKWV8UBuhm7Ypgg0J
-					UUbjAlKsWLwbRw/0+6TuQKVTUF5MRwRpBGPf
-					uvrezxgqB6wy0KkBOxvwRYQPx7Acg8vRh0EK
-					iEXkPZjGaNQ4vs9YogwPZ+yrM+wSSShXALWr
-					MQKg2lEL+UhDzdb/bA== )
-www.neersighted.com.	300	IN CNAME neersighted.com.
-			300	RRSIG	CNAME 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					IYOjs1233zVXLgoeM5mffM6i3WXcU5Ppafj9
-					vZgguoP+KZu7mdExrf129Pv9YGulqsb4Bted
-					XNUY6+d+WPgk8R3zJYRkSzZFYMEq26DscbP4
-					Efp8XayC/ggJVLu7QgQ+pXJ3seu397iFF0BH
-					NTCvBDoCELIkrCRDyJmlwYJOjgA58hSw9MPi
-					iGV9YYxg9p+4K422WDxOfcGSJrUK18cEjwVW
-					ysbLi6St06KffJEsqpGSJl0drxQAreOak89u
-					GbdN7IBatgAwC9iS1WOFD2tlN3ClFhJsSd16
-					kwowL+0vVxi3W04O+8worDZrfXFS39WH+qWb
-					Oe9oBXEnnVVCd+WvHQ== )
-ns4.neersighted.com.	300	IN A	109.74.194.10
-			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					j+FPnrqCKnUKAPx2zdIDB3l41dqEQ6sOjiod
-					naPRg5mWEgFS33eoB5E4XiM0yxuUJRpElbYX
-					gK/wYTXGxGOCDMZEPDxQb4ZeiMYCgAtKoF23
-					JpX3wZH1nBaCjkR68K6Iov38XI3OwwnNiTnH
-					DOu3CMANXPqT8a/InUumC3gaiZTdxaircbPl
-					26Q043VVbSMBN9fcuMJFriDTUeO6pHSN7w6M
-					VuAXphtllzmDCws3961ZT/FoauIr7MY6itLk
-					rytqCivrpxwZP8vZnM32CD292tBB6MU7h+Ht
-					SE/pQsgcPBayRBQXWLsBZSjUF3W4rTS9OoDf
-					NT9xYe/+jFWUbCto8w== )
-			300	AAAA	2a01:7e00::a
-			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					PGnu3KimkqGuh+rslnNLcbp7goJoQGHRxHMj
-					U0SYJaxnt6+0+pP8Pc2STooDKrnZkNysEXoo
-					WS3RecIxvMEXyPn5C7UqcfnX+3mTL2JJv6tH
-					oLqYrma2BaQAURr8IYHR9ATqaYymL0lRPFqc
-					oujWJBM36ysDvBwKun8nCB8TqsR1jcoiGFnN
-					54gyx1dMZOE9y2d1jqSs3JNHqvVb4O9jX/Wi
-					Udd03ORWc/Cr4M8meEankDXvjQViyN3+wCCz
-					g8EJeEI2hfF4/At2ioedH1KK8aT90jVmYZwo
-					CQmZ1dj4ahT38d6KrurDuB+Zxx6ygpxHM++j
-					nq/VjPXry2a8GHNCuQ== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					eGBQ3hkIS0nMjvFYuv5oU9C8CmkDJVlgKOkl
+					wHBkzntqKRFNj9anYcOPztMXd6+mybBIgTJq
+					gwM7gXXJBAE68ruLjS5CeDXL/Wyx5r/9pbif
+					zKNJe46w6IpGDccFh+aIuaLXmjMy7k+2TDTw
+					wCAIAf6+NN5hw0FhMoyE6A0fLjHcZn32+U9+
+					eQleXDztSBEAp4DeTKftYuDiX5dyx+ZYbhOW
+					8y1w/RxDcW3EbsufBbQ284PtfKQc45IKkDN5
+					Q4LhNrVK/nz90qh0xWAL1RtvfpqGz+nRGRtb
+					w09QGNRKAEvr/1oeX69F8I2TsO9mnqusprgt
+					rcOdwzmIxChXH97qAg== )
 oxygen.neersighted.com.	300	IN A	74.207.242.71
 			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					FKSuW6pLWbKkaV44SIFZkColT2b8IUQNcLry
-					x8qO+sCEYk3TUczW66yekvOOxp1lZJv35xuw
-					NFroQZZcAU51s8hkvsWLekVCmC6kxjD8dZIV
-					VlZa5yLwEyC4gIwtzUIP8W/8Phf2iXPeYdCb
-					Vp1vZIgghIATi5UvyWy5MbB+VZ8vn4fkb+vB
-					8JP+Fi/NQJDS05zM9ZIaL7Wwm9C0GLqeXTlw
-					TBQiIMBgCktLvzbFFfCCn9pkz2kJLFlR+RU8
-					xnfMyB/r5f/+2q5zW7esPOsHBwdu1gQBkbhr
-					y/ql/0AC4GnhGC7G444aXpDI+iG0Gb49yKA/
-					32/2YErQS+PRMSqaNg== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					lPVycZc+CRM9Bp67eAmOGdLjC/+50PKME5RS
+					p189YyehKse6BoPzcfx5YZrbVcPt99IwC4Nv
+					afxZgk8m6vcJFd+1NLXl+f+MsvJKrK2eyr4e
+					VVBMNZaEom8fGpMGacLfBdiwxt9Y71/wrcGZ
+					wCUK9GzQsmp3kiZmlkeaZ9XrLlA54Xa1u4xr
+					vQpN8lfLtxszpOGgqzqY+/UiaTk8WLkuYOTl
+					tUiDFtB+DNmt2aW0o30N8EwMiOH+p7bzKTnZ
+					sUiUrslXTBKU02DehJT+zYprruXjurSyzXBj
+					zGypaj+3hcxN9Sh89G+SaT5CDgFvUZf8hOTo
+					XwUwDVgloQuLMrhynA== )
 			300	AAAA	2600:3c01::f03c:91ff:fe73:cb9f
 			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					BTM7hYUfBbuNuIRwDcZTWfQovOhu+zR11F1g
-					K0ckgP3o+jzNC04JQ/w5G6cBgpDZ0vlFRizQ
-					27ibz08yrtV1mBfuOq9nNlA+iwovJHwrDUJn
-					sSrngs88bVBvGMfeeyNKTeXBL3KaISH69gmg
-					Nt5pbbg5kCbB93gUnYFVJc1B+x+3Yv8h50VA
-					2UCD/yPxyoAXKcd97aGJsiRuuLUbdlTkt9G3
-					YfL8Ysq7KPr6Ri4gkMEsg/joDmvfZMmekTTn
-					CzrjvYWJNn63jBl8MH5kpFnBw1NEPveVM24r
-					JBKgKvhsGUgC9rEr0Q23AlWMCga6dIsE2h+W
-					ClzqzRAfr8dkHesmSA== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					IuDlAIAdipBP1d0ls9QIs8W6rnkSZCrvjPXa
+					Gb1yXN3UMNl0kTtCjZ4RnlWDteMaKuehk1Ly
+					Q1suJWgFB+pou/HlBT4BDyQA/pnPcUJli5Gb
+					QW8+RxNs0YI0PkXu92TJG3Nn/5nKx21AEZIz
+					N2FDREHmDODxP9RSoRjcmr8uOn+y7RKRcA3n
+					GHRfIOo3Y3SUxApmS7h0ER2K4Wc0B9Df6PRK
+					h7fvTPGFOViImGiK9G4p/Ro/eIwZWZfpX2/J
+					vYBUo0M+VaaGtS2VeNUzmqFbB9v95+irGRM+
+					5HNOTicfeFqITrAH36HfrL2dUPttTbAw6Fce
+					26QXmIEWZCq0B/bB3w== )
 			300	SSHFP	1 1 (
 					C56BC803FF0A74DFA120170EB5DD092799BE
 					228E )
@@ -776,149 +789,117 @@ oxygen.neersighted.com.	300	IN A	74.207.242.71
 					71D4B400C76279F6F548D4818701E5031985
 					E4C5D60B949315DBDA630DD912A2 )
 			300	RRSIG	SSHFP 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					mWOFN+bnoNhIOkrH90k/09fwm6P19BtgVC5t
-					17o1a8M1266uQc/K7O/dg+U3asMuOP96IqJ1
-					8xQNJ0Q1ac7C1yl/GRkEmly1S+8L1jmCrz6B
-					pAAe7fUSTBS5e3TbFOKy1yHNgWA+BtDTpcKg
-					aO9u2hFpxqoZ8eFl9S9B+Gf0qOQ6otNCNQ0M
-					w2Vy3F5ZSZNx6Nt91TSxnKbPcnBK7BzsRM4w
-					hHzlPK2TCt98xycyA26RhPJAUknHvX9X+Kox
-					rIcVg6xoBh6Wqf+7pqXFNb2aVtjKrMW0QY19
-					CpClA4eSnsSZbS4YNQ0GPTrFMWfd/qbom0KQ
-					skFrWAu3CXjm80gx4Q== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					K8T9CveKkRibhjlxHSm8+0fRQSHmLuIFgUDd
+					pRwJCZLMkZAzwey/+ANGjNnA+kwW5QD8C+LP
+					/G8Fwb9o8vRQt+RHLeYTvUu3Dv4eAEQHFzKj
+					e5hWQsIF8nGJDfKew5gB4jNBMXVrXELdpQ0l
+					driyTTP8eRSokQT+yB1VAqYBpoSVCd7rMVIn
+					fC/0jhN4uECi6ang+Y/f9u3mBHJTWU5HjQeN
+					QP3lz8wWvHZDnvjNn9PllQaUe0HJKKvb3/aV
+					pjJ0RHovILVBHW9MsW54UcKMNST7cdv04Js5
+					vPQVpR1H61WOhq205esNgf4qOx1rxWFz/dub
+					mQw6vpNh8hlJ6e4taw== )
 _443._tcp.www.neersighted.com. 300 IN TLSA 3 0 1 (
 					0F39A5AEAE8D9DD697433276A39F0F427D63
 					AD70A910146AE5C093D965CCD4EC )
 			300	RRSIG	TLSA 10 5 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					korQE8Am28+frCB4nGz9hw0bPmPiufY8aBBV
-					uUR0/K4In5V25xj2hmdHx2yE/Z5zFsljXN0t
-					VcT48vkegCJMTRwgpoS6qA2k4y85FS8iw+rD
-					J9vL3SaSIFMO4eEn//N0XN2cEfvjU/3wmAYW
-					wdTWOEjrppgy+mg+i7V6lJFLaa8gtQn4w9Z9
-					ID2bHTnyGrjmMXif5EWz1d/jkGBRrzrmUzpM
-					WfnHgJImtkvndHyeZrsRerd+dFXotPV/pi5i
-					056cOKYD9n54+MjGOrgPP262Ojrdh+SxvZYi
-					AwMUr76+SdubAilaTUrKPjsNR3ghNsj7oCp2
-					76n0fIIHS70r58qUeA== )
-0QNU7KG1Q5R3FRDQ8V71DGCU9CUN37L0.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					2LBQBT82N8IAIJIHRHJ4N77KI7UHSB88
-					A SSHFP RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					ESIw2X7IWCQg8EHZ7/FNhcrkQi2zdpCjhOqi
-					Lv/jZ5YskPAod+2hGFb1QBAm5yG28jrn9NqD
-					bgAZeKNpNTcllN1m5NQmKyEAG0n0UIPtP6wo
-					6NbpWCKVoBeJjEUqQih5KEMKKf5QvphO/WJO
-					7gXNQnTNfVjR50iJ1/UpbjioZyx8wTdjRZny
-					CkaSU9mHieXR02uWxuXZgfyi0F1GYEIUMZIg
-					XrtvBYqsQPDaC3ksSxfftN5aZJFLzjacYHP1
-					+qigOwLIUYzmbXE+4DehQL9PbD96cWbJebzY
-					wSv4XM9TBraXvZqlGyMELHg8s0qspiOMs3rC
-					Di0Ibl85pDvAfBtzrg== )
-6H821U119L3SGMITG6M9O380QB6LE95U.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					79V968TB9V0LDDHG81CU14QVSE7M1TD2 )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					AI8GGvleWPWV8kiZaN14cINgHcII/K3xaF3L
-					8VJAAJGV7YmWBH93Tn9/vAw/ubWsrLysp2DA
-					Z0C4sUQPF1gjPHixev1s2p6QNO5h2HB8ikR0
-					t8ewDQ5zzWfA1O9/znRBKH4N0ddpLhtjRy+W
-					gGIdzU/Q2mk7T9FH2xofqW69+m5xMMn9l/C1
-					gsz6Hep79A5Y8ZcBj/b8j6iDV2u0wO1cJwfM
-					p+0xCflu+BsEuGl9pwusA4MEDsVtNKpmRoVn
-					zJHWOic0JDcZiWvROV5ROCPGF6sL6/U1Sm7N
-					niEIuVoiroF3ZoVLnkjY/J96YakVLVxTqmXo
-					keslg8iZ/2c8RHAt1g== )
-79V968TB9V0LDDHG81CU14QVSE7M1TD2.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					9O2N53AMB0UKQJ13OG4L5ASUK4NS4LCL
-					RRSIG TLSA )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					QZA0zRU9A/qpjBhQfHn1IGanCp01IBECHWD/
-					bfUIN6m2DOh7YDPvAQi0mH2eeFSGvMZs1KJ1
-					nzXXKMZwT3d8iOaMKewfOW43E49D3hnhbbmk
-					qyNMRAe2HpngIeYNQOupVoQFFagY4VzQcjO1
-					FoPjd1TC3CWERr2wbdB0Q46h189vI85xW5LY
-					W7EcOTQm8Y1cuULB/HVxY6IcUOPbc47Np1Aa
-					bbtC0oP0CnLpN+cy03veqmKpugRGZQjQg39C
-					7CWFDVtlCKH5/byzc/kIycEfiEPTMl6enfxy
-					J17w7OatV4OaBYJkeQAAxxkNRU/4G2hfGGQA
-					ewXNHXNM9bjv1EKTJw== )
-9O2N53AMB0UKQJ13OG4L5ASUK4NS4LCL.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					A0LV6C4JMNSRNVUBSANK92OI38FE7CEI
+					20140913163448 20140814163448 29357 neersighted.com.
+					slcI8Np1BH1OuwsgBqjFsZqHuMX6reMtXQT2
+					qve283Oa4ngne0+hlau0gLf7YJHZWFZ8HVI/
+					4lx20xuhOHd4pRZli0f5qG/dAN5cpCUqB7hd
+					8TZ04u4bnhw0gwFzFaWu9yeNt/ogzOtLLQJY
+					8q6ODyGHf6vYMDRbHuEjFfKOF8BFM3iQBVVv
+					VLry2SdHj+tj69gUfQmPA0dAX1+sAUioUnBj
+					ziswdwkFJOEO9GoBA1GJpo5siNJRwd36Cdxm
+					LrOqbSfEFG++sn9MOrbcNtOCv1vuheY3EUAP
+					c9c/bF63xmAsYhYzpKI3XnrboXrflbuQYo0t
+					0z/gVTcVQ2eVFQY40A== )
+0CF09CA4OSR4L09B8O3M1F63HJ055IS3.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					0P8648HHJCITUJC19M1HSBC63L0R48J1
 					A AAAA SSHFP RRSIG )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					OuU2QEFCzf4dJt455frYvyKsIhoOIkcMFcmk
-					ekw4EgMiv5oNiCD/HHFUEqYiu30IUFMJBYx6
-					ZCRFKM0E0qJKH0ZCOoPoFoZYt9WafhPnMX5n
-					umlbyIYeGkGsJpXxWADbON5apmlctB+76p/3
-					mymhbjA2WAq/GujwfXp3OcIMC57ktwIHlIUb
-					EcRkoN5sVya5q6AY5r5XkbFpigoFIBmojoTU
-					gxb2D/s6y1Hv00NFDjoZQP+Ev42GG/nAKnqY
-					Fe3j9vlB4So/UtxFtVUPlhXPHUWUaBrVHTPl
-					UYUlv5I+yjf+OjXAlN0dMP6ZnRXsuoIQTn3H
-					Q4RoDmGFZlYZ4f5q1g== )
-2LBQBT82N8IAIJIHRHJ4N77KI7UHSB88.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					6H821U119L3SGMITG6M9O380QB6LE95U
-					TXT RRSIG )
+					20140913163448 20140814163448 29357 neersighted.com.
+					X1sJfkdAjv97KDBqc4uta3HDmmBuM/8LTOLH
+					gGNuvUNyhoNZ03ZY7DSQbHg9zZelF0bxPtkR
+					lyeJM/ZgRIJcvLckJ46GehtOBzfFVKJ5BHfQ
+					4lx2ebap69GJe2Tlrm0aGkNB67XMFwpH//6q
+					uCy905oO+V3XU0rB5OEkzTvQdZc9oaYKjXqj
+					EddYRq/bRNzPfn5c70hiwyg2nTs/iYujhfx7
+					dRd1ZpmBPiFA0Jouijs8CtOOfgxBPgzJeun+
+					K4/kzQNXOXk/bS7sfkis4bNtcURT1SewjlbD
+					wiScHGo72m9qoc21pTqPuzQMBgXd34Ssv/Ir
+					y/6HuxGYmr69X5UWZA== )
+0P8648HHJCITUJC19M1HSBC63L0R48J1.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					1TL42I894JVMGPG39THGO1QD4Q5M4TMK )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					datvPpEtFGauNPf0mSNjIRy49ZZMXaoh7uge
-					cD1h9uKBgq+31l0uk8GixeptOTcdpq6ZPsBd
-					PNULG13YUKvR6KTq/is1QIIFJ14aSdWbY58u
-					8S0B8v91bi3jfDsoR6XHLBnAVkhlf+PquWrG
-					9sT1Muy4/uAB3QVxRpEOBxsp7F/frPYqCHo8
-					oY+85rZ2pPRA9N9Uqx0CDH2ZB9ob1i+NMSGz
-					2eF6gbiPdlsh3s/3xLNMELwHz1ZqQLWCQ2V/
-					RdKnawFTXvyuzr1UBkw4vQ4VCbJQJwGSzB/G
-					oBiwQsijmsYZjsx0fh2SGuRJCZjdplXPFBbQ
-					enIx2FrMx/Td1l05og== )
-BT60QTL2TUGBBLR61EEBNPORR3HEOI6T.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					CSPDAR4SILIUC9RA7I8DCNTQ5H4VV51V
+					20140913163448 20140814163448 29357 neersighted.com.
+					tPEmFjiaOWEdsmwmwr5zLP4u4fACjHZoGt87
+					ynum70vcIIT4ZqMcJWnqjXPfawM1Pvaues0P
+					owYmaPCO8t1olsJHUHZtbZCU5Gciji1bVpkg
+					1rYoZUa+BmdO4BuUhC/TLzxXdMmXdN/BI9Xu
+					smJTppkfhw9FuXt2fBPIBvWVT8ICz2rKKTcR
+					zXH+I2AeWp+KEa0E3V7TelnYZ8eHRYtQ54xL
+					mzTVo6g300qpFbdgvkMAsoo2W5RnMykxqXdj
+					/P3ukvEYMTrmmdJL106AzveIg3vcShQQ1gQZ
+					QGI8L15deJxf+sVj0DPyd5aZDpprdFrSXKHH
+					rv46Kj5CWX9J8C/q3g== )
+www.neersighted.com.	300	IN CNAME neersighted.com.
+			300	RRSIG	CNAME 10 3 300 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					IOVvmmyHGjL8pdwJ24Aj5HBzH2euRGJQKAjR
+					M2u/1Gro8dvpbC4lLCx3sgdOPCXJ8xyuCrkj
+					5uS+gHy+KHUa7QaPX8rc7KGgGmnGVHRZRrs1
+					Mbqt//+EEFFv7RzIMIZYBECqoAyT6jLKLvwD
+					YBSnqFq8BLTws+Nb+/Dvy7Ha6XhLE3C4RDea
+					G0N4DYMW1aC4YimAaqjZGxeEnD4BIOd3MU89
+					iNNZ0UmaPItctqfB/Sg3NlGTFSSd7+Jv3Rzi
+					5MgP7SBkrJ2OlSeL5kmwdBV5IasWOVXHCsUK
+					rh2B4pKWCOZhVQC0DLOUbSmpopMHX1muRX5g
+					tcHzc3sLjna1gPW7AQ== )
+1TL42I894JVMGPG39THGO1QD4Q5M4TMK.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					34ENS4PEEM9V25R9UT7A3FEPL7CIDJ0F
 					A AAAA RRSIG )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					vWGfWOQeTqIr3sj5077BiySygGPFYD/cpXVc
-					rfQsWFcgVfhRjRaI7FDNSb+OasaX0Rl+tPLQ
-					aMdlNmrGtOceUnkC4Mdie/bWoypKZu9ZD3bq
-					zLrndxhxkIGAd6R1WygtbYWJDmjjgN9eZGO0
-					drAEgd+w8M3C++M9xVvF4GeMkMTMoedQ8dF8
-					v4+oQJbMQFhZg5qpYrO9Zl2BVtxWsy+mHTo0
-					KBAa22eolOBYe5dg2fctadNbDLbISlwCk1Pm
-					oqCWZ3qD4jp0rGtOdXKnqMceUik42nX9lRmm
-					tthxPHgdRU2nbwNgXqOVVIQyCUXl2y4TbwSX
-					73URBYONqYD1Ncul9w== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					Pjc0o5begKxIcUujhGRg4eOepo7tFPRpJM83
+					QcNTL4oK4zkm2bSTN9Tf00XPr6Z/GJ/D0llE
+					fFvvIxBBRy9ARcjEkEI++uRgfk9kTOgvjb4k
+					M8Y/yVsHz/8qTwDf/5Ck+I8uKN3b181Thwc7
+					0quFuPD4nWDNl3HbC400OkYCYIuJ5gtBrYAK
+					4tFCqo5f3Ae/tpm/9d7iLGL8oA95eeZijuOZ
+					WPaf6vcSCIl51+mVsepLKJL7N9L+yaBfKVIc
+					sirM1fbqB4XwRBr+xR9dreMLP7L4/a8H1CJY
+					cAar6PxjJBP4WK4ctBRQIIGjpdGqylT5BCTg
+					JcZ5lqVLEKt0Q0iPPw== )
 silver.neersighted.com.	300	IN A	107.150.19.177
 			300	RRSIG	A 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					h5cJvChZm7LvRguUkJdzbMrG8fdsJXOahGBc
-					zikgnA8uKWHnXqk8T/uFbhE0ZQiID1SBfZoA
-					3x/VmXO9BKJX+WxxFGwNZiCcLNtUkFi5EqUs
-					0d0sCFoJwW0QXpsr1XzZJj1X8Vk+TTgM1hiN
-					Lr921bjsQHGRrYasCLmX3uSYy7Zxp0a7BKpz
-					Ir/GdegxN4UQdbtkHZKZTfzsQa7I7nvgoSdw
-					cAoq0XOjh+TqHAHcQF0kN66fhIrqFMHuPw44
-					WDs5rquG4JyGimM/2JxEyOaFS+kWkR5QGuTH
-					3IT9rWbSkILa2MhTS/L0wYQ75okVbRwRD9KG
-					AvIwFUH3KKs/2Aq3eQ== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					oTT/1gGYvmbSSAQZTm/DZnSY5U2vUJlqEzat
+					vWDPsPTamZWkQH79yiusCd2WFfdLo4jtgc0P
+					g/usOaLV8mnORcJIBKwsmVIKzSvBZbaqY7rm
+					Cf/NvrOUnQKyW3X9WTX4sv8ZVKIYR2rCdxuY
+					ZBwSt9WKXdj71kWJYviG7QQg9RrRTFujOOae
+					dTSRZq8lEFkw9I1lSXH20AIpQX7MTEKcnmcN
+					ZfB5zqm+t+2xCpXu64sjnhKQEDUaHSyWWujb
+					ZdTmEn8laieZl8Woj7sAa2mJqRFL0e3vcjdn
+					g3Q9tNy4QIUWisp4WreRa7dGPt7YfJWPS3yr
+					vleM8GkHn1Xt5OkNzQ== )
 			300	AAAA	2602:ffea:1:3::1
 			300	AAAA	2602:ffea:1:4::1
 			300	AAAA	2602:ffea:1:dd::1
 			300	RRSIG	AAAA 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					FkCnoxpP0YaOBthLOZixPHhFENYhd5qsA0xg
-					C7Kw69u//qjHZHTXODDTbBRTJkT7Nl4sJBtm
-					lnNTiqJvG7FMI1zKcC9+1Vxn9awasatDARhW
-					DtShxIucIxE5RktBkR8zNH3kcHsnnExgVY9a
-					608KF/xRYV3liHaqSt/fJkTHjkkoM2bAwo49
-					sMPgUsIDmGsIvXH6GwfCrpx8dW6PR+75Lopj
-					5AobnwNRBF0yqbNloftgNzFkkVKrsVtPoyVu
-					ME7yRS9rUFALI1X9Gs2y28FySvVzEBXTcYov
-					woRHBhHSQsKB1g1PBXceeQQwUlS2vLrYu6Ap
-					I0hpE9tABPyHMBMR4A== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					AORTuBY+8aIhyW4ZjpXjJnb+3Y9LDqeQigZz
+					97JChQySzBZzg4GI6RF3x+HA3whq0sdNX18X
+					r/Rh2dEvLixWgQN+/Q+tfjESQsuk5Hrzp3nr
+					aMS+Pyob3SAo0nxt2J8Uc5NFavch+Hg/SdAq
+					eyeT2k/WrCNOlbxsPRz4F6u2DfpmpfyzddUa
+					HcuNYphDUmOIYbUvAEKfkhWYOjVrVUymesPW
+					x05pQ9JiKiJ02cKfnCB1uNf5YjLTKRyMkl5u
+					PipAcPeqEuv6y9SWAwekEpvtjktxG/zAegIc
+					gYFPC4Vdtc9fOlh7EOBsf9xw6oszD5psTTbf
+					blhVX8Mdrf0hTvI70Q== )
 			300	SSHFP	1 1 (
 					6A55B8FD5C2494D332E737FF12E19C53CC60
 					1037 )
@@ -938,311 +919,371 @@ silver.neersighted.com.	300	IN A	107.150.19.177
 					012B1E2350F637A4B03DCB910085FEDB9D7B
 					B71D590EBDF3A68B3D253D4CC075 )
 			300	RRSIG	SSHFP 10 3 300 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					LKmNwzbjek/1mpngxNUhqkqnFpgFT2lda72n
-					HxjFmPe0gxCabp1SSRfZfmIxO8QFdo+g55gs
-					e44usbm/ZwrGA54DhxvL5qpBjtZ09UvCHJVG
-					4piuUbZkRoRWIci9bCVSJYVCJNMUHW6H5LNg
-					v4hjRlhmR0z6/2SyLwn4N0kvuZr91Mkfo25V
-					+jFo1PwycSht1iHBHTIcw88hycccM0ouUsCi
-					QHlG15g3jfMzBHkzSj6ELO4i9kkHpNXHJi6J
-					OiupLknKZdPuCg4CtDUaKvdm/71o80GgV5Un
-					YRC5Jsv/pyRHKjZhVkb40D+o+civlXwtxyjo
-					bCPt9Ufffq7tmV8AJA== )
-A0LV6C4JMNSRNVUBSANK92OI38FE7CEI.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					AERGMBDMVGKKKQV4QM282CA4RCRNE1CI
-					TXT RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					NZAjudPiozrtQH23f3ZGsl/qyqopNf9C+O3j
-					+0WOUupaK/Po9vjJSVDUrKeZll5d8jD921aw
-					UszXSO1/ElUxLo/VkPy47nilXcRTv04PR8Tq
-					2pK47p5VYww+6blWt793Il6a8C4a0JuoFUDa
-					CH1JQtLYt0KUJRDlpXhmsexWK7IhwOrFCGiS
-					iXWhaTOGMawaB0D/hu9XuzCRJjczQzKf6o5s
-					Eskeha3nXnzKRuKzcSGGyxTxS1YCDbnVDo+Y
-					6eodPVTlIxDrvnq7l4oBkxXzgxsAcmU5guVS
-					cigm8Xa18Gtu1bXupc7iR1Q5Q4VSO8OZ6rzO
-					KlDS0voGXHU1A2qiiQ== )
-AERGMBDMVGKKKQV4QM282CA4RCRNE1CI.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					BT60QTL2TUGBBLR61EEBNPORR3HEOI6T
-					A NS SOA MX TXT AAAA RRSIG DNSKEY NSEC3PARAM )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					MHll4SOCdE351wkDSrCmj01H3wipABHxhKd2
-					zKYnujkCP13dbeE5pJAJPqvucJuoKTY29+wd
-					tg8k5Iz2VHhsR1KEyknIt09UTFfiCod2i9RC
-					uLTqxtNgVjKOtzbtQaNd6ZZkGoqSyfBgQPC5
-					KQcoRErCsqU8qDL1KhEkRu42pv5hfDaD70qr
-					7b+VhKXkeObr9B1pJXcULbQAdW06fgGGlyrC
-					ht4y04gJ2LTsfcqjotWC+q2FnNlu889wDQ2F
-					95raTuOjUGyJJMlCAY2VDF4PNG1fW/+D/zdY
-					GKglA/21ZaUbWXq6QY/rUiigM3k9xCXj22R5
-					Waxsw0i1QYc8C5FJhA== )
-E3CK9JTK01O56IS0CNN4MG28F8M5S64S.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					FP93LT3RGBT8BT68EQIUVICDPJTJFUFE )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					Kg/Zh5Rfie8NZr8JU1VreaSsgEQW1g1P7Vkf
-					q5thDKX+A2HALLeJAow19E40b39thx2vymMj
-					yVbFCkYKOy3VjC8dUWSCnKheDDwnJwZnypS1
-					yWywcJGRhwHgfdy6oAXQJdaYK77an6eDliX4
-					0eZjRRIgvzqSY/K5NjykGAJuoLi0NZ3CsyG7
-					Azi/YV5kV0p1COxeGkI6goM6HA91/oEsrlW5
-					Xs+jCqKrVJLo2GWMie2Qs82zDqmmkVyVmczs
-					8/aRf9z3QNikzzle5FK+FY7iye5wDioS4txh
-					3aZ/5VKFafEzoEMRjhs6UQ7JRlrra5ozmJX5
-					C51fgQhcu67I9OgUnA== )
-DT8VMJTKAN40OTTEDM1SCP785IQI2FKT.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					E3CK9JTK01O56IS0CNN4MG28F8M5S64S
-					A AAAA SSHFP RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					N6u/r2/Rt5cem2QgGjxHvOjEHW3hmaO4Y78s
-					LnS45t54/hCkkkcb5Q0A+Ys7aA37nv6gelib
-					tHSIlM1rAlqEbQ7R+1W78XgdntYYgIpk1aK2
-					fJjNlnxDzx7z+wXOb6lxlpl5tO+so8MBsEDU
-					vKCAJmaV+19NfRkqeF7FqJP77iCsWjdvOesN
-					sqs5yXxl+IwRly8WXjayG6p4Sg1Cp5my5nT4
-					AonaTSbuTgFD7wWLdQ7bSEkzKg0YrMXhBPyB
-					MHg1GGLtvF4y3CKDZt8B3STncpSnMefnUZU3
-					yCP1vvQ/Qh+VNZWq9PekPsxseYYSB9DQqZxt
-					fIVFvgwnQ13eIhxx5A== )
-CSPDAR4SILIUC9RA7I8DCNTQ5H4VV51V.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					DT8VMJTKAN40OTTEDM1SCP785IQI2FKT
-					CNAME RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					foAUNkhToZgfSoETtm1pduOvUY6Suz1I4YPF
-					3LTtjJk3Vz03imDmSDWXYZmR89tLrUofhL97
-					Ms34e+nlGI9vcoJraq7DDp3pLozI902wkvIK
-					iJ02v4oqjg01I83nPlWsPnP6NsosZPm+XFwh
-					XiL2G4cX3rFB0YtQBGW5Q0WoiD9DgKw74Syb
-					J9TnlvMt4GZNWeA+P3xUitqdHgrSvsjeN+SR
-					TKVYEFZZh3hCewOVGlzd551Ul2yJLUTzUbyK
-					jo/NVggWiLr68j9DG8Yjgq7SHP4lp+UQZlaM
-					8RDYZ5euq+0xS49/oTtk2+Sni/ZSO/prZFvw
-					5faddtJQD47cGdYD5g== )
-ILKSD76F0NLIC076C3UCQQBIKQ5THL1C.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					J094JC3LDA2LGBJ6AE0GVIKRCOS1LP73
-					TXT RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					pt6yfg4Lkj4BmYlS3kB4/ziIAG/6HLBx36hd
-					9MhZsk26uRUV4Qtfjcjh3UaNJJVodgKO+ewF
-					zs7spLUvfq6V7o4cmmuQ4XXVhyt2osqmX6lg
-					Nt4ioIZdF+uAC9MQFHJ/7GX3HaeAE4uJBHTU
-					+T/VDhIEkY1tAs7n0VK1PRGLhenAngyreC8R
-					npbg3R4H9iqQVzEs0/4mnxQSk5qAYSvMajH8
-					Fo9OyasnMUFI+QnacKtCwkHJ19VJfNJ+UXqr
-					dtR8Q/E5Ml+6dFLacBiOypeCDzzAl5fs3wMB
-					ADXkoyUiB/04P8rKmoEYPaO3JGtPLPNwevZS
-					ssLNE6M6Idka++lOcQ== )
-J094JC3LDA2LGBJ6AE0GVIKRCOS1LP73.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					KJ3TOFVKKBUAK09AF3I0DEMIJPSHJRPB
-					A AAAA SSHFP RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					ro6ZKBFSVt9luTKC7n2SlIwej+yJmmJcM3Df
-					j07/e/byON5btG3zRQrvfxd3iH5iiufRKSfz
-					+PUcZcFVU0pvLb4j1UL6G3SVjx3Fb05NI4AR
-					SgTRAhqOpqTwe2VgPnf9j99Zr3ec53Plawi+
-					IzD/NSaQ5JT4zwnW6SUrx6+k/SvbB5dc8u3R
-					0TJdISLUOWD+KlWaaHUVkvlg3JR+YGSAYvC4
-					GhU8Ds2KaYMYI8q3J1QXSap7Y4EppTbgWiyA
-					p9qpVwDEZ2UEwZsfFat4njI4Xz/ReqIsWBIy
-					Wh3kYG9ZlUgro5L6kutpAdLfMv95as8atl4b
-					wflhari1QXphWZaRmg== )
-FP93LT3RGBT8BT68EQIUVICDPJTJFUFE.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					HR34KPU922BC78NHLI1EGQ4EGARG19L1
-					A AAAA SSHFP RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					edLRxvy6tcJh4cbYaGSXR14LJihrICF3SL8r
-					4Ba+LISRGLHWgpcZZ6XLhQqE3xXCfmFzkEYe
-					Qdh07LLGncK1jK8E12awj+g2GMoK4Z349sot
-					l1mW3koX/gyDkPsUWrpdnHbIIY31hqDrxnFw
-					U9R/8wN+a9l0HAt2Y59/JvlFrNVqsY31Edrf
-					3gtUkbegwPKaBgyOAkQQNKzN8eaxII4MB7cR
-					rURGKT4iDrhb3bKWihkYbnDEeFTOs5rKoAhi
-					KhtMQd3WEyMDmtCOfj8KcIhYy8uLNSztgrZ0
-					GWAvNtbrRWs3Jm4JCBsMwEzHt4b9CrqEZx+e
-					B32C/q0E2M6hwWbG5A== )
-HR34KPU922BC78NHLI1EGQ4EGARG19L1.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					ILKSD76F0NLIC076C3UCQQBIKQ5THL1C
-					MX RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					j6yln4tgvf6ykFJUJLKCqjnFIiujfILqxSIK
-					+DjELyHxDD1gqJRErNS2Jk8Ml31uEb1b/GXJ
-					Ol9qupU3DZrYCKxSkdJVVgBzO5umjg8joVP7
-					COcGeSHcJDl5nwhFiCcotCYjipphsgkt1fFa
-					R6cJkyUa/pD2HQch4viCFDq6kG2K7Tu2VgJu
-					BNlJx+DfJ8EnvbZUvXMHHwhhG0JM9RTRVHdO
-					KcHHGTDbtWVbAt/WhJIceRKvNn0VtBl+SWl5
-					mefXAqvp/oG6kgXAzx45DOTuWq39qwW1C/pz
-					G2+BpYL9p0vTRooY2MaOV0E5UCTDmRTcM6T8
-					rtxyY8hUCILPZ5+eUA== )
-KJ3TOFVKKBUAK09AF3I0DEMIJPSHJRPB.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					NQH5JI732F8RJMNV8DGE3U46B9QP1SB2 )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					nMYg+aD7AGzkrN20J82pzpCwX4P9M2cKAH9H
-					EsVEhNudzl8tMaXA6l5Et2jiL0vVc4aU7XY5
-					P6KtngmjRfQcG3rB8vIqAeOQEuph/9WWXP+v
-					ag+4N1JxuqfI+EdfVo/ga5WcVddkIT+v6s8w
-					FNYtlSU4Rpyr4RgzIdV4EppmqLHCvjJn9F5m
-					YUfxT8f72VmJRByt4gsZvrLCZ8gCdb+XfLph
-					9HvJW9hZoqWiDLksjKsgI7301gq+g9Z3uaKY
-					yeAmo6VgsZM5l+WqC9q82TyibgXYO9YT3xZd
-					aLsq5tIVqwHyapLHNsSbugV4K2/LpVSCfyF4
-					jpGwlPZUlbR8zJwHcQ== )
-PLMS13DROEAACRKBQ2GNP7D9LJLP0R8O.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					QCFAV187SUFNGE9K300UVH8MVSSH97H7
-					A AAAA SSHFP RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					dRNyg3/TBi5q+48N3IsaWUmBYG+Lz3z+2bQa
-					qBu6v1o6bHVddzHb+VrtKN3ndfVdvbDoHScY
-					zjMz1rVfdJYVaU3U928BxlHPrFwMEiBARV3U
-					j3CP4zETpF0pHKmXCZYVQrL1Q8TTKvYTWPQx
-					W1XGi4Vd6Sif/AAJ3sMjwxpBAoMcunXU1Lur
-					ZjJZ06OseZ7Z46k/ucSR6hOdKCN4LV3+n1P3
-					VG6rDTeWFEOBdMYmbBlKEjPZ1c7LIfyk0IIg
-					9PN2C8O3Nq/sunuKnvHJTUnN1KOiYUAR+3eu
-					3Lqdi45UDGU7/KoS+k3tAjKyEJJmd8O9vtil
-					ntACMLLjPAqHvEGyHQ== )
-OIJQP86OE1PI2DI5D2D3GBJI810AD5PC.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					PLMS13DROEAACRKBQ2GNP7D9LJLP0R8O
-					A AAAA SSHFP RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					kyiP26mBRBeMYxbeSaTCd72NQuYRMWbHRWPq
-					CYLsUrmTsM8hXJISEtYQqqY55LiQENiBuoNG
-					jGA5OaI1TMZMATVoz0EaKpsbxZJMU3RDYOpn
-					H0MtKLVnVnxwAdsGlzydgq1QogFGY45qJM15
-					LQNyARAB53MTzjTGdqzq/SeL7a4nowGs/gCX
-					5EcPB7d0ZMkJRdm1Le+9nVGbgs2ADa6ViWgt
-					cF/xfqIbS/b+xbUXz8gqojQxsbEnKKzKkIaY
-					ym428Trk89yMwANYsgiHBA4EPvvVtTYRndSE
-					uZiTn/EiUX0mDQz3x2yCZBC3cTIAeRxSTsqN
-					NxmdRH5oMatV9hAP7g== )
-NQH5JI732F8RJMNV8DGE3U46B9QP1SB2.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					OIJQP86OE1PI2DI5D2D3GBJI810AD5PC
+					20140913163448 20140814163448 29357 neersighted.com.
+					hwUPo/6mIOOa3wZ+fYC4K9x+S0jgkb6RWwE6
+					NHSF81cnImzdK8j2gKSSj3q+8CejpQzDrIis
+					TQqsX4SQgwcKf89k84vrJVGaGw95GrMb/t2x
+					BjT9KjzOSmOht5DeYhKJhhJv18isANgxc3mh
+					paFMRy5fvO1f4vQGG0GmYFmiDeU1MP2yjlIE
+					UsF0QWYwJSN5P0vZpN+K5n3zmvtfbL/zmCWW
+					Mk+xDdPF9gQpTteFzGwLcPBYMtXQuO9Npf6k
+					S83Nmm7UsU0epS5DFJZ9PJI4fJbybUj9ldDG
+					XGOMMWEPMqmUL+zHYgoKJbWe2OOlpo3QLBrR
+					qr1Ne7oJW6ALdYk9jQ== )
+5FAFBICP52C33DRTNGRH13EL1T4KU90T.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					6DE3DFPHCGT8J45LF7D8LA1BJAJBR53T
 					A AAAA RRSIG )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					LzSSitqjZvE3Pcr7nFUi8n2c2Vy72xSdQw0t
-					rF2xXByWezI9z4Nw8qV/ljMz5LsUmfLGmomd
-					E0XHy4O2ZRs/NXriUrdVcuN2mfvyapohFnxe
-					wGP7ORpzJkH1eTk/9iZDNLr+lIYzvUuZXHKE
-					brR1BuMNsP1s3TUvHGOyIrYaheFLJbRfCEEO
-					CsNnHXEksnj40J4zFfb72VrdSremy9o0Z7CG
-					U/Xm7sJ4PHccEWpyVBgR8nqGPS5o6VT775jG
-					GfJFAGrcDefMPZj1naOAIYqH0pfIIAHAxccu
-					vteMWQ4fpKcEm5DNnpsK8nt1maOI1yuTOsj/
-					Z5hN4WWKWAA/zTiVwQ== )
-QCFAV187SUFNGE9K300UVH8MVSSH97H7.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					R0S29C46O0NCGEO3O70Q0HKECJNRUJK8
-					RRSIG TLSA )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					sg7vrXgfqaWaFHqxtHttBSvudjEILV12n14n
-					BctKE7FwyM1qrLbl2ybbKjHoo6w3+uzq9VyS
-					2JyiNKaFpUQAJAEi1+sxKmNPHASjG+fn5dhU
-					BFTQt3DZ5s4e15gaJM+8CrzF5vA6bsnw4roQ
-					cFiQRlz/ZqVHq8sqkshqm+DLoX1gJSZoPPpa
-					jJP96KiDcxuJvOzkBlrcpKTfNnkb2rzSNC99
-					d0sW6m8I8KG6rQO7kN34/yJMcHKw7Ha+O4hb
-					l2qDFduA5RnfTDfwSpEDOgQxyZhhdJRCIRjo
-					CM8dWL2lHSClF+hD5eS0gQt4cXk+NF1J8n77
-					mUZ1/FEfFieVgCZWOA== )
-S25P5V5DBDGABG5C3SMJ7U5N408HGMMD.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					SFS3J86NC5SEL3DFAOAMDITQBG5TITFI
-					A AAAA RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					nWejY6K7/C0C330kYFjr8B2As61gdPHzr03j
-					ImKFjTNQaFX5/0VnrdbctuCWHs+urmy3ZKzU
-					whg4bLpDXzp8mmmlNd0FSM1kZ3pIDJQi6jXw
-					ejg/4KpyFRgGCztVvPr1VdlEyWtzZT01iNLo
-					HNVZJOI3+UiLciBqcSGukkKRkhxRTwgUD8xl
-					KXdBXYoqAUn/uI5DMjST2YEeRxpi2L/c0kAB
-					5mWet4u4pRT9N2GihSU3MXToP0CbGb5gW6E4
-					LVq3jCcZhrEc1KBDX9/2bPbqjfTkmofKKGS6
-					4iQNcYcLuhvgpJCYG+VGsjuXF7RmZfhM7g6v
-					F+ToPHhzqgTWkE4mTw== )
-RGKA4MS7RNJCTUSUE8KIA5P9CIMGTUEO.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					S25P5V5DBDGABG5C3SMJ7U5N408HGMMD
-					A AAAA RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					uSkUMIBXoYxT5iJyE3ELE8dyUegI2KOd0oRa
-					1uMukzWDVXoejcjJqBCFQYYw62b56V4HDqPg
-					oWN0HJbr8hYYYrupMtn3B94jVMfQtEheH1Bn
-					eAcr9GOiHC6iZmP6isZjyHmYazYH5tLfQZnA
-					0Qt/zOttEm2oDDFv3kIBdF6garY7aIyHEdqL
-					06ARMDS+xo66R3fVyxmdBJcFwRKUHJyCxrxp
-					5+/gCepjzCmLJQ6RQhqiuwDY5We/mEvDT7dZ
-					MtjXcRrHZLIYVn6g5ONqi7i/CjzSv3GgufaL
-					VmNpm9eMg+tZS7pRJNXWfB+qm4abdco6vgcE
-					EBkPNppVWTQihYZ/vw== )
-R0S29C46O0NCGEO3O70Q0HKECJNRUJK8.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					RGKA4MS7RNJCTUSUE8KIA5P9CIMGTUEO
-					A AAAA RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					rxORs3N1YmwUzYSlK9wEfS+e92CSljU+RAXs
-					ErxjHpx2mRnnqKEZSaP1FR1nkZBiJiy55c6o
-					Matyt+XkIruh4xf2awaV7a6m1DjxrcPbqR72
-					Q8T84XtwXOiVwnNwxenjeLphKp9OHtAi42RG
-					SWTNnSqnkc5ZQNyXgUOi2uFMcIHKTVVRQh06
-					ng2A+PmT3Sa5n6yUtnCCV4hJMSXVrX8F25w6
-					q9CD6LPNR6yhbgfN3UyWd2/8RncYQwyq6aAp
-					PQlu9Phcd3QJrE8WzcHUOsFqt9da2kpQgl1y
-					K8yorU42jHS9DSLj6igKmRUl7LDRIM55bXn4
-					uBb83vvGmI1PTOM8sw== )
-THKIFU1ADOREAGS80AU5DQDE0NKAI9BE.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					TP65N8VSDF1V7GQDTC2HO5GGDGK2ODE0
+					20140913163448 20140814163448 29357 neersighted.com.
+					eYcaMCMi2vdm/BGYbizLW+/c37+Oftle7mKm
+					N5ujrtgFILN2RJh34HNYo7NukqSfGkE+lK5d
+					iSnPsGlQAWDJm79EXlB5m4vqnAaDFwhQN910
+					sJecoR+KvYTfuYCnz9wcKBuDZEZD7HZIvWxt
+					ezYLKZwlQL5dibr8H9CvU2iUGWAEiJsYWApg
+					44+gnfsWP+KmidVf/cFwjCP+eMnS2fwb63qh
+					sSf+OFC3M/CqlJSWEDI8jugeboN2DSgIUg/Q
+					PODa/QdvKcC+26HAN9fSWkkiw/QD6/T4gT9g
+					ZYXrv+coRySAAWuOR2ZM2wgDrELRf0R6qUuA
+					t3m1KfqqemCGAi9WGA== )
+6DE3DFPHCGT8J45LF7D8LA1BJAJBR53T.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					8A8RT1JUJO959S1QVDCMOG6D5JPFCEB4
 					A SSHFP RRSIG )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					TQvuGXfMiXt4Ic+mQghqdep8WTn+WXd0Nzic
-					VHr86pbYUkM1Jf5oeWeM/m0hicYJHG6pdrV+
-					xS7GyQrg5w1vwLMAwZ0GRlz/t51sWYuXJFp5
-					3EwsOI+A/UffIEk+tOP+GpCoLY9F5m1C2e6O
-					YE+KEUKPzsni5tTcoBOKU1SckgE4o/3/0qu5
-					Uvf/G7oAOQNvfk3L4H1+TtBnxoLKO3O36Qco
-					ADFVo4aNX/lNuhMfxZY3L0pOX7eIJ3RYuJXW
-					GlEWiGHq2ickdll5hw+uCY6xH83WyqeGpIw1
-					7pSEtegt5gJZmFkKRn3anu1ApILxSgXngyjf
-					8dGnGL54CmWf5Fqv7g== )
-TP65N8VSDF1V7GQDTC2HO5GGDGK2ODE0.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					0QNU7KG1Q5R3FRDQ8V71DGCU9CUN37L0 )
+					20140913163448 20140814163448 29357 neersighted.com.
+					QbIFH75MS69mpOmTUJUyMpaud7dFm6ulrquG
+					bILqVTv7OSfTS5tmAxvcjdlEt0dbQSpj/Gxc
+					d/9zRZ/adh3v7FQr2BVvHhCRXdB9uCNQkStG
+					0bIIPI6aBD0F8PcQot8IJDQMwT94fXLEwEjU
+					F9M2O97v2Mf4dRTQry6ceJMQjcMl5hFWeqzp
+					J9JrBHHwGeBZvQlKEtPgtywj7uADM87j2mAR
+					XOFdn6JblwDcPQg2cGXZJCqkR9LTwtNzFDsc
+					JNDuUr5N8hQE3IxqtxoOF6x8uRD6Utk1TyMQ
+					9OkR6R3BtenrmC8VjA+FtmObP55k48Qb2cQ0
+					QJbvUnzja/zXxwYa+w== )
+8A8RT1JUJO959S1QVDCMOG6D5JPFCEB4.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					8FJUCU5SB7GQ2U7AM7CTBCK4C0O48Q3M
+					RRSIG TLSA )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					Nhx0SBMeET6BCFbblMx9Zk7Zttx0l5xG1Bm5
-					CRYVn8bIb/4jCoKeX6KoSS/HLS23ZoEvaD8m
-					lVU+X20xIrxgH3bDaprGFhbnAmfySgyXPot+
-					vxAQRooKPqx/XqvLwDYabUuzGJe4swIoWXex
-					5KYJZxEfgoxVB96OguN6fckVCa9k7ea6mLND
-					Ki8FDbnUrg0ULLbLCgrBcekR/mO5hAMEeXNs
-					YyFyX3kVk9rwH0wBOtd58ybbSJ4x/EDYIIJQ
-					nJ3cGqoiTHlXdOSHSa+Jr2Hhmo7z9xkF1foi
-					LOJOC2SH1uSINvUlLPNed9KoEhJ6RUK00/eW
-					qv5rTo8B1kJGFlbEuA== )
-SFS3J86NC5SEL3DFAOAMDITQBG5TITFI.neersighted.com. 3600 IN NSEC3	1 0 10 B1BBA7C8EA99CE2E (
-					THKIFU1ADOREAGS80AU5DQDE0NKAI9BE
+					20140913163448 20140814163448 29357 neersighted.com.
+					MmLTNtJ+JEImS121wUu62bcAo/8VMYanGHIM
+					WnH9gsY5oVsSEYUtZ0Ed4j2e5fPFl+Ccbg1+
+					2Bz7KAg/NBxUzQkt0yvxkQa3BpOINp+tog3j
+					0fe55Fp1/xlAfc7oN8/ABvlRQ2Kz/twsaK4P
+					F254QgAmiQNQ+9eawbh7I+fJC8HGjLQS4XNf
+					+cDimGW0WHdJjpY4Wo6AKoUROWLepsJpJt41
+					zN9aDAZyspvHkLDKrgJG1B6kmVPlMQAtQB65
+					/AU/SX/901oPXQdkpCI0/LNnoXl/68r752kN
+					Hr/xYglbG9jlrjEuzHkPl4Bsleq7Mh0T7XxK
+					epVLNsVRrOEJ8jsA7A== )
+34ENS4PEEM9V25R9UT7A3FEPL7CIDJ0F.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					3K57U0CLC9UCBT6G7O2K48VKBGUGE2R6
+					TXT RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					K9ggDsj28RWdyopiV1WaCu8SpwwKTvYz7zJ+
+					Rair93CnPPSe9GUZpw+/jwiX4ST6k+5urPI6
+					V+ri8dn0efT6cer245S1/oPUxJ1JT3/VM+b3
+					LW1f9CR37Spa279vQegdN/n3dUxb/kEtR07u
+					7iRWZAV96U4OS+P2KB0RcCqYEY4tESjsijqI
+					oeJRfZoBbb0Xmgbf0tzmiarCH05atrrXto1T
+					UQhMgj5ksLxpNHUwrvHdRQOL3rnZB+Nhbgdq
+					FPJGa5SDjjXzcYHVVxyLjLFDRvwrSvxIaKjw
+					Q1klDNP1Ye2hKcPJ+V5RaPadB4Sx99ODVFij
+					tshF6plj+1rWVA81JQ== )
+3K57U0CLC9UCBT6G7O2K48VKBGUGE2R6.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					5FAFBICP52C33DRTNGRH13EL1T4KU90T
 					A AAAA SSHFP RRSIG )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20140913135502 20140814135502 29357 neersighted.com.
-					s9ocQHEgTLljYYZUtbNEnqobr8IWXQBggazQ
-					gyYmehvSXZA/UrCn8hKnqATZlzBx+aSDV9/8
-					fLvWCAGTFg0+Mm4L2sg1/HP57cflcqeADDeT
-					rH+4qbPm/CelkpkLFMBfamt94ckNZOfjSqh2
-					vaHe3aCbPJcfnG4l8XIgbj0y29pjTw8K0aA3
-					RXY+ic29g0j3WfIG2Facx3+oOoCB/5d26dhS
-					aB4RFTojWymLlR6UInrgQ110B30GrVE+3X/M
-					DhqwRMZ8OFzTiZtECMPJacLE5UZ1Gn56/Fxl
-					V8TF8+zpLwkoAAGrHYZWZRzgncqBUKZb8Oxq
-					m+vv9uermtkWiApBdg== )
+					20140913163448 20140814163448 29357 neersighted.com.
+					sCqBSphOVjG4NA8vB1n2jQtYJD7RGBN8S0Aq
+					1L0daXtVMSH7m+ahyqwXfKzBziGm32R5TL8x
+					Va3CLsHhxp5Tl7dCHb1VuxUBU5z2zjSMttK9
+					cElSsczzxQ1T00kjyPO1QSGMuN1w5ZyBiPdF
+					IeyPvjxOBCtVSePw1BCIuFvV0HJ9O5/ZC992
+					zB36DrO3atfxqT0tUui9YTwGwYk0Po+kTW1z
+					FpQndRP8ZntTKZb6qTrW/miH4J4qOJNpKt9q
+					GxeWOVGgNSOVnCci/l9DAZSG//JpHOKr3/u+
+					e8ooUHZ6i+0l/zBDBEB/uiSs+mwqAxRZpPFF
+					RWo51LyxnUC0rXvsSg== )
+ADDB9I1G817I05VMJLAV3U3J72OA7T4A.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					DGKBBND06V40KVK9EF4QVHKIT0E4SMCH
+					A AAAA RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					QOttqNFnz1zXvvA2AghCSYNEJesizRaCf9JI
+					yZYt9N2Xv2/b0zOXAEHX4J5d3S1jS10yleIP
+					e6dKfCY2ooNsM8z3G8j6zUCGAu8v/3cFsBlL
+					EHKdz7MKAXyGQ7Cbbn5fVBVAstwKkVeyt2ne
+					UDJ8IdWIf54MBQ1tQRrYIznVdj5awAtUrMQx
+					R2ie/YiyPVANV6SR/Hh3UIgBJdVRCRsMrFhC
+					K1cbwbPexCAJLoO62CSNjHm95cba6yZVtHv0
+					yJXaMqpbnh3qpwWNbTvg3xa317c5jCrkWKwM
+					Nxx+jzRrlRYe/nwOF6bKcIZM9D3o6PmOgpcf
+					ukNmYxIiqxTR4NRbwg== )
+DGKBBND06V40KVK9EF4QVHKIT0E4SMCH.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					DQ3SDOEKCF72EDUHCGTJNR822A8IC5JM )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					KOVj1Q0DrhXQDQN4Vcm0KrKCl8TywAAvMPyG
+					Eysye0zLwgO75JNWjROowi2DhZHefFsPHjQu
+					iHCZkctW0DdVmjCd2vKwD3c6eBgAQYzDcnzL
+					v6q5137MH4ubYwThXkVtXtCXnGTMPvhdRC4n
+					WRBee1l3+UXGJKn0RkPD4P9py+GCFDYXuhsB
+					kY5sGGwefUzXDT9zOgQD0T8gNBGQEiwj50sX
+					V80ASpyoBz/FSDtV1bQnl3XkGCP8dZgZRN0o
+					eFsfkfxfeu+qQAHlp51C/ttYaBerV04zK/SP
+					oFib6exZCPcORoz2NDBY0N5oayI9X9eWtTL7
+					/gWU2qAdqJ9o+D9tFw== )
+DQ3SDOEKCF72EDUHCGTJNR822A8IC5JM.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					F24RJ5G8FAMOU2VNQIF7CKB73TVQN6V8
+					MX RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					YfbIGwXs8tQIyzCpPriZFwIqTxNe9ORG9E82
+					ng5tT2sqE5budYv/5qxqGTf37u9TG5V9nGz5
+					WF3HCbIkOsDyBXsLbKZjzZPWqvKs8qFgSJ1x
+					LhsCS3dKClbNHqdqCojeuCd60AsyAIjDuBmy
+					ARNcrP1ycGnl5RWupAYMraSE+Tq1YtxNEDTW
+					9p4bNt1zxYLZxBMQIW2d5/AGNaNxKS7+U8i4
+					swdeQbRrbS4fdHJLaiIPBiecdjUVo1vkvHzy
+					VE0DYZPyKjUb4wReDb8Ew4PZfk7cMTxachV1
+					nmmCCmPFbmcMb0Rte3sAOeOB4jl6ahZmXo8e
+					iJOuXKecXZx6NdTSpg== )
+9CLPKMUQH64KIDUV1DB79BC3537R62OD.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					ADDB9I1G817I05VMJLAV3U3J72OA7T4A
+					A SSHFP RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					pLHgpc7xeaenIn0ibaiqkRhJXxaYofDgE2+E
+					ajsgdEwQhe3lZswpSZOF2rgPy9DlejjuWkvv
+					zv0Vytr93Bl9XOAwO4Nc0JhwGjDLWdgCzk1F
+					Jf7D6b9wIz8sDyIct8ZMS0uicMkN+tDgDjtN
+					v7V5QVEclMd3blEmwqxReai+bn8pzJLkyCek
+					vzXHY5GTrNANbBTr1jNhUjw3v8gQHL3gPVzB
+					iwIZHNoKCrxPK2CoMPHvjrX4GiY0/cZ73J5U
+					4BtUioTFBmkOZr0mL/HvuMmZlUp3/TYx0IzK
+					aiZJo41G2oFwb1lJVcAwycB/7v4wCw5IVVzv
+					dFNSCQg5hWcsLALZrw== )
+F80UAJUD3Q2394F958NU703JFNJKSK4K.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					HNF0HELNCKN77SEEVAU5V0N5M62PLLIH
+					A AAAA RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					LznWDJZacQVAqtF/6b48kRDdVyc0R1baZAUt
+					dNmKAodbST3MzhcjEcFNw9Sn4I/f/Kh0WLW6
+					aVqWSleoKTXE9QTr4O/wC1PQkY3w2zgXIQh5
+					iiBPZwFjYilDgC0fcqGbuMb2j/75yO/yZ0yx
+					0FISzMXVXHF+G1e9YPFJBbgZnKZ+unq2SENs
+					JhvVhA6oi6bd17kJWvMaV8mdeMeCjUcDH3wh
+					aAFThiZjQjvhBEiHStvU/bs784ozqA2NlOQm
+					Cek54vMYQXCz3vwOhUd34zsUAcXTKGAzr9q4
+					4ODKNsGxIbXwLZxGf4wb0ciYio+ICZkTTHGi
+					/rkHX7uSPkGAaStyVQ== )
+HNF0HELNCKN77SEEVAU5V0N5M62PLLIH.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					I7JT4MSDTP0NNPQCJ0JQ195AR0HFR2OR
+					TXT RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					bBZXoXM2wI38G/n0NSuBTVnct5EVENUMzEz4
+					bsE1e1xemUQm2I5Bj66Bs2xlBidbZrG2JRhD
+					bZrNaY1+C49P6xGfh5rGb4sHl16ZYuRQVa2E
+					JFPdBecjQoo05xBV3olxbJ9RbmOL5D31Xg3D
+					hdi1WdKVj5PqDCExa2sv3i6ySBDLM1WyVYTc
+					LjiU3KpqPglx7Zc82MbAc05XaqIHwIm3LeMK
+					jQq0j2zI6UmX1oCwEwTtHn+31BdpT4UgdVFY
+					zNoK9NzPdVRmqxIeDDMkkcvfP4OS8N6JLBF4
+					S10WjOAj2CkEhcWtwdZ9tlQXD9d/KD2KkLTo
+					PctABc8r3YdmRtHjfA== )
+8FJUCU5SB7GQ2U7AM7CTBCK4C0O48Q3M.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					9CLPKMUQH64KIDUV1DB79BC3537R62OD
+					A NS SOA MX TXT AAAA RRSIG DNSKEY NSEC3PARAM )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					fekMmqRc4Wumc0Z3LgU26ln8W+n4zbN445Zc
+					o4i8ORQJKVLopaVOyfi5kas/tK8iz857PBDd
+					u7AQIM3r6ZwsVMsjuLU70/YBFyGNuZIFb6U/
+					dlBpepfwvCMlqxn1Flss+YNrpKUyzJ08MxSA
+					SnlMIPhi8cswfjTR9xEIZhkyEGL9ndvdTC9H
+					meh9pPe1yPwhkKR2a8Or3+R72b+l7D5Z7FsI
+					8zpKF8fLM9MC7ZCvf4xF9yhtYQWRMw5pIpVb
+					X1dVfApOFKL95y7PVora4mix/2Ce5OIaCWVv
+					fMyr5w+gk4mgars0uIEhc89lwfFtz4U+QnO+
+					NOLD/uTwxOi1+9+paA== )
+IU6RB8DVS1LT6T04LP7FBE47MC1RU3C8.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					JNPV1M31O0BOKN6A41L2G65N03109TMT )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					GHUPnSyZZkieKf2ZOAY7OG+LH/07sddSr4ln
+					q0Fhx28QrQnw8GXgWDMYmEiwJud5eWWGkp3y
+					wzGQsHlbJpFkEFLPHw77famf2MtOonED9sJT
+					+yLG2WVZ6kqYKtXAS26UnjVlVg0y77KKGf/E
+					l+kOmNgV1m5Bb03bL5Wxvpub+kYk/O03fv+/
+					J79i1TvSktBbiyQaQjScxtrIVukK6nNkiLv0
+					nkYPgfd6ETupGneUd7QcZgm5lW9LNkGyg4iS
+					FajecnNpH5/VNB01P/mr2GeqWbQYw9SDmM1G
+					b0J9jErS8ig/Bm7OJGgg0pFPNnvJh58NnOJ1
+					4XkBPCDJVxfIg1aJDA== )
+JNPV1M31O0BOKN6A41L2G65N03109TMT.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					KB76IKK5I4UG0LUG9O41Q3ILDBJDH1PF
+					A AAAA SSHFP RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					I1cdrCkzN46cLAFkO35RyraY7JiWMcOz3WrY
+					LyHOkYjXr6G8HL+590b134OhGFU65fF6kB07
+					G+aw88A73JYyCjFVKC5c4anaSgiPG95nBDtS
+					OD1iyIIbIuEfFJ6wHl20AGestPX3phPQZinn
+					voPtGzVY8UQhvael+5WoazohhXPrNm4CfJna
+					BGrtEi0bQLaqRo9Xm+XqKGc9Za/n8fBW4Yz7
+					7mi7+GQbXXXYMleK9OV7Dl19srtKJuHOzLmw
+					aKNQXk4sQOMWSxYUNju82KUPcLATrRTQsmyD
+					KuZV4ij0NixQL2sl5mL4o/QtFLZrILU2D249
+					BMfGqtoeag4ZFDVdew== )
+F24RJ5G8FAMOU2VNQIF7CKB73TVQN6V8.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					F80UAJUD3Q2394F958NU703JFNJKSK4K
+					TXT RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					Cq7USr4nPFmfqiMy2r9DGDK8vsyYDOIaWWod
+					hyRlwaoxUGB+dySmAQEwSwm+mjUOXMfL77N5
+					+K9pehh2h/9Oo0XbB206bn3SG9jDjY6BaT5O
+					wDCYhVNT0yJ2LpDqn2EJnLfmpNDiYAdpob5g
+					sPrfVRss0SU0c4bxbGVbiU1AnrvMp5MG0HHL
+					QkbVTUfkci0gWIwp1lGSux0EjswZ+lWxDWqS
+					pfI4MqwhOozhDFV674DhuxQrk0f3jPB3uI38
+					BRLpHFHFjuWwqprrv4Hnnvdp1F2EQAQ1+7+d
+					XR56Fu9DMLuWkQ4V/GtOSv/gZjQ69952Uf9W
+					F37QyNlnuj3abvx6Qg== )
+KMFCBC6ULM31QGGGC360HO1U8ETUK5IJ.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					L0DDKQPQ6DTQ6U4IV2HHOV22GCPFMJL8
+					A AAAA SSHFP RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					Yp886S9N0Xm1vSD9zZ/sQDJ9a6OxfI20XdDO
+					b04y9H2DKLpDNBt8HHdVYa0GTW7DR2YG9cBl
+					wtCuXT27KxFq5bshcQAFkLORj5F0gHMuMw3y
+					O93Nh4Dn2KDtIdcWaQADsDjQdn3vG+WZaymA
+					3wpxIkCRySUx2EiPDENdusmiKoPJ3mTcqOVU
+					0/FUJCHXj52MLWK7XRUqCV7fs/t48VTq/gKD
+					DThq20zd79VXPTcFHUpS/X2Xe7GBl0w9HOo0
+					q2YF41OtWONjfosolFdynmr0h0SdrUiPQRt0
+					z03bEru+WZ3i5pbrVwx6GshBUz/urNUzVQEB
+					sPAdJ8TKK31pEav3IA== )
+PKQN7V73AO5OHEN1U8U4ADP53SPJ1TM1.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					Q2DCV2HK43QF3SBPMA0C6TP5JO1UQOJT
+					RRSIG TLSA )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					ECvwAHNCavkYHmboA6WoNgV96TRtEG+LcAn1
+					8BHakEEjfUM9JLzE13kjPDwdgUOR+8jxkx2P
+					8Wrv6JUWNJcjDlLbxmSkdOAJyj49pl3cU23M
+					cYrLJ23JF507wfdofmpi2Jl/KT47UzTe67Nu
+					M/669D+pgmo3BKRib0Pz4lZsJlklz4a53hJD
+					oAsf2i0xWC7CNau0Kj6exQ5g6IARhQ2BbDQ9
+					JZZtDp7dts7QDmx/2I9N9y7+456/WyA5woVg
+					5PdoUXfuLLDnIwf4xya46U6raF5igDFsbsdp
+					SoQ/hM0H3fT/mPTkT/qDnRsncIKuon/XCIiD
+					uwNXLBGjL5Y6GO9gWQ== )
+L0DDKQPQ6DTQ6U4IV2HHOV22GCPFMJL8.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					PKQN7V73AO5OHEN1U8U4ADP53SPJ1TM1
+					A AAAA SSHFP RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					MF9oYzjR/xZt1DuNIX2RCpe2hbVwCmkyPyuc
+					e1Xp2e7KyUAG8MgeGXqQQQzELdHztsHHwfSN
+					yjXvE9nuwzpXG4w7/OKQ3GO5+h17PKZOUtua
+					DP/Z0bpqaECR2Ab8qTFXvibVyRKk+3WKH3W0
+					VGxrJEnRtrcwNRAjpnLcVgNOzFwEgY272niL
+					zXWrCMsCTe37sH7mUdOqOkFheZjUb/iLHPgT
+					DZ3tn8b/JdH8xCMGNP4yz06FoRvuORlI6U+1
+					v30uL67gvTH7kCTFli2HQj1/Qr4kXbJ78ttc
+					8kxBISur+DBsJuUyV+Lc4E78i1sxPkLzb943
+					Hgr4S7iCmYPWU9j9Pw== )
+QK70AOQN679IOESELMUUDUR2TDHNVQQ2.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					QQSAURS9EMKGGMMI9OKCSHAAF3O9RNE1 )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					C9AxG2Mr4ZeMbzG944Ygq9VwalRozK1ceJ+4
+					46oxdTp/GhLVNeFIjd44hWBJXhWivNWJAqFI
+					WKPdoWIdjVPmPtAgWdvGjMuIjHPMvAzeTaw/
+					NdURRhql8Er+CSThrOchrvEANUMBHYgf08zy
+					7JNsUlfrd9hlpjwS/1UKy76gXL6DhHMHMNNP
+					2POiFlm9JgKJ/aMZ58m/W9xuMCFWpFV86TaG
+					qsexKikATMKWgKHBIdkL1NxUuYGKm2pzwByv
+					4V87wmO3k6FEF1ExTNIut5ZDTUKAFOdRe51m
+					b+dDwFzLz1SSmFO9xRN+4p+4GKcHbUuJwxmE
+					H+T7FVJVdQu9TbU2Gg== )
+I7JT4MSDTP0NNPQCJ0JQ195AR0HFR2OR.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					IU6RB8DVS1LT6T04LP7FBE47MC1RU3C8
+					CNAME RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					q6X/xK55p6j9myM76xWDgrCRJ1Hd8OKviFz7
+					Njt3P90F8MTecfUIaD6k+7YJjA/FfSbiYa/4
+					rHECXr9OX6qhm5zHaBPBNr5X3WOJWFnpOvFL
+					sc1+C783oFAwka2JYQsSR3eY23SEcl4Q41tT
+					8vv3966iXfmaWWghzqF+ZMaqKGp7Bb2JFJj5
+					B6r2dEXFMRvSoky/GYoUxUqVazznfM+8PhB1
+					bRaIaiN+zh/BCEi3cCIAV0g+ymagBngGYdVT
+					X13Vh/3OY7RZ6t1yze11dD8CWFZoIMLTw9l1
+					JsSFRnYGr+MVkTqFhYTd1ryt92ks1L/X1icu
+					hWOwTGwNr9BSHBxBrg== )
+VNH1VRGO7NQAOVB8G431L9L38GV6JJEH.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					0CF09CA4OSR4L09B8O3M1F63HJ055IS3
+					A AAAA RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					uPz8KdZLyKDNgq4APxADmXFHM/7y5Dmx7Gdq
+					k7JxKnzwiecNxv+QSgzvKgBA2qh7dXsD5o4x
+					qCABLUW4JxZijfQg21/bmhZgWS4cOeqxXDsd
+					PQbmazl27HGGcUfjq2s00JeCSTD4YZ0DZ2C6
+					4T2kudJqDjEQKFJLhgKfNH6mpWBFTGOoTiwy
+					95wmjiejel+rgFimx+JPwKZnllm7Z34jpjzS
+					7+yt8mEzbZIqEzH4TLRniylbsg6Teei/E4+h
+					lEfjlWPhU3Omuc2DyySGYQARGa2Fh899wsgj
+					ON0AD9fHEPTDg6nIlIwRFfXcnnQIRpTmHCXh
+					mUqyuQeUuNr0RQG84g== )
+KB76IKK5I4UG0LUG9O41Q3ILDBJDH1PF.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					KMFCBC6ULM31QGGGC360HO1U8ETUK5IJ
+					A AAAA SSHFP RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					b+roMbQVk0lu3yc2rHWB4OH6ZaKASspil7mR
+					oU7/2nwCXbY40RO4atmjkic5C9+4G6JbdrCh
+					XJBj3p6+LBGCv+fHVp/yd2M4V9TDsjDeMboZ
+					YmvrQ4XKI+Q/ywWK/P20wJPP0/CsYBit44QZ
+					Hfcj+rsURsKOxIk0TmpW1wWokYxxCQRsyFWQ
+					AESv75d4V8qY21PBkoUD4HFgxF/sG3ULvMwf
+					ZeAvntRjN4b0S546rAJRHXBP/CemJiBR5Rom
+					BjeVL3qtSonEhrMrhKVKZTPTVZSPooYbBX03
+					TFVl7KrlaBm1BoQnLVGruL2Fyo9znN4aWw4k
+					cyvAKV0k7vk6rZZolg== )
+Q2DCV2HK43QF3SBPMA0C6TP5JO1UQOJT.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					QK70AOQN679IOESELMUUDUR2TDHNVQQ2
+					A AAAA RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					GcBabuTNQyy4Sc3SM9oXCfYM8b06I+7Lb6CM
+					oyPFBDMXRhF4imThn83Fz7whc0eIw/xDGsRS
+					eO5dU10WlOdsTlSO1xqlBDZXudekTMAh1kc1
+					0f353fosWjm80PA7v0cU5LSgHIH3p3JisRar
+					VtGKkFcuGqrFmnGvImebj0R6w+ogiMlaZuJK
+					nBLCQ+S/n+Zs27BF3FEzXr2M48J2pRp5fSPH
+					Wl65Hrf7PUQjJB3C/ncgEtRppG6x3XxApr8x
+					WBO6cOz5wN7RucKN34Z10S9sMG+rA3RS8Orz
+					QzR9+qvSWI3+GMDZJbKD2aKEuy4FvP24ifPW
+					fABqvWzdplEuWiC1nw== )
+QQSAURS9EMKGGMMI9OKCSHAAF3O9RNE1.neersighted.com. 3600 IN NSEC3	1 0 10 912315B6A3B20CE0 (
+					VNH1VRGO7NQAOVB8G431L9L38GV6JJEH
+					A AAAA SSHFP RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20140913163448 20140814163448 29357 neersighted.com.
+					rEu7BABCVhVJ+JHsCQY94AYo+Ql6bY/p9ehT
+					oQjPtmqkktp+NchhhIkxLfJdbQ0z/FsTUbLr
+					ruJWryCTTe827vd57XaJ7Q8FQAi1nD+1Fd7d
+					Xh6Nrubs59+vptVzSbaBuLp2/MDSBeBBzWhG
+					1iOCPYfNQuGwl//ZSib9U2TLCNaaxsfDZC4Q
+					SA4EH36EjQiqThlVHbupt2i19LnhngYg3c6K
+					sGKRqnmKbb6shjYCqTOJeuNxEpkqJq/piNim
+					Bi/OsQHYVwKTnVob45Ij+lJr/XmHUfTmnPns
+					8kqqYpJnTSa0TLhyVlXr9U8WM6I93rwn7sXq
+					2oUo+fB7i0ihbt2UOw== )
