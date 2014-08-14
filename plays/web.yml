@@ -8,11 +8,12 @@
 
     - { role: web/site, site: localhost, conf: files/web/localhost.conf }
 
-    - { role: web/kibana }
-    - { role: web/site, site: kibana.neersighted.com, conf: files/web/kibana.neersighted.com.conf }
-
     - { role: web/elastichq }
     - { role: web/site, site: elastichq.neersighted.com, conf: files/web/elastichq.neersighted.com.conf }
+    - { role: web/kibana }
+    - { role: web/site, site: kibana.neersighted.com, conf: files/web/kibana.neersighted.com.conf }
+    - { role: web/kopf }
+    - { role: web/site, site: kopf.neersighted.com, conf: files/web/kopf.neersighted.com.conf }
 
     - { role: web/site, site: neer.io, conf: files/web/neer.io.conf }
     - { role: web/site, site: neergaard.me, conf: files/web/neergaard.me.conf }
