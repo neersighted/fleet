@@ -1,3 +1,0 @@
-- name: extract elasticsearch-hq
-  tags: [elasticsearch-hq, web]
-  unarchive: src=elasticsearch-hq.tgz dest=/srv/web creates=/srv/web/elasticsearch-hq/config.js

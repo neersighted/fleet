@@ -2,7 +2,7 @@ ES_USER=elasticsearch
 ES_GROUP=elasticsearch
 #ES_JAVA_OPTS=
 
-ES_HEAP_SIZE=1g
+ES_HEAP_SIZE=512m
 #ES_HEAP_NEWSIZE=
 #ES_DIRECT_SIZE=
 
