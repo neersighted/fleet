@@ -1,0 +1,2 @@
+- name: restart stash53
+  service: name=stash53 state=restarted

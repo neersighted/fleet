@@ -1,6 +1,12 @@
-node.name: {{ inventory_hostname }}
-cluster.name: {{ cluster }}
+node:
+  name: {{ inventory_hostname }}
+  data: true
+  master: true
+cluster:
+  name: {{ cluster }}
 
-discovery.zen.ping.multicast.address: {{ ipv4.private }}
-
-bootstrap.mlockall: true
+network:
+  bind_host: 0.0.0.0
+  publish_host: {{ network.ipv4.private }}
+discovery.zen.ping:
+  multicast.address: {{ network.ipv4.private }}

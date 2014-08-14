@@ -1,4 +1,0 @@
-#!/bin/sh
-ip link set $INTERFACE up
-ip addr add {{ ipv4.private }}/24 dev $INTERFACE
-ip addr add {{ ipv6.private }}/64 dev $INTERFACE

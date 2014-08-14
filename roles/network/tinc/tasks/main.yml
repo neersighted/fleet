@@ -1,21 +1,21 @@
 - name: create directories
-  tags: [meshnet, network]
+  tags: [tinc, network]
   with_items:
     - /etc/tinc/hosts
   file: path={{ item }} state=directory
 
 - name: install tinc service
-  tags: [meshnet, network]
+  tags: [tinc, network]
   copy: src=tinc.service dest=/etc/init.d/tinc
   notify: restart tinc
 
 - name: configure tinc
-  tags: [meshnet, network]
+  tags: [tinc, network]
   template: src=tinc.conf dest=/etc/tinc/tinc.conf
   notify: restart tinc
 
 - name: transfer tinc scripts
-  tags: [meshnet, network]
+  tags: [tinc, network]
   with_items:
     - tinc-up
     - tinc-down
@@ -23,16 +23,16 @@
   notify: restart tinc
 
 - name: transfer hosts
-  tags: [meshnet, network]
+  tags: [tinc, network]
   with_items: groups['all']
   template: src=host dest=/etc/tinc/hosts/{{ hostvars[item].mesh.name }}
   notify: restart tinc
 
 - name: transfer key
-  tags: [meshnet, network]
-  copy: src={{ conf }}/{{ inventory_hostname }}.priv dest=/etc/tinc/rsa_key.priv mode=600
+  tags: [tinc, network]
+  copy: src={{ keys }}/{{ inventory_hostname }}.priv dest=/etc/tinc/rsa_key.priv mode=600
   notify: restart tinc
 
 - name: enable and start tinc
-  tags: [meshnet, network]
+  tags: [tinc, network]
   service: name=tinc state=started enabled=yes

@@ -19,7 +19,7 @@
     - { role: firewall/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
     - { role: security/sudo }
 
-    - { role: network/meshnet, conf: files/all/network/meshnet }
+    - { role: network/tinc, keys: files/all/network/tinc }
     - { role: firewall/rule, rule: { rule: allow, port: 655 } }
     - { role: firewall/rule, rule: { rule: allow, interface: tinc0, direction: in } }
 
@@ -28,7 +28,7 @@
     - { role: security/auth_key, user: ansible, key: "{{ lookup('file', '../.ssh/deploy_key.pub') }}" }
     - { role: security/add_sudoer, user: '%deploy', perms: 'ALL=(ALL) NOPASSWD: ALL' }
     - { role: accounts/add_group, group: { name: wheel } }
-    - { role: accounts/add_user, user: { name: neersighted, group: wheel, password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.' } }
+    - { role: accounts/add_user, user: { name: neersighted, group: wheel, shell: /bin/bash, password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.' } }
     - { role: security/auth_key, user: neersighted, key: "{{ lookup('file', '../.ssh/neersighted_key.pub') }}" }
     - { role: security/add_sudoer, user: neersighted, perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL' }
 
