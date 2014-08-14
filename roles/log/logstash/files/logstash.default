@@ -1,0 +1,13 @@
+LS_USER=logstash
+
+LS_HEAP_SIZE="512m"
+#LS_JAVA_OPTS="-Djava.io.tmpdir=$HOME"
+#LS_USE_GC_LOGGING="true"
+#LS_OPTS=""
+#LS_OPEN_FILES=16384
+#LS_NICE=19
+
+#LS_HOME=/var/lib/logstash
+#LS_CONF_DIR=/etc/logstash/conf.d
+#LS_PIDFILE=/var/run/logstash.pid
+#LS_LOG_FILE=/var/log/logstash/logstash.log

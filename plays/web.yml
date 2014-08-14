@@ -11,6 +11,9 @@
     - { role: web/kibana }
     - { role: web/site, site: kibana.neersighted.com, conf: files/web/kibana.neersighted.com.conf }
 
+    - { role: web/elasticsearch-hq }
+    - { role: web/site, site: elasticsearch-hq.neersighted.com, conf: files/web/elasticsearch-hq.neersighted.com.conf }
+
     - { role: web/site, site: neer.io, conf: files/web/neer.io.conf }
     - { role: web/site, site: neergaard.me, conf: files/web/neergaard.me.conf }
     - { role: web/site, site: neersighted.com, conf: files/web/neersighted.com.conf }

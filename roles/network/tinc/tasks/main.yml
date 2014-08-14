@@ -25,7 +25,7 @@
 - name: transfer hosts
   tags: [tinc, network]
   with_items: groups['all']
-  template: src=host dest=/etc/tinc/hosts/{{ hostvars[item].mesh.name }}
+  template: src=host dest=/etc/tinc/hosts/{{ hostvars[item].network.mesh.name }}
   notify: restart tinc
 
 - name: transfer key

@@ -1,3 +1,8 @@
+- name: configure logstash service
+  tags: [logstash, db]
+  copy: src=logstash.default dest=/etc/default/logstash
+  notify: restart logstash
+
 - name: configure logstash grok patterns
   tags: [logstash, log]
   copy: src=patterns dest=/opt/logstash/patterns/custom
