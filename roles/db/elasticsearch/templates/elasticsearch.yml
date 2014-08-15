@@ -5,7 +5,6 @@ node:
 cluster:
   name: {{ cluster }}
 
-
 index:
   number_of_shards: 4
   number_of_replicas: 1
@@ -17,5 +16,4 @@ discovery.zen.ping.multicast:
   enabled: true
   address: {{ network.ipv4.private }}
 
-# Lock all memory.
 bootstrap.mlockall: true
