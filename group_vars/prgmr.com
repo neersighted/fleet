@@ -1,1 +1,1 @@
-debian_mirror: http://mirrors.ocf.berkeley.edu/debian
+debian_mirror: http://mirrors.kernel.org/debian
