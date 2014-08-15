@@ -5,11 +5,17 @@ node:
 cluster:
   name: {{ cluster }}
 
+
+index:
+  number_of_shards: 4
+  number_of_replicas: 1
+
 network:
   bind_host: 0.0.0.0
   publish_host: {{ network.ipv4.private }}
-discovery.zen.ping:
-  multicast.address: {{ network.ipv4.private }}
+discovery.zen.ping.multicast:
+  enabled: true
+  address: {{ network.ipv4.private }}
 
 # Lock all memory.
 bootstrap.mlockall: true
