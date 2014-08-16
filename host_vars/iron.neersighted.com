@@ -1,6 +1,6 @@
 network:
   ipv4:
-    gateway: 107.150.19.1
+     gateway: 107.150.19.1
      netmask: 24
      public:
        - 107.150.19.150

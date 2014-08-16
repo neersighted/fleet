@@ -12,4 +12,4 @@
     - { role: dns/zone, zone: saynay.me, zonefile: files/dns/saynay.me.zone.signed }
     - { role: dns/zone, zone: singulo.co, zonefile: files/dns/singulo.co.zone }
 
-    - { role: log/stash53, server: '10.13.37.79/6379' }
+    - { role: log/stash53, server: '{{ hostvars['nitrogen.neersighted.com'].network.ipv4.private }}/6379' }
