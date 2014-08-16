@@ -14,7 +14,6 @@
     - 1-input.conf
     - 50-filter-auth.conf
     - 50-filter-dns.conf
-    - 50-filter-logstash-forwarder.conf
     - 50-filter-nginx.conf
     - 50-filter-syslog.conf
     - 50-filter-ufw.conf

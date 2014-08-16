@@ -1,0 +1,4 @@
+- name: configure site {{ site }}
+  tags: [site, site, web]
+  template: src={{ conf }} dest=/etc/nginx/nginx.conf.d/{{ conf|basename }}
+  notify: reload nginx

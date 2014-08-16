@@ -1,12 +1,12 @@
 - name: configure nginx.conf.d
-  tags: [server, web]
+  tags: [nginx, web]
   file: path=/etc/nginx/nginx.conf.d state=directory
 
 - name: configure nginx
-  tags: [server, web]
+  tags: [nginx, web]
   template: src=nginx.conf dest=/etc/nginx/nginx.conf
   notify: restart nginx
 
 - name: enable and start nginx
-  tags: [server, web]
+  tags: [nginx, web]
   service: name=nginx state=started enabled=yes

@@ -1,4 +1,0 @@
-- name: configure site {{ site }}
-  tags: [web, site]
-  copy: src={{ conf }} dest=/etc/nginx/nginx.conf.d/{{ conf|basename }}
-  notify: reload nginx
