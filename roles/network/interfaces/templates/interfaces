@@ -1,0 +1,30 @@
+auto lo
+
+iface lo inet loopback
+
+
+auto eth0
+
+{% for ip in network.ipv4.public %}
+iface eth0 inet static
+{% if loop.first %}
+  gateway {{ network.ipv4.gateway }}
+{% endif %}
+  address {{ ip }}
+  netmask {{ network.ipv4.netmask }}
+{% endfor %}
+
+{% for ip in network.ipv6.public %}
+iface eth0 inet static
+{% if loop.first %}
+  gateway {{ network.ipv6.gateway }}
+{% endif %}
+  address {{ ip }}
+  netmask {{ network.ipv6.netmask }}
+{% if not loop.first %}
+  up ip addr change {{ ip }}/{{ network.ipv6.netmask }} preferred_lft 0 dev eth0
+{% endif %}
+{% if loop.first %}
+  pre-up echo 0 > /proc/sys/net/ipv6/conf/$IFACE/accept_ra
+{% endif %}
+{% endfor %}
