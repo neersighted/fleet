@@ -4,7 +4,7 @@ network:
      netmask: 24
      public:
        - 107.150.19.150
-    private: 10.13.37.79
+     private: 10.13.37.79
   ipv6:
     gateway: 2602:ffea:1::1
     netmask: 48
