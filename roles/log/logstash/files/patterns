@@ -5,7 +5,7 @@ NFLOG2 (?:IN=%{WORD:in_device} OUT=(%{WORD:out_device})? MAC=%{NFMAC} SRC=%{IP:s
 NETFILTERLOG (?:%{NFLOG2}|%{NFLOG1})
 
 NGUSER [a-zA-Z\.\@\-\+_%]+
-NGREQUEST %{WORD:request.type} %{URIPATHPARAM:request.uri} HTTP/%{NUMBER:request.proto}
+NGREQUEST %{WORD:request.method} %{URIPATHPARAM:request.uri} HTTP/%{NUMBER:request.proto}
 NGRESPONSE %{NUMBER:response.status} %{NUMBER:response.length}
 NGINXACCESS %{IPORHOST:src_ip} %{IPORHOST:host} %{NGUSER:user} \[%{HTTPDATE:timestamp}\] \"%{NGREQUEST:request}\" %{NGRESPONSE:response} \"%{DATA:referrer}\" \"%{DATA:useragent}\"
 
@@ -13,6 +13,6 @@ SLTIMESTAMP %{MONTH} +%{MONTHDAY} %{TIME}
 SLFACILITY <%{NONNEGINT:facility}.%{NONNEGINT:priority}>
 SLHOST %{IPORHOST:source}
 SLPROG %{PROG:program}(?:\[%{POSINT:pid}\])?
-SYSLOG %{SLTIMESTAMP:timestamp} (?:%{SLFACILITY} )?%{SLHOST} %{SLPROG}
+SYSLOGPREFIX %{SLTIMESTAMP:timestamp} (?:%{SLFACILITY} )?%{SLHOST} %{SLPROG}:
 
 UFWLOG \[UFW %{DATA:event}\] %{NETFILTERLOG}
