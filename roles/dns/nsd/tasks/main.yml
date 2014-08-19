@@ -7,11 +7,6 @@
   template: src=nsd.conf dest=/etc/nsd/nsd.conf validate='nsd-checkconf %s'
   notify: restart nsd
 
-- name: configure slaves
-  tags: [nsd, dns]
-  template: src=slaves.conf dest=/etc/nsd/slaves.conf
-  notify: restart nsd
-
 - name: enable and start nsd
   tags: [nsd, dns]
   service: name=nsd state=started enabled=yes

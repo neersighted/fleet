@@ -15,7 +15,7 @@ iface eth0 inet static
 {% endfor %}
 
 {% for ip in network.ipv6.public %}
-iface eth0 inet static
+iface eth0 inet6 static
 {% if loop.first %}
   gateway {{ network.ipv6.gateway }}
 {% endif %}

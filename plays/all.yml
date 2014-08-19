@@ -39,7 +39,8 @@
     - { role: system/motd }
     - { role: system/ntp, timezone: UTC }
 
-    - { role: mail/nullmailer, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', to: admin@neersighted.com, from: '{{ ansible_hostname }}@fleet.neersighted.com' }
+    - { role: mail/aliases, to: admin@neersighted.com }
+    - { role: mail/msmtp, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', from: '{{ ansible_hostname }}@fleet.neersighted.com' }
 
     - { role: log/beaver, server: '{{ hostvars["iron.neersighted.com"].network.ipv4.private }}:6379' }
 

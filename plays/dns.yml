@@ -2,7 +2,8 @@
   hosts: dns
   sudo: yes
   roles:
-    - { role: dns/nsd }
+    - { role: dns/unbound, listen: ['{{ network.ipv4.private }}', '{{ network.ipv6.private }}'], allow: ['{{ network.ipv4.private }}/24', '{{ network.ipv6.private }}/64'] }
+    - { role: dns/nsd, listen: ['{{ network.ipv4.public.0 }}', '{{ network.ipv6.public.0 }}', '127.0.0.1', '::1'] }
     - { role: firewall/rule, rule: { rule: allow, port: domain } }
 
     - { role: dns/nsd/zone, zone: neer.io, zonefile: files/dns/neer.io.zone.signed }

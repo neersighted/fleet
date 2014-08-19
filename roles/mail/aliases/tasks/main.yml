@@ -1,0 +1,3 @@
+- name: configure aliases
+  tags: [aliases, mail]
+  template: src=aliases dest=/etc/aliases

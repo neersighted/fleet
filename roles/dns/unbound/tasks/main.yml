@@ -1,0 +1,13 @@
+- name: transfer root hints
+  tags: [unbound, dns]
+  copy: src=root.hints dest=/var/lib/unbound/root.hints
+  notify: restart unbound
+
+- name: configure unbound
+  tags: [unbound, dns]
+  template: src=unbound.conf dest=/etc/unbound/unbound.conf validate='unbound-checkconf %s'
+  notify: restart unbound
+
+- name: enable and start unbound
+  tags: [unbound, dns]
+  service: name=unbound state=started enabled=yes
