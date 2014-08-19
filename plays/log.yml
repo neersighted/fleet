@@ -3,5 +3,5 @@
   sudo: yes
   roles:
   - { role: packages/install, package: openjdk-7-jre }
-  - { role: db/elasticsearch, cluster: log }
-  - { role: log/logstash, cluster: log }
+  - { role: database/elasticsearch, cluster: log }
+  - { role: logging/logstash, cluster: log }

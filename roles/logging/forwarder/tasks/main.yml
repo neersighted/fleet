@@ -1,18 +1,18 @@
 - name: install logstash-forwarder service
-  tags: [forwarder, log]
+  tags: [forwarder, logging]
   copy: src=logstash-forwarder.service dest=/etc/init.d/logstash-forwarder mode=755
   notify: restart logstash-forwarder
 
 - name: install logstash-forwarder certificate
-  tags: [forwarder, log]
+  tags: [forwarder, logging]
   copy: src={{ cert }} dest=/etc/logstash-forwarder.crt
   notify: restart logstash-forwarder
 
 - name: configure logstash-forwarder
-  tags: [forwarder, log]
+  tags: [forwarder, logging]
   template: src=logstash-forwarder.conf dest=/etc/logstash-forwarder
   notify: restart logstash-forwarder
 
 - name: enable and start logstash-forwarder
-  tags: [forwarder, log]
+  tags: [forwarder, logging]
   service: name=logstash-forwarder state=started enabled=yes

@@ -1,13 +1,13 @@
 - name: configure elasticsearch service
-  tags: [elasticsearch, db]
+  tags: [elasticsearch, database]
   copy: src=elasticsearch.default dest=/etc/default/elasticsearch
   notify: restart elasticsearch
 
 - name: configure elasticsearch
-  tags: [elasticsearch, db]
+  tags: [elasticsearch, database]
   template: src=elasticsearch.yml dest=/etc/elasticsearch/elasticsearch.yml
   notify: restart elasticsearch
 
 - name: enable and start elasticsearch
-  tags: [elasticsearch, db]
+  tags: [elasticsearch, database]
   service: name=elasticsearch state=started enabled=yes

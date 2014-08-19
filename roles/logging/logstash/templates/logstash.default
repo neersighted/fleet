@@ -6,9 +6,9 @@ LS_HEAP_SIZE="512m"
 #LS_NICE=19
 #LS_OPTS=""
 LS_JAVA_OPTS="-Des.network.bind_host=0.0.0.0 \
-              -Des.network.publish_host={{ network.ipv6.private }} \
+              -Des.network.publish_host={{ network.ipv4.private }} \
               -Des.discovery.zen.ping.multicast.enabled=true \
-              -Des.discovery.zen.ping.multicast.address={{ network.ipv6.private }}"
+              -Des.discovery.zen.ping.multicast.address={{ network.ipv4.private }}"
 
 #LS_HOME=/var/lib/logstash
 #LS_CONF_DIR=/etc/logstash/conf.d

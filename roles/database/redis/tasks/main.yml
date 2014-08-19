@@ -1,5 +1,5 @@
 - name: bind to all interfaces
-  tags: [redis, db]
+  tags: [redis, database]
   lineinfile: >
     dest=/etc/redis/redis.conf
     regexp='^bind '
@@ -8,7 +8,7 @@
   notify: restart redis
 
 - name: enable aof
-  tags: [redis, db]
+  tags: [redis, database]
   lineinfile: >
     dest=/etc/redis/redis.conf
     regexp='^appendonly '

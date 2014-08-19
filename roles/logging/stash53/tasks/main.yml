@@ -1,13 +1,13 @@
 - name: install stash53
-  tags: [stash53, log]
+  tags: [stash53, logging]
   copy: src=stash53 dest=/usr/local/bin/stash53 mode=755
   notify: restart stash53
 
 - name: install stash53 service
-  tags: [stash53, log]
+  tags: [stash53, logging]
   template: src=stash53.service dest=/etc/init.d/stash53 mode=755
   notify: restart stash53
 
 - name: enable and start stash53
-  tags: [stash53, log]
+  tags: [stash53, logging]
   service: name=stash53 state=started enabled=yes

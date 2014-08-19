@@ -1,13 +1,13 @@
 - name: install beaver service
-  tags: [beaver, log]
+  tags: [beaver, logging]
   copy: src=beaver.service dest=/etc/init.d/beaver mode=755
   notify: restart beaver
 
 - name: configure beaver
-  tags: [beaver, log]
+  tags: [beaver, logging]
   template: src=beaver.conf dest=/etc/beaver.conf
   notify: restart beaver
 
 - name: enable and start beaver
-  tags: [beaver, log]
+  tags: [beaver, logging]
   service: name=beaver state=started enabled=yes

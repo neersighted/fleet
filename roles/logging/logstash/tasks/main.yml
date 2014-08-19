@@ -4,12 +4,12 @@
   notify: restart logstash
 
 - name: configure logstash grok patterns
-  tags: [logstash, log]
+  tags: [logstash, logging]
   copy: src=patterns dest=/opt/logstash/patterns/custom
   notify: restart logstash
 
 - name: configure logstash
-  tags: [logstash, log]
+  tags: [logstash, logging]
   with_items:
     - 1-input.conf
     - 50-filter-auth.conf
@@ -22,10 +22,10 @@
   notify: restart logstash
 
 - name: validate logstash config
-  tags: [logstash, log]
+  tags: [logstash, logging]
   command: /opt/logstash/bin/logstash agent --config /etc/logstash/conf.d/ --configtest
   changed_when: false
 
 - name: enable and start logstash
-  tags: [logstash, log]
+  tags: [logstash, logging]
   service: name=logstash state=started enabled=yes
