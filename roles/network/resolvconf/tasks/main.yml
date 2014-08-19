@@ -1,7 +1,3 @@
-- name: configure search domain(s)
+- name: configure resolv.conf
   tags: [resolvconf, network]
-  lineinfile: >
-    dest=/etc/resolv.conf
-    regexp='^search'
-    line='search {{ searchdomains }}'
-    state=present
+  template: src=resolv.conf dest=/etc/resolv.conf
