@@ -4,11 +4,6 @@
     - /etc/tinc/hosts
   file: path={{ item }} state=directory
 
-- name: install tinc service
-  tags: [tinc, network]
-  copy: src=tinc.service dest=/etc/init.d/tinc
-  notify: restart tinc
-
 - name: configure tinc
   tags: [tinc, network]
   template: src=tinc.conf dest=/etc/tinc/tinc.conf
@@ -31,6 +26,11 @@
 - name: transfer key
   tags: [tinc, network]
   copy: src={{ keys }}/{{ inventory_hostname }}.priv dest=/etc/tinc/rsa_key.priv mode=600
+  notify: restart tinc
+
+- name: install tinc service
+  tags: [tinc, network]
+  copy: src=tinc.service dest=/etc/systemd/system/tinc.service
   notify: restart tinc
 
 - name: enable and start tinc

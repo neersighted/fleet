@@ -1,0 +1,13 @@
+- name: install zramctl
+  tags: [zram, system]
+  copy: src=zramctl dest=/usr/sbin/zramctl mode=755
+  notify: restart zram
+
+- name: install zram service
+  tags: [zram, system]
+  copy: src=zram.service dest=/etc/systemd/system/zram.service
+  notify: restart zram
+
+- name: enable and start zram
+  tags: [zram, system]
+  service: name=zram state=started enabled=yes

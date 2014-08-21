@@ -34,7 +34,7 @@
 
     - { role: system/extract_kernel }
     - { role: system/pvgrub, when: ansible_virtualization_type == 'xen', boot: '{{ boot_device }}', root: '{{ root_device }}', console: '{{ console_device }}' }
-    - { role: system/tuning, zram_percent: 75 }
+    - { role: system/zram }
 
     - { role: system/motd }
     - { role: system/ntp, timezone: UTC }

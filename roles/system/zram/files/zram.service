@@ -1,0 +1,11 @@
+[Unit]
+Description=Compressed Swap Devices
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/zramctl start
+ExecStop=/usr/sbin/zramctl stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
