@@ -4,8 +4,8 @@ Requires=network.target tinc.service
 After=network.target tinc.service
 
 [Service]
-Type=forking
-ExecStart=/usr/local/bin/stash53 -D \
+Type=simple
+ExecStart=/usr/local/bin/stash53 \
   -e {{ server }} -O logstash:stash53 -P 0
 Restart=on-failure
 
