@@ -31,7 +31,9 @@
 - name: install tinc service
   tags: [tinc, network]
   copy: src=tinc.service dest=/etc/systemd/system/tinc.service
-  notify: restart tinc
+  notify:
+    - reload systemd
+    - restart tinc
 
 - name: enable and start tinc
   tags: [tinc, network]

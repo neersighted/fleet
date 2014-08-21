@@ -1,4 +1,0 @@
-dependencies:
-  - { role: packages/add_key, key: D88E42B4, url: 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch' }
-  - { role: packages/add_repo, repo: 'deb http://packages.elasticsearch.org/logstashforwarder/debian stable main' }
-  - { role: packages/install, package: logstash-forwarder }

@@ -1,65 +1,13 @@
-#!/bin/sh
-#
-### BEGIN INIT INFO
-# Provides:          stash53
-# Required-Start:    $remote_fs $syslog
-# Required-Stop:     $remote_fs $syslog
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: dns query shipper
-# Description:       lightweight dns query shipper
-### END INIT INFO
+[Unit]
+Description=DNS Packet Logger
+Requires=network.target tinc.service
+After=network.target tinc.service
 
-set -e
-. /lib/lsb/init-functions
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/stash53 -D \
+  -e {{ server }} -O logstash:stash53 -P 0
+Restart=on-failure
 
-NAME=stash53
-DESC="log shipper"
-DAEMON=/usr/local/bin/stash53
-PIDFILE=/var/run/$NAME.pid
-LOGFILE=/var/log/$NAME.log
-DAEMON_ARGS="-D -p $PIDFILE -l $LOGFILE -L $LOGFILE -P 0 -e {{ server }} -O logstash:stash53"
-
-test -x $DAEMON || exit 0
-
-do_start() {
-  log_daemon_msg "Starting $DESC" $NAME
-  start-stop-daemon --start \
-    --pidfile $PIDFILE \
-    --exec $DAEMON \
-    -- $DAEMON_ARGS >>$LOGFILE 2>&1
-  log_end_msg $?
-}
-
-do_stop() {
-  log_daemon_msg "Stopping $DESC" $NAME
-  start-stop-daemon --stop \
-    --pidfile $PIDFILE \
-    --exec $DAEMON \
-    --retry TERM/5/KILL/10
-  log_end_msg $?
-}
-
-do_restart() {
-  do_stop
-  do_start
-}
-
-check_status() {
-    status_of_proc -p $PIDFILE $DAEMON $NAME
-}
-
-print_usage() {
-  echo "Usage: $0 {start|stop|restart|force-reload|status}"
-  return 1
-}
-
-case "$1" in
-  start)                do_start ;;
-  stop)                 do_stop ;;
-  restart|force-reload) do_restart ;;
-  status)               check_status ;;
-  *)                    print_usage ;;
-esac
-
-exit 0
+[Install]
+WantedBy=multi-user.target
