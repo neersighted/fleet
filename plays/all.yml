@@ -6,22 +6,22 @@
     - { role: packages/upgrade, type: dist }
     - { role: packages/install, package: linux-image-amd64 }
     - { role: packages/install, package: python-pip }
-
-    - { role: firewall }
+    - { role: system/systemd }
 
     - { role: network/hostname }
     - { role: network/resolvconf }
     - { role: network/interfaces }
+    - { role: network/ufw }
 
     - { role: security/ssh}
-    - { role: firewall/rule, rule: { rule: limit, port: ssh } }
+    - { role: network/ufw/rule, rule: { rule: limit, port: ssh } }
     - { role: packages/install, package: mosh }
-    - { role: firewall/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
+    - { role: network/ufw/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
     - { role: security/sudo }
 
     - { role: network/tinc, keys: files/all/tinc }
-    - { role: firewall/rule, rule: { rule: allow, port: 655 } }
-    - { role: firewall/rule, rule: { rule: allow, interface: tinc0, direction: in } }
+    - { role: network/ufw/rule, rule: { rule: allow, port: 655 } }
+    - { role: network/ufw/rule, rule: { rule: allow, interface: tinc0, direction: in } }
 
     - { role: accounts/add_group, group: { name: deploy, system: true } }
     - { role: accounts/add_user, user: { name: ansible, group: deploy, system: true } }

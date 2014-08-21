@@ -1,5 +1,5 @@
 - name: activate rule {{ rule }}
-  tags: [rule, firewall]
+  tags: [rule, ufw, network]
   action: ufw
   args: rule
-  notify: reload firewall
+  notify: reload ufw

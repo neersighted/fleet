@@ -1,8 +1,8 @@
 - name: restrict incoming connections
-  tags: [firewall]
+  tags: [ufw, network]
   ufw: policy=deny direction=incoming
   notify: reload firewall
 
 - name: activate ufw
-  tags: [firewall]
+  tags: [ufw, network]
   ufw: state=enabled
