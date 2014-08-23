@@ -3,9 +3,11 @@ Description=Compressed Swap Devices
 
 [Service]
 Type=simple
-ExecStart=/usr/sbin/zramctl start
-ExecStop=/usr/sbin/zramctl stop
 RemainAfterExit=yes
+PrivateNetwork=yes
+
+ExecStart=/usr/local/sbin/zramctl start
+ExecStop=/usr/local/sbin/zramctl stop
 
 [Install]
 WantedBy=multi-user.target

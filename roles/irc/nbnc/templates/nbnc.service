@@ -1,0 +1,16 @@
+[Unit]
+Description=Trivial IdentD
+After=network.target
+
+[Service]
+Type=simple
+SyslogLevel=info
+PrivateDevices=yes
+
+ExecStart=/usr/local/bin/nbnc {{ user }}
+
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

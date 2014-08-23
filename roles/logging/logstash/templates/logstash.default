@@ -12,5 +12,5 @@ LS_JAVA_OPTS="-Des.network.bind_host=0.0.0.0 \
 
 #LS_HOME=/var/lib/logstash
 #LS_CONF_DIR=/etc/logstash/conf.d
-#LS_PIDFILE=/var/run/logstash.pid
+#LS_PIDFILE=/run/logstash.pid
 #LS_LOG_FILE=/var/log/logstash/logstash.log

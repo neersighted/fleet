@@ -1,0 +1,15 @@
+- name: install nidd
+  tags: [nidd, irc]
+  copy: src=nidd dest=/usr/local/bin/nidd mode=0755
+  notify: restart nidd
+
+- name: install nidd service
+  tags: [nidd, irc]
+  template: src=nidd.service dest=/etc/systemd/system/nidd.service
+  notify:
+    - reload systemd
+    - restart nidd
+
+- name: enable and start nidd
+  tags: [nidd, irc]
+  service: name=nidd state=started enabled=yes

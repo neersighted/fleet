@@ -28,7 +28,7 @@
     - { role: security/auth_key, user: ansible, key: "{{ lookup('file', '../.ssh/ansible.pub') }}" }
     - { role: security/add_sudoer, user: '%deploy', perms: 'ALL=(ALL) NOPASSWD: ALL' }
     - { role: accounts/add_group, group: { name: wheel } }
-    - { role: accounts/add_user, user: { name: neersighted, group: wheel, shell: /bin/bash, password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.' } }
+    - { role: accounts/add_user, user: { name: neersighted, group: wheel, groups: 'adm', shell: /bin/bash, password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.' } }
     - { role: security/auth_key, user: neersighted, key: "{{ lookup('file', '../.ssh/neersighted.pub') }}" }
     - { role: security/add_sudoer, user: neersighted, perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL' }
 

@@ -1,12 +1,16 @@
 [Unit]
 Description=Distributed Mesh VPN
-Requires=network.target
 After=network.target
 
 [Service]
 Type=forking
+SyslogLevel=info
+
 ExecStart=/usr/sbin/tincd
+ExecStop=/usr/sbin/tincd -k
+
 Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target

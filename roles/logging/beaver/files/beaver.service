@@ -1,16 +1,19 @@
 [Unit]
 Description=Flexible Log Shipper
-Requires=network.target tinc.service
 After=network.target tinc.service
 
 [Service]
 Type=simple
+SyslogLevel=notice
+PrivateDevices=yes
+
+PIDFile=/run/beaver.pid
 ExecStart=/usr/local/bin/beaver -e \
   -c /etc/beaver.conf \
-  -P /var/run/beaver.pid \
-  -l /var/run/beaver.log
-PIDFile=/var/run/beaver.pid
+  -P /run/beaver.pid
+
 Restart=on-failure
+RestartSec=30
 
 [Install]
 WantedBy=multi-user.target

@@ -1,6 +1,6 @@
 - name: install zramctl
   tags: [zram, system]
-  copy: src=zramctl dest=/usr/sbin/zramctl mode=755
+  copy: src=zramctl dest=/usr/local/sbin/zramctl mode=755
   notify: restart zram
 
 - name: install zram service
