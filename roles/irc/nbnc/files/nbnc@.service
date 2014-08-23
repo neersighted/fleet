@@ -1,0 +1,22 @@
+[Unit]
+Description=Trivial IdentD
+After=network.target
+
+[Service]
+Type=simple
+SyslogLevel=info
+
+EnvironmentFile=/etc/nbnc.d/%i
+ExecStart=/usr/local/bin/nbnc \
+  $NBNC_LADDR $NBNC_LPORT \
+  $NBNC_RADDR $NBNC_RPORT \
+  $NBNC_OADDR \
+  $NBNC_SSL $NBNC_VERIFY \
+  $NBNC_PROTO \
+  $NBNC_PASS
+
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

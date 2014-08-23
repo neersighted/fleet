@@ -1,15 +1,20 @@
-- name: install nidd
-  tags: [nidd, irc]
-  copy: src=nidd dest=/usr/local/bin/nidd mode=0755
-  notify: restart nidd
+- name: install nbnc
+  tags: [nbnc, irc]
+  copy: src=nbnc dest=/usr/local/bin/nbnc mode=0755
+  notify: restart nbnc@{{ raddr }}
 
-- name: install nidd service
-  tags: [nidd, irc]
-  template: src=nidd.service dest=/etc/systemd/system/nidd.service
+- name: configure nbnc (for {{ raddr }})
+  tags: [nbnc, irc]
+  template: src=nbnc.conf dest=/etc/nbnc.d/{{ raddr }}
+  notify: restart nbnc@{{ raddr }}
+
+- name: install nbnc service (for {{ raddr}})
+  tags: [nbnc, irc]
+  copy: src=nbnc@.service dest=/etc/systemd/system/nbnc@.service
   notify:
     - reload systemd
-    - restart nidd
+    - restart nbnc@{{ raddr }}
 
-- name: enable and start nidd
-  tags: [nidd, irc]
-  service: name=nidd state=started enabled=yes
+- name: enable and start nbnc (for {{ raddr }})
+  tags: [nbnc, irc]
+  service: name=nbnc@{{ raddr }} state=started enabled=yes

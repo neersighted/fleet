@@ -4,7 +4,6 @@ Description=Compressed Swap Devices
 [Service]
 Type=simple
 RemainAfterExit=yes
-PrivateNetwork=yes
 
 ExecStart=/usr/local/sbin/zramctl start
 ExecStop=/usr/local/sbin/zramctl stop

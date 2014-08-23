@@ -1,9 +1,3 @@
-- name: create directories
-  tags: [tinc, network]
-  with_items:
-    - /etc/tinc/hosts
-  file: path={{ item }} state=directory
-
 - name: configure tinc
   tags: [tinc, network]
   template: src=tinc.conf dest=/etc/tinc/tinc.conf

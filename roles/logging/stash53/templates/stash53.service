@@ -5,7 +5,6 @@ After=network.target tinc.service
 [Service]
 Type=simple
 SyslogLevel=notice
-PrivateDevices=yes
 
 ExecStart=/usr/local/bin/stash53 \
   -e {{ server }} -O logstash:stash53 -P 0

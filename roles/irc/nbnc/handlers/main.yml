@@ -1,5 +1,5 @@
 - name: reload systemd
   command: systemctl daemon-reload
 
-- name: restart nbnc
-  service: name=nbnc state=restarted
+- name: restart nbnc@{{ raddr }}
+  service: name=nbnc@{{ raddr }} state=restarted
