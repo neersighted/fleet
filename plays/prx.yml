@@ -5,11 +5,11 @@
     - { role: irc/nidd, user: i }
     - { role: network/ufw/rule, rule: { rule: allow, port: ident } }
 
-    - { role: irc/nbnc, raddr: irc.esper.net, rport: 6697, lport: 6631, ssl: yes, noverify: yes, v6: yes, pass: 'espercorn lives forever' }
-    - { role: irc/nbnc, raddr: irc.freenode.net, rport: 6697, lport: 6632, ssl: yes, v6: yes, pass: 'free as in freedom' }
-    - { role: irc/nbnc, raddr: irc.oftc.net, rport: 6697, lport: 6633, ssl: yes, v6: yes, pass: 'freenode wannabe' }
-    - { role: irc/nbnc, raddr: irc.atheme.org, rport: 6697, lport: 6634, ssl: yes, v6: yes, pass: 'why am i here?' }
-    - { role: irc/nbnc, raddr: irc.irccloud.com, rport: 6697, lport: 6635, ssl: yes, v6: yes, pass: 'i want #vip back' }
-    - { role: irc/nbnc, raddr: irc6.quakenet.org, lport: 6636, v6: yes, pass: 'use ssl damnit!' }
-    - { role: irc/nbnc, raddr: irc.rizon.net, rport: 6697, lport: 6637, ssl: yes, v6: yes, pass: 'yay ss13 drama' }
+    - { role: irc/nbnc, raddr: irc.esper.net, rport: 6697, lport: 6631, oaddr: '[{{ network.ipv6.public.1 }}]', ssl: yes, noverify: yes, v6: yes, pass: 'espercorn lives forever' }
+    - { role: irc/nbnc, raddr: irc.freenode.net, rport: 6697, lport: 6632, oaddr: '[{{ network.ipv6.public.1 }}]', ssl: yes, v6: yes, pass: 'free as in freedom' }
+    - { role: irc/nbnc, raddr: irc.oftc.net, rport: 6697, lport: 6633, oaddr: '[{{ network.ipv6.public.1 }}]', ssl: yes, v6: yes, pass: 'freenode wannabe' }
+    - { role: irc/nbnc, raddr: irc.atheme.org, rport: 6697, lport: 6634, oaddr: '[{{ network.ipv6.public.1 }}]', ssl: yes, noverify: yes, v6: yes, pass: 'why am i here' }
+    - { role: irc/nbnc, raddr: irc.irccloud.com, rport: 6697, lport: 6635, oaddr: '[{{ network.ipv6.public.1 }}]', ssl: yes, v6: yes, pass: 'i want vip back' }
+    - { role: irc/nbnc, raddr: irc6.quakenet.org, lport: 6636, oaddr: '[{{ network.ipv6.public.1 }}]', v6: yes, pass: 'use ssl damnit' }
+    - { role: irc/nbnc, raddr: irc.rizon.net, rport: 6697, lport: 6637, oaddr: '[{{ network.ipv6.public.1 }}]', ssl: yes, noverify: yes, v6: yes, pass: 'yay ss13 drama' }
     - { role: network/ufw/rule, rule: { rule: allow, port: '6631:6639', proto: tcp } }
