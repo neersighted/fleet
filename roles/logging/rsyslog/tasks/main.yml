@@ -1,0 +1,7 @@
+- name: use iso timestamps
+  tags: [rsyslog, logging]
+  lineinfile: >
+    dest=/etc/rsyslog.conf
+    regexp='^\$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat'
+    state=absent
+  notify: restart rsyslog

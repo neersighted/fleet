@@ -42,6 +42,7 @@
     - { role: mail/aliases, to: admin@neersighted.com }
     - { role: mail/msmtp, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', from: '{{ ansible_hostname }}@fleet.neersighted.com' }
 
+    - { role: logging/rsyslog }
     - { role: logging/beaver, server: '{{ hostvars["iron.neersighted.com"].network.ipv4.private }}:6379' }
 
     - { role: packages/install, package: vim-nox }

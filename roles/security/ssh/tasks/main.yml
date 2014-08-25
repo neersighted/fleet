@@ -1,1 +1,8 @@
-- include: harden.yml
+- name: disable password authentication
+  tags: [ssh, security]
+  lineinfile: >
+    dest=/etc/ssh/sshd_config
+    regexp='^#?PasswordAuthentication'
+    line='PasswordAuthentication no'
+    state=present
+  notify: restart ssh

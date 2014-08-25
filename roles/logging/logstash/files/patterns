@@ -9,10 +9,10 @@ NGREQUEST %{WORD:request.method} %{URIPATHPARAM:request.uri} HTTP/%{NUMBER:reque
 NGRESPONSE %{NUMBER:response.status} %{NUMBER:response.length}
 NGINXACCESS %{IPORHOST:src_ip} %{IPORHOST:host} %{NGUSER:user} \[%{HTTPDATE:timestamp}\] \"%{NGREQUEST:request}\" %{NGRESPONSE:response} \"%{DATA:referrer}\" \"%{DATA:useragent}\"
 
-SLTIMESTAMP %{MONTH} +%{MONTHDAY} %{TIME}
+SLTIMESTAMP (%{TIMESTAMP_ISO8601}|%{SYSLOGTIMESTAMP})
 SLFACILITY <%{NONNEGINT:facility}.%{NONNEGINT:priority}>
 SLHOST %{IPORHOST}
-SLPROG %{PROG:program}(?:\[%{POSINT:pid}\])?
-SYSLOGPREFIX %{SLTIMESTAMP:timestamp} (?:%{SLFACILITY} )?%{SLHOST} %{SLPROG}:
+SLPROG %{PROG:program}(-\<stdin\>)?(?:\[%{POSINT:pid}\])?
+SYSLOGPREFIX %{SLTIMESTAMP:timestamp} (?:%{SLFACILITY} )?%{SLHOST} %{SLPROG}
 
 UFWLOG \[UFW %{DATA:event}\] %{NETFILTERLOG}
