@@ -6,12 +6,6 @@
 - name: configure zone {{ zone }}
   tags: [zone, nsd, dns]
   template: src=zone.conf dest=/etc/nsd/nsd.conf.d/{{ zone }}.conf
-  notify: restart nsd
-
-- name: include zone {{ zone }}
-  tags: [zone, nsd, dns]
-  lineinfile: >
-    dest=/etc/nsd/nsd.conf.d.conf
-    line="include: /etc/nsd/nsd.conf.d/{{ zone }}.conf"
-    insertafter=EOF
-  notify: restart nsd
+  notify:
+    - assemble nsd.conf.d
+    - restart nsd

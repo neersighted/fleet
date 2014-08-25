@@ -1,3 +1,6 @@
+- name: assemble nsd.conf.d
+  assemble: src=/etc/nsd/nsd.conf.d dest=/etc/nsd/nsd.conf.d.conf
+
 - name: reload nsd
   service: name=nsd state=reloaded
 

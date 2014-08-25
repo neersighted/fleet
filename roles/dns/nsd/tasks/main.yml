@@ -1,11 +1,11 @@
-- name: configure nsd.conf.d
-  tags: [nsd, dns]
-  file: path=/etc/nsd/nsd.conf.d.conf state=file
-
 - name: configure nsd
   tags: [nsd, dns]
   template: src=nsd.conf dest=/etc/nsd/nsd.conf validate='nsd-checkconf %s'
   notify: restart nsd
+
+- name: assemble nsd.conf.d
+  tags: [nsd, dns]
+  assemble: src=/etc/nsd/nsd.conf.d dest=/etc/nsd/nsd.conf.d.conf
 
 - name: enable and start nsd
   tags: [nsd, dns]
