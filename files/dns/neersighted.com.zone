@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014082201 ; serial
+      2014082501 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -55,6 +55,8 @@ www CNAME @
 @ AAAA 2600:3c00:e000:008c::1
 elastichq A 69.164.204.41
 elastichq AAAA 2600:3c00::f03c:91ff:fe73:bbd8
+grafana A 69.164.204.41
+grafana AAAA 2600:3c00::f03c:91ff:fe73:bbd8
 kibana A 69.164.204.41
 kibana AAAA 2600:3c00::f03c:91ff:fe73:bbd8
 kopf A 69.164.204.41

@@ -37,13 +37,13 @@
     - { role: system/zram }
 
     - { role: system/motd }
-    - { role: system/ntp, timezone: UTC }
+    - { role: system/ntp, timezone: PST8PDT }
 
     - { role: mail/aliases, to: admin@neersighted.com }
     - { role: mail/msmtp, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', from: '{{ ansible_hostname }}@fleet.neersighted.com' }
 
     - { role: logging/rsyslog }
-    - { role: logging/beaver, server: '{{ hostvars["iron.neersighted.com"].network.ipv4.private }}:6379' }
+    - { role: logging/beaver, server: 'iron.neersighted.com.int:6379' }
 
     - { role: packages/install, package: vim-nox }
     - { role: packages/install, package: git }

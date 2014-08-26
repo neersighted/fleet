@@ -1,0 +1,5 @@
+- name: Metrics Servers (mtx)
+  hosts: log
+  sudo: yes
+  roles:
+  - { role: database/influxdb }
