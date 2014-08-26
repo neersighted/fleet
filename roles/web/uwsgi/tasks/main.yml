@@ -1,0 +1,10 @@
+- name: install uwsgi service
+  tags: [uwsgi, web]
+  copy: src=uwsgi.service dest=/etc/systemd/system/uwsgi.service
+  notify:
+    - reload systemd
+    - restart uwsgi
+
+- name: enable and start uwsgi
+  tags: [uwsgi, web]
+  service: name=uwsgi state=started enabled=yes

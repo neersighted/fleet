@@ -1,0 +1,4 @@
+- name: configure vassal {{ vassal }}
+  tags: [vassal, uwsgi, web]
+  template: src={{ conf }} dest=/etc/uwsgi/{{ conf|basename }}
+  notify: reload uwsgi

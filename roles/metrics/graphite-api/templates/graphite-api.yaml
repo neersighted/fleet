@@ -1,0 +1,16 @@
+search_index: /tmp/graphite-api.index
+finders:
+  - graphite_influxdb.InfluxdbFinder
+influxdb:
+   host: {{ host }}
+   port: {{ port }}
+   user: root
+   pass: root
+   db:   {{ database }}
+   schema:
+     - ['', 60]
+     - ['high-res-metrics', 10]
+functions:
+  - graphite_api.functions.SeriesFunctions
+  - graphite_api.functions.PieFunctions
+time_zone: {{ timezone }}

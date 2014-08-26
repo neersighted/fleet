@@ -1,0 +1,6 @@
+dependencies:
+  - { role: packages/install, package: libffi-dev }
+  - { role: packages/install, package: python-dev }
+  - { role: packages/install, package: graphite-web }
+  - { role: packages/install/pip, package: graphite-api }
+  - { role: packages/install/pip, package: graphite_influxdb }

@@ -8,10 +8,10 @@
 
     - { role: web/nginx/site, site: localhost, conf: files/web/localhost.conf }
 
-    - { role: web/grafana }
-    - { role: web/nginx/site, site: grafana.neersighted.com, conf: files/web/grafana.neersighted.com.conf }
     - { role: web/elastichq }
     - { role: web/nginx/site, site: elastichq.neersighted.com, conf: files/web/elastichq.neersighted.com.conf }
+    - { role: web/grafana }
+    - { role: web/nginx/site, site: grafana.neersighted.com, conf: files/web/grafana.neersighted.com.conf }
     - { role: web/kibana }
     - { role: web/nginx/site, site: kibana.neersighted.com, conf: files/web/kibana.neersighted.com.conf }
     - { role: web/kopf }

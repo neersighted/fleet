@@ -1,0 +1,3 @@
+- name: configure graphite-api
+  tags: [graphite-api, metrics]
+  template: src=graphite-api.yaml dest=/etc/graphite-api.yaml
