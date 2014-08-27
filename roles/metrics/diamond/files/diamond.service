@@ -1,0 +1,17 @@
+[Unit]
+Description=System Metrics Collector
+After=network.target
+
+[Service]
+Type=forking
+SyslogLevel=notice
+
+PIDFile=/run/diamond.pid
+ExecStart=/usr/local/bin/diamond \
+  -p /run/diamond.pid
+
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

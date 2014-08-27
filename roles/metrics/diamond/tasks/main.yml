@@ -1,0 +1,23 @@
+- name: configure diamond
+  tags: [diamond, metrics]
+  template: src=diamond.conf dest=/etc/diamond/diamond.conf
+  notify: restart diamond
+
+- name: configure diamond handlers
+  tags: [diamond, metrics]
+  with_items:
+    - GraphiteHandler
+    - StatsdHandler
+  template: src=handlers/{{ item }}.conf dest=/etc/diamond/handlers/{{ item }}.conf
+  notify: restart diamond
+
+- name: install diamond service
+  tags: [diamond, metrics]
+  copy: src=diamond.service dest=/etc/systemd/system/diamond.service
+  notify:
+    - reload systemd
+    - restart diamond
+
+- name: enable and start diamond
+  tags: [diamond, metrics]
+  service: name=diamond state=started enabled=yes

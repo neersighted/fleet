@@ -1,2 +1,2 @@
 dependencies:
-  - { role: packages/install/pip, package: beaver}
+  - { role: packages/install/pip, package: beaver }

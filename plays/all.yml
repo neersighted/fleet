@@ -46,6 +46,8 @@
     - { role: logging/rsyslog }
     - { role: logging/beaver, server: 'iron.neersighted.com.int:6379' }
 
+    - { role: metrics/diamond, graphite: { host: 'iron.neersighted.com.int', port: 2003 } }
+
     - { role: packages/install, package: vim-nox }
     - { role: packages/install, package: git }
     - { role: packages/install, package: curl }

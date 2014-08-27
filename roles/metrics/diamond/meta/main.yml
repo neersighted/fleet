@@ -1,0 +1,3 @@
+dependencies:
+  - { role: packages/install, package: python-dev }
+  - { role: packages/install/pip, package: diamond }

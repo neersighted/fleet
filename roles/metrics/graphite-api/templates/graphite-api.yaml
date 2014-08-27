@@ -1,4 +1,7 @@
 search_index: /tmp/graphite-api.index
+cache:
+  type: redis
+
 finders:
   - graphite_influxdb.InfluxdbFinder
 influxdb:
@@ -8,9 +11,26 @@ influxdb:
    pass: root
    db:   {{ database }}
    schema:
-     - ['', 60]
-     - ['high-res-metrics', 10]
+     - ['',    1]
+     - ['1s',  1]
+     - ['3s',  3]
+     - ['5s',  5]
+     - ['10s', 10]
+     - ['15s', 15]
+     - ['30s', 30]
+     - ['45s', 45]
+     - ['60s', 60]
+     - ['1m',  60]
+     - ['5m',  300]
+     - ['10m', 600]
+     - ['15m', 900]
+
 functions:
   - graphite_api.functions.SeriesFunctions
   - graphite_api.functions.PieFunctions
+
+allowed_origins:
+  - '*'
+  - grafana.neersighted.com
+
 time_zone: {{ timezone }}

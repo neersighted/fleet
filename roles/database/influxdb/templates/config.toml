@@ -21,7 +21,7 @@ read-timeout = "5s"
  enabled = true
  udp_enabled = true
  port = 2003
- database = "metrics"
+ database = "graphite"
 
 [raft]
 port = 8090

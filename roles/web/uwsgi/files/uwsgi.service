@@ -9,8 +9,7 @@ SyslogLevel=notice
 PIDFile=/run/uwsgi.pid
 ExecStart=/usr/bin/uwsgi \
   --emperor /etc/uwsgi \
-  --pidfile /run/uwsgi.pid \
-  --enable-threads
+  --pidfile /run/uwsgi.pid
 KillSignal=SIGINT
 
 Restart=on-failure

@@ -1,0 +1,4 @@
+graphite: {}
+statsd:
+  host: localhost
+  port: 8125

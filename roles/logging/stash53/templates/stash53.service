@@ -1,6 +1,6 @@
 [Unit]
 Description=DNS Packet Logger
-After=network.target tinc.service
+After=network.target
 
 [Service]
 Type=simple

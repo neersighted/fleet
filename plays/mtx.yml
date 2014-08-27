@@ -3,7 +3,7 @@
   sudo: yes
   roles:
     - { role: database/influxdb }
-    - { role: metrics/graphite-api, host: localhost, port: 8086, database: metrics, timezone: PST8PDT }
+    - { role: metrics/graphite-api, host: localhost, port: 8086, database: graphite, timezone: PST8PDT }
 
     - { role: web/uwsgi }
     - { role: web/uwsgi/vassal, vassal: graphite-api, conf: files/mtx/graphite-api.ini }

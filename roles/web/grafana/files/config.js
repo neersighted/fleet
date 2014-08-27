@@ -4,13 +4,13 @@ function (Settings) {
     datasources: {
       graphite: {
         type: 'graphite',
-        url: "http://localhost:8080",
+        url: 'http://localhost:8089'
       },
       elasticsearch: {
         type: 'elasticsearch',
-        url: "http://localhost:9200",
+        url: 'http://localhost:9200',
         index: 'grafana',
-        grafanaDB: true,
+        grafanaDB: true
       }
     },
 
