@@ -1,18 +1,20 @@
 [Unit]
 Description=uWSGI Emperor
-After=network.target
 
 [Service]
-Type=simple
+Type=notify
+NotifyAccess=all
 SyslogLevel=notice
 
-PIDFile=/run/uwsgi.pid
 ExecStart=/usr/bin/uwsgi \
+  --master \
   --emperor /etc/uwsgi \
-  --pidfile /run/uwsgi.pid
-KillSignal=SIGINT
+  --emperor-tyrant \
+  --emperor-broodlord 10
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGQUIT
 
-Restart=on-failure
+Restart=always
 RestartSec=30
 
 [Install]

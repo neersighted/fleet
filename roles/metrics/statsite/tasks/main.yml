@@ -1,0 +1,25 @@
+- name: install statsite
+  tags: [statsite, metrics]
+  copy: src=statsite dest=/usr/local/bin/statsite mode=755
+  notify: restart statsite
+
+- name: install statsite graphite sink
+  tags: [statsite, metrics]
+  copy: src=graphite.py dest=/usr/local/bin/statsite.graphite mode=755
+  notify: restart statsite
+
+- name: configure statsite
+  tags: [statsite, metrics]
+  template: src=statsite.conf dest=/etc/statsite.conf
+  notify: restart statsite
+
+- name: install statsite service
+  tags: [statsite, metrics]
+  copy: src=statsite.service dest=/etc/systemd/system/statsite.service
+  notify:
+    - reload systemd
+    - restart statsite
+
+- name: enable and start statsite
+  tags: [statsite, metrics]
+  service: name=statsite state=started enabled=yes

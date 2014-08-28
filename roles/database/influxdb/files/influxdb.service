@@ -1,6 +1,5 @@
 [Unit]
 Description=Time Series Database
-After=network.target
 
 [Service]
 Type=simple
@@ -9,7 +8,7 @@ SyslogLevel=notice
 PIDFile=/opt/influxdb/shared/influxdb.pid
 ExecStart=/usr/bin/influxdb -pidfile /opt/influxdb/shared/influxdb.pid -config /opt/influxdb/shared/config.toml
 
-Restart=on-failure
+Restart=always
 RestartSec=30
 
 [Install]

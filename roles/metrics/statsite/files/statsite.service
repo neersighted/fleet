@@ -1,0 +1,15 @@
+[Unit]
+Description=UDP Statistics Daemon
+After=network.target
+
+[Service]
+Type=simple
+SyslogLevel=notice
+
+ExecStart=/usr/local/bin/statsite -f /etc/statsite.conf
+
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

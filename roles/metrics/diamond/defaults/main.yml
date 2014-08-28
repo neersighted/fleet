@@ -1,4 +1,6 @@
-graphite: {}
+graphite:
+  host: localhost
+  port: 2003
 statsd:
   host: localhost
   port: 8125

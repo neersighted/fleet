@@ -9,7 +9,7 @@ SyslogLevel=notice
 ExecStart=/usr/local/bin/stash53 \
   -e {{ server }} -O logstash:stash53 -P 0
 
-Restart=on-failure
+Restart=always
 RestartSec=30
 
 [Install]

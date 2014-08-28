@@ -11,6 +11,11 @@
   template: src=handlers/{{ item }}.conf dest=/etc/diamond/handlers/{{ item }}.conf
   notify: restart diamond
 
+- name: configure diamond collectors
+  tags: [diamond, metrics]
+  copy: src=collectors dest=/etc/diamond
+  notify: restart diamond
+
 - name: install diamond service
   tags: [diamond, metrics]
   copy: src=diamond.service dest=/etc/systemd/system/diamond.service
