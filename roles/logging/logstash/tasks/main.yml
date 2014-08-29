@@ -11,13 +11,15 @@
 - name: configure logstash
   tags: [logstash, logging]
   with_items:
-    - 1-input.conf
-    - 50-filter-auth.conf
-    - 50-filter-dns.conf
-    - 50-filter-nginx.conf
-    - 50-filter-syslog.conf
-    - 50-filter-ufw.conf
-    - 99-output.conf
+    - 10-input-redis-beaver.conf
+    - 10-input-redis-stash53.conf
+    - 25-parse-auth.conf
+    - 25-parse-dns.conf
+    - 25-parse-nginx.conf
+    - 25-parse-syslog.conf
+    - 25-parse-ufw.conf
+    - 50-output-statsd-nginx.conf
+    - 75-output-elasticsearch.conf
   template: src=conf.d/{{ item }} dest=/etc/logstash/conf.d/{{ item }}
   notify: restart logstash
 
