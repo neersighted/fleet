@@ -11,7 +11,7 @@ VALUE    = 1
 
 event = sys.argv[1]
 
-v = [{'name': 'events.' + event, 'columns': ['value'], 'points': [[VALUE]]}]
+v = [{'name': 'events.' + event, 'columns': ['event', 'value'], 'points': [[event, VALUE]]}]
 r = requests.post('http://localhost:8086/db/%s/series?u=root&p=root' % DATABASE, data=json.dumps(v))
 
 if r.status_code != 200:

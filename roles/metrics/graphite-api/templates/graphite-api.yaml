@@ -31,6 +31,5 @@ functions:
 
 allowed_origins:
   - '*'
-  - grafana.neersighted.com
 
 time_zone: {{ timezone }}

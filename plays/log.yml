@@ -4,4 +4,4 @@
   roles:
   - { role: packages/install, package: openjdk-7-jre }
   - { role: database/elasticsearch, cluster: log }
-  - { role: logging/logstash, cluster: log, timezone: PST8PDT }
+  - { role: logging/logstash, elasticsearch: { cluster: log }, statsd: { host: 'iron.neersighted.com.int' }, timezone: PST8PDT }

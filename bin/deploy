@@ -9,6 +9,6 @@ else
 fi
 
 
-bin/event deploy.fleet
+bin/event deploy.fleet.$playbook
 
 ansible-playbook plays/${playbook}.yml $@

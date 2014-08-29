@@ -7,7 +7,7 @@ NETFILTERLOG (?:%{NFLOG2}|%{NFLOG1})
 NGUSER [a-zA-Z\.\@\-\+_%]+
 NGREQUEST %{WORD:request.method} %{URIPATHPARAM:request.uri} HTTP/%{NUMBER:request.proto}
 NGRESPONSE %{NUMBER:response.status} %{NUMBER:response.length}
-NGINXACCESS %{IPORHOST:src_ip} %{IPORHOST:host} %{NGUSER:user} \[%{HTTPDATE:timestamp}\] \"%{NGREQUEST:request}\" %{NGRESPONSE:response} \"%{DATA:referrer}\" \"%{DATA:useragent}\"
+NGINXACCESS %{IPORHOST:src_ip} %{IPORHOST:dst_ip} %{NGUSER:user} \[%{HTTPDATE:timestamp}\] \"%{NGREQUEST:request}\" %{NGRESPONSE:response} \"%{DATA:referrer}\" \"%{DATA:useragent}\"
 
 SLTIMESTAMP (%{TIMESTAMP_ISO8601}|%{SYSLOGTIMESTAMP})
 SLFACILITY <%{NONNEGINT:facility}.%{NONNEGINT:priority}>

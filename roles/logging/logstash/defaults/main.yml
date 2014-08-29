@@ -1,0 +1,3 @@
+statsd:
+  host: localhost
+  port: 8125
