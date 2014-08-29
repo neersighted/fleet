@@ -8,6 +8,11 @@
   copy: src=graphite.py dest=/usr/local/bin/statsite.graphite mode=755
   notify: restart statsite
 
+- name: install statsite influxdb sink
+  tags: [statsite, metrics]
+  copy: src=influxdb.py dest=/usr/local/bin/statsite.influxdb mode=755
+  notify: restart statsite
+
 - name: configure statsite
   tags: [statsite, metrics]
   template: src=statsite.conf dest=/etc/statsite.conf

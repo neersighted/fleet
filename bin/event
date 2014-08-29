@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+
+import json
+import math
+import requests
+import sys
+import time
+
+DATABASE = 'metrics'
+VALUE    = 1
+
+event = sys.argv[1]
+
+v = [{'name': 'events.' + event, 'columns': ['value'], 'points': [[VALUE]]}]
+r = requests.post('http://localhost:8086/db/%s/series?u=root&p=root' % DATABASE, data=json.dumps(v))
+
+if r.status_code != 200:
+  print 'Failed to add point to influxdb -- aborting.'
+  sys.exit(1)

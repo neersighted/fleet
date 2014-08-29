@@ -2,14 +2,20 @@ define(['settings'],
 function (Settings) {
   return new Settings({
     datasources: {
+      influxdb: {
+        type: 'influxdb',
+        url: 'http://{{ influxdb.host }}:{{ influxdb.port }}/db/{{ influxdb.database }}',
+        username: 'root',
+        password: 'root'
+      },
       graphite: {
         type: 'graphite',
-        url: 'http://localhost:8089'
+        url: 'http://{{ graphite.host }}:{{ graphite.port }}'
       },
       elasticsearch: {
         type: 'elasticsearch',
-        url: 'http://localhost:9200',
-        index: 'grafana',
+        url: 'http://{{ elasticsearch.host }}:{{ elasticsearch.port }}',
+        index: '{{ elasticsearch.index }}',
         grafanaDB: true
       }
     },

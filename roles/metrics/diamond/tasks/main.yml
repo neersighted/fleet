@@ -7,7 +7,8 @@
   tags: [diamond, metrics]
   with_items:
     - GraphiteHandler
-    - StatsdHandler
+    - InfluxdbHandler
+    - StatsiteHandler
   template: src=handlers/{{ item }}.conf dest=/etc/diamond/handlers/{{ item }}.conf
   notify: restart diamond
 

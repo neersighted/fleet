@@ -1,3 +1,4 @@
 dependencies:
   - { role: packages/install, package: python-dev }
-  - { role: packages/install/pip, package: 'git+https://github.com/BrightcoveOS/Diamond#egg=Diamond' }
+  - { role: packages/install/pip, package: 'https://github.com/influxdb/influxdb-python/tarball/master' }
+  - { role: packages/install/pip, package: 'https://github.com/BrightcoveOS/Diamond/tarball/master' }

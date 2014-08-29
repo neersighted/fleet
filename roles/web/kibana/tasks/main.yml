@@ -4,4 +4,4 @@
 
 - name: configure kibana
   tags: [kibana, web]
-  copy: src=config.js dest=/srv/web/kibana/config.js
+  template: src=config.js dest=/srv/web/kibana/config.js

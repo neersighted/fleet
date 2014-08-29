@@ -4,4 +4,4 @@
 
 - name: configure grafana
   tags: [grafana, web]
-  copy: src=config.js dest=/srv/web/grafana/config.js
+  template: src=config.js dest=/srv/web/grafana/config.js

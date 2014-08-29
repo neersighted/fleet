@@ -5,11 +5,11 @@ cache:
 finders:
   - graphite_influxdb.InfluxdbFinder
 influxdb:
-   host: {{ host }}
-   port: {{ port }}
+   host: {{ influxdb.host }}
+   port: {{ influxdb.port }}
    user: root
    pass: root
-   db:   {{ database }}
+   db:   {{ influxdb.database }}
    schema:
      - ['',    1]
      - ['1s',  1]

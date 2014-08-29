@@ -5,6 +5,3 @@ influxdb:
   host: localhost
   port: 8086
   database: metrics
-statsite:
-  host: localhost
-  port: 8125

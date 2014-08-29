@@ -20,8 +20,8 @@ read-timeout = "5s"
  [input_plugins.graphite]
  enabled = true
  udp_enabled = true
- port = 2003
- database = "graphite"
+ port = {{ graphite_api.port }}
+ database = "{{ graphite_api.database }}"
 
 [raft]
 port = 8090

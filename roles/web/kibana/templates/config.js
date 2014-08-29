@@ -1,8 +1,8 @@
 define(['settings'],
 function (Settings) {
   return new Settings({
-    elasticsearch: 'http://localhost:9200',
-    kibana_index:  'kibana',
+    elasticsearch: 'http://{{ elasticsearch.host }}:{{ elasticsearch.port }}',
+    kibana_index:  '{{ elasticsearch.index }}',
 
     default_route: '/dashboard/elasticsearch/Overview',
 

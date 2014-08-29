@@ -7,7 +7,7 @@ Type=simple
 SyslogLevel=notice
 
 ExecStart=/usr/local/bin/stash53 \
-  -e {{ server }} -O logstash:stash53 -P 0
+  -e {{ redis.host }}/{{ redis.port }} -O logstash:stash53 -P 0
 
 Restart=always
 RestartSec=30

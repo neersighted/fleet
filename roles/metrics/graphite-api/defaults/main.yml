@@ -1,0 +1,4 @@
+influxdb:
+  host: localhost
+  port: 8086
+  database: metrics
