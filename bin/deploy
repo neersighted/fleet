@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 
 if [ "$1" != "" ]; then
-  playbook=$1
+  target=$1
   shift
 else
   echo "Must specify a playbook!"
   exit 1
 fi
 
+playbook=plays/${target}.yml
 
-bin/event deploy.fleet.$playbook
+if ! [ -f "${playbook}" ]; then
+  echo "Playbook ${target} does not exist!"
+  exit 1
+fi
 
-ansible-playbook plays/${playbook}.yml $@
+bin/event deploy.fleet.${target}
+
+ansible-playbook ${playbook} $@
