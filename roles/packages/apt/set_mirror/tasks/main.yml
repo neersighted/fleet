@@ -1,0 +1,3 @@
+- name: set mirror
+  tags: [set_mirror, apt, packages]
+  template: src=sources.list dest=/etc/apt/sources.list

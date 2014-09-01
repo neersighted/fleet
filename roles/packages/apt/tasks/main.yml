@@ -1,0 +1,4 @@
+- name: install package {{ package }}
+  tags: [apt, packages]
+  action: apt
+  args: package

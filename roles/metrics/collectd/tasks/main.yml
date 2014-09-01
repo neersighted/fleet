@@ -1,0 +1,15 @@
+- name: configure collectd
+  tags: [collectd, metrics]
+  template: src=collectd.conf dest=/etc/collectd/collectd.conf
+  notify: restart collectd
+
+- name: install collectd service
+  tags: [collectd, metrics]
+  copy: src=collectd.service dest=/etc/systemd/system/collectd.service
+  notify:
+    - reload systemd
+    - restart collectd
+
+- name: enable and start collectd
+  tags: [collectd, metrics]
+  service: name=collectd state=started enabled=yes

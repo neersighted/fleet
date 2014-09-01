@@ -1,2 +1,2 @@
 dependencies:
-  - { role: packages/install, package: ntp }
+  - { role: packages/apt, package: { pkg: ntp } }

@@ -1,0 +1,4 @@
+- name: add repo {{ repository }}
+  tags: [add_repo, apt, packages]
+  action: apt_repository
+  args: repository

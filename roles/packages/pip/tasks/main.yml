@@ -1,0 +1,4 @@
+- name: install package {{ package }}
+  tags: [pip, packages]
+  action: pip
+  args: package

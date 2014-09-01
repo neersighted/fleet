@@ -3,19 +3,22 @@
   copy: src=statsite dest=/usr/local/bin/statsite mode=755
   notify: restart statsite
 
-- name: install statsite graphite sink
+- name: install statsite sinks
   tags: [statsite, metrics]
-  copy: src=graphite.py dest=/usr/local/bin/statsite.graphite mode=755
-  notify: restart statsite
-
-- name: install statsite influxdb sink
-  tags: [statsite, metrics]
-  copy: src=influxdb.py dest=/usr/local/bin/statsite.influxdb mode=755
+  with_items:
+    - graphite
+    - influxdb
+  copy: src={{ item }}.py dest=/usr/local/bin/statsite.{{ item }} mode=755
   notify: restart statsite
 
 - name: configure statsite
   tags: [statsite, metrics]
-  template: src=statsite.conf dest=/etc/statsite.conf
+  template: src=statsite.conf dest=/etc/statsite/statsite.conf
+  notify: restart statsite
+
+- name: configure statsite influx sink
+  tags: [statsite, metrics]
+  template: src=influxdb.conf dest=/etc/statsite/influxdb.conf
   notify: restart statsite
 
 - name: install statsite service

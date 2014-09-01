@@ -1,0 +1,3 @@
+collectd:
+  host: localhost
+  port: 25826

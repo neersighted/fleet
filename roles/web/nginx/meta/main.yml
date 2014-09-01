@@ -1,5 +1,5 @@
 dependencies:
-  - { role: packages/add_key, key: 7BD9BF62, url: 'http://nginx.org/keys/nginx_signing.key' }
-  - { role: packages/add_repo, repo: 'deb http://nginx.org/packages/mainline/debian wheezy nginx' }
-  - { role: packages/install, package: nginx }
+  - { role: packages/apt/add_key, key: { id: 7BD9BF62, url: 'http://nginx.org/keys/nginx_signing.key' } }
+  - { role: packages/apt/add_repo, repository: { repo: 'deb http://nginx.org/packages/mainline/debian wheezy nginx' } }
+  - { role: packages/apt, package: { pkg: nginx } }
   - { role: file/directory, path: /etc/nginx/nginx.conf.d }

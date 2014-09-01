@@ -1,0 +1,4 @@
+- name: create user {{ user }}
+  tags: [user, accounts]
+  action: user
+  args: user

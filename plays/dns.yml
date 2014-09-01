@@ -13,4 +13,4 @@
     - { role: dns/nsd/zone, zone: saynay.me, zonefile: files/dns/saynay.me.zone.signed }
     - { role: dns/nsd/zone, zone: singulo.co, zonefile: files/dns/singulo.co.zone }
 
-    - { role: logging/stash53, redis: { host: 'nitrogen.neersighetd.com.int' } }
+    - { role: logging/stash53, redis: { host: 'nitrogen.neersighted.com.int' } }

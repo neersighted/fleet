@@ -1,0 +1,15 @@
+[Unit]
+Description=System Metrics Gatherer
+After=network.target
+
+[Service]
+Type=forking
+SyslogLevel=notice
+
+ExecStart=/usr/sbin/collectd
+
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

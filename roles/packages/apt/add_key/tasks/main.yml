@@ -1,0 +1,4 @@
+- name: add key {{ key }}
+  tags: [add_key, apt, packages]
+  action: apt_key
+  args: key

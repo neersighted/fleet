@@ -1,0 +1,15 @@
+- name: configure bucky
+  tags: [bucky, metrics]
+  template: src=bucky.conf dest=/etc/bucky.conf
+  notify: restart bucky
+
+- name: install bucky service
+  tags: [bucky, metrics]
+  copy: src=bucky.service dest=/etc/systemd/system/bucky.service
+  notify:
+    - reload systemd
+    - restart bucky
+
+- name: enable and start bucky
+  tags: [bucky, metrics]
+  service: name=bucky state=started enabled=yes

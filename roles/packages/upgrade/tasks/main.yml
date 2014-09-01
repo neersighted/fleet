@@ -1,3 +1,0 @@
-- name: upgrade system ({{ type }})
-  tags: [upgade, packages]
-  apt: upgrade={{ type }} update_cache=yes

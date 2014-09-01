@@ -2,11 +2,13 @@
   hosts: all
   sudo: yes
   roles:
-    - { role: packages/mirror, release: unstable, mirror: '{{ debian_mirror }}' }
-    - { role: packages/upgrade, type: dist }
-    - { role: packages/install, package: linux-image-amd64 }
-    - { role: packages/install, package: apt-transport-https }
-    - { role: packages/install, package: python-pip }
+    - { role: packages/apt/set_mirror, release: unstable, mirror: '{{ debian_mirror }}' }
+    - { role: packages/apt, package: { pkg: apt-transport-https } }
+    - { role: packages/apt, package: { pkg: apt-listchanges } }
+    - { role: packages/apt, package: { upgrade: dist, update_cache: yes } }
+
+    - { role: packages/apt, package: { pkg: python-pip } }
+
     - { role: system/systemd }
 
     - { role: network/hostname }
@@ -16,7 +18,7 @@
 
     - { role: security/ssh}
     - { role: network/ufw/rule, rule: { rule: limit, port: ssh } }
-    - { role: packages/install, package: mosh }
+    - { role: packages/apt, package: { pkg: mosh } }
     - { role: network/ufw/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
     - { role: security/sudo }
 
@@ -33,6 +35,7 @@
     - { role: security/auth_key, user: neersighted, key: "{{ lookup('file', '../.ssh/neersighted.pub') }}" }
     - { role: security/add_sudoer, user: neersighted, perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL' }
 
+    - { role: packages/apt, package: { pkg: linux-image-amd64 } }
     - { role: system/extract_kernel }
     - { role: system/pvgrub, when: ansible_virtualization_type == 'xen', boot: '{{ boot_device }}', root: '{{ root_device }}', console: '{{ console_device }}' }
     - { role: system/zram }
@@ -46,15 +49,16 @@
     - { role: logging/rsyslog }
     - { role: logging/beaver, redis: { host: 'iron.neersighted.com.int' } }
 
-    - { role: metrics/diamond, influxdb: { host: 'iron.neersighted.com.int' } }
+    - { role: metrics/collectd, collectd: { host: '{{ hostvars["iron.neersighted.com"].network.ipv4.private }}' } }
 
-    - { role: packages/install, package: vim-nox }
-    - { role: packages/install, package: git }
-    - { role: packages/install, package: curl }
-    - { role: packages/install, package: htop }
+    - { role: packages/apt, package: { pkg: vim-nox } }
+    - { role: packages/apt, package: { pkg: git } }
+    - { role: packages/apt, package: { pkg: curl } }
+    - { role: packages/apt, package: { pkg: htop } }
 
-    - { role: packages/install, package: socat }
-    - { role: packages/install, package: tcpdump }
+    - { role: packages/apt, package: { pkg: socat } }
+    - { role: packages/apt, package: { pkg: tcpdump } }
+    - { role: packages/apt, package: { pkg: bmon } }
 
-    - { role: packages/remove, package: nfs-common }
-    - { role: packages/remove, package: rpcbind }
+    - { role: packages/apt, package: { pkg: rpcbind, state: absent } }
+    - { role: packages/apt, package: { pkg: nfs-common, state: absent } }

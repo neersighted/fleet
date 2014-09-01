@@ -1,4 +1,0 @@
-- name: create user {{ user }}
-  tags: [add_user, accounts]
-  action: user state=present
-  args: user

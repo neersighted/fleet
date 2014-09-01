@@ -1,3 +1,0 @@
-- name: install package {{ package }}
-  tags: [install, packages]
-  apt: pkg={{ package }} state=present

@@ -1,0 +1,4 @@
+- name: create group {{ group }}
+  tags: [group, accounts]
+  action: group
+  args: group

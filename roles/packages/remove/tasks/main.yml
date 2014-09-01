@@ -1,3 +1,0 @@
-- name: remove package {{ package }}
-  tags: [remove, packages]
-  apt: pkg={{ package }} state=absent

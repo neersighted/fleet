@@ -4,6 +4,7 @@
   roles:
     - { role: database/influxdb }
 
+    - { role: metrics/bucky }
     - { role: metrics/statsite }
     - { role: metrics/graphite-api, timezone: PST8PDT }
 

@@ -1,2 +1,2 @@
 dependencies:
-  - { role: packages/install, package: libhiredis0.10 }
+  - { role: packages/apt, package: { pkg: libhiredis0.10 } }

@@ -1,4 +1,4 @@
 dependencies:
-  - { role: packages/install, package: python-dev }
-  - { role: packages/install/pip, package: 'influxdb' }
-  - { role: packages/install/pip, package: 'https://codeload.github.com/BrightcoveOS/Diamond/zip/master' }
+  - { role: packages/apt, package: { pkg: python-dev } }
+  - { role: packages/pip, package: { name: 'influxdb' } }
+  - { role: packages/pip, package: { name: 'https://codeload.github.com/BrightcoveOS/Diamond/zip/master', state: latest } }

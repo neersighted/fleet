@@ -1,3 +1,0 @@
-- name: install python package {{ package }}
-  tags: [pip, install, packages]
-  pip: name={{ package }} state=present

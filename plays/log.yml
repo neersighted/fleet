@@ -2,6 +2,6 @@
   hosts: log
   sudo: yes
   roles:
-  - { role: packages/install, package: openjdk-7-jre }
+  - { role: packages/apt, package: { pkg: openjdk-7-jre } }
   - { role: database/elasticsearch, cluster: log }
   - { role: logging/logstash, elasticsearch: { cluster: log }, statsd: { host: 'iron.neersighted.com.int' }, timezone: PST8PDT }
