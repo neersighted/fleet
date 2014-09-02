@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+hostname=${COLLECTD_HOSTNAME:-$(hostname -f)}
+interval=${COLLECTD_INTERVAL:-10}
+
+while sleep $interval; do
+  /usr/sbin/unbound-control stats | while read line; do
+    instance=$(echo $line | cut -d= -f1 | cut -d. -f1)
+    stat=$(echo $line \
+      | cut -d= -f1 \
+      | cut -d. -f2- \
+      | sed 's/\./-/g' \
+      | sed 's/recursion-time-/recursiontime-/g')
+    value=$(echo $line | cut -d= -f2)
+
+    if [ "${instance}" == 'time' ]; then
+      continue
+    fi
+
+    echo "PUTVAL ${hostname}/unbound-${instance}/unbound_${stat} interval=${interval} N:${value}"
+  done
+done

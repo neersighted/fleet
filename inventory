@@ -15,6 +15,10 @@ iron.neersighted.com
 [prx]
 copper.neersighted.com
 
+[time]
+carbon.neersighted.com
+oxygen.neersighted.com
+
 
 [crissic]
 copper.neersighted.com
@@ -28,11 +32,27 @@ linode-fre
 linode-new
 [linode-dal]
 hydrogen.neersighted.com
-[linode-fre]
 nitrogen.neersighted.com
+[linode-fre]
 oxygen.neersighted.com
 [linode-new]
 carbon.neersighted.com
 
 [prgmr.com]
 helium.neersighted.com
+
+
+[us:children]
+us-north
+us-south
+us-east
+us-west
+[us-north:children]
+[us-south:children]
+linode-dal
+[us-east:children]
+crissic
+linode-new
+[us-west:children]
+linode-fre
+prgmr.com

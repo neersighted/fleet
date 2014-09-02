@@ -1,1 +1,3 @@
-- include: config.yml
+- name: configure sudoers
+  tags: [sudo, security]
+  template: src=sudoers dest=/etc/sudoers validate='visudo -cf %s'

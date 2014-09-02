@@ -3,5 +3,5 @@ dependencies:
   - { role: packages/apt, package: { pkg: python-dev } }
   - { role: packages/pip, package: { name: flask-cache } }
   - { role: packages/pip, package: { name: influxdb } }
-  - { role: packages/pip, package: { name: 'graphite-influxdb' } }
+  - { role: packages/pip, package: { name: graphite-influxdb } }
   - { role: packages/pip, package: { name: 'https://codeload.github.com/brutasse/graphite-api/zip/master', state: latest } }

@@ -4,13 +4,15 @@
   roles:
     - { role: packages/apt/set_mirror, release: unstable, mirror: '{{ debian_mirror }}' }
     - { role: packages/apt, package: { pkg: apt-transport-https } }
-    - { role: packages/apt, package: { pkg: apt-listchanges } }
     - { role: packages/apt, package: { upgrade: dist, update_cache: yes } }
 
     - { role: packages/apt, package: { pkg: python-pip } }
 
+
     - { role: system/systemd }
 
+
+    - { role: system/motd }
     - { role: network/hostname }
     - { role: network/resolvconf }
     - { role: network/interfaces }
@@ -23,42 +25,57 @@
     - { role: security/sudo }
 
     - { role: network/tinc, keys: files/all/tinc }
-    - { role: network/ufw/rule, rule: { rule: allow, port: 655 } }
+    - { role: network/ufw/rule, rule: { rule: allow, port: tinc } }
     - { role: network/ufw/rule, rule: { rule: allow, interface: tinc0, direction: in } }
 
-    - { role: accounts/add_group, group: { name: deploy, system: true } }
-    - { role: accounts/add_user, user: { name: ansible, group: deploy, system: true } }
+
+    - { role: accounts/group, group: { name: deploy, system: true } }
+    - { role: accounts/user, user: { name: ansible, group: deploy, system: true } }
     - { role: security/auth_key, user: ansible, key: "{{ lookup('file', '../.ssh/ansible.pub') }}" }
-    - { role: security/add_sudoer, user: '%deploy', perms: 'ALL=(ALL) NOPASSWD: ALL' }
-    - { role: accounts/add_group, group: { name: wheel } }
-    - { role: accounts/add_user, user: { name: neersighted, group: wheel, groups: 'adm', shell: /bin/bash, password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.' } }
+    - { role: security/sudoer, user: '%deploy', perms: 'ALL=(ALL) NOPASSWD: ALL' }
+    - { role: accounts/group, group: { name: wheel } }
+    - { role: accounts/user, user: { name: neersighted, group: wheel, groups: 'adm', shell: /bin/bash, password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.' } }
     - { role: security/auth_key, user: neersighted, key: "{{ lookup('file', '../.ssh/neersighted.pub') }}" }
-    - { role: security/add_sudoer, user: neersighted, perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL' }
+    - { role: security/sudoer, user: neersighted, perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL' }
+
 
     - { role: packages/apt, package: { pkg: linux-image-amd64 } }
     - { role: system/extract_kernel }
     - { role: system/pvgrub, when: ansible_virtualization_type == 'xen', boot: '{{ boot_device }}', root: '{{ root_device }}', console: '{{ console_device }}' }
-    - { role: system/zram }
 
-    - { role: system/motd }
-    - { role: system/ntp, timezone: PST8PDT }
+    - { role: system/zram }
+    - { role: system/tuning }
+
+
+    - { role: time/timezone, timezone: PST8PDT }
+    - { role: time/ntp/client, when: "inventory_hostname not in groups['time']" }
 
     - { role: mail/aliases, to: admin@neersighted.com }
     - { role: mail/msmtp, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', from: '{{ ansible_hostname }}@fleet.neersighted.com' }
+
 
     - { role: logging/rsyslog }
     - { role: logging/beaver, redis: { host: 'iron.neersighted.com.int' } }
 
     - { role: metrics/collectd, collectd: { host: '{{ hostvars["iron.neersighted.com"].network.ipv4.private }}' } }
 
-    - { role: packages/apt, package: { pkg: vim-nox } }
-    - { role: packages/apt, package: { pkg: git } }
-    - { role: packages/apt, package: { pkg: curl } }
-    - { role: packages/apt, package: { pkg: htop } }
 
+    - { role: packages/apt, package: { pkg: haveged } }
+
+    - { role: packages/apt, package: { pkg: sysstat, state: absent } }
+    - { role: packages/apt, package: { pkg: exim4, state: absent } }
+    - { role: packages/apt, package: { pkg: exim4-base, state: absent } }
+    - { role: packages/apt, package: { pkg: exim4-config, state: absent } }
+    - { role: packages/apt, package: { pkg: exim4-daemon-light, state: absent } }
+    - { role: packages/apt, package: { pkg: rpcbind, state: absent } }
+    - { role: packages/apt, package: { pkg: nfs-common, state: absent } }
+
+    - { role: packages/apt, package: { pkg: htop } }
+    - { role: packages/apt, package: { pkg: vim-nox } }
+    - { role: packages/apt, package: { pkg: apt-file } }
+    - { role: packages/apt, package: { pkg: apt-listchanges } }
+    - { role: packages/apt, package: { pkg: curl } }
+    - { role: packages/apt, package: { pkg: git } }
     - { role: packages/apt, package: { pkg: socat } }
     - { role: packages/apt, package: { pkg: tcpdump } }
     - { role: packages/apt, package: { pkg: bmon } }
-
-    - { role: packages/apt, package: { pkg: rpcbind, state: absent } }
-    - { role: packages/apt, package: { pkg: nfs-common, state: absent } }

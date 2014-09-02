@@ -1,8 +1,26 @@
+- name: don't log to syslog
+  tags: [ufw, network]
+  lineinfile: >
+    dest=/etc/rsyslog.d/20-ufw.conf
+    regexp='^#?& ~'
+    line='& ~'
+    state=present
+  notify: restart rsyslog
+
 - name: restrict incoming connections
   tags: [ufw, network]
   ufw: policy=deny direction=incoming
   notify: reload firewall
 
+- name: install ufw service
+  tags: [ufw, network]
+  copy: src=ufw.service dest=/etc/systemd/system/ufw.service
+  notify: reload systemd
+
 - name: activate ufw
   tags: [ufw, network]
   ufw: state=enabled
+
+- name: enable and start ufw
+  tags: [ufw, network]
+  service: name=ufw state=started enabled=yes

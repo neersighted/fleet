@@ -1,3 +1,8 @@
 collectd:
   host: localhost
   port: 25826
+
+metrics:
+  collectd:
+    nginx: false
+    unbound: false

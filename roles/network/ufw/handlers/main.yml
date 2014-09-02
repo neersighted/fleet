@@ -1,2 +1,8 @@
+- name: reload systemd
+  command: systemctl daemon-reload
+
+- name: restart rsyslog
+  service: name=rsyslog state=restarted
+
 - name: reload ufw
   ufw: state=reloaded

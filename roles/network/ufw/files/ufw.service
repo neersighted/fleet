@@ -1,0 +1,16 @@
+[Unit]
+Description=Uncomplicated Firewall
+DefaultDependencies=no
+After=systemd-sysctl.service
+Before=sysinit.target
+
+[Service]
+Type=oneshot
+SyslogLevel=notice
+
+RemainAfterExit=yes
+ExecStart=/lib/ufw/ufw-init start
+ExecStop=/lib/ufw/ufw-init stop
+
+[Install]
+WantedBy=multi-user.target

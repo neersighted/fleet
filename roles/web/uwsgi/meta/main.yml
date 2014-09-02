@@ -1,3 +1,7 @@
 dependencies:
   - { role: packages/apt, package: { pkg: uwsgi } }
+  - { role: packages/apt, package: { pkg: uwsgi-extra } }
+  - { role: packages/apt, package: { pkg: uwsgi-plugin-php } }
   - { role: packages/apt, package: { pkg: uwsgi-plugin-python } }
+  - { role: packages/apt, package: { pkg: uwsgi-plugin-python3 } }
+  - { role: packages/apt, package: { pkg: uwsgi-plugin-rack-ruby2.1 } }

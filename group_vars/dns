@@ -1,0 +1,3 @@
+metrics:
+  collectd:
+    unbound: true

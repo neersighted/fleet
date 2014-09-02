@@ -1,0 +1,15 @@
+- name: configure ntp
+  tags: [client, ntp, time]
+  template: src=ntp.conf dest=/etc/ntp.conf
+  notify: restart ntp
+
+- name: install ntp service
+  tags: [client, ntp, time]
+  copy: src=ntp.service dest=/etc/systemd/system/ntp.service
+  notify:
+    - reload systemd
+    - restart ntp
+
+- name: enable and start ntp
+  tags: [client, ntp, time]
+  service: name=ntp state=started enabled=yes

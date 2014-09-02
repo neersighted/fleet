@@ -7,10 +7,12 @@ NotifyAccess=all
 SyslogLevel=notice
 
 ExecStart=/usr/bin/uwsgi \
-  --master \
+  --autoload \
+  --master --workers 2 --no-orphans \
   --emperor /etc/uwsgi \
   --emperor-tyrant \
   --emperor-broodlord 10
+
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGQUIT
 

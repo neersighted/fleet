@@ -1,0 +1,4 @@
+- name: configure sysctls
+  tags: [tuning, system]
+  template: src=sysctl.conf dest=/etc/sysctl.conf
+  notify: reload sysctls

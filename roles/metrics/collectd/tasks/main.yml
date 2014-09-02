@@ -3,6 +3,19 @@
   template: src=collectd.conf dest=/etc/collectd/collectd.conf
   notify: restart collectd
 
+- name: configure extra collectd types
+  tags: [collectd, metrics]
+  copy: src=types.db dest=/etc/collectd/types.db
+  notify: restart collectd
+
+- name: install external collectd collectors
+  tags: [collectd, metrics]
+  with_items:
+    - test
+    - unbound
+  copy: src=collectd-{{ item }} dest=/usr/local/lib/collectd/collectd-{{ item }} mode=755
+  notify: restart collectd
+
 - name: install collectd service
   tags: [collectd, metrics]
   copy: src=collectd.service dest=/etc/systemd/system/collectd.service

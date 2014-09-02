@@ -1,2 +1,2 @@
 dependencies:
-  - { role: packages/pip, package: { name: 'https://codeload.github.com/josegonzalez/beaver/zip/master', state: latest } }
+  - { role: packages/pip, package: { name: beaver, state: latest } }

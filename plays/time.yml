@@ -1,0 +1,6 @@
+- name: Time Servers (all)
+  hosts: time
+  sudo: yes
+  roles:
+    - { role: time/ntp/server }
+    - { role: network/ufw/rule, rule: { rule: allow, port: ntp } }

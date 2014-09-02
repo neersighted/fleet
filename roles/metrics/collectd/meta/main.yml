@@ -1,2 +1,4 @@
 dependencies:
+  - { role: file/directory, path: /usr/local/lib/collectd }
   - { role: packages/apt, package: { pkg: collectd } }
+  - { role: packages/apt, package: { pkg: sane-utils, state: absent } }
