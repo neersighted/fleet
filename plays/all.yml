@@ -67,6 +67,8 @@
     - { role: packages/apt, package: { pkg: exim4-base, state: absent } }
     - { role: packages/apt, package: { pkg: exim4-config, state: absent } }
     - { role: packages/apt, package: { pkg: exim4-daemon-light, state: absent } }
+    - { role: packages/apt, package: { pkg: sane-utils, state: absent } }
+    - { role: packages/apt, package: { pkg: libsane, state: absent } }
     - { role: packages/apt, package: { pkg: rpcbind, state: absent } }
     - { role: packages/apt, package: { pkg: nfs-common, state: absent } }
 
@@ -76,6 +78,7 @@
     - { role: packages/apt, package: { pkg: apt-listchanges } }
     - { role: packages/apt, package: { pkg: curl } }
     - { role: packages/apt, package: { pkg: git } }
+    - { role: packages/apt, package: { pkg: strace } }
     - { role: packages/apt, package: { pkg: socat } }
     - { role: packages/apt, package: { pkg: tcpdump } }
     - { role: packages/apt, package: { pkg: bmon } }

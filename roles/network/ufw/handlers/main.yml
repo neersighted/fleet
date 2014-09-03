@@ -1,6 +1,9 @@
 - name: reload systemd
   command: systemctl daemon-reload
 
+- name: reload kernel modules
+  service: name=systemd-modules-load state=restarted
+
 - name: restart rsyslog
   service: name=rsyslog state=restarted
 

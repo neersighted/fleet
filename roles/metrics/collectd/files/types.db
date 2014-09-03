@@ -1,3 +1,4 @@
+ntppool_score		value:GAUGE:-5:20
 unbound_num		value:GAUGE:0:U
 unbound_requestlist	value:GAUGE:0:U
 unbound_recursiontime	value:GAUGE:0:U
