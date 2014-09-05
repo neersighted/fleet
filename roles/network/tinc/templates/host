@@ -1,6 +1,6 @@
 Address = {{ hostvars[item].network.ipv4.public.0 }}
 Address = {{ hostvars[item].network.ipv6.public.0 }}
-Subnet = {{ hostvars[item].network.ipv4.private }}/32
-Subnet = {{ hostvars[item].network.ipv6.private }}/128
+Subnet = {{ hostvars[item].network.ipv4.vpn }}/32
+Subnet = {{ hostvars[item].network.ipv6.vpn }}/128
 
 {{ lookup('file', keys + '/' + item + '.pub') }}

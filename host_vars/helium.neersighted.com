@@ -4,7 +4,7 @@ network:
     netmask: 24
     public:
       - 71.19.154.209
-    private: 10.13.37.37
+    vpn: 10.13.37.37
   ipv6:
     gateway: 2605:2700:0:3::1
     netmask: 64
@@ -15,7 +15,7 @@ network:
       - 2605:2700:1:1040::3
       - 2605:2700:1:1040::4
       - 2605:2700:1:1040::5
-    private: fd00:dead:beef::ac1d
-  mesh:
+    vpn: fd00:dead:beef::ac1d
+  tinc:
     name: helium
     entry: false

@@ -4,7 +4,7 @@ network:
      netmask: 24
      public:
        - 107.150.19.150
-     private: 10.13.37.79
+     vpn: 10.13.37.79
   ipv6:
     gateway: 2602:ffea:1::1
     netmask: 48
@@ -14,7 +14,7 @@ network:
       - 2602:ffea:1:3::3
       - 2602:ffea:1:3::4
       - 2602:ffea:1:3::5
-    private: fd00:dead:beef::face
-  mesh:
+    vpn: fd00:dead:beef::face
+  tinc:
     name: iron
     entry: true

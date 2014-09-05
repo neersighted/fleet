@@ -4,7 +4,7 @@ network:
     netmask: 24
     public:
       - 173.255.230.140
-    private: 10.13.37.16
+    vpn: 10.13.37.16
   ipv6:
     gateway: fe80::1
     netmask: 64
@@ -15,7 +15,7 @@ network:
       - 2600:3c03:e000:00c5::3
       - 2600:3c03:e000:00c5::4
       - 2600:3c03:e000:00c5::5
-    private: fd00:dead:beef::1ced
-  mesh:
+    vpn: fd00:dead:beef::1ced
+  tinc:
     name: carbon
     entry: true

@@ -2,7 +2,7 @@
   hosts: dns
   sudo: yes
   roles:
-    - { role: dns/unbound, listen: ['{{ network.ipv4.private }}', '{{ network.ipv6.private }}'], allow: ['{{ network.ipv4.private }}/24', '{{ network.ipv6.private }}/64'] }
+    - { role: dns/unbound, listen: ['{{ network.ipv4.vpn }}', '{{ network.ipv6.vpn }}'], allow: ['{{ network.ipv4.vpn }}/24', '{{ network.ipv6.vpn }}/64'] }
     - { role: dns/nsd, listen: ['{{ network.ipv4.public.0 }}', '{{ network.ipv6.public.0 }}', '127.0.0.1', '::1'] }
     - { role: network/ufw/rule, rule: { rule: allow, port: domain } }
 

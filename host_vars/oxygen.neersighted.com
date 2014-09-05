@@ -4,7 +4,7 @@ network:
     netmask: 24
     public:
       - 74.207.242.71
-    private: 10.13.37.53
+    vpn: 10.13.37.53
   ipv6:
     gateway: fe80::1
     netmask: 64
@@ -15,7 +15,7 @@ network:
       - 2600:3c01:e000:00ae::3
       - 2600:3c01:e000:00ae::4
       - 2600:3c01:e000:00ae::5
-    private: fd00:dead:beef::1dea
-  mesh:
+    vpn: fd00:dead:beef::1dea
+  tinc:
     name: oxygen
     entry: true

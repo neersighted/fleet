@@ -1,4 +1,4 @@
 #!/bin/sh
 ip link set $INTERFACE up
-ip addr add {{ network.ipv4.private }}/24 dev $INTERFACE
-ip addr add {{ network.ipv6.private }}/64 dev $INTERFACE
+ip addr add {{ network.ipv4.vpn }}/24 dev $INTERFACE
+ip addr add {{ network.ipv6.vpn }}/64 dev $INTERFACE

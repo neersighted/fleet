@@ -1,0 +1,3 @@
+- name: set mailname
+  tags: [mailname, mail]
+  copy: content='{{ inventory_hostname }}\n' dest=/etc/mailname

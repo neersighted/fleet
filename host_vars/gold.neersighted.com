@@ -4,7 +4,7 @@ network:
     netmask: 24
     public:
       - 107.150.19.176
-    private: 10.13.37.85
+    vpn: 10.13.37.85
   ipv6:
     gateway: 2602:ffea:1::1
     netmask: 48
@@ -14,7 +14,7 @@ network:
       - 2602:ffea:1:dc::3
       - 2602:ffea:1:dc::4
       - 2602:ffea:1:dc::5
-    private: fd00:dead:beef::babe
-  mesh:
+    vpn: fd00:dead:beef::babe
+  tinc:
     name: gold
     entry: false

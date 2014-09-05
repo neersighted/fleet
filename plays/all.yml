@@ -50,6 +50,7 @@
     - { role: time/timezone, timezone: PST8PDT }
     - { role: time/ntp/client, when: "inventory_hostname not in groups['time']" }
 
+    - { role: mail/mailname }
     - { role: mail/aliases, to: admin@neersighted.com }
     - { role: mail/msmtp, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', from: '{{ ansible_hostname }}@fleet.neersighted.com' }
 
@@ -57,9 +58,10 @@
     - { role: logging/rsyslog }
     - { role: logging/beaver, redis: { host: 'iron.neersighted.com.int' } }
 
-    - { role: metrics/collectd, collectd: { host: '{{ hostvars["iron.neersighted.com"].network.ipv4.private }}' } }
+    - { role: metrics/collectd, collectd: { host: '{{ hostvars["iron.neersighted.com"].network.ipv4.vpn }}' } }
 
 
+    - { role: packages/apt, package: { pkg: binfmt-support } }
     - { role: packages/apt, package: { pkg: haveged } }
 
     - { role: packages/apt, package: { pkg: sysstat, state: absent } }
