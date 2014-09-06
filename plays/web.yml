@@ -3,8 +3,7 @@
   sudo: yes
   roles:
     - { role: web/nginx }
-    - { role: network/ufw/rule, rule: { rule: allow, port: http } }
-    - { role: network/ufw/rule, rule: { rule: allow, port: https } }
+    - { role: network/ferm/rule, rule: { name: 30-http, rule: 'proto tcp dport (http https) ACCEPT' } }
 
     - { role: web/nginx/site, site: localhost, conf: files/web/localhost.conf }
 

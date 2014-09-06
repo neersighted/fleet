@@ -1,0 +1,3 @@
+dependencies:
+  - { role: file/directory, path: /etc/ferm/ferm.conf.d }
+  - { role: packages/apt, package: { pkg: ferm } }

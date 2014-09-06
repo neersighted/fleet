@@ -16,17 +16,17 @@
     - { role: network/hostname }
     - { role: network/resolvconf }
     - { role: network/interfaces }
-    - { role: network/ufw }
+    - { role: network/ferm }
 
     - { role: security/ssh}
-    - { role: network/ufw/rule, rule: { rule: limit, port: ssh } }
+    - { role: network/ferm/rule, rule: { name: 30-ssh, rule: 'proto tcp dport ssh ACCEPT' } }
     - { role: packages/apt, package: { pkg: mosh } }
-    - { role: network/ufw/rule, rule: { rule: allow, port: '60000:61000', proto: udp } }
+    - { role: network/ferm/rule, rule: { name: 30-mosh, rule: 'proto udp dport 60000:61000 ACCEPT' } }
     - { role: security/sudo }
 
     - { role: network/tinc, keys: files/all/tinc }
-    - { role: network/ufw/rule, rule: { rule: allow, port: tinc } }
-    - { role: network/ufw/rule, rule: { rule: allow, interface: tinc0, direction: in } }
+    - { role: network/ferm/rule, rule: { name: 20-tinc0, rule: 'interface tinc0 ACCEPT'} }
+    - { role: network/ferm/rule, rule: { name: 30-tinc, rule: 'proto (udp tcp) dport tinc ACCEPT' } }
 
 
     - { role: accounts/group, group: { name: deploy, system: true } }
@@ -51,8 +51,7 @@
     - { role: time/ntp/client, when: "inventory_hostname not in groups['time']" }
 
     - { role: mail/mailname }
-    - { role: mail/aliases, to: admin@neersighted.com }
-    - { role: mail/msmtp, user: '{{ mail_user }}', pass: '{{ mail_pass }}', server: '{{ mail_server }}', from: '{{ ansible_hostname }}@fleet.neersighted.com' }
+    - { role: mail/postfix }
 
 
     - { role: logging/rsyslog }

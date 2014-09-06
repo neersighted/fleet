@@ -4,7 +4,7 @@
   roles:
     - { role: dns/unbound, listen: ['{{ network.ipv4.vpn }}', '{{ network.ipv6.vpn }}'], allow: ['{{ network.ipv4.vpn }}/24', '{{ network.ipv6.vpn }}/64'] }
     - { role: dns/nsd, listen: ['{{ network.ipv4.public.0 }}', '{{ network.ipv6.public.0 }}', '127.0.0.1', '::1'] }
-    - { role: network/ufw/rule, rule: { rule: allow, port: domain } }
+    - { role: network/ferm/rule, rule: { name: 30-dns, rule: 'proto (udp tcp) dport domain ACCEPT' } }
 
     - { role: dns/nsd/zone, zone: neer.io, zonefile: files/dns/neer.io.zone.signed }
     - { role: dns/nsd/zone, zone: neergaard.me, zonefile: files/dns/neergaard.me.zone.signed }

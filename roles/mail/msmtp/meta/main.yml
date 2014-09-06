@@ -1,3 +1,0 @@
-dependencies:
-  - { role: packages/apt, package: { pkg: msmtp } }
-  - { role: packages/apt, package: { pkg: msmtp-mta } }

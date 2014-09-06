@@ -1,0 +1,27 @@
+- name: configure postfix
+  tags: [postfix, mail]
+  with_items:
+    - main.cf
+  template: src={{ item }} dest=/etc/postfix/{{ item }}
+  notify: restart postfix
+
+- name: configure aliases
+  tags: [postfix, mail]
+  template: src=aliases dest=/etc/aliases
+  notify:
+    - postalias
+    - restart postfix
+
+- name: configure domain whitelist
+  tags: [postfix, mail]
+  template: src=domains dest=/etc/postfix/domains
+  notify:
+    - postmap domains
+    - restart postfix
+
+- name: configure passwd
+  tags: [postfix, mail]
+  template: src=passwd dest=/etc/postfix/passwd
+  notify:
+    - postmap passwd
+    - restart postfix

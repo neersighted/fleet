@@ -4,6 +4,17 @@ boot_device: hd0,0
 root_device: xvda1
 console_device: hvc0
 
-mail_user: bjorn@neersighted.com
-mail_pass: 9K2k6758tey9HD56
-mail_server: mail.messagingengine.com
+mail:
+  to: admin@neersighted.com
+  from: admin@neersighted.com
+  auth:
+    user: bjorn@neersighted.com
+    pass: 9K2k6758tey9HD56
+  domains:
+    - neer.io
+    - neergaard.me
+    - neersighted.com
+    - royalspades.co
+    - singulo.co
+  relay:
+    host: mail.messagingengine.com

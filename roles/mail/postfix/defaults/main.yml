@@ -1,0 +1,11 @@
+mail:
+  to: root
+  from: root
+  auth:
+    user: root
+    pass: root
+  domains:
+    - neersighted.com
+  relay:
+    host: localhost
+    port: 587

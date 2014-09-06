@@ -3,4 +3,4 @@
   sudo: yes
   roles:
     - { role: time/ntp/server }
-    - { role: network/ufw/rule, rule: { rule: allow, port: ntp } }
+    - { role: network/ferm/rule, rule: { name: 30-ntp, rule: 'proto udp dport ntp ACCEPT' } }

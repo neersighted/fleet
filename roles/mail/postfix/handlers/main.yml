@@ -1,0 +1,11 @@
+- name: postalias aliases
+  command: postalias /etc/aliases
+
+- name: postmap domains
+  command: postmap /etc/postfix/domains
+
+- name: postmap passwd
+  command: postmap /etc/postfix/passwd
+
+- name: restart postfix
+  service: name=postfix state=restarted

@@ -1,0 +1,16 @@
+[Unit]
+Description=For Easy Rule Making
+DefaultDependencies=no
+After=systemd-sysctl.service
+Before=sysinit.target
+
+[Service]
+Type=oneshot
+SyslogLevel=notice
+
+ExecStart=/usr/sbin/ferm /etc/ferm/ferm.conf
+ExecStop=/usr/sbin/ferm -F /etc/ferm/ferm.conf
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
