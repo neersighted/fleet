@@ -1,4 +1,5 @@
 dependencies:
   - role: packages/pip
-    args: name: beaver
-    state: latest
+    args:
+      name: beaver
+      state: latest
