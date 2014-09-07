@@ -1,4 +1,4 @@
-- name: create user {{ user }}
+- name: modify users ({{ args }})
   tags: [user, accounts]
   action: user
-  args: user
+  args: args

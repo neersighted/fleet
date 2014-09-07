@@ -1,2 +1,4 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: postfix } }
+  - role: packages/apt
+    args:
+      pkg: postfix

@@ -7,11 +7,6 @@
     state=present
   notify: restart rsyslog
 
-- name: load the nf_conntrack module
-  tags: [ufw, network]
-  copy: content='nf_conntrack\n' dest=/etc/modules-load.d/nf_conntrack.conf
-  notify: reload kernel modules
-
 - name: restrict incoming connections
   tags: [ufw, network]
   ufw: policy=deny direction=incoming

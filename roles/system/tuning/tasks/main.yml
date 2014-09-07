@@ -40,8 +40,3 @@
     net.netfilter.nf_conntrack_udp_timeout_stream: 180
     net.netfilter.nf_conntrack_events_retry_timeout: 15
   sysctl: name='{{ item.key }}' value='{{ item.value }}'
-
-- name: load the nf_conntrack module
-  tags: [tuning, system]
-  copy: content='nf_conntrack\n' dest=/etc/modules-load.d/nf_conntrack.conf
-  notify: reload kernel modules

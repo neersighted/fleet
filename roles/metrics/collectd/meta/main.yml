@@ -1,5 +1,10 @@
 dependencies:
-  - { role: file/directory, path: /usr/local/lib/collectd }
-  - { role: packages/apt, package: { pkg: collectd } }
-  - { role: packages/apt, package: { pkg: collectd-util } }
-  - { role: packages/apt, package: { pkg: sane-utils, state: absent } }
+  - role: file/directory
+    path: /usr/local/lib/collectd
+
+  - role: packages/apt
+    args:
+      pkg: collectd
+  - role: packages/apt
+    args:
+      pkg: collectd-util

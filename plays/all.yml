@@ -2,84 +2,191 @@
   hosts: all
   sudo: yes
   roles:
-    - { role: packages/apt/set_mirror, release: unstable, mirror: '{{ debian_mirror }}' }
-    - { role: packages/apt, package: { pkg: apt-transport-https } }
-    - { role: packages/apt, package: { upgrade: dist, update_cache: yes } }
+    - role: packages/apt/set_mirror
+      release: unstable
+      mirror: '{{ debian_mirror }}'
 
-    - { role: packages/apt, package: { pkg: python-pip } }
+    - role: packages/apt
+      args:
+        pkg: apt-transport-https
+    - role: packages/apt
+      args:
+        pkg: apt-listchanges
+    - role: packages/apt
+      args:
+        pkg: apt-file
+    - role: packages/apt
+      args:
+        pkg: python-pip
 
-
-    - { role: system/systemd }
-
-
-    - { role: system/motd }
-    - { role: network/hostname }
-    - { role: network/resolvconf }
-    - { role: network/interfaces }
-    - { role: network/ferm }
-
-    - { role: security/ssh}
-    - { role: network/ferm/rule, rule: { name: 30-ssh, rule: 'proto tcp dport ssh ACCEPT' } }
-    - { role: packages/apt, package: { pkg: mosh } }
-    - { role: network/ferm/rule, rule: { name: 30-mosh, rule: 'proto udp dport 60000:61000 ACCEPT' } }
-    - { role: security/sudo }
-
-    - { role: network/tinc, keys: files/all/tinc }
-    - { role: network/ferm/rule, rule: { name: 20-tinc0, rule: 'interface tinc0 ACCEPT'} }
-    - { role: network/ferm/rule, rule: { name: 30-tinc, rule: 'proto (udp tcp) dport tinc ACCEPT' } }
+    - role: packages/apt
+      args:
+        upgrade: dist
+        update_cache: yes
 
 
-    - { role: accounts/group, group: { name: deploy, system: true } }
-    - { role: accounts/user, user: { name: ansible, group: deploy, system: true } }
-    - { role: security/auth_key, user: ansible, key: "{{ lookup('file', '../.ssh/ansible.pub') }}" }
-    - { role: security/sudoer, user: '%deploy', perms: 'ALL=(ALL) NOPASSWD: ALL' }
-    - { role: accounts/group, group: { name: wheel } }
-    - { role: accounts/user, user: { name: neersighted, group: wheel, groups: 'adm', shell: /bin/bash, password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.' } }
-    - { role: security/auth_key, user: neersighted, key: "{{ lookup('file', '../.ssh/neersighted.pub') }}" }
-    - { role: security/sudoer, user: neersighted, perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL' }
+    - role: system/systemd
+
+    - role: system/kernel
+    - role: system/pvgrub
+      when: ansible_virtualization_type == 'xen'
+      boot: '{{ boot_device }}'
+      root: '{{ root_device }}'
+      console: '{{ console_device }}'
+
+    - role: system/tuning
+    - role: system/zram
 
 
-    - { role: packages/apt, package: { pkg: linux-image-amd64 } }
-    - { role: system/extract_kernel }
-    - { role: system/pvgrub, when: ansible_virtualization_type == 'xen', boot: '{{ boot_device }}', root: '{{ root_device }}', console: '{{ console_device }}' }
+    - role: network/ferm
+    - role: network/ferm/rule
+      name: ssh
+      rule: domain (ip ip6) table filter chain INPUT proto tcp dport ssh ACCEPT;
+    - role: network/ferm/rule
+      name: mosh
+      rule: domain (ip ip6) table filter chain INPUT proto udp dport 60000:61000 ACCEPT;
+    - role: network/ferm/rule
+      name: tinc
+      rule: |
+        domain (ip ip6) table filter chain INPUT {
+          proto (tcp udp) dport tinc ACCEPT;
+          interface tinc0 ACCEPT;
+        }
 
-    - { role: system/zram }
-    - { role: system/tuning }
+    - role: network/interfaces
+    - role: network/resolvconf
+    - role: network/tinc
+      keys: files/all/tinc
 
 
-    - { role: time/timezone, timezone: PST8PDT }
-    - { role: time/ntp/client, when: "inventory_hostname not in groups['time']" }
-
-    - { role: mail/mailname }
-    - { role: mail/postfix }
-
-
-    - { role: logging/rsyslog }
-    - { role: logging/beaver, redis: { host: 'iron.neersighted.com.int' } }
-
-    - { role: metrics/collectd, collectd: { host: '{{ hostvars["iron.neersighted.com"].network.ipv4.vpn }}' } }
+    - role: security/sudo
+    - role: security/ssh
+    - role: packages/apt
+      args:
+        pkg: mosh
 
 
-    - { role: packages/apt, package: { pkg: binfmt-support } }
-    - { role: packages/apt, package: { pkg: haveged } }
+    - role: accounts/group
+      args:
+        name: deploy
+        system: true
+    - role: security/sudoer
+      user: '%deploy'
+      perms: 'ALL=(ALL) NOPASSWD: ALL'
+    - role: accounts/group
+      args:
+        name: wheel
+    - role: security/sudoer
+      user: '%wheel'
+      perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL'
 
-    - { role: packages/apt, package: { pkg: sysstat, state: absent } }
-    - { role: packages/apt, package: { pkg: exim4, state: absent } }
-    - { role: packages/apt, package: { pkg: exim4-base, state: absent } }
-    - { role: packages/apt, package: { pkg: exim4-config, state: absent } }
-    - { role: packages/apt, package: { pkg: exim4-daemon-light, state: absent } }
-    - { role: packages/apt, package: { pkg: sane-utils, state: absent } }
-    - { role: packages/apt, package: { pkg: libsane, state: absent } }
-    - { role: packages/apt, package: { pkg: rpcbind, state: absent } }
-    - { role: packages/apt, package: { pkg: nfs-common, state: absent } }
+    - role: accounts/user
+      args:
+        name: ansible
+        group: deploy
+        system: true
+    - role: security/auth_key
+      user: ansible
+      key: "{{ lookup('file', '../.ssh/ansible.pub') }}"
 
-    - { role: packages/apt, package: { pkg: htop } }
-    - { role: packages/apt, package: { pkg: vim-nox } }
-    - { role: packages/apt, package: { pkg: apt-file } }
-    - { role: packages/apt, package: { pkg: apt-listchanges } }
-    - { role: packages/apt, package: { pkg: curl } }
-    - { role: packages/apt, package: { pkg: git } }
-    - { role: packages/apt, package: { pkg: strace } }
-    - { role: packages/apt, package: { pkg: socat } }
-    - { role: packages/apt, package: { pkg: tcpdump } }
-    - { role: packages/apt, package: { pkg: bmon } }
+    - role: accounts/user
+      args:
+        name: neersighted
+        group: wheel
+        groups: adm
+        shell: /bin/bash
+        password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.'
+    - role: security/auth_key
+      user: neersighted
+      key: "{{ lookup('file', '../.ssh/neersighted.pub') }}"
+
+
+    - role: mail/postfix
+
+    - role: logging/rsyslog
+    - role: logging/beaver
+      redis:
+        host: iron.neersighted.com.int
+    - role: metrics/collectd
+      collectd:
+        host: '{{ hostvars["iron.neersighted.com"].network.ipv4.vpn }}'
+
+
+    - role: time/timezone
+      timezone: PST8PDT
+    - role: time/ntp/client
+      when: "inventory_hostname not in groups['time']"
+
+    - role: network/hostname
+    - role: mail/mailname
+    - role: system/motd
+
+
+    - role: packages/apt
+      args:
+        pkg: binfmt-support
+    - role: packages/apt
+      args:
+        pkg: haveged
+
+    - role: packages/apt
+      args:
+        pkg: sysstat
+        state: absent
+    - role: packages/apt
+      args:
+        pkg: exim4
+        state: absent
+    - role: packages/apt
+      args:
+        pkg: exim4-base
+        state: absent
+    - role: packages/apt
+      args:
+        pkg: exim4-config
+        state: absent
+    - role: packages/apt
+      args:
+        pkg: exim4-daemon-light
+        state: absent
+    - role: packages/apt
+      args:
+        pkg: sane-utils
+        state: absent
+    - role: packages/apt
+      args:
+        pkg: libsane
+        state: absent
+    - role: packages/apt
+      args:
+        pkg: rpcbind
+        state: absent
+    - role: packages/apt
+      args:
+        pkg: nfs-common
+        state: absent
+
+    - role: packages/apt
+      args:
+        pkg: htop
+    - role: packages/apt
+      args:
+        pkg: vim-nox
+    - role: packages/apt
+      args:
+        pkg: curl
+    - role: packages/apt
+      args:
+        pkg: git
+    - role: packages/apt
+      args:
+        pkg: strace
+    - role: packages/apt
+      args:
+        pkg: socat
+    - role: packages/apt
+      args:
+        pkg: tcpdump
+    - role: packages/apt
+      args:
+        pkg: bmon

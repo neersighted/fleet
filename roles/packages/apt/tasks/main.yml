@@ -1,4 +1,4 @@
-- name: install package {{ package }}
+- name: invoke apt ({{ args }})
   tags: [apt, packages]
   action: apt
-  args: package
+  args: args

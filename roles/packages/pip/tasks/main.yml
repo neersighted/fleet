@@ -1,4 +1,4 @@
-- name: install package {{ package }}
+- name: invoke pip ({{ args }})
   tags: [pip, packages]
   action: pip
-  args: package
+  args: args

@@ -1,3 +1,13 @@
 dependencies:
-  - { role: file/directory, path: /etc/ferm/ferm.conf.d }
-  - { role: packages/apt, package: { pkg: ferm } }
+  - role: file/directory
+    path: /etc/ferm/ferm.conf.d
+
+  - role: system/module
+    module: nf_conntrack
+  - role: packages/apt
+    args:
+      pkg: xtables-addons-common
+
+  - role: packages/apt
+    args:
+      pkg: ferm

@@ -1,0 +1,4 @@
+- name: load module {{ module }}
+  tags: [tuning, system]
+  copy: content='{{ module }}\n' dest=/etc/modules-load.d/{{ module }}.conf
+  notify: reload kernel modules

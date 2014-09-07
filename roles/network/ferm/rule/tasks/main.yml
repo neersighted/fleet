@@ -1,4 +1,4 @@
-- name: add rule {{ rule }}
+- name: add rule {{ name }}
   tags: [rule, ferm, network]
-  template: src=rule.conf dest=/etc/ferm/ferm.conf.d/{{ rule.name }}.conf
+  copy: content='{{ rule }}\n' dest=/etc/ferm/ferm.conf.d/{{ name }}.conf
   notify: reload ferm

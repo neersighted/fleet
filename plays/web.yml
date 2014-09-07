@@ -2,21 +2,50 @@
   hosts: web
   sudo: yes
   roles:
-    - { role: web/nginx }
-    - { role: network/ferm/rule, rule: { name: 30-http, rule: 'proto tcp dport (http https) ACCEPT' } }
+    - role: network/ferm/rule
+      name: http
+      rule: |
+        domain (ip ip6) {
+          table filter chain INPUT proto tcp dport (http https) ACCEPT;
+          table mangle chain OUTPUT proto tcp sport (http https) MARK set-mark 80;
+        }
 
-    - { role: web/nginx/site, site: localhost, conf: files/web/localhost.conf }
 
-    - { role: web/elastichq }
-    - { role: web/nginx/site, site: elastichq.neersighted.com, conf: files/web/elastichq.neersighted.com.conf }
-    - { role: web/grafana }
-    - { role: web/nginx/site, site: grafana.neersighted.com, conf: files/web/grafana.neersighted.com.conf }
-    - { role: web/kibana }
-    - { role: web/nginx/site, site: kibana.neersighted.com, conf: files/web/kibana.neersighted.com.conf }
-    - { role: web/kopf }
-    - { role: web/nginx/site, site: kopf.neersighted.com, conf: files/web/kopf.neersighted.com.conf }
+    - role: web/nginx
 
-    - { role: web/nginx/site, site: neer.io, conf: files/web/neer.io.conf }
-    - { role: web/nginx/site, site: neergaard.me, conf: files/web/neergaard.me.conf }
-    - { role: web/nginx/site, site: neersighted.com, conf: files/web/neersighted.com.conf }
-    - { role: web/nginx/site, site: gapps.itvends.com, conf: files/web/gapps.itvends.com.conf }
+    - role: web/nginx/site
+      name: localhost
+      conf: files/web/localhost.conf
+
+    - role: web/elastichq
+    - role: web/nginx/site
+      name: elastichq.neersighted.com
+      conf: files/web/elastichq.neersighted.com.conf
+
+    - role: web/grafana
+    - role: web/nginx/site
+      name: grafana.neersighted.com
+      conf: files/web/grafana.neersighted.com.conf
+
+    - role: web/kibana
+    - role: web/nginx/site
+      name: kibana.neersighted.com
+      conf: files/web/kibana.neersighted.com.conf
+
+    - role: web/kopf
+    - role: web/nginx/site
+      name: kopf.neersighted.com
+      conf: files/web/kopf.neersighted.com.conf
+
+    - role: web/nginx/site
+      name: neer.io
+      conf: files/web/neer.io.conf
+    - role: web/nginx/site
+      name: neergaard.me
+      conf: files/web/neergaard.me.conf
+    - role: web/nginx/site
+      name: neersighted.com
+      conf: files/web/neersighted.com.conf
+    - role: web/nginx/site
+      name: gapps.itvends.com
+      conf: files/web/gapps.itvends.com.conf

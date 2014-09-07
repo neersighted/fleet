@@ -1,4 +1,4 @@
 dependencies:
   - role: packages/apt
     args:
-      pkg: sudo
+      pkg: linux-image-amd64

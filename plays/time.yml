@@ -2,5 +2,13 @@
   hosts: time
   sudo: yes
   roles:
-    - { role: time/ntp/server }
-    - { role: network/ferm/rule, rule: { name: 30-ntp, rule: 'proto udp dport ntp ACCEPT' } }
+    - role: network/ferm/rule
+      name: ntp
+      rule: |
+        domain (ip ip6) {
+          table filter chain INPUT proto udp dport ntp ACCEPT;
+          table mangle chain OUTPUT proto udp sport ntp MARK set-mark 123;
+        }
+
+
+    - role: time/ntp/server

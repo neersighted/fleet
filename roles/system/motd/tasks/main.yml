@@ -1,3 +1,3 @@
 - name: motd | configure motd
   tags: [motd, system]
-  copy: content={{ inventory_hostname }} dest=/etc/motd
+  copy: content='{{ inventory_hostname }}\n' dest=/etc/motd

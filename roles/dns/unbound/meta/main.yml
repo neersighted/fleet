@@ -1,2 +1,4 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: unbound } }
+  - role: packages/apt
+    args:
+      pkg: unbound

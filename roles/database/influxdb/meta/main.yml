@@ -1,2 +1,3 @@
 dependencies:
-  - { role: packages/apt/url, url: 'http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb' }
+  - role: packages/apt/url
+    url: 'http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb'

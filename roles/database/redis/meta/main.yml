@@ -1,3 +1,7 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: redis-server } }
-  - { role: packages/apt, package: { pkg: redis-tools } }
+  - role: packages/apt
+    args:
+      pkg: redis-server
+  - role: packages/apt
+    args:
+      pkg: redis-tools

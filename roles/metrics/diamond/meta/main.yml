@@ -1,4 +1,11 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: python-dev } }
-  - { role: packages/pip, package: { name: influxdb } }
-  - { role: packages/pip, package: { name: diamond, state: latest } }
+  - role: packages/apt
+    args:
+      pkg: python-dev
+  - role: packages/pip
+    args:
+      name: influxdb
+  - role: packages/pip
+    args:
+      name: diamond
+      state: latest

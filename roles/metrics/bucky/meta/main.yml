@@ -1,5 +1,12 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: collectd } }
-  - { role: packages/apt, package: { pkg: python-dev } }
-  - { role: packages/pip, package: { name: setproctitle } }
-  - { role: packages/pip, package: { name: 'https://codeload.github.com/trbs/bucky/zip/master', state: latest } }
+  - role: packages/apt
+    args:
+      pkg: python-dev
+
+  - role: packages/pip
+    args:
+      name: setproctitle
+  - role: packages/pip
+    args:
+      name: 'https://codeload.github.com/trbs/bucky/zip/master'
+      state: latest

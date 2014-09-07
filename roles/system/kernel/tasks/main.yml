@@ -1,11 +1,11 @@
 - name: get kernel version
-  tags: [extract_kernel, system]
+  tags: [kernel, system]
   shell: dpkg -s linux-image-amd64|awk '/Depends/{sub(/linux-image-/,""); print $2}'
   register: kernel_version
   changed_when: false
 
 - name: extract kernel
-  tags: [extract_kernel, system]
+  tags: [kernel, system]
   script: >
     extract-vmlinux.sh
     /boot/vmlinuz-{{ kernel_version.stdout }} >

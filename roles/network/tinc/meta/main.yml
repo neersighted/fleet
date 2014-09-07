@@ -1,3 +1,7 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: tinc } }
-  - { role: file/directory, path: /etc/tinc/hosts }
+  - role: file/directory
+    path: /etc/tinc/hosts
+
+  - role: packages/apt
+    args:
+      pkg: tinc

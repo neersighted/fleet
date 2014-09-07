@@ -2,11 +2,15 @@
   hosts: mtx
   sudo: yes
   roles:
-    - { role: database/influxdb }
+    - role: database/influxdb
+    - role: metrics/graphite-api
+      timezone: PST8PDT
 
-    - { role: metrics/bucky }
-    - { role: metrics/statsite }
-    - { role: metrics/graphite-api, timezone: PST8PDT }
+    - role: metrics/bucky
+    - role: metrics/statsite
 
-    - { role: web/uwsgi }
-    - { role: web/uwsgi/vassal, vassal: graphite-api, conf: files/mtx/graphite-api.ini }
+
+    - role: web/uwsgi
+    - role: web/uwsgi/vassal
+      name: graphite-api
+      conf: files/mtx/graphite-api.ini

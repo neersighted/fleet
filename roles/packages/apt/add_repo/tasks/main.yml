@@ -1,4 +1,4 @@
-- name: add repo {{ repository }}
+- name: modify repo {{ args }}
   tags: [add_repo, apt, packages]
   action: apt_repository
-  args: repository
+  args: args

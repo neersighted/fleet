@@ -1,4 +1,4 @@
-- name: create group {{ group }}
+- name: modify groups ({{ args }})
   tags: [group, accounts]
   action: group
-  args: group
+  args: args

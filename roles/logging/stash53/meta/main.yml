@@ -1,2 +1,4 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: libhiredis0.10 } }
+  - role: packages/apt
+    args:
+      pkg: libhiredis0.10

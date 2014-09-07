@@ -1,2 +1,4 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: ntp } }
+  - role: packages/apt
+    args:
+      pkg: ntp

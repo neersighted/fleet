@@ -12,6 +12,22 @@ iface eth0 inet static
 {% endif %}
   address {{ ip }}
   netmask {{ network.ipv4.netmask }}
+{% if loop.first %}
+  up /sbin/tc qdisc add dev $IFACE root handle 1: htb default ffff
+  up /sbin/tc class add dev $IFACE parent 1: classid 1:1 htb rate {{ network.speed }}
+  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:53 htb rate 50kbps ceil 256kbps
+  up /sbin/tc qdisc add dev $IFACE parent 1:53 handle 53: sfq perturb 10
+  up /sbin/tc filter add dev $IFACE parent 1: handle 53 fw classid 1:53
+  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:80 htb rate 5mbps ceil 10mbps
+  up /sbin/tc qdisc add dev $IFACE parent 1:80 handle 80: sfq
+  up /sbin/tc filter add dev $IFACE parent 1: handle 80 fw classid 1:80
+  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:123 htb rate 512kbps ceil 1mbps
+  up /sbin/tc qdisc add dev $IFACE parent 1:123 handle 123: sfq
+  up /sbin/tc filter add dev $IFACE parent 1: handle 123 fw classid 1:123
+  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:ffff htb rate {{ network.speed }}
+  up /sbin/tc qdisc add dev $IFACE parent 1:ffff handle ffff: sfq
+  down /sbin/tc qdisc del dev $IFACE root
+{% endif %}
 {% endfor %}
 
 {% for ip in network.ipv6.public %}
@@ -22,6 +38,6 @@ iface eth0 inet6 static
   address {{ ip }}
   netmask {{ network.ipv6.netmask }}
 {% if not loop.first %}
-  up ip addr change {{ ip }}/{{ network.ipv6.netmask }} preferred_lft 0 dev eth0
+  post-up ip addr change {{ ip }}/{{ network.ipv6.netmask }} preferred_lft 0 dev eth0
 {% endif %}
 {% endfor %}

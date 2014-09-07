@@ -1,2 +1,5 @@
 - name: reload sysctls
-  command: sysctl -p
+  service: name=systemd-sysctl state=restarted
+
+- name: reload kernel modules
+  service: name=systemd-modules-load state=restarted

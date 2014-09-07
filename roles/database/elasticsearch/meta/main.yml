@@ -1,5 +1,16 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: openjdk-7-jre } }
-  - { role: packages/apt/add_key, key: { id: D88E42B4, url: 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch' } }
-  - { role: packages/apt/add_repo, repository: { repo: 'deb http://packages.elasticsearch.org/elasticsearch/1.1/debian stable main' } }
-  - { role: packages/apt, package: { pkg: elasticsearch } }
+  - role: packages/apt
+    args:
+      pkg: openjdk-7-jre
+
+  - role: packages/apt/add_key
+    args:
+      id: D88E42B4
+      url: 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch'
+  - role: packages/apt/add_repo
+    args:
+      repo: 'deb http://packages.elasticsearch.org/elasticsearch/1.1/debian stable main'
+
+  - role: packages/apt
+    args:
+      pkg: elasticsearch

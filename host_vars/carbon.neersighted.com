@@ -1,4 +1,5 @@
 network:
+  speed: 125mbit
   ipv4:
     gateway: 173.255.230.1
     netmask: 24

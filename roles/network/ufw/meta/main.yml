@@ -1,2 +1,4 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: ufw } }
+  - role: packages/apt
+    args:
+      pkg: ufw

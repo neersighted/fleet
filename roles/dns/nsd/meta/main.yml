@@ -1,2 +1,4 @@
 dependencies:
-  - { role: packages/apt, package: { pkg: nsd } }
+  - role: packages/apt
+    args:
+      pkg: nsd

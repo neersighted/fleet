@@ -2,15 +2,48 @@
   hosts: dns
   sudo: yes
   roles:
-    - { role: dns/unbound, listen: ['{{ network.ipv4.vpn }}', '{{ network.ipv6.vpn }}'], allow: ['{{ network.ipv4.vpn }}/24', '{{ network.ipv6.vpn }}/64'] }
-    - { role: dns/nsd, listen: ['{{ network.ipv4.public.0 }}', '{{ network.ipv6.public.0 }}', '127.0.0.1', '::1'] }
-    - { role: network/ferm/rule, rule: { name: 30-dns, rule: 'proto (udp tcp) dport domain ACCEPT' } }
+    - role: network/ferm/rule
+      name: domain
+      rule: |
+        domain (ip ip6) {
+          table filter chain INPUT proto (tcp udp) dport domain ACCEPT;
+          table mangle chain OUTPUT proto (tcp udp) sport domain MARK set-mark 53;
+        }
 
-    - { role: dns/nsd/zone, zone: neer.io, zonefile: files/dns/neer.io.zone.signed }
-    - { role: dns/nsd/zone, zone: neergaard.me, zonefile: files/dns/neergaard.me.zone.signed }
-    - { role: dns/nsd/zone, zone: neersighted.com, zonefile: files/dns/neersighted.com.zone.signed }
-    - { role: dns/nsd/zone, zone: royalspades.co, zonefile: files/dns/royalspades.co.zone }
-    - { role: dns/nsd/zone, zone: saynay.me, zonefile: files/dns/saynay.me.zone.signed }
-    - { role: dns/nsd/zone, zone: singulo.co, zonefile: files/dns/singulo.co.zone }
 
-    - { role: logging/stash53, redis: { host: 'nitrogen.neersighted.com.int' } }
+    - role: dns/unbound
+      listen:
+        - '{{ network.ipv4.vpn }}'
+        - '{{ network.ipv6.vpn }}'
+      allow:
+        - '{{ network.ipv4.vpn }}/24'
+        - '{{ network.ipv6.vpn }}/64'
+    - role: dns/nsd
+      listen:
+        - '{{ network.ipv4.public.0 }}'
+        - '{{ network.ipv6.public.0 }}'
+        - 127.0.0.1
+        - ::1
+
+    - role: dns/nsd/zone
+      zone: neer.io
+      zonefile: files/dns/neer.io.zone.signed
+    - role: dns/nsd/zone
+      zone: neergaard.me
+      zonefile: files/dns/neergaard.me.zone.signed
+    - role: dns/nsd/zone
+      zone: neersighted.com
+      zonefile: files/dns/neersighted.com.zone.signed
+    - role: dns/nsd/zone
+      zone: royalspades.co
+      zonefile: files/dns/royalspades.co.zone
+    - role: dns/nsd/zone
+      zone: saynay.me
+      zonefile: files/dns/saynay.me.zone.signed
+    - role: dns/nsd/zone
+      zone: singulo.co
+      zonefile: files/dns/singulo.co.zone
+
+    - role: logging/stash53
+      redis:
+        host: nitrogen.neersighted.com.int
