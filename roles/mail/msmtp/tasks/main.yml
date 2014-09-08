@@ -1,0 +1,7 @@
+- name: configure msmtp
+  tags: [msmtp, mail]
+  template: src=msmtprc dest=/etc/msmtprc
+
+- name: configure aliases
+  tags: [msmtp, mail]
+  template: src=aliases dest=/etc/aliases

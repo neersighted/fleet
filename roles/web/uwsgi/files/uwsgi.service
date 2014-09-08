@@ -1,5 +1,6 @@
 [Unit]
 Description=uWSGI Emperor
+After=network.target
 
 [Service]
 Type=notify
@@ -10,8 +11,7 @@ ExecStart=/usr/bin/uwsgi \
   --autoload \
   --master --workers 2 --no-orphans \
   --emperor /etc/uwsgi \
-  --emperor-tyrant \
-  --emperor-broodlord 10
+  --emperor-tyrant
 
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGQUIT

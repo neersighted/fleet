@@ -5,4 +5,7 @@ dependencies:
 
   - role: packages/apt
     args:
-      pkg: postfix
+      pkg: msmtp
+  - role: packages/apt
+    args:
+      pkg: msmtp-mta

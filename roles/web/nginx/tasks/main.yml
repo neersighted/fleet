@@ -3,6 +3,13 @@
   template: src=nginx.conf dest=/etc/nginx/nginx.conf
   notify: restart nginx
 
+- name: install nginx service
+  tags: [nginx, web]
+  copy: src=nginx.service dest=/etc/systemd/system/nginx.service
+  notify:
+    - reload systemd
+    - restart nginx
+
 - name: enable and start nginx
   tags: [nginx, web]
   service: name=nginx state=started enabled=yes

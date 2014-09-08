@@ -1,6 +1,8 @@
 - include: all.yml
 - include: dns.yml
 - include: log.yml
-- include: prx.yml
+- include: mail.yml
+- include: metrics.yml
+- include: proxy.yml
 - include: time.yml
 - include: web.yml

@@ -9,7 +9,7 @@
   tags: [postfix, mail]
   template: src=aliases dest=/etc/aliases
   notify:
-    - postalias
+    - postalias aliases
     - restart postfix
 
 - name: configure domain whitelist

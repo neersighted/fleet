@@ -9,10 +9,13 @@ iron.neersighted.com
 [web]
 hydrogen.neersighted.com
 
-[mtx]
+[mail]
+gold.neersighted.com
+
+[metrics]
 iron.neersighted.com
 
-[prx]
+[proxy]
 copper.neersighted.com
 
 [time]

@@ -2,32 +2,29 @@
 # Postfix
 #
 
-# Set my hostname/domain.
-myhostname = {{ inventory_hostname }}
-mydomain = {{ mail.domains.0 }}
-
-# List of aliases.
 alias_database = hash:/etc/aliases
+alias_maps = hash:/etc/aliases
 #virtual_alias_maps = hash:/etc/virtualaliases
 
-# Don't automatically append $mydomain.
-append_dot_mydomain = no
+luser_relay = default
+append_at_myorigin = yes
+append_dot_mydomain = yes
 
-#
-# Local
-#
-
-# Disable notifications.
 biff = no
+
 
 #
 # SMTPd
 #
 
-# SMTP Banner.
-smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
+smtpd_banner = $myhostname ESMTP $mail_name
 
-# Relay domain whitelist (and DNSBLs).
+# Use TLS for incoming SMTP.
+smtpd_tls_cert_file = /etc/ssl/neersighted.com.pem
+smtpd_tls_key_file = /etc/ssl/neersighted.com.pem
+smtpd_tls_security_level = may
+
+# Only allow specific domains, check RBLs.
 smtpd_recipient_restrictions = check_recipient_access hash:/etc/postfix/domains,
   reject_rbl_client zen.spamhaus.org,
   reject_rhsbl_reverse_client dbl.spamhaus.org,
@@ -46,7 +43,8 @@ smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
 # Outgoing SMTP authentication.
 smtp_sasl_auth_enable = yes
 smtp_sasl_security_options = noanonymous
+smtp_sasl_tls_security_options = noanonymous
 smtp_sasl_password_maps = hash:/etc/postfix/passwd
 
 # Outgoing SMTP host.
-relayhost = [{{ mail.relay.host }}]:{{ mail.relay.port }}
+relayhost = [{{ relay.host }}]:{{ relay.port }}

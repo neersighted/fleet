@@ -1,7 +1,6 @@
 auth:
   user: root
   pass: root
-domains: []
 relay:
   host: localhost
   port: 587

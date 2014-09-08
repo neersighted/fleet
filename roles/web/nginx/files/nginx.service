@@ -1,0 +1,19 @@
+[Unit]
+Description=High Performance Web Server/Proxy
+After=network.target
+
+[Service]
+Type=forking
+SyslogLevel=notice
+
+PIDFile=/run/nginx.pid
+ExecStart=/usr/sbin/nginx
+ExecReload=/usr/bin/kill -HUP $MAINPID
+KillSignal=SIGQUIT
+KillMode=mixed
+
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

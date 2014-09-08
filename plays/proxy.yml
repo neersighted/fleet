@@ -1,5 +1,5 @@
-- name: Proxy Servers (prx)
-  hosts: prx
+- name: Proxy Servers (proxy)
+  hosts: proxy
   sudo: yes
   roles:
     - role: network/ferm/rule

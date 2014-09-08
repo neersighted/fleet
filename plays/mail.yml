@@ -1,0 +1,26 @@
+- name: Mail Servers (mail)
+  hosts: mail
+  sudo: yes
+  roles:
+    - role: network/ferm/rule
+      name: smtp
+      rule: |
+        domain (ip ip6) {
+          table filter chain INPUT proto (tcp udp) dport smtp ACCEPT;
+          table mangle chain OUTPUT proto (tcp udp) sport smtp MARK set-mark 23;
+        }
+
+
+    - role: mail/postfix
+      to: bjorn@neersighted.com
+      auth:
+        user: bjorn@neersighted.com
+        pass: 9K2k6758tey9HD56
+      domains:
+        - neer.io
+        - neergaard.me
+        - neersighted.com
+        - royalspades.co
+        - singulo.co
+      relay:
+        host: mail.messagingengine.com

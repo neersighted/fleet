@@ -101,7 +101,14 @@
       key: "{{ lookup('file', '../.ssh/neersighted.pub') }}"
 
 
-    - role: mail/postfix
+    - role: mail/msmtp
+      to: bjorn@neersighted.com
+      auth:
+        user: bjorn@neersighted.com
+        pass: 9K2k6758tey9HD56
+      relay:
+        host: mail.messagingengine.com
+      when: "inventory_hostname not in groups['mail']"
 
     - role: logging/rsyslog
     - role: logging/beaver
@@ -115,6 +122,9 @@
     - role: time/timezone
       timezone: PST8PDT
     - role: time/ntp/client
+      servers:
+        - '{{ hostvars["carbon.neersighted.com"].network.ipv6.vpn }}'
+        - '{{ hostvars["oxygen.neersighted.com"].network.ipv6.vpn }}'
       when: "inventory_hostname not in groups['time']"
 
     - role: network/hostname

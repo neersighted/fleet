@@ -7,4 +7,4 @@ dependencies:
       pkg: collectd
   - role: packages/apt
     args:
-      pkg: collectd-util
+      pkg: collectd-utils
