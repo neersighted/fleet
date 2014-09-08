@@ -1,8 +1,8 @@
 [Unit]
 Description=For Easy Rule Making
-DefaultDependencies=no
 After=systemd-sysctl.service
 Before=sysinit.target
+DefaultDependencies=no
 
 [Service]
 Type=oneshot

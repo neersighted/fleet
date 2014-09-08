@@ -1,0 +1,19 @@
+[Unit]
+Description=Postfix Mail Transport Agent
+After=network.target
+Conflicts=sendmail.service exim4.service
+
+[Service]
+Type=forking
+SyslogLevel=notice
+
+PIDFile=/var/spool/postfix/pid/master.pid
+ExecStart=/usr/sbin/postfix start
+ExecReload=/usr/sbin/postfix reload-quiet
+ExecStop=/usr/sbin/postfix stop
+
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

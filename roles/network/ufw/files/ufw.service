@@ -1,8 +1,8 @@
 [Unit]
 Description=Uncomplicated Firewall
-DefaultDependencies=no
 After=systemd-sysctl.service
 Before=sysinit.target
+DefaultDependencies=no
 
 [Service]
 Type=oneshot

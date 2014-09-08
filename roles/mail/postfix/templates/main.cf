@@ -2,11 +2,13 @@
 # Postfix
 #
 
-alias_database = hash:/etc/aliases
-alias_maps = hash:/etc/aliases
-#virtual_alias_maps = hash:/etc/virtualaliases
+# Only locally deliver mail to localhost.
+mydestination = localhost
 
-luser_relay = default
+# Always send to our to address.
+luser_relay = {{ to }}
+local_recipient_maps =
+
 append_at_myorigin = yes
 append_dot_mydomain = yes
 

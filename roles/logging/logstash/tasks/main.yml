@@ -23,11 +23,6 @@
   template: src=conf.d/{{ item }} dest=/etc/logstash/conf.d/{{ item }}
   notify: restart logstash
 
-- name: validate logstash config
-  tags: [logstash, logging]
-  command: /opt/logstash/bin/logstash agent --config /etc/logstash/conf.d/ --configtest
-  changed_when: false
-
 - name: enable and start logstash
   tags: [logstash, logging]
   service: name=logstash state=started enabled=yes

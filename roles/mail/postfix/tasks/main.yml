@@ -5,23 +5,23 @@
   template: src={{ item }} dest=/etc/postfix/{{ item }}
   notify: restart postfix
 
-- name: configure aliases
-  tags: [postfix, mail]
-  template: src=aliases dest=/etc/aliases
-  notify:
-    - postalias aliases
-    - restart postfix
-
 - name: configure domain whitelist
   tags: [postfix, mail]
   template: src=domains dest=/etc/postfix/domains
-  notify:
-    - postmap domains
-    - restart postfix
+  notify: reload domains
 
 - name: configure passwd
   tags: [postfix, mail]
   template: src=passwd dest=/etc/postfix/passwd
+  notify: reload passwd
+
+- name: install postfix service
+  tags: [postfix, mail]
+  copy: src=postfix.service dest=/etc/systemd/system/postfix.service
   notify:
-    - postmap passwd
+    - reload systemd
     - restart postfix
+
+- name: enable and start postfix
+  tags: [postfix, mail]
+  service: name=postfix state=started enabled=yes

@@ -1,5 +1,5 @@
 [Unit]
-Description=Trivial IdentD
+Description=Transparent BNC (%i)
 After=network.target
 
 [Service]

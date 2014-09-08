@@ -1,10 +1,10 @@
-- name: postalias aliases
-  command: postalias /etc/aliases
+- name: reload systemd
+  command: systemctl daemon-reload
 
-- name: postmap domains
+- name: reload domains
   command: postmap /etc/postfix/domains
 
-- name: postmap passwd
+- name: reload passwd
   command: postmap /etc/postfix/passwd
 
 - name: restart postfix
