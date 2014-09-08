@@ -6,5 +6,6 @@ interval=${COLLECTD_INTERVAL:-10}
 while sleep $interval; do
   value=$(dd if=/dev/urandom bs=1 count=1 2>/dev/null | hexdump -e "\"%d\n\"")
 
-  echo "PUTVAL ${hostname}/test/gauge-value interval=${interval} N:${value}"
+  echo "PUTVAL ${hostname}/test/gauge interval=${interval} N:${value}"
+  echo "PUTVAL ${hostname}/test/derive interval=${interval} N:${value}"
 done

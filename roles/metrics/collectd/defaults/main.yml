@@ -4,6 +4,7 @@ collectd:
 
 metrics:
   collectd:
+    ntpd: false
     ntppool: false
     nginx: false
     unbound: false

@@ -192,7 +192,10 @@
 
     - role: packages/apt
       args:
-        pkg: htop
+        pkg: zsh
+    - role: packages/apt
+      args:
+        pkg: bmon
     - role: packages/apt
       args:
         pkg: vim-nox
@@ -207,10 +210,13 @@
         pkg: strace
     - role: packages/apt
       args:
+        pkg: htop
+    - role: packages/apt
+      args:
+        pkg: bmon
+    - role: packages/apt
+      args:
         pkg: socat
     - role: packages/apt
       args:
         pkg: tcpdump
-    - role: packages/apt
-      args:
-        pkg: bmon

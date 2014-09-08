@@ -1,0 +1,54 @@
+#!/usr/bin/env perl
+
+use strict;
+use Socket;
+use Sys::Hostname;
+
+my $HOSTNAME = $ENV{COLLECTD_HOSTNAME} || hostname();
+my $INTERVAL = $ENV{COLLECTD_INTERVAL} || 10;
+
+while (1) {
+  sleep $INTERVAL;
+
+  my $queries  = 0;
+  my $packrecv = 0;
+  my $packproc = 0;
+
+
+  open(SYSSTATS, "ntpdc -c sysstats |") or die("Could not execute ntpdc: $!");
+
+  while (<SYSSTATS>) {
+    if (/^packets received:\s*(\d*)/) {
+      $packrecv = $1;
+    }
+    if (/^packets processed:\s*(\d*)/) {
+      $packproc = $1;
+    }
+    if (/^current version:\s*(\d*)/) {
+      $queries += $1;
+    }
+    if (/^previous version:\s*(\d*)/) {
+      $queries += $1;
+    }
+    if (/^bad version:\s*(\d*)/) {
+      $queries += $1;
+    }
+    if (/^access denied:\s*(\d*)/) {
+      $queries += $1;
+    }
+    if (/^bad length or format:\s*(\d*)/) {
+      $queries += $1;
+    }
+    if (/^bad authentication:\s*(\d*)/) {
+      $queries += $1;
+    }
+    if (/^rate exceeded:\s*(\d*)/) {
+      $queries += $1;
+    }
+  }
+  close(SYSSTATS);
+
+  $queries = $queries - $packproc;
+
+  print "PUTVAL ${HOSTNAME}/ntpd/connections interval=${INTERVAL} N:${queries}\n"
+}

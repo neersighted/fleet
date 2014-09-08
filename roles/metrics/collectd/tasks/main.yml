@@ -12,6 +12,7 @@
   tags: [collectd, metrics]
   with_items:
     - test
+    - ntpd
     - unbound
   copy: src=collectd-{{ item }} dest=/usr/local/lib/collectd/collectd-{{ item }} mode=755
   notify: restart collectd
