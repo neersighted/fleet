@@ -171,6 +171,11 @@
         purge: yes
     - role: packages/apt
       args:
+        pkg: ntpdate
+        state: absent
+        purge: yes
+    - role: packages/apt
+      args:
         pkg: sane-utils
         state: absent
         purge: yes
