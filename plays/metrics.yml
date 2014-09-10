@@ -13,4 +13,4 @@
     - role: web/uwsgi
     - role: web/uwsgi/vassal
       name: graphite-api
-      conf: files/mtx/graphite-api.ini
+      conf: files/metrics/graphite-api.ini

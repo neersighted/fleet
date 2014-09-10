@@ -1,17 +1,8 @@
-- name: bind to all interfaces
+- name: configure redis
   tags: [redis, database]
-  lineinfile: >
-    dest=/etc/redis/redis.conf
-    regexp='^bind '
-    line='bind 0.0.0.0'
-    state=present
+  template: src=redis.conf dest=/etc/redis/redis.conf
   notify: restart redis
 
-- name: enable aof
+- name: enable and start redis
   tags: [redis, database]
-  lineinfile: >
-    dest=/etc/redis/redis.conf
-    regexp='^appendonly '
-    line='appendonly yes'
-    state=present
-  notify: restart redis
+  service: name=redis-server state=started enabled=yes
