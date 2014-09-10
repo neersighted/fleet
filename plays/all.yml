@@ -120,7 +120,7 @@
 
 
     - role: time/timezone
-      timezone: PST8PDT
+      timezone: US/Pacific
     - role: time/ntp/client
       servers:
         - '{{ hostvars["carbon.neersighted.com"].network.ipv6.vpn }}'
