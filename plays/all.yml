@@ -8,6 +8,11 @@
 
     - role: packages/apt
       args:
+        upgrade: dist
+        update_cache: yes
+
+    - role: packages/apt
+      args:
         pkg: apt-transport-https
     - role: packages/apt
       args:
@@ -18,11 +23,6 @@
     - role: packages/apt
       args:
         pkg: python-pip
-
-    - role: packages/apt
-      args:
-        upgrade: dist
-        update_cache: yes
 
 
     - role: system/systemd
@@ -53,10 +53,10 @@
           interface tinc0 ACCEPT;
         }
 
-    - role: network/interfaces
-    - role: network/resolvconf
     - role: network/tinc
       keys: files/all/tinc
+    - role: network/interfaces
+    - role: network/resolvconf
 
 
     - role: security/sudo

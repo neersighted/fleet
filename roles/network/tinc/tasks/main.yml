@@ -17,7 +17,7 @@
   template: src=host dest=/etc/tinc/hosts/{{ hostvars[item].network.tinc.name }}
   notify: restart tinc
 
-- name: transfer key
+- name: transfer private key
   tags: [tinc, network]
   copy: src={{ keys }}/{{ inventory_hostname }}.priv dest=/etc/tinc/rsa_key.priv mode=600
   notify: restart tinc
