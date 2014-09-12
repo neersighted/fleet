@@ -11,6 +11,17 @@
         }
 
 
+    - role: security/ssl/certificate
+      cert: files/ssl/dhparam.pem
+    - role: security/ssl/certificate
+      cert: files/ssl/gandi-ca.pem
+    - role: security/ssl/certificate
+      cert: files/ssl/neer.io.pem
+    - role: security/ssl/certificate
+      cert: files/ssl/neergaard.me.pem
+    - role: security/ssl/certificate
+      cert: files/ssl/neersighted.com.pem
+
     - role: web/nginx
 
     - role: web/nginx/site

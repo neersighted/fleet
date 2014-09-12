@@ -11,6 +11,9 @@
         }
 
 
+    - role: security/ssl/certificate
+      cert: files/ssl/neersighted.com.pem
+
     - role: mail/postfix
       to: bjorn@neersighted.com
       auth:
@@ -24,3 +27,6 @@
         - singulo.co
       relay:
         host: mail.messagingengine.com
+      ssl:
+        cert: /etc/ssl/neersighted.com.pem
+        key: /etc/ssl/neersighted.com.pem

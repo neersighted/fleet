@@ -1,0 +1,3 @@
+- name: transfer ssl certificate ({{ cert|basename }})
+  tags: [certificate, ssl, security]
+  copy: src={{ cert }} dest=/etc/ssl/{{ cert|basename }}

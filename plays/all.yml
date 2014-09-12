@@ -80,12 +80,16 @@
       user: '%wheel'
       perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL'
 
+    - role: security/ssh/auth_key
+      user: root
+      key: "{{ lookup('file', '../.ssh/ansible.pub') }}"
+
     - role: accounts/user
       args:
         name: ansible
         group: deploy
         system: true
-    - role: security/auth_key
+    - role: security/ssh/auth_key
       user: ansible
       key: "{{ lookup('file', '../.ssh/ansible.pub') }}"
 
@@ -96,7 +100,7 @@
         groups: adm
         shell: /bin/bash
         password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.'
-    - role: security/auth_key
+    - role: security/ssh/auth_key
       user: neersighted
       key: "{{ lookup('file', '../.ssh/neersighted.pub') }}"
 

@@ -2,6 +2,7 @@
   tags: [postfix, mail]
   with_items:
     - main.cf
+    - master.cf
   template: src={{ item }} dest=/etc/postfix/{{ item }}
   notify: restart postfix
 

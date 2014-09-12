@@ -1,9 +1,8 @@
-#
-# Postfix
-#
 
 # Only locally deliver mail to localhost.
 mydestination = localhost
+# Only relay for whitelisted domains.
+relay_domains = $myhostname, hash:/etc/postfix/domains
 
 # Always send to our to address.
 luser_relay = {{ to }}
@@ -12,41 +11,57 @@ local_recipient_maps =
 append_at_myorigin = yes
 append_dot_mydomain = yes
 
-biff = no
+# Use a relay instead of sending ourselves.
+relayhost = [{{ relay.host }}]:{{ relay.port }}
 
-
-#
-# SMTPd
-#
-
-smtpd_banner = $myhostname ESMTP $mail_name
-
-# Use TLS for incoming SMTP.
-smtpd_tls_cert_file = /etc/ssl/neersighted.com.pem
-smtpd_tls_key_file = /etc/ssl/neersighted.com.pem
-smtpd_tls_security_level = may
-
-# Only allow specific domains, check RBLs.
-smtpd_recipient_restrictions = check_recipient_access hash:/etc/postfix/domains,
-  reject_rbl_client zen.spamhaus.org,
+# Lock down the relay; try to reject spam.
+smtpd_helo_required = yes
+smtpd_helo_restrictions =
+  reject_non_fqdn_helo_hostname,
+  reject_invalid_helo_hostname,
+  reject_rhsbl_helo hostkarma.junkemailfilter.com=127.0.0.2,
+  reject_rhsbl_helo zen.spamhaus.org
+smtpd_client_restrictions =
+  reject_rbl_client b.barracudacentral.org,
+  reject_rbl_client hostkarma.junkemailfilter.com=127.0.0.2,
+  reject_unknown_client_hostname
+smtpd_sender_restrictions =
+  reject_unknown_sender_domain,
+  reject_unknown_address,
   reject_rhsbl_reverse_client dbl.spamhaus.org,
+  reject_rbl_client b.barracudacentral.org
+smtpd_recipient_restrictions =
+  reject_invalid_hostname,
+  reject_non_fqdn_hostname,
+  reject_non_fqdn_sender,
+  reject_non_fqdn_recipient,
+  reject_unknown_sender_domain,
+  reject_unknown_recipient_domain,
+  reject_unauth_destination,
+  permit_mynetworks,
+  permit_dnswl_client list.dnswl.org,
+  reject_rbl_client zen.spamhaus.org,
   reject_rhsbl_helo dbl.spamhaus.org,
   reject_rhsbl_sender dbl.spamhaus.org,
-  reject
+  reject_rhsbl_reverse_client dbl.spamhaus.org,
+  permit
+smtpd_data_restrictions =
+  reject_unauth_pipelining
+# Force strict address syntax.
+strict_rfc821_envelopes = yes
+# Don't allow the VRFY command.
+disable_vrfy_command = yes
 
-#
-# SMTP
-#
 
+# Use TLS for incoming SMTP.
+smtpd_tls_security_level = may
+smtpd_tls_cert_file = {{ ssl.cert }}
+smtpd_tls_key_file = {{ ssl.key }}
 # Use TLS for outgoing SMTP.
 smtp_use_tls = yes
 smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
-
-# Outgoing SMTP authentication.
+# Use authentication for outgoing SMTP.
 smtp_sasl_auth_enable = yes
 smtp_sasl_security_options = noanonymous
 smtp_sasl_tls_security_options = noanonymous
 smtp_sasl_password_maps = hash:/etc/postfix/passwd
-
-# Outgoing SMTP host.
-relayhost = [{{ relay.host }}]:{{ relay.port }}
