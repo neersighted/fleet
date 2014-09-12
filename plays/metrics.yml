@@ -4,7 +4,7 @@
   roles:
     - role: database/influxdb
     - role: metrics/graphite-api
-      timezone: US/Pacific
+      timezone: America/Los_Angeles
 
     - role: metrics/bucky
     - role: metrics/statsite

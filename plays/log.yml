@@ -7,7 +7,7 @@
     cluster: log
 
   - role: logging/logstash
-    timezone: US/Pacific
+    timezone: America/Los_Angeles
     elasticsearch:
       cluster: log
     statsd:
