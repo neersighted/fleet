@@ -12,7 +12,8 @@
 
 
     - role: security/ssl/certificate
-      cert: files/ssl/neersighted.com.pem
+      cert: files/ssl/hydrogen.neersighted.com.pem
+      when: inventory_hostname == 'hydrogen.neersighted.com'
 
     - role: mail/postfix
       to: bjorn@neersighted.com
@@ -24,9 +25,11 @@
         - neergaard.me
         - neersighted.com
         - royalspades.co
+        - saynay.me
         - singulo.co
       relay:
         host: mail.messagingengine.com
       ssl:
-        cert: /etc/ssl/neersighted.com.pem
-        key: /etc/ssl/neersighted.com.pem
+        cert: /etc/ssl/hydrogen.neersighted.com.pem
+        key: /etc/ssl/hydrogen.neersighted.com.pem
+      when: inventory_hostname == 'hydrogen.neersighted.com'
