@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. bjorn.neersighted.com. (
-      2014091103 ; serial
+      2014091201 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -94,6 +94,8 @@ ns4 AAAA 2a01:7e00::a ; ns5.linode.com
 
 _443._tcp.neersighted.com. TLSA 3 0 1 0f39a5aeae8d9dd697433276a39f0f427d63ad70a910146ae5c093d965ccd4ec
 _443._tcp.www.neersighted.com. TLSA 3 0 1 0f39a5aeae8d9dd697433276a39f0f427d63ad70a910146ae5c093d965ccd4ec
+_25._tcp.neersighted.com. TLSA 3 0 1 0f39a5aeae8d9dd697433276a39f0f427d63ad70a910146ae5c093d965ccd4ec
+_25._tcp.gold.neersighted.com. TLSA 3 0 1 0f39a5aeae8d9dd697433276a39f0f427d63ad70a910146ae5c093d965ccd4ec
 
 n._pka TXT "v=PKA1; fpr=EF5352EC46885C8D88EA6437F13812806D922AB5; uri=http://neersighted.com/key.asc"
 bjorn._pka TXT "v=PKA1; fpr=EF5352EC46885C8D88EA6437F13812806D922AB5; uri=http://neersighted.com/key.asc"
