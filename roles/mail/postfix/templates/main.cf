@@ -1,4 +1,3 @@
-
 # Only locally deliver mail to localhost.
 mydestination = localhost
 # Only relay for whitelisted domains.
@@ -22,8 +21,8 @@ smtpd_helo_restrictions =
   reject_rhsbl_helo hostkarma.junkemailfilter.com=127.0.0.2,
   reject_rhsbl_helo zen.spamhaus.org
 smtpd_client_restrictions =
-  reject_rbl_client b.barracudacentral.org,
   reject_rbl_client hostkarma.junkemailfilter.com=127.0.0.2,
+  reject_rbl_client b.barracudacentral.org,
   reject_unknown_client_hostname
 smtpd_sender_restrictions =
   reject_unknown_sender_domain,

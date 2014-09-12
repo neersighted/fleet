@@ -4,11 +4,7 @@
   roles:
     - role: network/ferm/rule
       name: smtp
-      rule: |
-        domain (ip ip6) {
-          table filter chain INPUT proto (tcp udp) dport smtp ACCEPT;
-          table mangle chain OUTPUT proto (tcp udp) sport smtp MARK set-mark 23;
-        }
+      rule: domain (ip ip6) table filter chain INPUT proto tcp dport smtp ACCEPT;
 
 
     - role: security/ssl/certificate
