@@ -21,7 +21,7 @@ iface eth0 inet static
   up /sbin/tc class add dev $IFACE parent 1:1 classid 1:80 htb rate 5mbps ceil 10mbps
   up /sbin/tc qdisc add dev $IFACE parent 1:80 handle 80: sfq
   up /sbin/tc filter add dev $IFACE parent 1: handle 80 fw classid 1:80
-  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:123 htb rate 512kbps ceil 1mbps
+  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:123 htb rate 1mbps ceil 2mbps
   up /sbin/tc qdisc add dev $IFACE parent 1:123 handle 123: sfq
   up /sbin/tc filter add dev $IFACE parent 1: handle 123 fw classid 1:123
   up /sbin/tc class add dev $IFACE parent 1:1 classid 1:ffff htb rate {{ network.speed }}
