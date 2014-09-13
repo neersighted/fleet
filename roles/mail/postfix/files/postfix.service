@@ -9,7 +9,7 @@ SyslogLevel=notice
 
 PIDFile=/var/spool/postfix/pid/master.pid
 ExecStart=/usr/sbin/postfix start
-ExecReload=/usr/sbin/postfix reload-quiet
+ExecReload=/usr/sbin/postfix reload
 ExecStop=/usr/sbin/postfix stop
 
 Restart=always

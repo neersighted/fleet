@@ -51,8 +51,6 @@ smtpd_data_restrictions =
   permit
 # Force strict address syntax.
 strict_rfc821_envelopes = yes
-# Don't allow the VRFY command.
-disable_vrfy_command = yes
 
 
 # Use TLS for incoming SMTP.
