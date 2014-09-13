@@ -1,9 +1,7 @@
 - name: set /etc/timezone to {{ timezone }}
   tags: [timezone, time]
   copy: content='{{ timezone }}\n' dest=/etc/timezone
-  notify: reconfigure tzdata
 
 - name: set /etc/localtime to {{ timezone }}
   tags: [timezone, time]
   file: src=/usr/share/zoneinfo/{{ timezone }} dest=/etc/localtime state=link force=yes
-  notify: reconfigure tzdata
