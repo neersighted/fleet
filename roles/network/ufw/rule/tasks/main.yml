@@ -1,5 +1,0 @@
-- name: add rule {{ rule }}
-  tags: [rule, ufw, network]
-  action: ufw
-  args: rule
-  notify: reload ufw

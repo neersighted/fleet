@@ -14,5 +14,3 @@ SLFACILITY <%{NONNEGINT:facility}.%{NONNEGINT:priority}>
 SLHOST %{IPORHOST}
 SLPROG %{PROG:program}(-\<stdin\>)?(?:\[%{POSINT:pid}\])?
 SYSLOGPREFIX %{SLTIMESTAMP:timestamp} (?:%{SLFACILITY} )?%{SLHOST} %{SLPROG}
-
-UFWLOG \[UFW %{DATA:event}\] %{NETFILTERLOG}

@@ -17,7 +17,6 @@
     - 25-parse-dns.conf
     - 25-parse-nginx.conf
     - 25-parse-syslog.conf
-    - 25-parse-ufw.conf
     - 50-output-statsd-nginx.conf
     - 75-output-elasticsearch.conf
   template: src=conf.d/{{ item }} dest=/etc/logstash/conf.d/{{ item }}

@@ -1,4 +1,0 @@
-dependencies:
-  - role: packages/apt
-    args:
-      pkg: ufw
