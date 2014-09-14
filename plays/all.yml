@@ -23,6 +23,9 @@
     - role: packages/apt
       args:
         pkg: python-pip
+    - role: packages/apt
+      args:
+        pkg: python-virtualenv
 
 
     - role: system/systemd
