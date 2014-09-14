@@ -13,19 +13,10 @@ iface eth0 inet static
   address {{ ip }}
   netmask {{ network.ipv4.netmask }}
 {% if loop.first %}
-  up /sbin/tc qdisc add dev $IFACE root handle 1: htb default ffff
+  up /sbin/tc qdisc add dev $IFACE root handle 1: htb default f
   up /sbin/tc class add dev $IFACE parent 1: classid 1:1 htb rate {{ network.speed }}
-  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:53 htb rate 50kbps ceil 256kbps
-  up /sbin/tc qdisc add dev $IFACE parent 1:53 handle 53: sfq perturb 10
-  up /sbin/tc filter add dev $IFACE parent 1: handle 53 fw classid 1:53
-  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:80 htb rate 5mbps ceil 10mbps
-  up /sbin/tc qdisc add dev $IFACE parent 1:80 handle 80: sfq
-  up /sbin/tc filter add dev $IFACE parent 1: handle 80 fw classid 1:80
-  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:123 htb rate 1mbps ceil 2mbps
-  up /sbin/tc qdisc add dev $IFACE parent 1:123 handle 123: sfq
-  up /sbin/tc filter add dev $IFACE parent 1: handle 123 fw classid 1:123
-  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:ffff htb rate {{ network.speed }}
-  up /sbin/tc qdisc add dev $IFACE parent 1:ffff handle ffff: sfq
+  up /sbin/tc class add dev $IFACE parent 1:1 classid 1:f htb rate {{ network.speed }}
+  up /sbin/tc qdisc add dev $IFACE parent 1:f handle f: sfq
   down /sbin/tc qdisc del dev $IFACE root
 {% endif %}
 {% endfor %}
