@@ -1,0 +1,2 @@
+- name: update initrd
+  command: update-initramfs -u

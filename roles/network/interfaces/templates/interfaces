@@ -13,7 +13,7 @@ iface eth0 inet static
   address {{ ip }}
   netmask {{ network.ipv4.netmask }}
 {% if loop.first %}
-  up /sbin/tc qdisc add dev $IFACE root handle 1: htb default f
+  up /sbin/tc qdisc add dev $IFACE root handle 1: htb default f r2q 250
   up /sbin/tc class add dev $IFACE parent 1: classid 1:1 htb rate {{ network.speed }}
   up /sbin/tc class add dev $IFACE parent 1:1 classid 1:f htb rate {{ network.speed }}
   up /sbin/tc qdisc add dev $IFACE parent 1:f handle f: sfq

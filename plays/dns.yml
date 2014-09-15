@@ -6,7 +6,7 @@
       name: domain
       rule: |
         @hook pre   "tc class add dev eth0 parent 1:1 classid 1:53 htb rate 5mbps ceil 10mbps";
-        @hook pre   "tc qdisc add dev eth0 parent 1:53 handle 53: sfq";
+        @hook pre   "tc qdisc add dev eth0 parent 1:53 handle 53: sfq perturb 10";
         @hook pre   "tc filter add dev eth0 parent 1: proto ip prio 53 handle 53 fw classid 1:53";
         @hook flush "tc filter del dev eth0 prio 53";
         @hook flush "tc qdisc del dev eth0 parent 1:53 handle 53:";

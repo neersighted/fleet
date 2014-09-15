@@ -6,7 +6,7 @@
       name: ntp
       rule: |
         @hook pre   "tc class add dev eth0 parent 1:1 classid 1:123 htb rate 1mbps ceil 3mbps";
-        @hook pre   "tc qdisc add dev eth0 parent 1:123 handle 123: sfq";
+        @hook pre   "tc qdisc add dev eth0 parent 1:123 handle 123: sfq perturb 10";
         @hook pre   "tc filter add dev eth0 parent 1: proto ip prio 123 handle 123 fw classid 1:123";
         @hook flush "tc filter del dev eth0 prio 123";
         @hook flush "tc qdisc del dev eth0 parent 1:123 handle 123:";

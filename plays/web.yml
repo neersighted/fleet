@@ -5,8 +5,8 @@
     - role: network/ferm/rule
       name: http
       rule: |
-        @hook pre   "tc class add dev eth0 parent 1:1 classid 1:80 htb rate 5mbps ceil 10mbps";
-        @hook pre   "tc qdisc add dev eth0 parent 1:80 handle 80: sfq";
+        @hook pre   "tc class add dev eth0 parent 1:1 classid 1:80 htb rate 5mbps ceil 15mbps";
+        @hook pre   "tc qdisc add dev eth0 parent 1:80 handle 80: sfq perturb 10";
         @hook pre   "tc filter add dev eth0 parent 1: prio 80 handle 80 fw classid 1:80";
         @hook flush "tc filter del dev eth0 parent 1: prio 80";
         @hook flush "tc qdisc del dev eth0 parent 1:80 handle 80:";

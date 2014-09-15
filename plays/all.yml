@@ -31,6 +31,7 @@
     - role: system/systemd
 
     - role: system/kernel
+    - role: system/initrd
     - role: system/pvgrub
       when: ansible_virtualization_type == 'xen'
       boot: '{{ boot_device }}'

@@ -1,0 +1,4 @@
+- name: configure initrd modules
+  tags: [initrd, system]
+  copy: src=modules dest=/etc/initramfs-tools/modules
+  notify: update initrd
