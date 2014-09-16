@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. hostmaster.neersighted.com. (
-      2014091602 ; serial
+      2014091607 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -27,8 +27,9 @@ $TTL 300
 @ MX 20 mx1.messagingengine.com.
 @ MX 30 mx2.messagingengine.com.
 
-@ SPF "v=spf1 include:spf.messagingengine.com ?all"
 @ TXT "v=spf1 include:spf.messagingengine.com ?all"
+@ TXT "spf2.0/pra"
+_dmarc TXT "v=DMARC1; p=none; rua=mailto:postmaster@neersighted.com; adkim=r; aspf=r"
 mesmtp._domainkey TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsix0DtMAEDUAM3XX2sfpU9nRPF8iWSlHBBKUbBqBfqaYEZ1tZxWKqxA9UWaKrPgJm8Ry+J+rjCiFZM3GjvXCgq4uKZEmGWHgHl8eiEJB4fxaJCzhl1NuJHgr+nWTB1YS3utf50G2HeTp5rPkvxWeH7CvyZtPZcNmRq8G0+AqZtQIDAQAB"
 
 

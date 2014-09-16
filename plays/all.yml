@@ -124,7 +124,7 @@
         host: nitrogen.neersighted.com.int
     - role: metrics/collectd
       collectd:
-        host: nitrogen.neersighted.com.int
+        host: '{{ hostvars["nitrogen.neersighted.com"].network.ipv4.vpn }}'
 
 
     - role: time/timezone
