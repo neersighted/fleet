@@ -11,13 +11,12 @@
 
 
     - role: irc/nidd
-      user: i
+      user: bjorn
 
     - role: irc/nbnc
       raddr: irc.esper.net
       rport: 6697
       lport: 6631
-      oaddr: '[{{ network.ipv6.public.1 }}]'
       ssl: yes
       noverify: yes
       v6: yes
@@ -26,7 +25,6 @@
       raddr: irc.freenode.net
       rport: 6697
       lport: 6632
-      oaddr: '[{{ network.ipv6.public.1 }}]'
       ssl: yes
       v6: yes
       pass: free as in freedom
@@ -34,7 +32,6 @@
       raddr: irc.oftc.net
       rport: 6697
       lport: 6633
-      oaddr: '[{{ network.ipv6.public.1 }}]'
       ssl: yes
       v6: yes
       pass: freenode wannabe
@@ -42,7 +39,6 @@
       raddr: irc.atheme.org
       rport: 6697
       lport: 6634
-      oaddr: '[{{ network.ipv6.public.1 }}]'
       ssl: yes
       noverify: yes
       v6: yes
@@ -51,21 +47,18 @@
       raddr: irc.irccloud.com
       rport: 6697
       lport: 6635
-      oaddr: '[{{ network.ipv6.public.1 }}]'
       ssl: yes
       v6: yes
       pass: i want vip back
     - role: irc/nbnc
       raddr: irc6.quakenet.org
       lport: 6636
-      oaddr: '[{{ network.ipv6.public.1 }}]'
       v6: yes
       pass: use ssl damnit
     - role: irc/nbnc
       raddr: irc.rizon.net
       rport: 6697
       lport: 6637
-      oaddr: '[{{ network.ipv6.public.1 }}]'
       ssl: yes
       noverify: yes
       v6: yes

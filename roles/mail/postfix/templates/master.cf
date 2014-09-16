@@ -17,7 +17,7 @@ proxymap  unix  -       -       n       -       -       proxymap
 proxywrite unix -       -       n       -       1       proxymap
 smtp      unix  -       -       -       -       -       smtp
 relay     unix  -       -       -       -       -       smtp
-      -o smtp_helo_timeout=5 -o smtp_connect_timeout=5
+  -o smtp_helo_timeout=5 -o smtp_connect_timeout=5
 showq     unix  n       -       -       -       -       showq
 error     unix  -       -       -       -       -       error
 retry     unix  -       -       -       -       -       error

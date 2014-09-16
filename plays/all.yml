@@ -121,18 +121,18 @@
     - role: logging/rsyslog
     - role: logging/beaver
       redis:
-        host: iron.neersighted.com.int
+        host: nitrogen.neersighted.com.int
     - role: metrics/collectd
       collectd:
-        host: '{{ hostvars["iron.neersighted.com"].network.ipv4.vpn }}'
+        host: nitrogen.neersighted.com.int
 
 
     - role: time/timezone
       timezone: America/Los_Angeles
     - role: time/ntp/client
       servers:
-        - '{{ hostvars["carbon.neersighted.com"].network.ipv6.vpn }}'
-        - '{{ hostvars["oxygen.neersighted.com"].network.ipv6.vpn }}'
+        - carbon.neersighted.com.int
+        - oxygen.neersighted.com.int
       when: "inventory_hostname not in groups['time']"
 
     - role: network/hostname

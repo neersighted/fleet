@@ -17,5 +17,5 @@ dependencies:
       name: graphite-influxdb
   - role: packages/pip
     args:
-      name: 'https://codeload.github.com/brutasse/graphite-api/zip/master'
+      name: 'https://github.com/brutasse/graphite-api/archive/master.zip'
       state: latest

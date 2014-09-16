@@ -30,6 +30,7 @@
       cert: files/ssl/neersighted.com.pem
 
     - role: web/nginx
+    - role: web/uwsgi
 
     - role: web/nginx/site
       name: localhost

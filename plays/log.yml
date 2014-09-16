@@ -11,4 +11,4 @@
     elasticsearch:
       cluster: log
     statsd:
-      host: iron.neersighted.com.int
+      host: nitrogen.neersighted.com.int

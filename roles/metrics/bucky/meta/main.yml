@@ -8,5 +8,5 @@ dependencies:
       name: setproctitle
   - role: packages/pip
     args:
-      name: 'https://codeload.github.com/trbs/bucky/zip/master'
+      name: 'https://github.com/trbs/bucky/archive/master.zip'
       state: latest
