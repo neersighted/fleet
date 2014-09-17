@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. hostmaster.neersighted.com. (
-      2014091701 ; serial
+      2014091704 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -26,6 +26,8 @@ $TTL 300
 @ MX 10 hydrogen
 @ MX 20 in1-smtp.messagingengine.com.
 @ MX 30 in2-smtp.messagingengine.com.
+
+mail CNAME mail.messagingengine.com.
 
 @ SPF "v=spf1 a mx include:spf.messagingengine.com ~all"
 @ TXT "v=spf1 a mx include:spf.messagingengine.com ~all"
