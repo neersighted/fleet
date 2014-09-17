@@ -1,96 +1,96 @@
-; File written on Tue Sep 16 07:55:56 2014
+; File written on Wed Sep 17 04:25:24 2014
 ; dnssec_signzone version 9.10.0-P2
 neer.io.		300	IN SOA	ns1.neersighted.com. hostmaster.neersighted.com. (
-					2014091611 ; serial
+					2014091702 ; serial
 					3600       ; refresh (1 hour)
 					900        ; retry (15 minutes)
 					1209600    ; expire (2 weeks)
 					3600       ; minimum (1 hour)
 					)
 			300	RRSIG	SOA 10 2 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					DWWRCH//FKmq76/QPeaPAFqDiKELwobrTaSZ
-					+RRSGzDhm5wg8svfK5Bub0xQ7/fWchViewIY
-					bhvy8XaISLpx0kIc+KK0EWZ1WRoclYDw0hhJ
-					4Empoq/4OC5SaOSxy3p6AYmfwrP9s4fSIiSy
-					0W0nZkcJ51JTttZU3JNg8/y77lcqMOw82xmi
-					Mcj+mrld0c+0w5PzRwB445t9CTnszS95feo6
-					I7aOToDX1olLmEOJ9I6dLSBL2k8vC5QOW6N5
-					+/dHY8KcIf/7PSoXN29StxIWcTrP626S1zUJ
-					6U0BEgiURy9UVrUkQ/nbkx57Yf39XKhRXf/c
-					MrqY0/cxwmfT9WAulg== )
+					20141017102524 20140917102524 9932 neer.io.
+					o6rzu5NbQCB01Zk3kXgw4NDUX/DS0ZUmUXMu
+					+WneSfQZoBIi7OxIfhzaShfpMW+ZA1QHyZMj
+					PVOlHgO4guaBJmhFgV8cGdE9Lm4ppkkeDGOU
+					xndTfX7Z2HqdHOmjFYzLoGBc82fTrI4fGBEK
+					4JGOJ2C5PWL0RjynGFDg3zbHtC751owbVydg
+					JhB+Sk40FY+cFLyhJShSpas8qE8WE8rPUHrB
+					RRJKYF+IeUvuf5W6OMxjLxSMIS7Mo/+PxIfg
+					ZxOzcDfKsGIJLe6AYajhu91sgDx5ezBhA40u
+					9zG1RyqnuTdHIbjujJWqj1SR22yFbk1xU1G5
+					FSj6/nmPTNcIpvit/w== )
 			300	NS	ns1.neersighted.com.
 			300	NS	ns2.neersighted.com.
 			300	NS	ns3.neersighted.com.
 			300	NS	ns4.neersighted.com.
 			300	RRSIG	NS 10 2 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					a5xi28e2zLekooKdmqL6HjUJeKIiCVfjXZrY
-					Dit/cSR0b5CUyAeyAVIFyMNQGUatTb0FmcK0
-					m3lI/RbSehHtl/qkhgIVhBpo657eGO/J8JCM
-					Qc5imbNSuVmIdu9+pRajYI7YYmbvI1RlmniB
-					OozFf25WfLfl7GoAxlH6FG1GnoZmfNpfJrgV
-					xM+uqXW1nFg83aP0PYlpI+wleBqIrW8t0bSh
-					NF7BTHdOO6lqAPUQo7l0tInviGHd3qR74OeO
-					h0z8OlM/QG5EvshvWAtPKEgeIq2eDT0vJ+jw
-					CU6vbzAgmg7tLLL1RheRpJdwoXIf4dz/fZEy
-					lqyRFLa1LooPJLJz3Q== )
+					20141017102524 20140917102524 9932 neer.io.
+					j7yn0LCzJx8GNI/bJf+njRzMGT3GZAkqg522
+					lO/B1Z/xvyp5XXABf0vMvoK6cdJ6zyFbT1XK
+					cdqgCyJ1cbySqKKzrmyRIpJA2i+kbpICrVNx
+					eOIOpqoBMvRu0f2raFDHJy11vHs3C9XceZ8j
+					XDk5ap9vDLT/DsX0KGtg6vQ/hbnVhO4cwvXm
+					SZejzMTK6lYjXl+99FpGZJHXGADAe/kFw9vj
+					A/5pcvLTrqseXubMrTuXnJ7GoR2qzjjl8CMe
+					BOpRWAnxmv1lRxIcG0pIWb8bl1zqim6WhNdE
+					ZxixcK4QeEcInufOxzWvjZcYBvovi/omDvr/
+					YxTrOQzayhSOltHq2g== )
 			300	A	96.126.118.209
 			300	RRSIG	A 10 2 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					QzSQgAPyiDLJetMUFvYXCBpt/irAIBTG+yjx
-					nDWXw3daHN3DhHgYe/C2ZeD2DGnlnYojC3yc
-					/2mY6ePNDyolkTlBXJgNBEMP6ug4sZ8PUj4Y
-					IAYOnu17Dv2Gkvx1eojZXpDzlSAYzTy6ZNny
-					8BuqNusUY5LKAiC9ZL8xGxfk6Hqzq1fn+GFy
-					LaWhNuogRChqn+c6bCjyF9h+z82ErocQdKqr
-					2rc7W/ign9xUjkgErDR6dvqa7bqmuWWq/Lp0
-					hP12zJKsBLYuAQoQnkxDfEEMDZJVAs43oIFk
-					sl2C8ReP3SqOBcffwN/M2PzVG6tyruds3rYR
-					pdE0Zvbg70U0tcTmDw== )
+					20141017102524 20140917102524 9932 neer.io.
+					pPXvqU7Ae2QX2FEPHFUDxZo13Vd7RvUK2oP+
+					rfpnWeRZqAiLJWfhT53dKWtWICRu9Dwodofw
+					YgiSxh1QQiDD9KBKOqPdT8J8/Ax+XoCY1Rxu
+					maaS7X3px+7ud9nBwVVAuB5SK7p2gOBAWA34
+					MtXDE5ITL8/OtSe88ptHFIWqhkIVmanOziYJ
+					2jO7vjcWHdHZMeyieUFfOlvYHy/XK2bA1AcN
+					hqlC3n+ttZkonwmhy+3WjVvdaEJ9wg7oKqlu
+					ycCgHXLnNBMffBVkJPgd78bQjfoy+D+XAb9J
+					Qv7dXG+VCtl9MLkdKQUNHogjHIZTXtxlUznU
+					02gxSpeTaaoG1PBq4Q== )
 			300	MX	10 hydrogen.neersighted.com.
-			300	MX	20 mx1.messagingengine.com.
-			300	MX	30 mx2.messagingengine.com.
+			300	MX	20 in1-smtp.messagingengine.com.
+			300	MX	30 in2-smtp.messagingengine.com.
 			300	RRSIG	MX 10 2 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					b/lJf7po2XwwyzG1Bv6JT49btfw4b8Pbuxl4
-					RNrGKPpD/y3CPM3l3T9zGUE3dAe6VxKV4ojl
-					JtLoG4iskOUTPFsBRrYaP7hIU2Sq4iAJLtdN
-					S+WBiCz9jQHKewdBu2dKlp5Rr+hSpBbviUeT
-					0i4ZuWEXM6UcsR45iRYU1UocnWDCiypx2W35
-					erRe4XKmP83SDN46TaNU8gjobFsCeqRlClCR
-					IzwNdJWShjHkedp9xBnAGVLo2aI+LSbCMHdi
-					giB8Uo9L8PBKmf+DaAhjVNgB023DvENj+8GV
-					AAPhrv9oxplHreiveMtYSQ+i4VqLoG5zv0Y5
-					Q60i9XLODM6Zx6qklQ== )
+					20141017102524 20140917102524 9932 neer.io.
+					PKW4p3xbst7/BISfA/0aC2YQdtrurXRNJAnc
+					/OpqPs2izM/3kO61o8wsovj1BxqKw5tFOC7A
+					NYNMst2nl3/VgBQHbyIPXMBpqScOlTbr//B0
+					hXQLAI2NQbCVSWiFDeMbDbAuarD4yozNJINR
+					OnnM5D9WjNwh033/ZNLX7RypXzKbR1k2acZq
+					+bLcj04Uk1/kZDRpqBhHqnKB0+2gVJ8UM5qa
+					M5ZQIRiJ9stt5GfpKKwdtjHigKuHLeVMdhdC
+					NN8xyYeDeMXfWhXDarDuy8GPIuJavyJKDDG/
+					+RJieqimdK8JFhXXd3LuO7zwkocglT6qy0zO
+					5tjUHDNZLJgooAfXTg== )
 			300	TXT	"spf2.0/pra"
 			300	TXT	"v=spf1 a mx include:spf.messagingengine.com ~all"
 			300	TXT	"keybase-site-verification=zL78_Fypnnjh5TyG0t3-JOFjSRf1P3Kct7WVRBZ2Nh4"
 			300	RRSIG	TXT 10 2 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					UmW0cQemHbt+EnTSAYuVTn7frGc3xyQ/3GKZ
-					Su7f6mMArhcmbxw0BULW7kd6SfCdpKFDiz6S
-					/F5ZI2VmL/79dVriSWvUwwG+9QkOWXv80kq5
-					tPMOz/HihBNN6z8iIsUH6o3h6XoPPVIw4IE4
-					tz8/C+LsEZxxQ03ZwkhPVt46ktuv7GoLNNdd
-					YepqqkJKCVjcsUb/T/xcBXyySDF59HwMn3yZ
-					+uaAFjjU1FKLWfrJ01rm86b5b5pAW5D6rdjM
-					LCFSrX0Cc39HvxsFSOE2srNw5n9CZ/xfehmw
-					nHU0WiKv74sN7ziTQ97+df4pYJBAqqslE56g
-					bYlXThI+M1LYvaZHoQ== )
+					20141017102524 20140917102524 9932 neer.io.
+					Co3q+7o4QnbQ/vmfDe2AAtD4mZAX32HZbOLW
+					rsgPq3BYkbzWkCQTGLlZyTqctoPuxjfZn8zQ
+					/QdLotFTNqzBG71XJSHslLDYh8bE0rvDVDQN
+					YYBK/DaA6TjTRCr85E4cRQXbT97zWCQkE3uC
+					IS6+iFzcZ/LO1qQlVxM0UijsGFsl210+Wu7R
+					G4HuTmRIwuBA+DYVJUrYhwiQv/m9azpvIDBp
+					u50wB5fuZCxZ+JxqoQkVCkwPpwO94ssPgcsH
+					BIJQ/xnKjcPl8ZJaswj1mdvvRo8PppxnZnnG
+					Vd2m4gu0S3aDnr2gUdxEppDtzRThIrUEUfuk
+					7IHa63A/3bBJEm6BGQ== )
 			300	AAAA	2600:3c00:e000:8c::3
 			300	RRSIG	AAAA 10 2 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					M8gcd9mzoCN+RE7OLCQRD6n5Ictbvwkrlc31
-					VcqXVHAMAD6Jh0oTLY9hYiuTWaDJK4RIsiBi
-					bzReMAhinWWMr1S9zIuzM86N+slcfYf64AY/
-					0pfV24V2zGJW5C/Hxe+/LqLBDVB1OmSMi4vM
-					XTo0Wx7oE8VIfI0eiiw4+ORQD9AU5sb08/2e
-					ne7jlCwvpkBz2vFnKpV6ElXuAl9L4ZcFNA5H
-					jbc6mFtergx2FQvsovnmJzCSKXY5Q5XrK8WH
-					m6xC1kCHhnJsaK48mu0WNQlVFg9Z9wck9JgP
-					wJJaXt5l85E7I7My8Qp2mOY0df2+k3tmBzNW
-					KJv1dLaV07sCdMzthQ== )
+					20141017102524 20140917102524 9932 neer.io.
+					mfo+h5t72virWbWZ313Wicuz0r2sjO3sCZWC
+					xRNkeHicQf6RZujinY3Ixu/nHYOLbm+bzq2E
+					h5DEuCVY/tz0l77u9JR6XxImNJYkHo05Pw5C
+					dyDV/mIlOuGLBWox0CKTTrSAECBlswfE3tDp
+					ECBE7AZHKxiXawRGzvkIiCkh7hcBCasmHCCW
+					kKamoj3Ri1supv1xLEDCS1XIUO1/D0iwmTEZ
+					Fk4xbJq3iMpkEAxMfnpOAT67jzBTzU/F+Z+v
+					DDOltDdv3A3Uz7yPbZC+XAjp6inLSs/3THq8
+					AgVyHmo34ICO+s/tICVsCUkIhRmw9QC2w5al
+					dqREBhUbbiRSgKXF2Q== )
 			300	DNSKEY	256 3 10 (
 					AwEAAaW2+v65+GJxtGlnHpPoZnh4gcMrSLZt
 					MU9FGhlZ4FzVK3vG6NOEdsNZZYMGVO4QRGGi
@@ -116,311 +116,311 @@ neer.io.		300	IN SOA	ns1.neersighted.com. hostmaster.neersighted.com. (
 					xFAtZwzo0WywV3jryfBFTUU=
 					) ; KSK; alg = RSASHA512; key id = 59238
 			300	RRSIG	DNSKEY 10 2 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					Kgk5PP66TCkkHLFc9GQIWpSYFzBlfWfx1UWM
-					S0fFYDmUeut1di/wh8iyAUVG5w3uFHbbVDNn
-					y5PwZH6ZIeJSDbPJwdmWzdDj/BYKyHTHcVAK
-					hyHkdr2NJIZIh6NNi1fBWhkijoDBPxLB6IsV
-					EQE4MZlQEfuz8lvSK4kNbvvRzjEHxvlbMAc/
-					B2h5kQ6x5/8FFsO6DQZPINgQeN2p5TcglQwk
-					oS5nH9xVbWQJV+VHvPy2VXPkDfF8kbqIBDz8
-					FqYdNc3voybJqx0mvsuNyfF9myJCsXKv27Xb
-					WDQMTDNGXcTETOsYp2oJuGWrpDphyeNRyE9j
-					7JZVjzyxje4GJibgZw== )
+					20141017102524 20140917102524 9932 neer.io.
+					YLeitXFsP04wa+jUwHtiiUd6SU6erKAtwpGr
+					gG7W7wjvpmIDrPLfsfkgrWF3yMgbs68gfRHn
+					7CGM/lYQNlMkG9Z6zIu8CRob9kuSejK+1XjK
+					4lRqEY0t/6YcRs61+Tw5kZKc9hHiECiDRqgo
+					pNp5ITY4y/PwfTHKqKOkQYm4eeu4egACFOrX
+					UMg8y8X1AZWOWrG+6q4vTwW2h+GHeBun1y8Q
+					oRMUMHXJuiS3fNSbR8yb52/gvO65+V7m9sr5
+					/VYbpH5/qpfn+LyYf3NqsK9e1+feTYsXtjzt
+					Ct30nqtttP0EchfOFXgX4XdCqvvZuUUrJFa5
+					NK0Zco0cQa/REKL1DA== )
 			300	RRSIG	DNSKEY 10 2 300 (
-					20141016135556 20140916135556 59238 neer.io.
-					cyfsa/Nkx/CT8+6ZF3TNrY1dHj/80Jxq9nnL
-					cn0wwMz5DViUGvcaMVFfBTuxfmjgfTu1RNgY
-					x9mtAm9PwhXh/jqHxAKn4pj5fwoIoFShoXQ6
-					hLyDAUrmduWrhB2M3jsO25GfKxP/cqW3Am2f
-					pABF8j0iX3M1G+K4vPvS4SScVsHgVBGPVUQW
-					4GxkoopBKTSWrxu4nAGgJ5ZczUpYl46S5Tq2
-					y8jaBDmuBpXlZ6Sdynq4DFfxh3PEgTjDB9Z5
-					K/c3+sW/eUJt/WPtWU6sVdlIx9DVO1bYuQ71
-					79hxYwl5IWV5Fm0TMYYQO5aRQtVpnIUhkxp9
-					xU5LQ082m3KxZ8k55A== )
-			0	NSEC3PARAM 1 0 10 44DEC041E6271C01
+					20141017102524 20140917102524 59238 neer.io.
+					A8Df+J82xJMU/q13l4yNOJLEgqgRxzLZeXez
+					R0icGZnGb9DhO5oThEHqtE4ehhiq+OK4dtXY
+					rsU8W4d5F+a6n+25w8n2xHm3WGY+SAczWH6B
+					bsjlqFwxtM6bSHOj3PhQaHlqKdGDDIx1GhUb
+					hBwFmDiFb54gaD/emHdO6g9+3XyFHwa2h/gC
+					8hwObsAEvmZnQL2JISOlpivaF57jchPbvncq
+					PkKV6jhk3frJqsNxhPZaoWxqi0IDMd5eBAEb
+					NrRXb46qZcl6H2Ebd3/qECxmDMCMaR7kEaEB
+					MdmLZY/XKe9Wnny0Q5jCSV78edCoMb+R6jfm
+					vUrOGDpxDzEe4fcqSw== )
+			0	NSEC3PARAM 1 0 10 B17BA0A4D8453DB7
 			0	RRSIG	NSEC3PARAM 10 2 0 (
-					20141016135556 20140916135556 9932 neer.io.
-					C8TeOCQKV7stzMyKUgSzWPR/J2EWBvwWsrMn
-					ei1vVlAF4pGnppwHxAJpUvWWoz57LxC+TZVb
-					KfWw1Zfm5/JCRKcDxa5nMJKOv/CkgaQAjlx4
-					osRjWyiJd+N0PD4S6vkXmdwLGMKtFrvZf7su
-					gEeoTzVbCQvPyBK802cYPg6zEm7W8aaWNr7v
-					r2rqGjTz1/98kd5sRaqPq4FJ2ugsa1nL+Dnh
-					ZnOUTtHeSVsH78XexBqQjMEo9Nrs5ocEmG6M
-					ni49xarnHtkFGuI5Jci3j2+f0HbpEjpB/wQG
-					DNuuQRjK+I4E/oZ6XMFEHLZu4H917ta+x7/L
-					YVJ8YUtAp15N6ulPLg== )
+					20141017102524 20140917102524 9932 neer.io.
+					JMrQYOpavIyVGhvA3ZLA8/WxCIFZsrpqp3sj
+					Vk1vkI9xJgpJ9iPvOAPblD5yIobv238V6oST
+					N/UWSsJwKsr+1yeBV1ZG8oX5HDrkpc2yyNJF
+					XZl5Rd4khjoD6Ey7v66OnJAIPkANIZXWRaZm
+					1B1Sml0o8egoFp/RgKTAUYO1BTegbY/mHccH
+					PnY3BcjrscYNxLkJ3p481HXt/caiLFhyEmr6
+					SCFEcYifA+LS7rMJxyNhs/3x9E8B9u51nsnL
+					+YtAcaT7cOjEtN9p/VUrWgyoDC31Cx8lOjM7
+					G/jmFw8sKxp9Uxu1OfrCHVjSq91fbul30OEe
+					w218fpNkO9RmxaytaQ== )
 			300	SPF	"v=spf1 a mx include:spf.messagingengine.com ~all"
 			300	RRSIG	SPF 10 2 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					XvOqImz236MlZI2q4zevabex8/TgsiNdcG+9
-					P4YEKXGwPvVndlOWrS7qaRts7CytqTRJSz8y
-					j6yTttNf8iTrhed8ajLD5K/F6GTJOMaTCW2Q
-					+52AGrzQc6iwVyk9p5Juoyok0MemahJgntXh
-					CmTvimTTvNyl3brJv6j9e0WNjl9GY+hFxily
-					8rc5j2DBwDxob1bK0RNa+R3k5v7P8feTALzn
-					jpge+6uoF0vquRwY/5Suon6X2fNtf4LAWKi0
-					J8D02I+Tl3FjKjxXXQDkzDR1yFoomojH/bob
-					OyWD3GPJkIWix8xh1Fmi94QknkRrwUp87heS
-					tSpUAdaNO4xUanymAg== )
+					20141017102524 20140917102524 9932 neer.io.
+					kit0be+B7u1YSmGPHZjy9G3NTnD+oQ1i751W
+					0gEwc0W3x1nuoiXTWCCWNHTejoPR5fcKT5at
+					TjaokC2JatdNom+Dtu0Qs6z8pb05wPtxDXkp
+					CLqmXg4/0nquaDZeYLuFusDXgtMRZX7UmNLX
+					7OiYsUWQwTbzPaa5gCxVnB1g9BZuefSkmVni
+					GlB1MNiuOaD8tYrC49QYUDVTGxouo8TwcYjV
+					7uvkJwpUZgjR69cY8Xk30gJOATTXylNHYwN/
+					Jvw22+D7lon7DCytQzSan7wL090UYic/qD1M
+					fDHF4bzb+VR+meRHAkNjeK0uF2vWzlpVIBRm
+					0U9B2l96IFne76N+lg== )
+*.neer.io.		300	IN MX	10 hydrogen.neersighted.com.
+			300	IN MX	20 in1-smtp.messagingengine.com.
+			300	IN MX	30 in2-smtp.messagingengine.com.
+			300	RRSIG	MX 10 2 300 (
+					20141017102524 20140917102524 9932 neer.io.
+					NasJ12v5v+ugjsq22aphwDEw9752lR8qpXfT
+					eVwL6CN3/3OcGRWtEV5MGSDg548Wwk+I1N3z
+					eI7Wq45upd15LNbszJp2i1gmUgHa/p9NoVrK
+					KCxi5vzBIWPIedUGWarr66+/eN4pxb+mtgWl
+					QYv5ZIfcP+cm7vR0k90ySVLi1fF21lYaB3N+
+					RQuwt5dGOSXeE5MZ3dSZF2JQdcncDHiLCKdA
+					9kneJviqzYqLG4R731tTLSN4BQGs+OvYU6s3
+					DzmUhX6mz3ADfR2Nl2fJHhNsdbR4ocu0saaf
+					4gKkiz5pEbYLIPwwd00p2+oekGNp6RTC/SWE
+					I54CX2YIzsWtglWfuw== )
 _dmarc.neer.io.		300	IN TXT	"v=DMARC1\; p=none\; rua=mailto:postmaster@neersighted.com\; adkim=r\; aspf=r"
 			300	RRSIG	TXT 10 3 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					SYOblxYju7x2uonoiHtpTih5y94gLrspiE5b
-					jRK/E70Zu7+tBl9aU97gg288Ve8xIvgxFDcn
-					wlaveGVIPYM//xhvBmK1ZbN2J79WO6VPFp33
-					4ki6EklrvgVdOF99qHdRjDI9FH8AVq7KKWKZ
-					xpDHLBfjzzbh8YjNHnrrdvPvzq2xkTYon69r
-					iqX7yfpUotlkEsRDn3n4bvb76Y2SYPV/LjUo
-					UrwKfN+PN7UZ7Gz66WumDJ/xBbj038ul1cfF
-					5sq9Q/hUFG/TQmr2PKEeDfyHDWccoq+sNm/s
-					RwGtOuw/mb4nlEfFYtpMz1kfJXNXnQaqtnEg
-					/uveT0r9iub/JessAQ== )
-*.neer.io.		300	IN MX	10 hydrogen.neersighted.com.
-			300	IN MX	20 mx1.messagingengine.com.
-			300	IN MX	30 mx2.messagingengine.com.
-			300	RRSIG	MX 10 2 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					ng38G+6J49NuiqrMg2D+BbpLQr8kfAA/jibO
-					c4OeAKhYXkwSFvgjpSjPNA+wIO5fBKrl61Lb
-					8fQhT8wkOqDoKPrR+AY6U3NSztuXSx+Qo7lV
-					bVjY0iG75tVToLn/m8WxrK37fA2xwnn8VAWb
-					s7ZE7G7l69t4QiPlsUFXu8fEWTh7hbMe5/I6
-					YVIc3D4Kfw6UBMKxWC+iV0Q+iWpjP3YtBIVN
-					1oecBwv6WRJehynNm/9D4JwCtB9r+kTK+UE/
-					5ee+CHK3VgFUul9fqmE/A/RG3hhj3t8pxKwL
-					5j+gnyNr8aTmbW5ac3s+Y+ul0iaUvCtmV6Yx
-					acAukxUGCs/pYJzIDQ== )
+					20141017102524 20140917102524 9932 neer.io.
+					Cal5W83V3mYcQrAv7qo2OehIF5IkSuMPT5CZ
+					AADUK1MgsTaZQ0FoxKa+/zTysUd66sbEkE81
+					v3DBcGYS/zVQ9vop3y89JFVMwbxowDRmL6is
+					VsFWq7psZdXpHzghHo/2YoooiFK6+xYflXAf
+					oLiDiKyEpef05M5oVkI1ya/xFtOQa17W13Jb
+					1I38exYrZVPeuU4lGqbS5xSTOyt9ctt+BfrG
+					fLHuif9XXkvRk8PskqTzm9bHJUgQprgk57CT
+					7ZZdy0PwoEb2EFv+hbdnxrMh6/k9KykXXiOd
+					oApuVnD8CobeuyNmXQ9ZqBNlh9PvguhuhqvB
+					ILhmQP1P64msVGkSLA== )
 be.neer.io.		300	IN AAAA	2602:ffea:1:4::2
 			300	RRSIG	AAAA 10 3 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					M8fUJO/8sJMhyCh2WsBoz0SDo7Jj3+J/DywX
-					aRKb7kiCT3X7GhyCl210Iafw6THsrFJAePPy
-					JhUjOe+nZ80dtGidiNqQ5F3VIcQ1a/nu8D31
-					2Fiejj7Hp4WkzsKrWn9MhUWVwMjyB6OamcMF
-					fu6XMTYrJdrA8jWl4U6hD7Xv5Z+2QPTN13UB
-					wrgn2T8lJyRUNNhEqaWUwgeRS25mNiXPiLP4
-					Oq0e6VO7pVdxQqxVhgDkKQhrcjAG8bA1SI4u
-					URnhTnmMH4Qdgt+VgRY2LFJ8JZVsHHTu1SYE
-					FSG3AwQ+BfCFdvccMIWBVeK5kpA5WwrXuBAq
-					dZtw0SzewlZz0wfaPg== )
-mesmtp._domainkey.neer.io. 300	IN TXT	"v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKHkayj0jloRLhViPBHEH+7Tu32wEcgCZpu84XV6Se1Excnk36NdIeOpFKpAGMdjh7luL689NHPWaQIs3V1xV7yzZVH0wpV59uY00v/oVAYCXKz0s6DvC90tZXbkjvWA+iAvfU228Xxylapz37l4r6FPW8K5wgYx4v22DBmPuFswIDAQAB"
-			300	RRSIG	TXT 10 4 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					VzfsjC1JoshLBVCcHoAM3RCNjnjtNC4qPmHg
-					q4zsprgiv1m21he8nmC4bEiENHb2xPZgCSxH
-					RjPu0VX8NJl07Gx96C8qwgiCQXvx7O3frWhP
-					9ngyp489Hvv+tuKVROUw51jKrXRVWh8v8hn6
-					5Mqy28jh+dcZvdwt4x9MdyXfzE8BZvYgA4g5
-					GFRyj5MDzUIYWK9aVp7gzZJw9zfTKhQt4d71
-					PMMUkuEThbqWByhDQUhgjYQ9mUHxSDyb3u2X
-					idmeDDQ7yYkgEXzW82Q50eJ2pCKEi9n8Myxf
-					FEBcv63QryO69uMHbtoSIlwubLmzZq7SzT4D
-					pbOY8jzvUous8m30Jg== )
-www.neer.io.		300	IN CNAME neer.io.
-			300	RRSIG	CNAME 10 3 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					HnIKbGJFWmTA53U0l2BG9Xeuz1RZmGElkWt3
-					XP6qhXP09FpI5+fEBI32qf0zSbh8TdcmqtID
-					TnM6HorcaedUu6QAPOU+veE8jwsY1uvwVGcV
-					LC0iVeWmNaRqEL+v70qwEiFutolqzVvgGsBr
-					lpiBFHLdKeYcPa8178XP/KWYqluuJ1DCiO+p
-					fbr5NbXdoR/quD10xgYenwihDJFgSIQ0Yb/R
-					AkDFX9KXvwkOoHXRKoAfbJWmGRmO5DAGr9rB
-					EUBKaDcTHCpJGntyfhBePLc06DqIbitcsoxu
-					L7Hjnl3V6QVuhSvkCQSlWKOXy6/Wbq4gVcVc
-					ppt9RiIdFX0yJrUlzg== )
-4TAHOC85C7I1LR7P9C1NUFA586GLB0JE.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					68VMA9CRSUNTF1AIAV2SG20RLN4UONL9
-					RRSIG TLSA )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					G13eeCKUDrSuwz4kO5Fvw3YNXY+vCprvFyjd
-					AXDV8MfUw4CcLnT7Tk55WeoBUDaoL3qus/5Q
-					snCgh9OiqXo6ajHRb7x/bhJNq+jNQk94Bs/N
-					ki14QCRo3tbPeSTXhkOVNRQTxH5bZDOL2F5i
-					cIAHCmVWrMnb/+PzabuvZS5BWpG12NQXT7iW
-					PeTUJAqahpnXpPVWdzt8MUOd1s9vBPaZebfe
-					iNG/Mk3rQ26ZuZ8XTVv31n+tGZr64ybIYyoI
-					ZUGelb0K0aHRUngf0vzZUrJk1wDPCfhQrhQk
-					FQwIhqzySwecCKaghbRTniKtUMez8jmka2PS
-					SXI47gDrNpvG+LN//A== )
+					20141017102524 20140917102524 9932 neer.io.
+					D8ROQYD0h8xhFF9FMP9rNHGIjzzliVpM5EGO
+					7d4T7ClZ3mCp3pazOiOM3rEfoII/3yl+W8Xt
+					BVoWpnf7P3b75NSJY7XRZuG0kauU+jiu9MYm
+					RzN4SvsS0H4opVWbaciChsAiuWjQpVeclqH5
+					TVc7JNDizPohjpv5K8t8xXriVMUNptgBsz8U
+					2W6/mYD2H5lgE4mYrIIYBWsc+MYLQHUuUYs1
+					9LWJaHVrbiUSoR4Trou0hhIoxklMMrnNzv65
+					scN12M5vIUcY5tqoCM88mbBUMjsIddZxYLrI
+					dtpf6+GRk08bIIKum7bybw3yhXwLGHLbRu4b
+					WHQyqypsucyP9cUTjQ== )
 _443._tcp.neer.io.	300	IN TLSA	3 0 1 (
 					E795B30A7C5B92A528FCE703257E5C49F753
 					C5AE5E73D7E1A19868FB9A739D36 )
 			300	RRSIG	TLSA 10 4 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					AMk5l71vlsjgQphWhKOO3h0wC2F0K5voSY4s
-					0Ybwx93qr4nPdH0a7SFWnk0xADPP9krasikj
-					FWvQdWGCxjp3XOipnaRru+hbP7R3Sf/t2Ned
-					Zddr/TVt3BGEDSHVgu/eT7FCHgLezdMoxI0c
-					cIENVOQ+bj6DTLXEvyYxqQepfTASPiXMXmBY
-					H9xSXKPt/W+FJNFEvyn84QyAHxsSE/8e3P76
-					uP2iHdG2C9esoN3tPFJX6fNPXYPTHHDeSgNn
-					zFuuVcT0bsn2KVJN9bB2uYJRiIqqnXXTX7QN
-					qKdzF8rLC0h4dYPlnmGk5F8fOmsFRZSKtcvE
-					EqXVl3ajVKAQX07KUw== )
-68VMA9CRSUNTF1AIAV2SG20RLN4UONL9.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					DAL63IJ87VATHV8R7416J2NRI8CI2M90 )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					ZHh3HnWcVbFESgvqSH2KalWPw14/4LXB5fHQ
-					Ebe2yZNt4s2i+Qc5UqOISAU+fntlCnNdjBN/
-					riZKjNfqIc7ziULtv0nz4Tcvp9olfuiDOUsS
-					F9WFkyThA8Y35eU7vA0oB8OPZ18vpRk4WYMS
-					8QWVCjhXtaHlF0e2HfSKRBNcX+G2LsBNzwsK
-					YwdkmMSNgECz7k3OQUMsU1HxntQFSPP6kE1W
-					3rHYTw7jAdaiVxVETbN0Jw5PoUJMOgDAG0p9
-					SWJUrXyzwJQPfNmdBoc94qK87RLM6UFEc9p9
-					LuApsrRzP65c9bACSHfDB8smSOdjW0aYIqsN
-					RwdKwavB4r3IZQvRxg== )
-1JFD61GJSRIR02BT9FMVTT2LOI4NEKNS.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					4TAHOC85C7I1LR7P9C1NUFA586GLB0JE
-					A NS SOA MX TXT AAAA RRSIG DNSKEY NSEC3PARAM SPF )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					f0vj2+66sm1bq+1Za2mOS4sJd5ZU/3CuwACP
-					0dtheLX82EMMUm4D0R+einIkdZ78rc92tPzP
-					EVm699moh7L/bG5D1p5X1U8W+Ocf18AF2g3A
-					Oh1KQJ+1MMRitNGfny94p4XD8PxZT7it7j0N
-					d8wk3mTgMVjhHc5ZvBPMh4Wu3TQo3gU5ThPV
-					NoZzuPKSCYNFQh9xKZEKxC7pWKqkQHnsZLr4
-					jfi/AqcVL5JONaYKhcNeWx0ahcXgwtLcIRTw
-					3oL3JRMl9w5nbXFeuf1rxr5V8PgGVa692Sy0
-					5unxV8jkGLt2iSYUUB6rITKnErVfoTAPQh+6
-					EVJK9VjgQ3TsoR15Ag== )
+					20141017102524 20140917102524 9932 neer.io.
+					jd0MjE4eVVgMbPXO4l2IlyZElQnMXebl374o
+					ciIsLwuHhtzGluBaf8ojTd2xQ6eJFsHEDvOL
+					MkgtaJRZ3XotndZUmkZJB6K8Xv9a2fTGEYyj
+					k7EjaPSg7yZJGhZL4Cb7AN2qyij6Yti2035X
+					VuURQXIzCNzQHxhxtggUQtbZ95ykEUKi5RF9
+					pjAJneX7myJL/AlaDq5/ecyjMW5ymX2CiMe3
+					LG73jbtQIRGx9fwLwcO2kkQItpx0wLGfluQw
+					BkkD9aMKw3znWJ4DJAeqHtcOckZK3xvsD6z9
+					uo+KGz7FYxn9JsoXFKCNf+b1wgmDt0pdJnVb
+					2n5+TjAURXfQehhalA== )
 _443._tcp.www.neer.io.	300	IN TLSA	3 0 1 (
 					E795B30A7C5B92A528FCE703257E5C49F753
 					C5AE5E73D7E1A19868FB9A739D36 )
 			300	RRSIG	TLSA 10 5 300 (
-					20141016135556 20140916135556 9932 neer.io.
-					ljnmw/3jPy5V0OARO1wUMuN55qcW6pO/1E3x
-					rBtEm4BBpqs7W4ghzea5OXGAS7jrEujH/XW1
-					sAsbRp2ThEgtobVUBzJNc1Vu7amzc+IXgQnI
-					U0HNQQ/0t1fE/uQMfohLxNWWael6SD21lkz8
-					ijMzpjJn4pMrvh6wRkJMjyL1jIKybsiKrQ8R
-					ikFrHZJFgQM0EnhlmIJWN8j263renTzMbgLi
-					nXH7HG/OHgmzgl0GJSgYzXTMFNIZZvX4gimE
-					JRpQmpFuTzfP0xBPRDuBV705gR/eVUpB29mS
-					2vf/6VRUtPjfHjpS2LEdRIxNI+oKmjyn+91g
-					zJUVdVwYBzoP8MjO6Q== )
-E8U6BTKRM195P0OHK0UJI41OD0KDDRUU.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					ER19SOD4KPBN2LQ1H17Q076JTS2DGADO
-					MX RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					lVfqXrA/V9ChOGoAfh+jKHPwMl77sKzjC+34
-					qiWmHqodzUdhgK/7swSg2I1uvojogVDyK20l
-					JCNPEOaJmwH64zCjwnLpdfzqt1VXueljuGw9
-					aaB6fxrIbyrVtWkdhHPk/3mFRwtwn2bo+6id
-					Xe4Ykdw4A73zcZq7gry3R0xvmppikoUzFYbz
-					dUwGScHDA6NK5gAhLu5qou77bJBUKT6wBbOt
-					gteodnEbPymtGiWIqEMrxkG+c/v8xCBWb7Nk
-					yCFwUYHypReMmaMGmGk+jb+6hwsdJLoFd/qo
-					zliHGN21ENWBVbLiebgmI8d/hLVaRO979/x6
-					UxgqINYDwO74o9XENg== )
-HHFTFC7FCIAAS4CSK5TCSVU73LM7JI2F.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					N3EQ7A96G04O62GL2UULSLIHDJHNSG2N
-					AAAA RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					WsJq2YwwDIaMd2zAgI6IbW1klRB/QailLWy6
-					htC/IPvS246TEtFxtbn1ArpvM/K/p92LNwh/
-					d7/HFuANYTz2YpPslPgo/APGD6SJEJhOX0T6
-					TxToziieWmniq5eKymuq34iwqqxyPV5Pdb6/
-					XJcec4fRmWe9FzKnHWqtcSvM7ERorGFRiM1n
-					LqQdo5fU1OmeAggqPRw3q872vXNQsk0SNIng
-					N/BR7d1/DzQE9OcrVtdid55EC0RNSX8S6AJQ
-					JYF7u/cfjp4xdql90qN+IpW8rU9Pbkyt+OXM
-					VQigtdOAN5OQXXRy97dJmTG58hVMWG9d25qU
-					7eysqO6VSlTqLjLbjA== )
-N3EQ7A96G04O62GL2UULSLIHDJHNSG2N.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					O8HVGE2870AV94LCDUEV7993O9669VOT
-					TXT RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					Ml5JpeEBEvGEkMGnqeyRkETq/r5K9A5K7Neb
-					JJXYRuQ6MlaoD9GcRXd6CyE6obSYfE681u/j
-					sE0MZC+bNdT69WknqINO85g9k8XDZaUi03Ui
-					vOY0n8Cn8sUhA6GERsvUA8M8aT41ufbSSJN0
-					hZqxmPPRn5laIZqAgdpHSYasUqDQVl/scl0K
-					0L1GuwL7EQlTUdYViJG4U227yWHQOk+wyXvf
-					8lkjP/StfsLBvoJffBpWyWI9nGCTe4Y6ErfX
-					Dz1DyZhO9Yo8yWNW9tO8gbfrM94g549kTUpe
-					avGlUOtC9Y9fk3nu5HLVvD6D8nSDI7z6/sH3
-					7F6JE4irqKRzMqZX+A== )
-RMA31MQ4J2Q1VFBC78OLSBOG7JCPE2P8.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					TQR2MQF3O1FCJR7R9C540QU1HJ8UOHL3
-					CNAME RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					M7pALbiXopT+Xe19kwIv063eh9pPuJHJbmV0
-					S6pzoMcZzit4GNe24GjNyyqN/P7/kH4c89qi
-					gOi66/UGjNOirhspI64bGS9928lzffiz/Dil
-					sbGJI2LwpobYbpbz2FwqR/3iEa4T99TmTm9d
-					B0QU5bY5tsKBbwtD0pmnGjwa45wNKdfdpxQI
-					w6luNJTdyIb8PnNzEtKPe23+qIj/WQHLWSWx
-					MThrfa8hFts0WejgTzBJzCktXQCvvuXos813
-					ovvsIO8He2VAl+3iCH7+7Jw/75AJMhkjtjl3
-					ZCpQdW5zcT8KnMtC4IHzSnA+cQTKdFIRiyaU
-					8QGTtJDRxcTI/KKB0A== )
-DAL63IJ87VATHV8R7416J2NRI8CI2M90.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					E8U6BTKRM195P0OHK0UJI41OD0KDDRUU )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					lt1zh8hEsHh0vdISfkByrQmue2x7oBDUayao
-					zxZa0ubBsz0EDRLyk98tF/ag9O7v3+kgRMrH
-					YJcT6aAIBO6d5AbPDTXPS7QIW60zyvQkVqPB
-					UWQMB/EZGtWxlKsMBdLPSG9sOhfBpV7qw9RW
-					oUbXGN80nQD+rhmJdGB6V33i4+GuQUkEeET3
-					kv6nvnRUAleULuFSJ2SDPQPLMA0TU+UkPsHM
-					I0H30JScAjsSVUA2jTfofy2POymIDw1D8JJ7
-					dMK06ac5UGTj6oTzfmspBmcJQ/orRwa9ZySP
-					o3jt3iAsasVnTIvVcRP/FV2V/yj1IMmT1Fqj
-					wIkyX3BM4ShjLJJ+vQ== )
-ER19SOD4KPBN2LQ1H17Q076JTS2DGADO.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					HHFTFC7FCIAAS4CSK5TCSVU73LM7JI2F )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					k+Os9jwph5Q56LaUvlMobol2s1beFJ9wiN2q
-					ek5vQP8dE9ybYR7wSZsKHYVGbnn+TKdqy4Ef
-					D01/s+mCKmnUtnhz5/wm6jeXS0sn03AuXP+X
-					EXWsaS5XTKV9HdGV46YM1AqWVJJP0Lun34FM
-					cgoU9IdNC5w26O6yT/Uc+4nbI0Eb4oTBgbhh
-					tK70dYkU2oZ/b0u08i9lWDNbZzZc1Mc8W3EV
-					tXyUaDZMhT3y0vitsfYBBAaN02nIkhs8Ez9Z
-					dDMSf1OlFgYxDinFCXg91xXXESckikUBEhRD
-					jZc8W56B36K3Q5K5kg/oXnoWFIP35xaupPid
-					pSp2JHR8TNhTcOSdew== )
-TQR2MQF3O1FCJR7R9C540QU1HJ8UOHL3.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					1JFD61GJSRIR02BT9FMVTT2LOI4NEKNS
+					20141017102524 20140917102524 9932 neer.io.
+					E2XTm/d5G3lxUw5D8NvmcqYgHfF9dxZoSv53
+					wQOOnXLQDAZStWJ/7dERwO+u7ssllSqGqqRL
+					4r491kVlZOrqhANtkZW1Ggm+npkfH1ekLFVK
+					+iFYrukdVY54IVV4iI6xhxed/J63ZyVRc4T0
+					HuI5PE+ci2Glnp7b745ENG4/h0906Sin9Wjc
+					n8dNr0p8AY2sOSA41mRWLR3Qz3qy6DIFC5uG
+					lwKxcdgtMVkscooQQawd58ySzlfVpB75aKKF
+					ALDq7N17QK62pmgBYtl/miDSRc7+hRJzyqfb
+					uIm3bvy0B8+5sITzvQvQB35wFQwQpXyZ69fS
+					W5tcP7FizoFgzhvJTg== )
+28MAKPRTRHOTNP39P1E1OF7OMUTOGCNG.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					5IO3LJJDLBAJHCFP57FH7HOV6580E2GK
 					RRSIG TLSA )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					TrSFBIJAe9oK/6Noa5s2X2FTr/0i+cqeNT3u
-					yXtQ9uu80LjP8b85wSi4T9+zW5bu47qRGS/L
-					0Kka6H/Rzn4OpmCaFlKh+DCORgEZxh0Bmc7F
-					eqXwnXo7WIzhm/Y9ZuFTmkBJpKenlzL9u1UL
-					73E/14t2rBGL3PmA0qDmkGX934IfsmET94tK
-					UA+JlR7YzWd28dpGj9X0qi90d9uC0OfcU+nb
-					3qrptwZxnZhY6fEsdSBdHGTcnTeRv7+2u3dO
-					3+VQQI/OgZCTSzcMfNNVTuXuw6O3DW5A6+bl
-					4Wp3486a1NhT1QSQpVyHBxG8t1q8Zhalk6GB
-					SHf6dzBzqzfzsf/EDw== )
-O8HVGE2870AV94LCDUEV7993O9669VOT.neer.io. 3600 IN NSEC3	1 0 10 44DEC041E6271C01 (
-					RMA31MQ4J2Q1VFBC78OLSBOG7JCPE2P8
+					20141017102524 20140917102524 9932 neer.io.
+					MpuNafhoSGrq/6D/Vne2Oxu8EobLqhSqQDTY
+					xcVGdk9UJmlQUsuVWrNHHZx0OFYZFlJRw4Vm
+					ibK38PnhAEAeue+ncD+ji/HJ1XMsAID8K1kj
+					oIC7GporhxMcMaa1K5iALGBn7s5soTiP7rr6
+					UoafcbY6Cssx5x43wKCV1Eo3EpK9HwS/CEzp
+					IFG3k2xHIdHGazVYSi9yHI17DeR8QZjFCIe2
+					Xr+55Jwooy4TuD+xmV5w1zYQcEoR48D0ZixY
+					wnZXYb6k+3xGJxX1lHuyfOCfUP/ilUJI0+2O
+					R+vyjOEh3ijoFsDu4EFqpJ/vgWkaHESYGQks
+					Qj2o5A1EGPIPvl6tUQ== )
+mesmtp._domainkey.neer.io. 300	IN TXT	"v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKHkayj0jloRLhViPBHEH+7Tu32wEcgCZpu84XV6Se1Excnk36NdIeOpFKpAGMdjh7luL689NHPWaQIs3V1xV7yzZVH0wpV59uY00v/oVAYCXKz0s6DvC90tZXbkjvWA+iAvfU228Xxylapz37l4r6FPW8K5wgYx4v22DBmPuFswIDAQAB"
+			300	RRSIG	TXT 10 4 300 (
+					20141017102524 20140917102524 9932 neer.io.
+					hqX132GOmhNMrdsKFcuW36TCuIZFovG53Q/t
+					TSx2mi1JjPgZghE8Bvww8RK7Hl7DgHO9mRLB
+					a4wVRk73IGXrDyjhf9I+/rV5uMXvyj0g3g9k
+					2eFx2WxIv3xE0zPKBhKePIfQ1KCIccxNcHqs
+					d4ynyG28YV99lBOsuEBeF5YZtdNoYjDQHq9a
+					hx0xbCsNsOQwA8UOCTfXtd7YLZDxQm4+w5Oh
+					rH0A8vRU2zUh943dbPi2/G0oBG1Lzw1oYUpa
+					N8ztmLhf4mPRSCKe0MrbpDmpxesrpVulU9Cd
+					6lJUhbp082ihXFRIt+KULEeahyJeMKBTdZQv
+					jhT+tXgs6Jn/QMks/Q== )
+5IO3LJJDLBAJHCFP57FH7HOV6580E2GK.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					DGPRL8S91O6BP0EQL07N8PFPQUU9C7VV )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141017102524 20140917102524 9932 neer.io.
+					LbCnXlrwS7YbOjCBg3leCHzzLvyrC92D+GUn
+					vmWXbhuRsvwg+HXQS3Pwguybom843qF2K9qS
+					YDhbN2iPZeaarIv5ijQTgtxFJoO3zCISEZkW
+					uNEdEDhEboHkxlzpp+BP14I8EbB2q1Z0qcFL
+					uuGZrCiwRQzFqP8+qXvQe/+hQTEEYNSmU0zj
+					5CKQrjcIrpYkA+mSAqo4nwWTQJJSVaoRdYWB
+					nSDIDSFR0Yml+S/A0YkCEHPv6QTHuDG+zb9y
+					tg2GsC42yRPQYEBVUfArSg7+X8qRIisNaOIS
+					mXtoYZDCpIyj4Ko1tq3POFFDG3mjLiQ4NKGk
+					y00iOyrIjaUZl4OKdQ== )
+www.neer.io.		300	IN CNAME neer.io.
+			300	RRSIG	CNAME 10 3 300 (
+					20141017102524 20140917102524 9932 neer.io.
+					es8T7NMaT4y6pohwpPC7r9b3qM1FZT+CEneO
+					6NlquOU/zhZNgMIUBrC21u3e2e3FcsqCUjLZ
+					d2OMToRgA9bpju3SvxR0ACGiZb2qsReuTGYQ
+					kXJpJj22YvSfns/nS7YrBPB4AQO/UVc/61qf
+					B4QkTlCEcviLDd7Pew9PIQJ2vgQJMXk6HHi5
+					MxnrOYNT/9YDIvXeSQ6RRu3DnA6VmADFjzCD
+					BpVTMKGl7IgBqg6Jx3QW2faTzdEdMMLjyZKS
+					EPRfMGh+XlCtpgtR9kyXP3j7h5K5uNXaSakb
+					mCRkPTaaCY9KRJQ7f+xMw5/PMun2OPGFTOkJ
+					evKJgonXA6AB5kOJLg== )
+EAAT8IOGOAPK81O2T6246VR1IDD6BQ7U.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					GDBBBS7TLUMHOJJ5CFNQT4N2LCKOU20U
 					TXT RRSIG )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20141016135556 20140916135556 9932 neer.io.
-					McaNPpHiPepeLg+nMTCa9eQsMu+6wAgX1kFd
-					K4Kz4D7EEVuIVcBy5Non3BzHRfSIaCVKi8Zs
-					JEB/uWfShgb+wSA1m2TOgPwR/ThyVuexve9f
-					h5iAvMRSL74c9wANBzDtvT1s0ZG65vbMyj7W
-					cTC+mrnCoc6KYxb2bed0MZHn1KbjXtkV7R7y
-					Y38ESpR8wUxgyCSVBEHjSR8wa/T5+XHA2j8R
-					J714P3GPUOC7blDw/HFGTUlnoJODnbSngXKn
-					61jPhtRjNQTvNKq5Z54fQomsLeYcccJfh+h8
-					RzOIuoktz8Gsfm5It54qevPg7gw4lCd9VC+5
-					1yrlAzQj764t+IIlvw== )
+					20141017102524 20140917102524 9932 neer.io.
+					MlHLkFn1qtRMQq3aiQ/Zi1ihauZvqllXJpqK
+					r++hbJ/n2X32zErkHQtURqCfyFRNHg7z5nRV
+					kJ80rmktanWE5W2ABiY4n9m8/zVq4TZ4Je20
+					j2LRtA6QB+s7FzqgfKvqz6KdAzDWRgVdSeju
+					1Q1uN5lbRbXfYll57zU26H+zbLvg9YHOcuhh
+					M1G1TKXPTvjjL87HMlJ9xB7PCEU4gdo8+lzn
+					gQ7TE8RzvXEMpj+AhV1LAUgzurbR7vk//vJk
+					/0zoXujk/Eq+f6aFW6H8XO02OyfeEa0BSzP8
+					u3nEqDR3Th1E1dNjzYTnB+l5exujN3MVqUX8
+					0MNxyU2appfp6TPtxw== )
+DGPRL8S91O6BP0EQL07N8PFPQUU9C7VV.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					EAAT8IOGOAPK81O2T6246VR1IDD6BQ7U )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141017102524 20140917102524 9932 neer.io.
+					OPLevc5dv0dtkz68eEmwCSQSPT5EPv0ejHy8
+					L+ABYF6hRgt3HOP4aAhtlTvyON7BvHT+jZl2
+					HFwhJsXZPJKVzebJOuqjXDi0l+QsJwG4Yv+I
+					l/htimSl+vqdcjqfgPC/tbHyuYzUsWcrU0EC
+					9xZsx5lEH1QviT9sm0rXpCsWW3SQETBQ79v0
+					2NsmcpK+2UVroU98QDT5C/l14QcL/HQ/cidM
+					e8I/jrd/K+sB8L8XctQUYFl6yBfwKVVObMY/
+					NdEL1Fh6WUPkhJvu09rUc1kOPEEQoqba7lGw
+					1YojhEkE9LyBW7JAX5clNDSi7eBXKb98fZHl
+					Kpdl/fRi9nw0L8mhsA== )
+HQSTRJEQF9Q3JN3LQ8V3LUOR1N90JV6H.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					OBNDMLMOD1215QCBF0H2R3MRHMSE0RGP
+					MX RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141017102524 20140917102524 9932 neer.io.
+					XuGLOC4SLOU49FsxD2H8/9UObzMEcsrdiLmx
+					T+0ayZkSGm8o2dYu9kqUuw7g9m4tBnM3+cTX
+					r10VkQeM+pKjzAb/kl2v1KtllBF3YEO9TZeT
+					vhRV8VsSY1fLI7UiVYUqK/ZBzXRClS5DVpMA
+					VkRyqcEj4v6KQrFvbv6dmwVDtUIsuRj3tcxc
+					vLkcp6Ro2NxtHs/lvZB3Rsdl8fGU1C7uOASp
+					q6nCgoK3QyhliOR4oqPpPTW5tRUBbGsFvOw/
+					NEew0JNP5Ujw5SP4AHazJrObq/mWQWb+01uk
+					11nBG4w3jYtfoqCyp+j6b+suk8e6s+Nu+ej5
+					Xrs5GXfw7v4ZSGYeBQ== )
+GDBBBS7TLUMHOJJ5CFNQT4N2LCKOU20U.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					HQSTRJEQF9Q3JN3LQ8V3LUOR1N90JV6H
+					RRSIG TLSA )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141017102524 20140917102524 9932 neer.io.
+					V//Hq+9Mb4dGUui5mP1wEQ1A8iyDk8fS6rxb
+					0paPoFrLrHldi7vrI8UZR8fCGF7bxlRlOkFr
+					ITM3Lpibp8MdUuSkqLo+RYv3J+nu62toGyrp
+					VqDjK5ngNArlE/ntyjlCi0XAQD79RZ/7ntOX
+					RLUcEjLrWBa3wi1wcTZS0LNVRhHwwOlir1cO
+					cjNUKI0qXckoS5XykGvn+eQGow/v0DnjsRTI
+					bUaZI9E9QrFHPQ+7qKsBbuVnbW1hI2w/g2I9
+					FhkBcFo9JJSHNu+ffjOgb13fQ2VPM5/ZBydV
+					OQIxAQXDfo6p+4lpwUEC+Jm4+Z+9yjhiAZTA
+					fSp/iaW/7+MunHLr3Q== )
+0QQVAKQOP7EGUC11GLN17GD1PT4IKD5S.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					28MAKPRTRHOTNP39P1E1OF7OMUTOGCNG
+					CNAME RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141017102524 20140917102524 9932 neer.io.
+					JQr4zEOV1RQ6b6gCHgJNBS7xEo3xasHB+ThA
+					3BtSx33Re3Fdnhilglkarfg+/81febqhHrD/
+					BkOcKCnAmea3tl7BbC4VBcjQ/pO4o5u7vYsH
+					L82kTiL3FbCCvu5JT7MGwbVYR7xMWuIgsHAn
+					CS8tPFrL1hfXzDjI3nvGCM+6NWeFqzdZtps6
+					a46QeU8N3B9MpwumdRrM7+4Dhoh4+J54qOD6
+					ezn2GoxuaP+KKnW+vB96U1hxQhlrUyl1uNsR
+					kbPsEqhkPIZn3irT703cQcP/luFcc8hp3cf8
+					nqFFFSi+UqlTXuIUbolihLn8FKWnMf5e24i0
+					8t0vx+xWR49m8LiO9g== )
+PV46EV0R472LT2V51OLABO8UJ97H986J.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					RDJPB9AOP4N6UJI3HD9P2A8RSM735LM3
+					A NS SOA MX TXT AAAA RRSIG DNSKEY NSEC3PARAM SPF )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141017102524 20140917102524 9932 neer.io.
+					WUTmHRZqBcmrNz/W2/lrS6O+47queRD1c1Q7
+					TauU3l7898xTF8qcshHKnuk2kua/Gka851xd
+					rudve4f6/Gz5BNDTyysQTaKsalmU4nd30uzg
+					z8iB4LGbTOxXumjV1eHkidztdzF4BIuP0suH
+					MqsMs11Y+5KRAJapp79YG4EgeuB5kdQWv68x
+					2NtDxR91PdY3t43Y3dYn0FR6opMzpUtnBgDM
+					9whhMB8xPb/XvNOmu98sANnsNiZ4oT02tjqY
+					zz4F6KVl9e8AYfqXAqmehqtJXS4594uI4LJd
+					kjKfimfYUh2E7Z/S1E5Zwn6/YIvyBsNgDTD5
+					MERIVMK4Os637e9FBA== )
+RDJPB9AOP4N6UJI3HD9P2A8RSM735LM3.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					TT0RFEHPVLEBPFG2F7DL4VEHB9477KEN )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141017102524 20140917102524 9932 neer.io.
+					RKO5cK9QKXefqHGFh/Z1/X0ptEzbKawemGbw
+					/Ovm9rJYaFWilCNkWmWAwpNFFg+5W9QnQc7J
+					Ee6Gr0KqUn06gSIWnC7fu298zbBBBwN11jwY
+					Sfan7MLiKZNwUpcL0C7Ie1WCZ+RO8HJhY+d6
+					PGKwKax27/v1ski09E2Fh1bo7geVT/iHnTv9
+					gPRfWYOHUxYANdoXHR7bS5Yc3jO+0SEJgNlK
+					6Ln7QOsfeurXJa5obXuWu/O/wFHNx8s3a9qw
+					A9Q0+JAi4mFT8ohGzhE4Goqu4c6f1d+2Ymkh
+					R36Ibd8Xf9BVBW/L+FgDFty0TH4W/aElVwde
+					4k+h28t57BQUDtN4zA== )
+TT0RFEHPVLEBPFG2F7DL4VEHB9477KEN.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					0QQVAKQOP7EGUC11GLN17GD1PT4IKD5S
+					TXT RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141017102524 20140917102524 9932 neer.io.
+					kqi/00TNtUw5inn/wooS4vEbuRUYvCOdxVia
+					TbmlgqguBk+GGK1Q3cVmkduKzkrvsNmdTbb8
+					1BusDU76wNQn2bTswsGDzzMHxjHv6a0lVbw6
+					Fv9HjfvcLGNWTxxiMw+fvwi7dF9mYFR6FtBU
+					Zm+VvxpoIK+nnSWuyWgJ3jtTMYaCeKXG7ARM
+					FJkDrmQxYuZRkyspVlCRBvL21owIiu+W6vz5
+					GhjdohLlAO0iq7jOsTQ5ABZYd9FIhOUzSCDo
+					KhpJMvm3rSc4j/3tcKGPVcHyS7GhcXkCUyep
+					QIkmcKFeyNikAMMnJYtQQdfb7NUsKfQPUNfJ
+					zy9MLOc20XsMrswo1g== )
+OBNDMLMOD1215QCBF0H2R3MRHMSE0RGP.neer.io. 3600 IN NSEC3	1 0 10 B17BA0A4D8453DB7 (
+					PV46EV0R472LT2V51OLABO8UJ97H986J
+					AAAA RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141017102524 20140917102524 9932 neer.io.
+					bg8xU/1Bqg8ckzgrp0v/FtRDnXWxncZxcxs3
+					aqnGq5lFFoai9DUiFxFf8c6cv5tleYNLo4cC
+					L7doz3daCce+RALUxsbFDl51FwIAXaP9vfMI
+					3Xzj0LK8s7VmgeljM+XhR221BVQPoD6+u9M+
+					TI1uW65il18bqUoxUijBGdgrCUh6iMSRN4LF
+					YYCcIYzrFpIthyYFxgPDrXoEbetBYdQqJhxS
+					nPYAPhM9OBkSSjWmdngTxl/7923VDKmpAvln
+					yyPzTqnZbTRwC6PI2kS75bJ9TXDJjmM5y/Aq
+					vrjYYMUhl7Zaq4FAJDWkXaX/Z/27MwgsFxkh
+					bN1eh05APkI8vVRgDg== )
