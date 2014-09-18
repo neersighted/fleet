@@ -31,6 +31,25 @@
         - '{{ network.ipv6.public.0 }}'
         - 127.0.0.1
         - ::1
+      slaves:
+        # ns1.linode.com
+        - 69.93.127.10
+        - 2600:3c00::a
+        # ns2.linode.com
+        - 65.19.178.10
+        - 2600:3c01::a
+        # ns3.linode.com
+        - 75.127.96.10
+        - 2600:3c02::a
+        # ns4.linode.com
+        - 207.192.70.10
+        - 2600:3c03::a
+        # ns5.linode.com
+        - 109.74.194.10
+        - 2a01:7e00::a
+        # slave.dns.he.net
+        - 216.218.133.2
+        - 2001:470:600::2
 
     - role: dns/nsd/zone
       zone: neer.io
