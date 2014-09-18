@@ -25,12 +25,12 @@ for domain in ${domains}; do
 
   eche "${bold}${blue}----> Check nameserver serials${reset}"
   for server in $(dig @${master_server} ${domain} ns | grep NS | grep -v "^;" | awk '{ORS=" "}{print $5}'); do
-    echo -n "${server} :"
+    echo -n "${server} : "
 
     serial=$(dig @${server} ${domain} soa | grep SOA | grep -v "^;" | awk '{print $7}')
 
     if [ -n "${serial}" ]; then
-      echo -n " ${serial}"
+      echo -n "${serial}"
       if [ $master_serial == $serial ]; then
         echo " :)"
       else
