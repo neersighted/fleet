@@ -27,6 +27,12 @@ buyvm-lv
 [buyvm-lv]
 tungsten.neersighted.com
 
+[digitalocean:children]
+digitalocean-ny3
+[digitalocean-ny3]
+uranium.neersighted.com
+plutonium.neersighted.com
+
 [linode:children]
 linode-dal
 linode-fre

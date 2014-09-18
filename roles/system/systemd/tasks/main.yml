@@ -1,0 +1,20 @@
+- name: check if systemd is running
+  tags: [systemd, system]
+  command: pidof systemd
+  ignore_errors: yes
+  register: systemd
+  changed_when: false
+
+- name: reboot into systemd
+  tags: [systemd, system]
+  command: shutdown -r now "reboot into systemd"
+  async: 0
+  poll: 0
+  register: rebooted
+  when: systemd|failed
+
+- name: wait for host to come back
+  tags: [systemd, system]
+  local_action: wait_for host={{ inventory_hostname }} port={{ ansible_ssh_port|default(22) }} search_regex=OpenSSH delay=10
+  sudo: false
+  when: rebooted.changed

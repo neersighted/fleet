@@ -73,7 +73,7 @@
     - role: accounts/group
       args:
         name: deploy
-        system: true
+        system: yes
     - role: security/sudoer
       user: '%deploy'
       perms: 'ALL=(ALL) NOPASSWD: ALL'
@@ -92,7 +92,7 @@
       args:
         name: ansible
         group: deploy
-        system: true
+        system: yes
     - role: security/ssh/auth_key
       user: ansible
       key: "{{ lookup('file', '../.ssh/ansible.pub') }}"

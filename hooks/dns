@@ -4,46 +4,41 @@ ROOT=$(pwd)
 ZONES=files/dns
 KEYS=files/dns
 
-git diff --cached --name-only | grep -v "signed" | grep -v "dsset" | if grep --quiet "${ZONES}"; then
-  modified_zones=$(git diff --cached --name-only | grep "${ZONES}" | grep -v "signed" | grep -v "dsset")
+for path in $(git diff --cached --name-only | \
+              grep "${ZONES}" | \
+              grep -v "signed" | \
+              grep -v "dsset" \
+            ); do
 
-  for path in $modified_zones; do
-    zonefile=$(basename "${path}")
-    zone=${zonefile/zone/}
+  zonefile=$(basename "${path}")
+  zone=${zonefile/zone/}
 
-    echo -e "\e[1;34m----> Checking [\e[0;32m${zone}\e[1;34m] (\e[0;32m${zonefile}\e[1;34m)\e[0m"
+  echo -e "\e[1;34m----> Checking [\e[0;32m${zone}\e[1;34m] (\e[0;32m${zonefile}\e[1;34m)\e[0m"
 
-    if ! named-checkzone "${zone}" "${ZONES}/${zonefile}"; then
-      echo -e "\e[1;34mAborting commit.\e[0m"
-      exit 1
-    fi
+  if ! named-checkzone "${zone}" "${ZONES}/${zonefile}"; then
+    echo -e "\e[1;34mAborting commit.\e[0m"
+    exit 1
+  fi
 
-    serial=$(grep -C 1 'SOA' "${ZONES}/${zonefile}" | tail -1 | tr -d '[[:space:]]' | cut -c 1-10)
-    serialdate=$(echo "${serial}" | cut -c 1-8)
-    currentdate=$(date "+%Y%m%d")
-    if [ "${serialdate}" = "${currentdate}" ]; then
-      newserial=$((serial+1))
-    else
-      newserial="${currentdate}01"
-    fi
+  oldserial=$(grep -C 1 'SOA' "${ZONES}/${zonefile}" | tail -1 | tr -d '[[:space:]]' | cut -c 1-10)
+  newserial=$(date '+%s')
 
-    echo -e "\e[1;34m----> Incrementing the serial from [\e[0;32m${serial}\e[1;34m] to [\e[0;32m${newserial}\e[1;34m]\e[0m"
-    sed -i "s/${serial}/${newserial}/" "${ZONES}/${zonefile}"
+  echo -e "\e[1;34m----> Incrementing the serial from [\e[0;32m${oldserial}\e[1;34m] to [\e[0;32m${newserial}\e[1;34m]\e[0m"
+  sed -i "s/${oldserial}/${newserial}/" "${ZONES}/${zonefile}"
 
-    git add "${ZONES}/${zonefile}"
+  git add "${ZONES}/${zonefile}"
 
-    if grep --quiet -i "DNSKEY" "${ZONES}/${zonefile}"
-    then
-        echo -e "\e[1;34m----> Signing [\e[0;32m${zone}\e[1;34m] (\e[0;32m${zonefile}\e[1;34m)\e[0m"
+  if grep --quiet -i "DNSKEY" "${ZONES}/${zonefile}"
+  then
+      echo -e "\e[1;34m----> Signing [\e[0;32m${zone}\e[1;34m] (\e[0;32m${zonefile}\e[1;34m)\e[0m"
 
-        dnssec-signzone -K "${KEYS}" -3 "$(head -c 1000 /dev/urandom | sha1sum | cut -b 1-16)" -N INCREMENT -o "${zone}" -t "${ZONES}/${zonefile}"
-        mv "dsset-${zone}" "${ZONES}"
+      dnssec-signzone -K "${KEYS}" -3 "$(head -c 1000 /dev/urandom | sha1sum | cut -b 1-16)" -N INCREMENT -o "${zone}" -t "${ZONES}/${zonefile}"
+      mv "dsset-${zone}" "${ZONES}"
 
-        git add "${ZONES}/${zonefile}"
-        git add "${ZONES}/${zonefile}.signed"
-        git add "${ZONES}/dsset-${zone}"
-    fi
+      git add "${ZONES}/${zonefile}"
+      git add "${ZONES}/${zonefile}.signed"
+      git add "${ZONES}/dsset-${zone}"
+  fi
 
-    echo -e "\e[0;32m---------------\e[0m"
-  done
-fi
+  echo -e "\e[0;32m---------------\e[0m"
+done

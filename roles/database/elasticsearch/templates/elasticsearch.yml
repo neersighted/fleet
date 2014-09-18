@@ -1,7 +1,7 @@
 node:
   name: {{ inventory_hostname }}
-  data: true
-  master: true
+  data: yes
+  master: yes
 cluster:
   name: {{ cluster }}
 
@@ -13,7 +13,7 @@ network:
   bind_host: 0.0.0.0
   publish_host: {{ network.ipv4.vpn }}
 discovery.zen.ping.multicast:
-  enabled: true
+  enabled: yes
   address: {{ network.ipv4.vpn }}
 
-bootstrap.mlockall: true
+bootstrap.mlockall: yes

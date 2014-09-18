@@ -1,0 +1,11 @@
+#!/bin/sh
+
+KEYS=files/all/tinc
+
+if ! [ -f $KEYS/$1.pub ]; then
+  openssl genrsa 4096 > $KEYS/$1.priv
+  openssl rsa -in $KEYS/$1.priv -pubout > $KEYS/$1.pub
+else
+  echo "Key for $1 already exists!"
+  exit 1
+fi

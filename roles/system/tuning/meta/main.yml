@@ -1,0 +1,3 @@
+dependencies:
+  - role: system/module
+    module: nf_conntrack

@@ -1,4 +1,4 @@
 metrics:
   collectd:
-    ntpd: true
-    ntppool: true
+    ntpd: yes
+    ntppool: yes
