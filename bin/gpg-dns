@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+set -e
+
+source bin/common
+source bin/colors
+
+
+GPGARGS="--no-secmem-warning"
+
+email=$1
+key=$2
+uri=$3
+
+if [ -z "${email}" ]; then
+  eche "${bold}${red}====> Email not specified${reset}"
+  exit 1
+elif [ -z "${key}" ]; then
+  eche "${bold}${red}====> Key not specified${reset}"
+  exit 1
+elif [ -z "${uri}" ]; then
+  eche "${bold}${red}====> URI not specified${reset}"
+  exit 1
+fi
+
+eche "${bold}${blue}====> Generate GPG DNS records [${green}${key}${blue}]${reset}"
+
+eche "${bold}${blue}----> Determine key fingerprint${reset}"
+fingerprint=$(gpg ${GPGARGS} --list-keys --fingerprint "${key}" | grep "Key" | sed 's/.*=//'| tr -d ' ')
+if [ -z "${fingerprint}" ]; then
+  eche "${bold}${red}===> Could not determine key fingerprint${reset}"
+  exit 1
+fi
+fingerprintlen=$(dc -e "16 o ${#fingerprint} 2 / p")
+fingerprintbin=$(printf "${fingerprintlen}${fingerprint}" | xxd -p -r)
+
+eche "${bold}${blue}----> Generate PGP CERT record${reset}"
+echo "${email/@/.}. CERT PGP 0 0 ("
+echo "$(gpg ${GPGARGS} --export --export-options export-minimal "${key}" | base64 --wrap=76 | sed 's/^/    /g')"
+echo ")"
+
+eche "${bold}${blue}----> Generate IPGP CERT record${reset}"
+echo "${email/@/.}. CERT IPGP 0 0 $(printf "${fingerprintbin}${uri}" | base64 --wrap=0)"
+
+eche "${bold}${blue}----> Generate PKA record${reset}"
+echo "${email/@/._pka.}. TXT \"v=pka1;fpr=${fingerprint};uri=${uri}\""
+
+
+eche "${bold}${green}====> GPG DNS records generated${reset}"

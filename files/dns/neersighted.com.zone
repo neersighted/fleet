@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. hostmaster.neersighted.com. (
-      1411078400 ; serial
+      1411083277 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -100,8 +100,6 @@ bjorn CERT IPGP 0 0 FO9TUuxGiFyNiOpkN/E4EoBtkiq1aHR0cHM6Ly9uZWVyc2lnaHRlZC5jb20v
 
 @ TXT "keybase-site-verification=a_LJ0l7lJXhU-eI0dLcOcBHB-30NjSxeUdjtTdKXuiw"
 
-
-; SSHFP
 carbon SSHFP 1 1 cb2c2989294156dbd7564a5092f8e5516b5e26a3
 carbon SSHFP 1 2 f0d5ef3ccd9051a8fa14ad9591788eb63df365110a681cc0121c473bb58ed7cd
 carbon SSHFP 2 1 4b62bcf61f47f8ab6ecfe78b64399754becae740

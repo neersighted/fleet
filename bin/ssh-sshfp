@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+source bin/common
+source bin/colors
+
+
+CIPHERS="rsa dsa ecdsa"
+HASHES="sha1 sha256"
+
+hosts=$@
+
+if [ -z "${hosts}" ]; then
+  eche "${bold}${red}====> Host(s) not specified${reset}"
+  exit 1
+fi
+
+for host in ${hosts}; do
+  eche "${bold}${blue}====> Generate SSHFP records [${green}${host}${blue}]${reset}"
+
+  c=1
+  for cipher in $CIPHERS; do
+    h=1
+
+    eche "${bold}${blue}----> Retrieve and hash host key [${green}${cipher}${blue}]${reset}"
+    hostkey=$(ssh-keyscan -t "${cipher}" "${host}")
+    if [ $? -ne 0 ]; then
+      eche "${bold}${red}===> Retrieving key failed${reset}"
+      exit 1
+    fi
+    for hash in $HASHES; do
+      ! fingerprint=$(printf "${hostkey}" | \
+                    awk '{print $3}' | \
+                    base64 -d | \
+                    ${hash}sum | \
+                    awk '{print $1}' \
+                  )
+
+      echo "${host}. SSHFP ${c} ${h} ${fingerprint}"
+
+      ((h++))
+    done
+    ((c++))
+  done
+
+  eche "${bold}${green}====> SSHFP records generated${reset}"
+  eche "${bold}${normal}---------------${reset}"
+done

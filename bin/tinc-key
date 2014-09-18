@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source bin/common
 source bin/colors
 
 
@@ -10,26 +11,22 @@ pubkey=$KEYS/${host}.pub
 privkey=$KEYS/${host}.priv
 
 if [ -f "${pubkey}" ]; then
-  echo -e "${bold}${red}====> Key already exists${reset}"
+  eche "${bold}${red}====> Key already exists${reset}"
   exit 1
 fi
 
-echo -e "${bold}${blue}====> Generate RSA keyset [${green}${host}${blue}]${reset}"
+eche "${bold}${blue}====> Generate RSA keyset [${green}${host}${blue}]${reset}"
 
-echo -e "${bold}${blue}----> Generate private key (${green}${privkey}${blue})${reset}"
-echo -en "${blue}"
+eche "${bold}${blue}----> Generate private key (${green}${privkey}${blue})${reset}"
 if ! openssl genrsa 4096 > ${privkey}; then
-  echo -e "${bold}${red}===> Key generation failed${reset}"
+  eche "${bold}${red}===> Key generation failed${reset}"
   exit 1
 fi
-echo -en "${reset}"
 
-echo -e "${bold}${blue}----> Extract public key (${green}${pubkey}${blue})${reset}"
-echo -en "${blue}"
+eche "${bold}${blue}----> Extract public key (${green}${pubkey}${blue})${reset}"
 if ! openssl rsa -in ${privkey} -pubout > ${pubkey}; then
-  echo -e "${bold}${red}===> Key extraction failed${reset}"
+  eche "${bold}${red}===> Key extraction failed${reset}"
   exit 1
 fi
-echo -en "${reset}"
 
-echo -e "${bold}${green}====> Keyset created${reset}"
+eche "${bold}${green}====> Keyset created${reset}"

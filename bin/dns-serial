@@ -1,53 +1,54 @@
 #!/usr/bin/env bash
 
+source bin/common
 source bin/colors
 
 
-targets=$@
+domains=$@
 
-if [ -z "${targets}" ]; then
-  echo -e "${bold}${red}====> Domain(s) not specified${reset}"
+if [ -z "${domains}" ]; then
+  eche "${bold}${red}====> Domain(s) not specified${reset}"
   exit 1
 fi
 
-for target in ${targets}; do
+for domain in ${domains}; do
   offline=
   unsynced=
 
-  echo -e "${bold}${blue}====> Check serials [${green}${target}${blue}]${reset}"
+  eche "${bold}${blue}====> Check serials [${green}${domain}${blue}]${reset}"
 
-  echo -e "${bold}${blue}----> Get master namserver${reset}"
-  master_server=$(dig ${target} soa | grep SOA | grep -v "^;" | awk '{print $5}')
+  eche "${bold}${blue}----> Get master namserver${reset}"
+  master_server=$(dig ${domain} soa | grep SOA | grep -v "^;" | awk '{print $5}')
 
-  echo -e "${green}${master_server}${blue} is master for ${green}${target}${blue}${reset}"
-  master_serial=$(dig @${master_server} ${target} soa | grep SOA | grep -v "^;" | awk '{print $7}')
+  echo "${master_server} is master for ${domain}"
+  master_serial=$(dig @${master_server} ${domain} soa | grep SOA | grep -v "^;" | awk '{print $7}')
 
-  echo -e "${bold}${blue}----> Check nameserver serials${reset}"
-  for server in $(dig @${master_server} ${target} ns | grep NS | grep -v "^;" | awk '{ORS=" "}{print $5}'); do
-    echo -en "${blue}${server} : ${reset}"
+  eche "${bold}${blue}----> Check nameserver serials${reset}"
+  for server in $(dig @${master_server} ${domain} ns | grep NS | grep -v "^;" | awk '{ORS=" "}{print $5}'); do
+    echo -n "${server} :"
 
-    serial=$(dig @${server} ${target} soa | grep SOA | grep -v "^;" | awk '{print $7}')
+    serial=$(dig @${server} ${domain} soa | grep SOA | grep -v "^;" | awk '{print $7}')
 
     if [ -n "${serial}" ]; then
-      echo -en "${green}${serial}${reset}"
+      echo -n " ${serial}"
       if [ $master_serial == $serial ]; then
-        echo -e " ${bold}${green}:)${reset}"
+        echo " :)"
       else
-        echo -e " ${bold}${red}:(${reset}"
+        echo " :("
         unsynced=1
       fi
     else
-      echo -e "${green}no results ${bold}${red}D:${reset}"
+      echo "no results D:"
       offline=1
     fi
   done
 
   if [ -n "${offline}" ]; then
-    echo -e "${bold}${red}====> Some servers are not responding${reset}"
+    eche "${bold}${red}====> Some servers are not responding${reset}"
   elif [ -n "${unsynced}" ]; then
-    echo -e "${bold}${red}====> Some servers are out of sync${reset}"
+    eche "${bold}${red}====> Some servers are out of sync${reset}"
   else
-    echo -e "${bold}${green}====> All servers are in sync${reset}"
+    eche "${bold}${green}====> All servers are in sync${reset}"
   fi
-  echo -e "${bold}${normal}---------------${reset}"
+  eche "${bold}${normal}---------------${reset}"
 done

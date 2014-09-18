@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source bin/common
 source bin/colors
 
 
@@ -9,22 +10,22 @@ target=$1; shift
 playbook=plays/${target}.yml
 
 if [ -z "${target}" ]; then
-  echo -e "${bold}${red}====> Playbook not specified${reset}"
+  eche "${bold}${red}====> Playbook not specified${reset}"
   exit 1
 fi
 if ! [ -f "${playbook}" ]; then
-  echo -e "${bold}${red}====> Playbook does not exist${reset}"
+  eche "${bold}${red}====> Playbook does not exist${reset}"
   exit 1
 fi
 
-echo -e "${bold}${blue}====> Deploy fleet [${green}${target}${blue}]${reset}"
+eche "${bold}${blue}====> Deploy fleet [${green}${target}${blue}]${reset}"
 
-echo -e "${bold}${blue}----> Record event (${green}${EVENT_PREFIX}${target}${blue})${reset}"
+eche "${bold}${blue}----> Record event (${green}${EVENT_PREFIX}${target}${blue})${reset}"
 bin/event "${EVENT_PREFIX}${target}"
 
-echo -e "${bold}${blue}----> Run playbook (${green}${playbook}${blue})${reset}"
+eche "${bold}${blue}----> Run playbook (${green}${playbook}${blue})${reset}"
 if ansible-playbook ${playbook} $@; then
-    echo -e "${bold}${green}====> Deploy succeeded${reset}"
+    eche "${bold}${green}====> Deploy succeeded${reset}"
 else
-    echo -e "${bold}${red}====> Deploy failed${reset}"
+    eche "${bold}${red}====> Deploy failed${reset}"
 fi
