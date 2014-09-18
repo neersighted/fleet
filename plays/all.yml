@@ -202,6 +202,11 @@
         pkg: nfs-common
         state: absent
         purge: yes
+    - role: packages/apt
+      args:
+        pkg: fuse
+        state: absent
+        purge: yes
 
     - role: packages/apt
       args:
