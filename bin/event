@@ -1,19 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env bash
 
-import json
-import math
-import requests
-import sys
-import time
+PREFIX=events.
 
-DATABASE = 'metrics'
-VALUE    = 1
+event=$1
 
-event = sys.argv[1]
-
-v = [{'name': 'events.' + event, 'columns': ['event', 'value'], 'points': [[event, VALUE]]}]
-r = requests.post('http://localhost:8086/db/%s/series?u=root&p=root' % DATABASE, data=json.dumps(v))
-
-if r.status_code != 200:
-  print 'Failed to add point to influxdb -- aborting.'
-  sys.exit(1)
+bin/influxdb-submit "${PREFIX}${event}" 1

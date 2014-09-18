@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. hostmaster.neersighted.com. (
-      1411008499 ; serial
+      1411069713 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -48,5 +48,8 @@ www CNAME @
 
 _443._tcp TLSA 3 0 1 c54904e3902f7b4fc49ef5583e1f3214c81671e57d18afd6e64de30bb1a70d40
 _443._tcp.www TLSA 3 0 1 c54904e3902f7b4fc49ef5583e1f3214c81671e57d18afd6e64de30bb1a70d40
+
+bjorn._pka TXT "v=pka1;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5;uri=https://neersighted.com/key.asc"
+bjorn CERT 6 0 0 FO9TUuxGiFyNiOpkN/E4EoBtkiq1aHR0cHM6 Ly9uZWVyc2lnaHRlZC5jb20va2V5LmFzYw==
 
 @ TXT "keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"

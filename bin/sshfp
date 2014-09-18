@@ -1,12 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-hashes='sha1 sha256'
-ciphers='rsa dsa ecdsa'
+HASHES='sha1 sha256'
+CIPHERS='rsa dsa ecdsa'
 
 c=1
-for cipher in $ciphers; do
+
+for cipher in $CIPHERS; do
   h=1
-  for hash in $hashes; do
+
+  for hash in $HASHES; do
     test -f /etc/ssh/ssh_host_${cipher}_key.pub || continue
 
     fp=$(awk '{print $2}' /etc/ssh/ssh_host_${cipher}_key.pub | openssl base64 -d -A | openssl dgst -${hash} | awk '{print $2}' | tr '[a-z]' '[A-Z]')

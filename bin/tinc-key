@@ -1,11 +1,35 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+source bin/colors
+
 
 KEYS=files/all/tinc
 
-if ! [ -f $KEYS/$1.pub ]; then
-  openssl genrsa 4096 > $KEYS/$1.priv
-  openssl rsa -in $KEYS/$1.priv -pubout > $KEYS/$1.pub
-else
-  echo "Key for $1 already exists!"
+host=$1
+pubkey=$KEYS/${host}.pub
+privkey=$KEYS/${host}.priv
+
+if [ -f "${pubkey}" ]; then
+  echo -e "${bold}${red}====> Key already exists${reset}"
   exit 1
 fi
+
+echo -e "${bold}${blue}====> Generate RSA keyset [${green}${host}${blue}]${reset}"
+
+echo -e "${bold}${blue}----> Generate private key (${green}${privkey}${blue})${reset}"
+echo -en "${blue}"
+if ! openssl genrsa 4096 > ${privkey}; then
+  echo -e "${bold}${red}===> Key generation failed${reset}"
+  exit 1
+fi
+echo -en "${reset}"
+
+echo -e "${bold}${blue}----> Extract public key (${green}${pubkey}${blue})${reset}"
+echo -en "${blue}"
+if ! openssl rsa -in ${privkey} -pubout > ${pubkey}; then
+  echo -e "${bold}${red}===> Key extraction failed${reset}"
+  exit 1
+fi
+echo -en "${reset}"
+
+echo -e "${bold}${green}====> Keyset created${reset}"

@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+source bin/colors
+
+
+ZONES=files/dns
+KEYS=files/dns
+
+for path in $(git diff --cached --name-only | \
+              grep "${ZONES}" | \
+              grep -v "signed" | \
+              grep -v "dsset" \
+            ); do
+  zonefile=$(basename "${path}")
+  zone=${zonefile/zone/}
+
+  echo -e "${bold}${blue}====> Update zone [${green}${zone}${blue}]${reset}"
+
+  echo -e "${bold}${blue}----> Check zone for errors${reset}"
+  echo -en "${blue}"
+  if ! named-checkzone "${zone}" "${ZONES}/${zonefile}"; then
+    echo -e "${bold}${red}===> Zone invalid${reset}"
+    exit 1
+  fi
+  echo -en "${reset}"
+
+  oldserial=$(grep -C 1 'SOA' "${ZONES}/${zonefile}" | tail -1 | tr -d '[[:space:]]' | cut -c 1-10)
+  newserial=$(date '+%s')
+
+  echo -e "${bold}${blue}----> Update serial (${green}${oldserial}${blue} -> ${green}${newserial}${blue})${reset}"
+  sed -i "s/${oldserial}/${newserial}/" "${ZONES}/${zonefile}"
+
+  git add "${ZONES}/${zonefile}"
+
+  if grep --quiet -i "DNSKEY" "${ZONES}/${zonefile}"; then
+      salt=$(head -c 1000 /dev/urandom | sha1sum | cut -b 1-16)
+
+      echo -e "${bold}${blue}----> Sign and update zone${reset}"
+      echo -en "${blue}"
+      if ! dnssec-signzone -t -3 "${salt}" -o "${zone}" -K "${KEYS}" -d "${KEYS}" "${ZONES}/${zonefile}"; then
+        echo -e "${bold}${red}===> Signing failed${reset}"
+        exit 1
+      fi
+      echo -en "${reset}"
+
+      git add "${ZONES}/${zonefile}"
+      git add "${ZONES}/${zonefile}.signed"
+      git add "${ZONES}/dsset-${zone}"
+  fi
+
+  echo -e "${bold}${green}====> Zone updated${reset}"
+  echo -e "${bold}${normal}---------------${reset}"
+done
