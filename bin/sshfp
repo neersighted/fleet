@@ -3,17 +3,22 @@
 HASHES='sha1 sha256'
 CIPHERS='rsa dsa ecdsa'
 
-c=1
+host=$1
 
+c=1
 for cipher in $CIPHERS; do
   h=1
-
   for hash in $HASHES; do
-    test -f /etc/ssh/ssh_host_${cipher}_key.pub || continue
+    fingerprint=$(ssh-keyscan -t "${cipher}" "${host}" 2>/dev/null | \
+                  awk '{print $3}' | \
+                  base64 -d | \
+                  ${hash}sum | \
+                  awk '{print $1}' \
+                )
 
-    fp=$(awk '{print $2}' /etc/ssh/ssh_host_${cipher}_key.pub | openssl base64 -d -A | openssl dgst -${hash} | awk '{print $2}' | tr '[a-z]' '[A-Z]')
+    sshfp="${c} ${h} ${fingerprint}"
 
-    echo "$(hostname -f). IN SSHFP ${c} ${h} ${fp}"
+    echo "${host}. SSHFP ${sshfp}"
 
     ((h++))
   done
