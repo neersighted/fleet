@@ -19,9 +19,11 @@ for domain in ${domains}; do
 
   eche "${bold}${blue}----> Get master namserver${reset}"
   master_server=$(dig ${domain} soa | grep SOA | grep -v "^;" | awk '{print $5}')
-
   echo "${master_server} is master for ${domain}"
+
+  eche "${bold}${blue}----> Get master's serial${reset}"
   master_serial=$(dig @${master_server} ${domain} soa | grep SOA | grep -v "^;" | awk '{print $7}')
+  echo "${master_server} has serial ${master_serial}"
 
   eche "${bold}${blue}----> Check nameserver serials${reset}"
   for server in $(dig @${master_server} ${domain} ns | grep NS | grep -v "^;" | awk '{ORS=" "}{print $5}'); do

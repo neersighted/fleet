@@ -1,0 +1,11 @@
+- name: reload systemd
+  command: systemctl daemon-reload
+
+- name: reload tmpfiles
+  service: name=systemd-tmpfiles-setup state=restarted
+
+- name: reload prosody
+  service: name=prosody state=reloaded
+
+- name: restart prosody
+  service: name=prosody state=restarted

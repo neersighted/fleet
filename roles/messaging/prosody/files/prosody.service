@@ -1,16 +1,15 @@
 [Unit]
-Description=High Performance Web Server/Proxy
+Description=XMPP Server
 After=network.target
 
 [Service]
 Type=forking
 SyslogLevel=notice
 
-PIDFile=/run/nginx.pid
-ExecStart=/usr/sbin/nginx
+PIDFile=/run/prosody/prosody.pid
+ExecStart=/usr/bin/prosodyctl start
 ExecReload=/bin/kill -HUP $MAINPID
-KillSignal=SIGQUIT
-KillMode=mixed
+ExecStop=/usr/bin/prosodyctl stop
 
 Restart=always
 RestartSec=30

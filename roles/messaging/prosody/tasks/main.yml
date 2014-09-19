@@ -1,0 +1,20 @@
+- name: configure prosody
+  tags: [prosody, messaging]
+  template: src=prosody.cfg.lua dest=/etc/prosody/prosody.cfg.lua
+  notify: reload prosody
+
+- name: install prosody tmpfiles
+  tags: [prosody, messaging]
+  copy: src=prosody.tmp dest=/etc/tmpfiles.d/prosody.conf
+  notify: reload tmpfiles
+
+- name: install prosody service
+  tags: [prosody, messaging]
+  copy: src=prosody.service dest=/etc/systemd/system/prosody.service
+  notify:
+    - reload systemd
+    - restart prosody
+
+- name: enable and start prosody
+  tags: [prosody, messaging]
+  service: name=prosody state=started enabled=yes

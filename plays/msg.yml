@@ -1,0 +1,22 @@
+- name: Messaging Servers (msg)
+  hosts: msg
+  sudo: yes
+  roles:
+    - role: network/ferm/rule
+      name: xmpp
+      rule: domain (ip ip6) table filter chain INPUT proto (tcp udp) dport (xmpp-server xmpp-client) ACCEPT;
+
+    - role: messaging/prosody
+      ssl:
+        cert: /etc/ssl/neersighted.com.pem
+        key: /etc/ssl/neersighted.com.pem
+      admins:
+        - bjorn@neersighted.com
+        - bjorn@neergaard.me
+      virtualhosts:
+        neersighted.com:
+          cert: /etc/ssl/neersighted.com.pem
+          key: /etc/ssl/neersighted.com.pem
+        neergaard.me:
+          cert: /etc/ssl/neergaard.me.pem
+          key: /etc/ssl/neergaard.me.pem

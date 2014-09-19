@@ -1,24 +1,24 @@
-; File written on Thu Sep 18 16:42:38 2014
+; File written on Fri Sep 19 06:56:42 2014
 ; dnssec_signzone version 9.10.0-P2
 neergaard.me.		300	IN SOA	ns1.neersighted.com. hostmaster.neersighted.com. (
-					1411083758 ; serial
+					1411135002 ; serial
 					3600       ; refresh (1 hour)
 					900        ; retry (15 minutes)
 					1209600    ; expire (2 weeks)
 					3600       ; minimum (1 hour)
 					)
 			300	RRSIG	SOA 10 2 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					a+4rDXYgaHg5phK70j6+WM1hlg+FQxiTbFPA
-					qfll3Blhkxcgo46oG/glYwGyogXuidgzW4K+
-					nLJKkUSD11RQdh04pKFFr16dJjvfXWk/L42K
-					oZUBsHQgD1s2MLtr8VzAkzQpEV3wXUfpzF8h
-					IxnEG9F9MRM3L7sQeG7THwoBEe47k9kKyYaE
-					/tu//jACMleEPcQ7pHBbldeMhA4cbjqWBSh7
-					tDCFudvIPNiDEtJEKfHLj7GcziaKogvOKw+Q
-					YwK+drskYJddZ8XCAw/hTKleH/vEGMB6IfNw
-					AzNbsJpazQCtLULZeHCtvUD7Mi8pETnzjyt3
-					55UXcjzOCHEtXr2d2A== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					sV9iCJM8xOJHXuLlxjOyAob3kSFee5aBkHXj
+					bXmod42k92FzFobzl6k1XByXkRbzGBaIDRSx
+					phOgr0iPomEENZSREV/YnPUOzUu5Ns6nap2I
+					Qr3VtWJAhUmxWBMOnr56s4SvdqYl6bM7WdPF
+					O6lHTwUrlrEyfzKsRGept/ynqVTHYoDTyQty
+					xvpqhyOWEp9r4Hojn9mV7NUtNyBL7YuZ9M3l
+					JAbFab/ilajpUXeJiN60JHTR4+wI+WiYVnCN
+					mv6kYUo6FNx2ZjJWe+UeuYTgHYrYshvFp4cl
+					leyvxaN+GxtNEU/hln5kSJ8xB335qyLgnduR
+					Qe4a/2+wA3MOE42vEA== )
 			300	NS	ns1.neersighted.com.
 			300	NS	ns2.neersighted.com.
 			300	NS	ns3.neersighted.com.
@@ -26,73 +26,73 @@ neergaard.me.		300	IN SOA	ns1.neersighted.com. hostmaster.neersighted.com. (
 			300	NS	ns5.neersighted.com.
 			300	NS	ns6.neersighted.com.
 			300	RRSIG	NS 10 2 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					su0QIHx3gWXBfgj++TbQgSLDc5JhwSlXNxkV
-					bL71v+NO3yTGWuFgt1PYrW1Zk4oW/V0uYzEc
-					BGIU878fyuFhSotqgiUh7/uOaZgZCJdEd6hl
-					ZZDtMnW5SJJkVhIPthURKh66kwQXcU2g2V7x
-					XmCdHH9CdDjzJOTtrXTnl/4SP3mmxRh5d4oi
-					Z7xCVo1dk+Cyy9KcTuXPXTNHkFjMKbn1MK/G
-					okoKZRqSc8DhhFwLAPbL+XeB6YSg992FOmvT
-					A+yncs96YvKpM32N8vXdNBJWdTQ/OeFxnTx5
-					mQOBpqCKUUQxPQZIZsD3yZGlymD27d7yYLJ1
-					eUiM6xiFFNUvWs2cUQ== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					qVPWg6tmCjmsEWRou2UDL3HI1fX89boFRxNU
+					PnFliEhNCTGCL4zIryn2Yu76BPBU+h3hr0Zg
+					oA3qCkM9cHyJBC6crfIYNlRrFc71qNOo4QUH
+					sSHJymFkd1DCd+b/KliYktgW5rsjy6JMDCYz
+					EPlUWvyUn8E19EjhmtwjTrCJtwvsf8DOc/5L
+					haWVvksI6YQGzTZjK3LTKsTpO4VIX67kdw8b
+					/UXYF8iWKArXtqFNEoEZvVo09L2izdvjewVJ
+					NSIG0oOLszW+qZcn/KRGxPRHEytTVKA02870
+					d7/CQvexDF5hxB03Ye8t6mGokOhsKymmXMSi
+					cE+lIck/xBW/B4lFyQ== )
 			300	A	198.58.114.99
 			300	RRSIG	A 10 2 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					K/ZBdmbjukFDyEDZerVjjLZspSUUGpwaTZpJ
-					04M9dIRoSwKpd92zWz+cQUdDfvO8Jx0WqJUo
-					JhdfM+kfvU6GyAytE6j6SGe5jkNVII5y0q7u
-					sYhSSpmgafuo/wWPx4jZg5jgivdcXRjihfbC
-					V8NIvf2FdL7iE2A1sYFiHLGlemlErhSTOnTg
-					WEj1giKm6UDJG4NXaftAcC8UKBJR+o2Lp2ja
-					+c8UyOYPf8rasJ9NRszZVWKFQYjpSp5xAuyN
-					1XW5qdtDKbvuJ8YvaWPizGjTJK2pqI8j/R46
-					Y3vp47zF53yGTQIUPC+2Jd8KZV4BcPb6Gqu9
-					y0GaCm6Msml+yOYmCA== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					5Pzq3yxKPP8p5xw3cHZCqShBQdC1WsvX2EBI
+					cykkj7L6u8mabAE+S0PZ25aufN6DIpXLMx4y
+					pvsW0KJHV4HUilTHA6EK2kX0XNKreino+X5P
+					ZhQ5fiwpJ5L2DUapi4o6ZP0iP50JIdrH3aD7
+					z6EcjyeBZrnREdQG6qbHOel1tKDyFH/evmtp
+					TBqk5DHgvuSXlP/mZmoiNzr+kQUKQ9Eh5Lh8
+					YCUkS66zD1vEnKdXsL68m6cmpvfcmw3Wq227
+					wA2vCQlhEPKXhAtFcQcKGcyHheObW5j5wjEy
+					e1wBrQbg9VghuWk1xKUM29wJpAZZBBJpfTcB
+					mUKPlg3k2BUl765WkQ== )
 			300	MX	10 hydrogen.neersighted.com.
 			300	MX	20 in1-smtp.messagingengine.com.
 			300	MX	30 in2-smtp.messagingengine.com.
 			300	RRSIG	MX 10 2 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					kMyB91nHSQr3HC7NRI7NZxN6Wxrexc3fYxvh
-					wWJRn1dMdtgz7Y6qL4mS/ao+eaJocbczUwmJ
-					i3p7wg3hQOdYqxdcjaJqTRr1xdakFs2JOTSP
-					dqMSGghHMS43qfMFeolvDRTKn3MTvt2IamRX
-					iVOMsGubT56wjB5oA2jp9J2SZ4RMOzv2HPUV
-					mz6QwbYVNzD/rFllOenDoP1adMTG/pxUP/jy
-					/zQospeSyzR9R8RHz/cBqkYRbvrQKIWHji/y
-					/dcCz5wS99UqaLYldTN7IBaliOY/mk2JvRw9
-					fTpW0H9u4OpPcrhNDNP4MTYryAkwB1+Vs9hj
-					q+baO9BOvFYz9kShaw== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					L4SeQB9pTLSivgkSv5o5QHaCh7oHaeKpC0g9
+					ZIWzNVULjRBCGv3WUeVi2ytXd7WK8XRqgL50
+					AnJFcE8ZNBk0jIGSQCa+Jr11jhiz85QKUo7c
+					4MTPiBAbsQtvTa7V/pBwePu6k5sK2oIWpnn2
+					qJ8zpdmehZDg1iM7UsFeyMGaCl+8OaI/rNTb
+					Ax2QfPmhqHXEUSSQhQVItHilXuoU6Suh+5L4
+					YudLZrfe4riS3EFthuz4aw9CSabkNwjG5j9Q
+					tM/gsGY0ZdDs8KF+h9G8/Z7OGbEZrXTV0xew
+					JngF/CQpMW2JU5UC5z4KD0I6A6SH0DJZEwpH
+					q8M15nqxKq8hxToxEw== )
 			300	TXT	"spf2.0/pra"
 			300	TXT	"v=spf1 a mx include:spf.messagingengine.com ~all"
 			300	TXT	"keybase-site-verification=WP3LciJa-PJ6VKRqeh7ATXIXmA-FT2NE2BDbrcp2jbg"
 			300	RRSIG	TXT 10 2 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					vAv15qKUwc+c4VFKV1RvlrSyRC0PdVNzXtMh
-					/Wzx1RspePXKt2eeQ+joUiMwIY3zhyikO8me
-					rEbpnbi4IpvjskV+ceur+4i7aKSQM7er/0A1
-					NARMunhbCnzetqKdm5KsuIlayJBOPsmiUqNE
-					eA0K54t0xH9QLITwYSP0Do64rY9pFZwcRCbx
-					U+dh4CrVDOSF12Jxg6xxToSQA5Tfu6GMf62I
-					AHpNHlMHRZs7WXVuvGEqbULWy5sJlXMEmp4x
-					WHUuTZXRY6Esqo6zBfRDlp2gG1LFZ3mlv8Xz
-					/zwOK3kKC1GwGPAXjN4BrkHNrzXkIOJJeA0i
-					bPeqbv78E1tK9xdsKg== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					0wfhJ3q7tgitRQQW0rLFnFUyAQOmqzkmuOom
+					nA+2mMVtIlFmC2EqXhy9Ia237PclcdOCLkRt
+					W2tjsN9RRseeez6N67j8abI/ON+gcK4KViuC
+					+T8ZCCpN/J4MjbVT3O4StN1TlThHYWCHZLrx
+					GEoeR3MwpuJ/yfubQDSxg9JzK9nY+T2TQrIK
+					fee0kwfmkzulYf+9+biM6++MsARY6ij3cZjl
+					vlxvaHzuEwWXZasMsQcBStZN8kra67uXUj/q
+					KuNDgoP1akztLmZiQNYvkOvQAGA6j/YQvek6
+					hAvaLf7NahRceHao2bIU4ShcsZmVUYPOQbEi
+					dUw6vrfPm0q/Pb5Rmg== )
 			300	AAAA	2600:3c00:e000:8c::2
 			300	RRSIG	AAAA 10 2 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					s6Mv7/tRhicpFKTgPGegIKwxPpK+xOU8dJ/z
-					9Bu3+UIvwJQ2pd70PA4CQcdQ39QcHxko6IS6
-					SyhV4wE/JriGTqrMzHcu48EZfXg4dr/6ltCU
-					Cmh1yObsoHEgHnUnIwNGnxDKsQTi6Xvr/t4M
-					/Lr3LWPOoDvHciH20vcLTimQ2vE7pH/PQQGL
-					wEwIq0OBjQAemISU09NTJXk9+cPYa+RGd+Fr
-					yi2X3pe9pyZtIuHgGp+yQC3UuRPVWchQsR55
-					EONIMLgmbREdHRfsBwPE9AzF4eLg1cYQsXKQ
-					AvwerWoM7/HBSeM7axwMVLk/xlRq0K9X3f/8
-					ah74ZkP7iOIRxJ5TcQ== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					7me8tI8n2n+KpUNEnbDfVyjN10T6HTJEXiXn
+					bFx+njIqEglpFvLUSnBQVN6ULf7oMN7TrVM6
+					IzyNxjKVpvCCgdSy8JYhc3TeONNzdOeitF8O
+					OMOEoxA7+EtapBK1lwzMbxoErGF/oH2RVbYE
+					WKNg62YUByyYil4rPj3YTxOKUqAjmgPUFgxr
+					ljgr1mcQZJ8hnMapImt9FaXl/0gQ3ECYXnLC
+					HqDJmzZdadO7QNc0zksqdyaxKTDlqLzvKW65
+					rRXw98vMTq9wp+abyxvnt9VkJblONFEER+rF
+					pt0IFQMAy0Kb9JAMaACh7KEj3A55RYIPsQrX
+					mnood6WkxAQX2KLWBA== )
 			300	DNSKEY	256 3 10 (
 					AwEAAe6sdJMsOR5G5g/rpSSeexRKs3r0NDwg
 					cnCJEniMDtGK7rSOIpIov0IIVW51o9Fktb+f
@@ -118,383 +118,439 @@ neergaard.me.		300	IN SOA	ns1.neersighted.com. hostmaster.neersighted.com. (
 					I1W6JGY3c8RqbhQC82ctnUU=
 					) ; KSK; alg = RSASHA512; key id = 20763
 			300	RRSIG	DNSKEY 10 2 300 (
-					20141018224238 20140918224238 20763 neergaard.me.
-					I8kAVVmOslzychjYORbxEDciH8y2OKeB/LIa
-					epS7mdva8B41gh1LwE7gJRc9ejUkVkx2HoH3
-					sA8ED001kbg1kI8zv+bcCUyVzlUKJ1MYW1ik
-					G+4K1Jq2sa4+i0SvQTaXLS9/1/MJbfuCfYsD
-					Tsf/BkBkS3rQNEHFc5rIaBR6asztZh33rMA9
-					WGn5IQTWci5+LHs/on3/bGMQUnoBwt9Pu/1s
-					LhJIRIrz7rDSP5a8qNFzNt3i65YRSZj6C1bj
-					N2vowyWtH3hUY6U9W1l1giU46iKKvAmteTx7
-					ug8jVgsZO8YhrfC3RxCPyDeHqKSsQNdjB2rL
-					+KQ7b8DEvMAi/AAv6Q== )
+					20141019125642 20140919125642 20763 neergaard.me.
+					XdtsujX4GgsK/YWKmDcISnlrgUjmPtKsrNz2
+					M0U07Sl/eI6BivTbteljZPSy6Ivmh6bhxAEP
+					fu5VCcs6+Vw3iitvisC1mmIxgtRzOAPG/THL
+					uC0V84PMChZqMAJdKiOOzyMbX+9lXTZs0i0O
+					fdg9iJSCHp37LsdgVProg6NhBwdld/4MRVo2
+					2BBMIdglN/8LaB2CjwzKKGZ2rAoIqkSMPhVe
+					CZX12qRrgcsL0Tq/Pwcxk0QXXI/kIahrttpn
+					o3QcctxKoouApv8Zs4fMh4eoSHf/52i3EhzV
+					axd6dYAvX2eFoS2NBugLTpgCuwcNP3KAyxn3
+					v9DhlH0Kxn9fgFNvsQ== )
 			300	RRSIG	DNSKEY 10 2 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					a4woEezbCWN76I/pNL1A1cUhdfQBhZ/6M7uW
-					SoTnL3hkBaH9/pnev1+vgWifDje6/sQdvmIo
-					bt82dNiEH2BSrdNuCKBFcpNA7o7NJ/mFkv24
-					8MfqVaWGfrLef2NEgBtoCpC2DlDdWcAuO0fg
-					OlFP2Z0ah5Ki3g4vQ8C9WabkR/mr/CaGy3HE
-					/0Yr4pW+IJeMxZX5GcP5Ro+4KmKZ0cXSPYiL
-					vmUcGue/+UPrUMaa65IQPOEoJruMsMDeZowI
-					YatSJfXldPVhMmR1vdwAd0rRHEMzUzb4NoHn
-					jYtSi+R/J7imfyKC/jRRKU57Vfpi9Hc48SZE
-					scX7IKj9UsjRcHPvMA== )
-			0	NSEC3PARAM 1 0 10 602B163503A4C0E8
+					20141019125642 20140919125642 22730 neergaard.me.
+					5ZRoecLQ9ysZ/4Wnt/FTuMGBmKn6Kl/XJ1yq
+					ge5nzVvRHdeBOBKBz0Gc6cVu+HCD7gK5iN6a
+					0LwczQaEEJ/ZF3TbUm5QEgD2Bxbhd9gzGYb6
+					mTGj78IIt6IfJf5kc1kq6WqUUx6WZUvgk8iJ
+					r9m2eS5D6JBqV01I+zc/8jEgLxolakCTE7LX
+					UJNdOU9x36T6qkvcgxQVdW19xMWQuBaGG3AW
+					qyKHF4iCt8JuyHWNtHzUsy4OF0OmmdJwq590
+					3oPQa4MiZbfjYOL6s1DmkeUCzKFhypu5TBWi
+					GauRI9PnbYI1NNFKY0+Htvh5mr3frbuuYblr
+					wvpQOWNYnXro5G0ANg== )
+			0	NSEC3PARAM 1 0 10 E647AEE888CF238B
 			0	RRSIG	NSEC3PARAM 10 2 0 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					7jFbK/jFP36yiNE3XEjyXFeaqRiruR8afs4n
-					Q7644GfoZlWK/REzjhltr7VAiksIQrmBoi2z
-					6F0d4DoQSflWhyOjWoAao3V6CAA3IQi3gmoh
-					imGmE2UnBR4PLSn7Tw5N9shezQ8mn9Kop7t/
-					A8+DTd4XbPYwPpgt3bqWuUZZgsSVNxh1X32m
-					ON4QspeCyIncZQ16GctEAATZ1F3QyGRJJRFl
-					9jt22/r46ATmaP2YnXTrWJlrjDOfk9NeDarz
-					WW56QyWHSUcRNf42HZbopfHmU6M6bEqyDgBi
-					zSBgjgwyJPRuyqJrV6Sdq9oDkuwd5le0+Si7
-					S0uryplLGEzdCw4HmQ== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					HIrrVRVC47cKq7eckP6wQzKc6B1SfadYMjeZ
+					in67B04Ctpmj0foIQy28oqBEaIw0GIATqtZV
+					f0lzXNbCD8D5LnTN0ahzhdrhhEtGXF+jFIcR
+					DXxG1wHKYs/JkN1BaW5dtD+7aJree9d+rTiQ
+					xRCeERzwxZQA/m7FbE7LYWaX/QUei6Se/7Nh
+					mlfWbKUqGlrj8rGZjAS6vq73HhWf8iRpkI2x
+					Le9Bx+/TzDXIKUeu52DtS0Xgf0P6vUyxzpnI
+					w0JztDamxiAUEuSR6EixgUEoZOXlJLLsP5J2
+					8/Nvea/FkWYk3o0ju3CrOySmLvI9/YkRI2Xl
+					ewijWgnvC/d0g7+48Q== )
 			300	SPF	"v=spf1 a mx include:spf.messagingengine.com ~all"
 			300	RRSIG	SPF 10 2 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					gFPsyV/FOflsejJrNwgDhQEHhs/WXySyOIvX
-					zR6G3R5KeAD31IsWKp7WHGlOl0bEigqnAds0
-					k8ya5EUXtqOtUqAEzYJ0ivABG0cFexxHNgnP
-					a3YyA0Wj95SY7Cob8xHrZ0DwB6T4W5+3G+6Y
-					2YVjnGZLxeElpocpF3vOf524e1AEM16dDCXa
-					wEfRxoz4s68CDecg3mkDonlOvw4q8kEMgxJh
-					VaAdMFhemggtpXa8wUCag2HFd6M5CSj64op+
-					f2oTJpgke5f1jeOO+hcnT4LAlNoQ/Q5GYgk7
-					00Tv7adTI1oHFmnx/Sae64BGpwhEBPafAFMc
-					bcUAuJDsAsj4+LUx9Q== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					Ici/BsUaWw/T939AlixleJFZdRvmm5uYVIZi
+					uI4BW4YOBKOlVOyzvKp12saz8UQJXlxfb2XI
+					woR2nA//LSUUYE3wZWvj8L8KM3wNwrVOc4/S
+					kuWAOqOwO+sPjAkvjcHaYxzI1kMLrbURFuXA
+					P0xLpqkIRg9raGDiL8mzPlyUISagGI6KiEL1
+					k/jzmg9iu0sgiMvWNvoTZtXKGLxTV/wOTX4H
+					H7hI3gF/UPnx9w+yZRo0g2wHNBzT5fNjmmMu
+					9OdumBITJI/azB626oIQdZXpklvqtwtJKqjP
+					4Uzw6Vt3VfoBZqLOeyB+tYco9MqrmihMK6ol
+					PMg7KeFUPU20nOeJcw== )
 *.neergaard.me.		300	IN MX	10 hydrogen.neersighted.com.
 			300	IN MX	20 in1-smtp.messagingengine.com.
 			300	IN MX	30 in2-smtp.messagingengine.com.
 			300	RRSIG	MX 10 2 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					hM2hmQ8uQxAHLuXDCgG2mrzT7RhfcdN2MRb9
-					9O+ZJXNOiLG6YC33jZO8EHojzSAK52Py/PLX
-					trsqWJKIpPjmAjJKL/dqHZ5dNj0U5vel0Ovv
-					e08hUdM0q4wUFbDgMYyYFn6XLFyg4HGPRGGO
-					3tgN4sciJhyg9/XA6EzwY8TIOzaIGwJK7TzW
-					NYZvhN13fghaM7tWma31JVg2PG2O8gc328az
-					kHszpPVVVsQpKy7sieIEJjSCWnLS45jHOon+
-					eVpMiUaQwp/Wt2JaaDyXcFtKcltfHudYU/g7
-					ok1oghqLEvntIlg6m5NWcFQuXXDuoNGntjtE
-					rglLe/6GGdRy0jCNaA== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					UKdb7flhS5dmu9MY0RdSzI0dyQr6m8hTKYFf
+					cWjx5Uqdx9aXt4Pd6ZjfvbD9Bqgx73D9ISlu
+					Mxb9Trp1b7EnQnFlZvWefeX/7u71rJwtYA8r
+					sZlJhvHbwxIQIFLN4bRSyOQX3c56IdR+1w78
+					updvhlQ4L7hcWv8OnkVmFZMTN/uRQy7cjPqb
+					ESHPkftd2WOmnRs+ODj0fGAG9KPJNlAk9ux2
+					Q8WoDAMfHRLYc8VS8KSSCCQ5KkFxJGC8aVGy
+					67Zq+GkqfcjYkcIWaLlzH0gnXK9mFOAsyktA
+					qC30SC5Ohc2UGm1dPI6KZhBykzsE7TOXcnHo
+					W9WsTQ5dohqKkqyJ8A== )
 _dmarc.neergaard.me.	300	IN TXT	"v=DMARC1\; p=none\; rua=mailto:postmaster@neersighted.com\; adkim=r\; aspf=r"
 			300	RRSIG	TXT 10 3 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					28L89lndd7wUnXT4LZBCmzKYsPTL8py6n6Pc
-					QcR8mxU8w/VMvZX5sSFYqhoVahNNCTux9ZiA
-					YZWbyCeBn60k22dCv/TdfP8T+RYz9wdj0Nam
-					CCG8Vr3FdssdxjWXfmGzSGCphvx/ZsfPUReW
-					HqD17VGOxSYhOf7O2VuVUYTpevaZFVfGVd7o
-					lBc4Zy/pJabUOJcRY4EgXiJKseMegAxvgieI
-					EpYYhrIi/MelfTacSKMS5fJBANAFo0Iqj/L7
-					i5bIiNQlf3tvhRzyc9M5JdNUp1lDG1oCqCwV
-					ykYOB1yMd0k2wAvFLe7avCNB1mZTnPiLmCxq
-					Y6k1D/d6doa+OhvAXQ== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					dH7OX3Jhep6ICKWkNbW6xTk2rRJzp6nwkGSD
+					e0EvqncqSoaJi07HYB8H2O3FRsIQpsACK/gw
+					cuNu933xfpowdejEGNnBa1DSjHYxGKG4UhuB
+					aBaMXY3PUIPVTKWV4wMpOkE68WALflYIKgan
+					hLtmx4sEk8v1ZLhUhPDUV40023koLnKOxWH0
+					gC4EiClCa0fZjEe2Bl8dOdT9WAWoEwz0boPF
+					5uqeEwynyojAetrqoFE6fwqmS3OxaCvbLw+b
+					CsA4xBhIwuChEOt4UQnyTjX9ym7LRwlI4I2F
+					f/7flDxRwkfO0YHJrBWpNEM929He0LJQOTBo
+					8fV8+E8m5p98197lFA== )
 mesmtp._domainkey.neergaard.me.	300 IN TXT "v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDR4gWyapi2MTG5cWbpOduoqwBJaH4JO74HNDLBWDheu329HtRcyvakBumpmycSh2/zN7oRKHRNBT222kMy/qAsqwWNFfo+UdI9dnlKy17mFdRdozEv+tBVk6BtYUb/lIvxg9au1izYPDAj1+wQXh+j0lfdP7hi6riIjhZVDjoH+QIDAQAB"
 			300	RRSIG	TXT 10 4 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					QhcsLN0+Y7k5LH7E3EYGMPnK96jeEhr6CRvS
-					QAeH7DhO75uO2tH8XanSGWD4g/r4EWusBiuX
-					934kKvbXADUZEnlddiJJLk38u/huE87TGrD2
-					+ZHoVbCS4JqwfbGvzQsAf0qcLlcSaeYeDYhD
-					07Ih2hQGDBzP7eRlkzwXpDokV1cQ/LZ6kcaO
-					Jzj3eOStX4E4ZGkIqol7h3SfJ3qYlAAJ9XSa
-					32Ds6FGuue26r3dyMkkSkzFpXj2Cen7+zBAT
-					VySOYYy+S17pYKaPBDu2WvRwoCKGrLQ9T5K+
-					PZildOGfe2YdFMzx/08NMnBx0myd+LU8K3O1
-					rq/bApZ2vUklkeYHcA== )
-_443._tcp.neergaard.me.	300	IN TLSA	3 0 1 (
-					C54904E3902F7B4FC49EF5583E1F3214C816
-					71E57D18AFD6E64DE30BB1A70D40 )
-			300	RRSIG	TLSA 10 4 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					C4n6iEwGT4yZraIygW11gwuTZVF1YkWpZH4i
-					qo7zseuFZ9MDfl7fpXb2Z69duk26LBxx9SIV
-					guPLUxaSmgIKJFCaE/EDG4yUCyybwObvd+61
-					cZLcBRs20tb61fQfSvSq4Th5EO0YMciv3xEO
-					IG78kAqmtH3D8eSfMYOyT6kxPP7nxc/922sq
-					XqLjg2n8Y6jYjYFonKeP+xGlhLTEDfyXsT3v
-					nLZ9ttP7qzqp//aF2ToW3Qxmo9he4NawAWbo
-					e1uQ/xFKrnfGDE+fjLLDaYHGnAhiXUJdPWza
-					cNMt+NHqbc7r0XHdGW6joZO8nga96FdMoWqo
-					ytn/TehBc0JsCW3l6Q== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					G42y2hSsdkuExhH1vct2o03kn+KEwwbTyA4w
+					0vETDzY9RYveVafQ4wYw+ha1LCdtw64lOC7B
+					PP9Tr2cJqrLBdIQf3VoFTUV+l/lu6AH+rnI5
+					dZ2HNOr5ByHk9IUrMvYvmWdsnhiLh8QF+2/W
+					eOLlWq1Tm9cnSi7fsDd9yZBqcb6riGyQOvKY
+					Jz/CfNo+2Ok7D2dN7BRUNMDouq6TXwTqTg9k
+					jFeSXd7yTHP+n/GeOBMfv0uR84xf5qYVhidC
+					mzX+/5u9k4Y3O59X+nWFQPrcN4s5T3KFqvnl
+					kvY2ENPc//5kSMOV+n7agzXkKFxaaU1AmLTL
+					72Y43g2fKpYZpnyPNA== )
+_xmpp-client._tcp.neergaard.me.	300 IN SRV 0 5 5222 hydrogen.neergaard.me.
+			300	RRSIG	SRV 10 4 300 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					4tyO+IJz2Jv3G7StVYN0D9fCXowSLG1Yki48
+					MKuOFleBkQFts8x6PF+5/4RGCEIj5RqB3Z4M
+					qX4WMMETFSeplfol2UHHmYen3W9IrfhAAMMz
+					Znv/k0Ud4VlOAheQh+OCvqg5Yic8ZMEUqeDQ
+					GU2RS2ZH8yYEi8VsVZoS+PCRejinOlsb9X4A
+					tSHLBPUA+0lj71lHIf5iO/F6U/lXaacxDoE/
+					GVjQ4cqTutaxVSxWGjMx2kTKMs92I2N5i6bV
+					WI7IiOo/CqWl2QMREykI6pcsySVVuwuC7LzH
+					vHHN9x0GbMfRt458G2yboX5EYpRN7FHr/u7Z
+					0TQTXuaT5jwGfda/4g== )
+_xmpp-server._tcp.neergaard.me.	300 IN SRV 0 5 5269 hydrogen.neergaard.me.
+			300	RRSIG	SRV 10 4 300 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					Q87MPy9l4Ku+W2yGh0rNd2Hz/Waga7u8C5gp
+					q+OKd4m/DrK660ezgvctqn83yc7MDS3TmS9v
+					vhkHUZ1b0pwgdKPTtNRpfyfMosbjA0AkdqXX
+					bduxmD+BN73cqv2vFwIio9w9yrR/ZlMIeFCB
+					NX0iMntvZeUBguaovXujeGa42M5zkthqxszf
+					6cVO4FnSyV5c6ddjrUd+mHpYRtYcXgFqmOBn
+					9KXGs4YyeZu7xkVX9pEzjemae85a6Eyvv75K
+					rdOo7vb/FWMxGv1Dfw8BqpJ7SfIflYYh1lpp
+					716fIqJtcngG4rp9FhI7lqj7ZZoSxe1hLc4b
+					7tkwf4V/is3CyTmG6Q== )
 bjorn.neergaard.me.	300	IN CERT	IPGP 0 0 (
 					FO9TUuxGiFyNiOpkN/E4EoBtkiq1aHR0cHM6
 					Ly9uZWVyc2lnaHRlZC5jb20va2V5LmFzYw== )
 			300	RRSIG	CERT 10 3 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					tavq0L58d9itcQad9oGYGq3yCeD1dcH2lveC
-					G3LBQ3RkhRDAOBqPHpz5zcoPUARozbrvZghZ
-					4oSNbWQZWy2SzQ9TJ+xWzU0+nBLdGCVWWVP4
-					BYJ4G0w/mTnrvFh5JY0c+ESh89bXD/MtVhGh
-					MwfCQiP6SpD52Tg0M1EbU0VSRFrnxh7f/C8Q
-					Pd7CbEyRU0BBUT+jdCyllpqLtrTibZNskbDp
-					3o8mJ8PwXVI+rQujvwsMppJfl2VoBjawH5Dl
-					VUX9OAqcbQurviN9Imbj1EK7spssTjiWsFLc
-					+iAVly1OUI3UIHqC0HddpmP4RPRcTr7ipfSN
-					TO9Fo/ENVwgmXCoj0g== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					iYf/iFLw/CZdCDhMUxqXxlSKgmmQQlznMboY
+					OY4kHW1FYCAjiaBPJNv87zR/qCggZ9nvg8Fp
+					9RXJei70ONMOilFgu/N3Ioz3wCz2FXk4Tdt0
+					xof6Zqu3rfTXzHPyXpOO9vQhaAqCX/8Oom8w
+					icSFP79u1M1s/6vdYIMFug50UTOta4vkktyG
+					P90q/QwwDl6fJoUD1Gq80Zg6+M1iggGdLKQg
+					H9GYrGREmR1ted3nhQNFuDf7lJb3TUBilN1a
+					f3VyPOuGA2wO2s0ONV4PZyZwbEahGLTGyiZa
+					ZN8m/yHjBbKe3mZZpUI37qiLyI0oVcnj6qf+
+					rKYU9LcWiK2m9pPT/w== )
+_443._tcp.neergaard.me.	300	IN TLSA	3 0 1 (
+					C54904E3902F7B4FC49EF5583E1F3214C816
+					71E57D18AFD6E64DE30BB1A70D40 )
+			300	RRSIG	TLSA 10 4 300 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					SjhhOv5/HgJfSrq+t5qeSqFmko8CXPEGD57I
+					aoLbNMzntTn1BXkJLVbfpjjKvNSPfh5+iG5z
+					itxxfdOIkhssLwqGu8CnUXBVxAdoYUB0w3sW
+					HX6soaoL1p+3dD2DkadHQO+kwwamZ4DBIToN
+					7/yAUn/SB/ikXkJzAJ/tep6To6jBYIiw/ABL
+					JETasNyN931viSSHEd4j7/iarGbN98k86HAq
+					6D2NvRK4lhtHCxsKnihBebY5tT8+892Da5Dp
+					qvWi1GEi3U11nbnjnCkejzivupGe2d4XaEoz
+					8JuyHb8b3ujnL377XlNeRyEthMhLpTM1pXNf
+					GEwmjR2dDqd6RAQb+w== )
+bjorn._pka.neergaard.me. 300	IN TXT	"v=pka1\;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5\;uri=https://neersighted.com/key.asc"
+			300	RRSIG	TXT 10 4 300 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					b5jSDNCm7aOIXW7jvr46TonoOnaLL/wZNxSs
+					clmRrjN9Yt23jtEMPo3OT0hypBY+vLKkE7RJ
+					fqx5+J9MBXhdu0hN2YGC//SNNOB7vdPC8Kej
+					ZLIS5b3oROehy9CbtU0Jya+sPQL319p733LN
+					82VxPT7JuwQat9zWJZfkRFdyJjp0HCT7lYB1
+					hwdB1LYj78GEfznoildstAh0EdZ9QdhPKHBa
+					UWmDRgl2dzMKS78Q+5V52SS4ZmVqQuWxSCYa
+					n3SPowprWYAd4eR3VwAbGiMg0txgxaq4ym4M
+					l7FEUrVVb+V+XIoxjlgCi8yM4BCvOsrmI+F1
+					n5JxUtlzwSW+8myWYQ== )
+www.neergaard.me.	300	IN CNAME neergaard.me.
+			300	RRSIG	CNAME 10 3 300 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					HPe0yf4k8S3z2ZVB8HHohFd5G0AHODWmr5AP
+					nuL0IuMq7VGemeaqIpWFAXMyar3fPE1neWxr
+					TnSr7h4NnsWKaPvviqB1vmUw3Dv97ifb8HV6
+					UOdex1iImGAF0XgyirxW2Ecf3O0DadEsWkEn
+					BDu4STWEHCKeeYI7oNuDsU0GPoO62rkw0hWB
+					Mjc1DJ6gJMdC3k3X5IwZ/NtR12DE9UfHhUuH
+					YllqnLjIfiYo/SRBhipnakN64J4eIpoS/CuU
+					PLiPdAJWIvtonytP2xpf6ODHKjszJfe40x8r
+					LsAdQGIZbtWHViHPsd230SpN01TNy7s1aX5b
+					haap2jLIDmE0XmfFHg== )
+42IU6QUKAPL43G6873415RP1GDAUKA8U.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					42REE5I2THI6QMGIVRPQ3LCLEJ7QF93Q )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					i/Sjv0DR9O17rdKMtyKOkE1+sidxKDtgrYEr
+					xBUgXbtAbk6OOessVj6Pa4pSWNUDpoECArBB
+					mroSW8+zmY7avPlP9ZOF5kYjP9UjC1jj0JLY
+					vk02vsGlgZWxvp2fh31hgBNXoNha68uFv8t3
+					fbWyU43knSdzmrwTg9sH5GGyDpNRvzIiNfS8
+					oL691VYOZTrwEg8nmmodyl8w5GwmOwQhfe4m
+					hZsKa3rw4zlU/AEi+n/yZXVol0tryH8EjjXD
+					idnxY8aRJVTV3A+dtUDrMT2FG9TSjh1YP5MB
+					TwJ9PE95ftrVk5c2ADDm0LUdmRlh5scTuNsU
+					pBxf6Yq/vcYt1sDCsg== )
+42REE5I2THI6QMGIVRPQ3LCLEJ7QF93Q.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					5C3HLL7PEGCVB32178HDUBA7C6H6PMG3
+					TXT RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					jb3y3j42p2R42WubKRoMfqHV2lHwTMwnj6BP
+					N0x1YyFQImBHoWCmvLLR3OUhF6+8xSRytx1H
+					vKo42MsvP8C2ulvptNn2lhHh5lEHE7oAQfso
+					LnLRLZzUX7w6ux0GW/ulj9yuqdr316h89uV4
+					+2ozoWehCk6j7UydM6u1A24XhsC0gm5QZNTe
+					FNes0kLNnFuj7ySV8ea0BiOCDqiLCN889D9m
+					h7aHTUHMC4V8etMaj0OadlHLdGj9ivopatq0
+					QZge3Ubje1P5uZC3YK/41ug4MQWcUfLsGM2M
+					z1+7WoHuYfysS7I5K/Nm+pIDPNupoYlbHdoS
+					qfvPY8ueJF4jhe+WkQ== )
+8NI9R0T4B0H343T2H4IIVRE2EEJ45CDN.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					9JPMQ5T6MSV3AA29LO3CM4DAM0KS87AG
+					CERT RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					lVvpL/jPGLePQVnarxoVf4GjCY6aRQgCkzq9
+					OeutNDZleleHDxk0Jcg5sJ7ubiclTsDNn6Wr
+					iSMtUWCN37qryC5kR1dWskAq3oDOlRq2XBNU
+					HQ+UJRZ+FJxg+EqjiWdPkCgpaER2MBbN4x6K
+					vqXPyY0KouEzrVd0nLVgz/1QUgyXakcFqhzF
+					RV8G2z0LBRRzKZOcLtgbk/lOimDq7IJufffN
+					oZJVzY1NfzD5DqjgUetv5vPdvvvOoR2WmzL6
+					oB0s4mR9PQk6cjOKnHm8cjLHPzKkEtMO9D2g
+					IjjWfz0verGnSDhxwuu3DMxkeiwg/9vTSiJi
+					vjOhMYjROu7OMirx+g== )
 mail.neergaard.me.	300	IN CNAME mail.messagingengine.com.
 			300	RRSIG	CNAME 10 3 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					XRmImPZ2KL4hwicSK+xKe3EHRHndGe4ZEI5r
-					J+lD8H/DsN1HpxM+c1kCCqEYB8v0vHz65lUs
-					sBIwyu91KDT6Snh61Gl5ezCbQZw26AcwZ+PP
-					wTVWSFEcjMxI2kZkzvRc4gVMNkMKnc28DTlf
-					XXXHjzZSuZjHF2Lb7faSE4UnJuWOzq7rzGMM
-					On1MEaIioh6/OsLTKwxJkqIGfvDUgi84EUQN
-					gXlMkX1PW1rPNyUlJeY33419ZJNuqSNuc1OW
-					iVT0CE31fR/u50/pMZAefI/iMpN5u+RiPWO7
-					vOuT5pRKST6Y1oVpSDpnDn1d8LtJiarHOQ4C
-					TR2cKaBejSLdlFfJxg== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					JhJrT8rwIVGPABRLYrChGVSuK03dKyECt354
+					mqMTER47Q0y/Z5K9Mit51oYs9MS7EJ2U2sBz
+					iGL4dK9U9fl/CxB7cQr3ONcfyP7l0wMo1Bsd
+					uYNoJIKqj8Ar9OCD1e0X6yelnyB/jYy4PoqY
+					PejBSE7Rswyx9PwD90xCCOfdKsjJbMLKivWH
+					iFsFUMi9cCDgQ/UhfO94OAOC0FtTg5nktWHB
+					+FfQjW+Xa4u1iMSj/B0sh1fqOSLWkgOlSsSd
+					5yvY9xxBqHDQcTLbOWijBZk1Un9B5JQMcXlw
+					xHek3Jb+Rqoz7Zbpq5yTlXOFosrLkm4u2nXj
+					VsaevjLVdb3ZzV2tmA== )
 _443._tcp.www.neergaard.me. 300	IN TLSA	3 0 1 (
 					C54904E3902F7B4FC49EF5583E1F3214C816
 					71E57D18AFD6E64DE30BB1A70D40 )
 			300	RRSIG	TLSA 10 5 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					177mA/SSwyNnK7lcroQGIJLKhNTLskdjxNdN
-					DlHR26wSm/C79R7P/WwbMCHIto9Z3FPcm1uj
-					l2/+pNZ51p/3gby8h3uPiSd3MKq3dSGk5LnR
-					V+QdLl2Gq0m5kFrSQ4YKJkol9gbSEss9nXEf
-					QF01Hdgj7XPHqHNfPysdzTTGAObhHA2y5tsQ
-					TH5E6IKPtTB7aN/l9QNhTe2px4jGsXz8w6bV
-					HEkW4SEtMZItVja2XutjJJkKuyTSx/dSkM1z
-					849Flnbx9Rajd4RMaePVP+9E6KhWzy2gDutF
-					DRaUaQTvo0sTiffkKfwrj4xsIQwY15uOzCfS
-					Z921WVqw1m5nnBalXg== )
-177E5Q2JF7OTCM9M5TU162HOBBPC25I7.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					2E5G1HJ7AI12GG49MFIIPT1SB6KUADC5 )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					uP/3OFcKtK8bke9/OkjCsG96cm7ucDyB9gGI
-					AUt3P7dVNB7Zalzhx8iG4yiZlzYpqBcIL+l+
-					Esf3sEXPNziVoqs4ixM6cD94Rq38nmKsZVhV
-					dBBPgdtGflvy40sOscsAR9NFph4lNscoD+Lw
-					gdjAWS1hdGW/BbGPMaUof3OAqRh/hIh6erE9
-					mbvnOxcqeF87cjEFyqOxJgLjrJQvi2IFGhBu
-					gSFLclSQfYjMN2pVIFgbL0LcF+1VyYXrmZhO
-					Jd9ac4w42KgBVb+fm5rhe48NAWU1eJMsEijk
-					o+nenJHJg9PKx3kCM23pz5tDn33+oixAnHyf
-					8bt8K2Y8XZzKZqVE0Q== )
-bjorn._pka.neergaard.me. 300	IN TXT	"v=pka1\;fpr=EF5352EC46885C8D88EA6437F13812806D922AB5\;uri=https://neersighted.com/key.asc"
-			300	RRSIG	TXT 10 4 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					leBoDbO8ftbQ5qc4jlyW7Ch0v2eoCPapYvxq
-					ThgiX4Q1eZHAx0Oe9Cd9HV8dPhjR4Hduyi7Q
-					jMfWg/fD3O6eNTT3ZsBWriMfMcg1xGN8joVf
-					4xsr+31kYQh1xBQTVh1SpBQaq+iZdOaw4d8J
-					Soratyx0w0YXuMVucCKNw5qiNz4gx+teLJ6W
-					YFd0UAmeIFXDrT4BAA5i14/o1F2HdXtbcyUu
-					GRb45/g1HnMN6Tj9cUMw8BW9ALruhjeoVI+J
-					4NMH718qfcEbHKe0QZhfJ2Ihv0UCeogXgNMI
-					M7cldlposUcc5duBfzMvuRQsIoE9hR6tLOMR
-					a6hY1+A0gBwznTbFlA== )
-2L7F7ISDEEKFJ62G3RDDJDHNK0R65L08.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					35IBU0H2GV393318CG601PBD6JJKNHSM
-					TXT RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					Uz7s30z3x51A8hwOjQFojAY5zb2hAsEPluT6
-					MT2zmeZ1lIK/M0bQbnW/JkatPkku+O5x5qZ9
-					g1uY766HJAr8UU+do3ephQlAICPTuKIkN69r
-					FR6L9qZad9PW9AXeTy8ome7rsOeSeu/YADAI
-					I97yvj8DC2RVV2VU6aehAAaOffxGCfJ8JLup
-					TRhEAclZtvFxBnwVW21duzctmfIl1LgIXvvR
-					vDSASi4CWyP9Fs0ADb5E7IFxYFP33DD9I9sC
-					XKSnQWht3Qu+Wx2tVRRmIEnAizBPrm6nJk/b
-					6n1VdF84nipCf8c3nXMkZgXKHApTLMRsHEO4
-					T1kKFEPHiP46niQdKQ== )
-www.neergaard.me.	300	IN CNAME neergaard.me.
-			300	RRSIG	CNAME 10 3 300 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					vWEwoEbg/jPq+VhfMfrNxyW1BKQrCBgrpmbZ
-					VhJ5T2VL3mRp5ei7Dz336OwEJGo/BCE0czC2
-					PgSKxS1JlTnfa/bukVlagXavRPZdetgo+cPi
-					sDTYMVcybYDKalzjfG7NLQz+tO+7iGXC1Ipb
-					aO+iB/oVoWinvJwQDJPsbOFlVkgwasPlV1wH
-					kS5KDOkBR/ylKEPp6GCEBiNALfTfy484G3Dg
-					9H9SRJ6Mw+usEuHIFz4qyg9ZVRqcn2/LDHoe
-					y/IKpA5Lf16yNSmTIlAMIYDp8xpO9YRrUcD3
-					+xbfTKlMpCvNLd5G1iYvmdNSVx6wCKKcjfV9
-					7hKpACD5hWMjgMU2xA== )
-7L8JKPA6EIOCODNV7R7THI6RK96GOF74.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					7S4K83KDJEQKFB4UR9RPPT2IGU18RPM5
-					RRSIG TLSA )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					xWATjBqat+tF52rs+3oYPNnepfuKe5m2jd/V
-					D6E8vdw/hlSD0Z99n9wyQbNGketyT62l9EQU
-					rTlC33KhJfowcRSz6ch8rpgheopQm/nWd6Ej
-					0VDRi5ranlPTESLTvTllcIpK3MVh9yxMp5ja
-					KeS0fFaGII5kz9hWGvtM+iXdShxERGAIkY6+
-					vp+38wFPJ+3CLWYSgYEqRs/RelZyREIlVlnd
-					jyGrBtOoWEP6MpD4Op175aUThVORGzdDBF2Z
-					p158Inup96uuMIYGCqWmPd3fJICh/0dPkoyt
-					7sHyPtCOMMGPqjq+L/SuujtYywObfNYar8/r
-					8M6FkPmUEx2dLGJ1Nw== )
-2E5G1HJ7AI12GG49MFIIPT1SB6KUADC5.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					2L7F7ISDEEKFJ62G3RDDJDHNK0R65L08 )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					fsGtECP3mJOymHOJbu/f3h9rxxJ1kDLUOsh/
-					nzzL997k97CkpK8rGdHxVwA5glKlOlecuz2n
-					Ka284MKtB2+1SASITZQaSuVSWJqj69pc6wrX
-					3YNgLTl2KmfdGhTNmrm/mr2HBegDrjy9TQy7
-					Ebu1Uw6rkEfj5MThWqSiOi6au4tDK1pXezqw
-					7bu7L/P0W21P6MhYWuzYkV1kRgKSwx1UZ5Uw
-					WTi6py5XdgiLztik4h5AG+2vasBHLchpVXsY
-					o2yZ0KPeShKM5jfC+novDflzK5PgEePDvBDO
-					xHLi15J6MF2OqlO+JlOKevcZXShEspeKpVif
-					jmseRLY37JhhPBjenw== )
-90A2FO9OJEP95ENMCLBKJ74AOCVSSLCD.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					9L5V9JM6335E7VM5K2K90IJ3FCH7Q6Q7
-					RRSIG TLSA )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					BBQELh+pltkzxfsHYHGefCBDzo5UgKL3/3w6
-					6DfmLKGzN5eLR50YQ+4n6PgVXFrDJDITQbZb
-					Wnez7WSFN90K7mrvAAYpvqSrTwd9Ad1pa5kT
-					z8266lsGI0U/1yxGtQookh+VSTXgZ8+VcTUx
-					gaDGhxGWP0jPZW1bzfSUQcuNb1o676CGBREH
-					bCg6HcjdUHDVK1FB0PvU+lTiV2lqznp/2SSm
-					FgdTlKjCwnvITSgWR2K+CRQMXUZ0olLZ72fd
-					2/whG1ggYggLsZc5/PSBRHNywAq4SHhEvF0f
-					Do+TI5/Uit6Z6rrCvAm8J4r/6A7hIftyhveX
-					I3VpiZz44ZiZRMmHOg== )
-35IBU0H2GV393318CG601PBD6JJKNHSM.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					7L8JKPA6EIOCODNV7R7THI6RK96GOF74 )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					r4ZKMVF7fcF8pIJA2OH200iiZKjxcCmYvWIz
-					nTPWvHMxJFz2asG5oIbQ1+TQ7J3VMpY7fiMd
-					LOsuQTueLSneqCuOv8gdI3Rs6fPLYgsVKupL
-					6R9S7rL6yxJsioZPKNhuUjDEQ7QLxPwaUk4u
-					m8HP6xzXJkklSMw1JyRbhkyujKM97/2ZTMB4
-					04Q7AnI2OKXZI8hIhjDrxl1Cyf5vaEUsBZhc
-					Klknqb5LuuQGcUMJ3Vzc9UwTvkzy+dCKezcC
-					vbQcdxoT8tXszdtGE1OVXTKxZcctrZpXndV3
-					SrauOLKn5Yn82EG0UZwA3DdTBLUf3SPP6aIh
-					SD3pw+eoOaVhLqO2Sg== )
-9L5V9JM6335E7VM5K2K90IJ3FCH7Q6Q7.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					CMMJVUK04P0G554M0V7LF8A5RESL7TN5
-					TXT RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					qZq6YJLw7wdoFPJwswy3dOl0pHR2/IW6sZQp
-					RF8X4UMLzUUDzwkWkwYU0Qrdf9rdkdjJ00Mp
-					sIUsUiB/3Y74nGngVjfvIy5YL2WJXdTW0BwP
-					VR1K6E+2oeZAL9YzYXgXnyTKhdmpqRVr8RYs
-					w9I0lG8GZWyaCApDMcl89Z2yaQj56o3ir8Jw
-					iRvwTUOtRK24J4zXvEwUsTRSoMplG+paQMa5
-					pbeMc3EWR3ICMZSXtU8PrdaTcyuLxP3ntuLc
-					4h5DNL5XJVb5+O2mBiocejei8Gd97uw6v0OL
-					+ttGWTVph1YwFZz5aaBCLsuyZdAqRI8XN7a7
-					hxQm17SlzLF1i8WC2A== )
-CMMJVUK04P0G554M0V7LF8A5RESL7TN5.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					DFH94QB8OUKSU791HQCHKJICSH8CBCCH
-					CERT RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					q4bjd5G8NPz6jUMZSq1unK5euN0RBwR2DXDB
-					Nb4GI3qd/C0xI6ylAmWuURRlpTwd/r+P3XWX
-					fGq/SwIfJf8PWxmBLwCwV5CK5EGXL6IwDiTM
-					m8aEcp5TyHztAkq/IkOwWR5qEWnYni0EgdJu
-					jPBX0SPw8ZLojKOvq6IVvIymBO9UkjXaWxgO
-					38giX6OuPV+oiz/VakA9jmIm7KqJgWlWdjWq
-					lvBmDp2N1c9aJiJxaJOdjOY0tl1mgwIdhEKE
-					AR3GyHesqvycLNx65Xdrpof11KyxWD3ku0Nc
-					jrzeR9Xv279CIkBtXadOMonZWxoV1UAcan8Y
-					h93Yb0b3IAUQvBxfQA== )
-EI1T8NGSIPQGPM6F6PP9O3OS28B9T99A.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					GFCO4N1OT1ARSSLQB6CM6HD6GT4RT235
+					20141019125642 20140919125642 22730 neergaard.me.
+					vi59kccP0ffaBLs8+cChTdALhQrU0YV1C7wf
+					P+O5YESrZWaf1qweYAm5/3QzGUq91hHjTHFq
+					WeLT3wvFh5tuwvJFO7YStPxn5dbaY6HWXbyd
+					QjcxkrWFOVNOgyAOlL4ZYge1Abrr6v7d39mI
+					bGxkOdAyCjM+XX7zz35VACkqoJZozm52FKv1
+					Wx5NDk8UEXCvb4IM4j5D9/fVbiqwGV/0HDvg
+					ZvTVzWRR337uSZvFLMWWTO9C9eSJwqr/LANn
+					pDzlCUxprEzxJQirDy+VAt0zbMhzU+9jDtbg
+					1ZTm7Zrm+ixRlJSqqNAoy7yVKhnERtQ41vNe
+					26r6+p7Zhr69ywStjQ== )
+9JPMQ5T6MSV3AA29LO3CM4DAM0KS87AG.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					9Q29DC9R39D9QR9P99DMLQABQTR0OHBL
 					A NS SOA MX TXT AAAA RRSIG DNSKEY NSEC3PARAM SPF )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					CUmNS/MHF99PIK2X0teDVYpCIdz1+6mvKl+W
-					s4Bp1VX/+YvyLP9v5qEI7C6qRmFQKP08f83s
-					l/BV9EZXmtH8SIB3JbxiWB9f6kDGGHmUsoHV
-					qmu3itpYuO86WmTT/qYN6uTykhmzqvYsGpaE
-					A9rkSCEJInzNHtwcyQcx6RLj8bS/BYa7Q4Bo
-					zV2UjewtjNEDNoKXox2gHZdoVsDjaLj08se3
-					GKaWODRrVmNxOEwBbLTL6LrT0d7VfgEqzMr3
-					Vb93wLSXztX35B3BHlwbRqoDqexqok9AbihH
-					d+euRHAcxIqe+HrnWoOdxSWJ+7G53kePp40E
-					RVQwUBhJ27b9uCEJhg== )
-GFCO4N1OT1ARSSLQB6CM6HD6GT4RT235.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					KOAB3JKT83EO0DJ6A5GGIU3CEB13UHT3
-					CNAME RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					5nvVUJgbCQsId2xAu2cemwak/x7JmBmy1Kr4
-					A1MRYOyPXyS0LxQa2wrKOSkeKYsImbIr7B9a
-					q/U4pFp4UFAcWX3ZNT/gKRNYCLmWhkPPrYIM
-					EOs1XTaGYBbEhdjhiNsWbOr8XQIwQn67ZCop
-					uKHxzt/N3QSV/nuUqwC/td7N+YC9M8HTNb9z
-					TMPl7wjaP6Tjk33eckKi3jLE5r80NthIGyiI
-					jrHwrj8t5MA+B6ja56bUBn++/B20VRHdqdFw
-					WMJdGfx4ZiAVVm4WpAqUEswKroZ+3Rro3uUA
-					rDzG9wBHrx4uoKjQ2j3s1M62d7j/0CKjnT5m
-					9sw57HQsYP3w719QwQ== )
-KOAB3JKT83EO0DJ6A5GGIU3CEB13UHT3.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					PN8E101H2V04I68KGGSAA9GM6HC7JOB0 )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					I7q4jpsYGF4DVmzrYA+vUNQQvWn7PDsPUiSf
-					qssX5fEo7/BHUmE1WDJEpdirZcoqBmVro0Un
-					qaoMVTH/hiLnAqpaVerD1H3TFEfgcBlg0P4k
-					fXfGq+pEqG5ArJ0fPjW+EawTrnhbEys0HiJM
-					aJBGptXAsFO1Q8HMMfl3HT5ve34+ZlQRKKFq
-					IqGjNMAAf34ZJDh0fqV0K2FCKbROSD/uYWvj
-					MfEArduf6WjkZ6lAzcRyf4LhAJ44jf/Ol2Et
-					qxHi80JFrCHn2C9XUcPML3GY5DxIOgkatJNW
-					l+hgYSaI0lQYUShhDIgEmmy5EBpi4TjEUj0q
-					riv2PX87laKdF2ASHQ== )
-DFH94QB8OUKSU791HQCHKJICSH8CBCCH.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					EI1T8NGSIPQGPM6F6PP9O3OS28B9T99A
-					TXT RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					FJMCEL+GWFKO2KeiBXLWeY8i/9Hzvb+16UiI
-					Y4D4cIsf4jTD4SRuP9S8szBPtn/65tv1Qdji
-					uB8DAKX4k92EglJFyB2SatUf8UbUFBXUSGy2
-					u8WplsKaU3vup/QWlYNjEoOMsR7AdsocdaAw
-					zpmuijk9ujvu3d9jqskia7v+SDWo+GdjVHDs
-					f+zxFtvUn/5ZOzV4434Ju4dszo+5YK0aWETG
-					RyodJqvSWp3r5cF4cXSOJ70jn1MZGKuKP295
-					LhEiAFh07LN1v8a02JIUpKB3WpMX+EW85Iu1
-					Ok3uDlI69xOViGw63M+8C+d7wN00R+eiF50v
-					LyEBqfmSVDip4RU4tg== )
-7S4K83KDJEQKFB4UR9RPPT2IGU18RPM5.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					90A2FO9OJEP95ENMCLBKJ74AOCVSSLCD
-					CNAME RRSIG )
-			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					jj6vA7eTJ8hfFB3GJa7P4kJc2CG/cdbU2/yd
-					6GMLb+ED+G11aLy+wGEiDRrU/ZTIPobfd1Tq
-					xL6hUP0mcqOCoEB3p6XmtCkzJgD7voiioOl0
-					jJnGzSJBFwhsUhIjPoDv68YV9UU4voM8DEry
-					2hT2q+ey1DrsTh4G8o+o0PgTGFZ81lentkcu
-					xijYDec7Qq10NpDGZ5IqJtqATngX9q8JKdtP
-					Z3yk5cXAO7yfCtK6jumBqg9uTd5zNELtUQoy
-					AYgeJ8kjFbpsbWZxuJ7/hDf3ou0mPY2U9UyJ
-					il++OcQoNHmHF2JZYumORqQxtCUJ+onNfglb
-					U5SWj8F1lUoRQwBqhQ== )
-PN8E101H2V04I68KGGSAA9GM6HC7JOB0.neergaard.me. 3600 IN NSEC3 1 0 10 602B163503A4C0E8 (
-					177E5Q2JF7OTCM9M5TU162HOBBPC25I7
+					20141019125642 20140919125642 22730 neergaard.me.
+					5NeoA99qxCdyvVV0aLYzkF8qa9lgYYq0vha6
+					7UqvdTjDZsU/E7dDNSuU0Nqla7VvPktbmg63
+					QIZcqmGGhliRUsd2aSq7OxFmUk/1oxOWcLzR
+					bRbUKjFqvppYaOvCBJufqxy9FBFoorcTsnyo
+					AgGLMJoQ1Jz2aIZDNuQYnPWpzUVznOYcZOOF
+					3+byqEmiaqPoSNleNp/7sbTXV9YxBzTtZsVj
+					Gbm78w9Jwtk35g5trHnrnJQa828iUdwZbCmO
+					oT3/yDYUEJ8KB8eWvknFzJ/1EgYGDeiQqHnM
+					2M5I2wDyM7wEZ++g25zfz+3opligX65YiTDB
+					hxz8vWjxrD1YzDHzMw== )
+BN1OD4M8M0V0VA6N30GD5EGO6UNEU4JO.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					CQ2ADSQ8BA2PMOBNBO36N004RV2IO13J
 					MX RRSIG )
 			3600	RRSIG	NSEC3 10 3 3600 (
-					20141018224238 20140918224238 22730 neergaard.me.
-					UF7KO7EDP/pdz5gMGAGJwHLjByLylCTGJCRB
-					Cgkoasgu8YzT3VtCU6VMLKsv218EQGvR7TTY
-					LP6+NrT1fEF/+j5C3LERG921zn90H3hvTJ1f
-					Ii3mUlxi8N4+SL+yhiH4pKdGYDBt6ZXIVcUI
-					lXrx/vyQZyyNpELlNTmfDbjxwgXaM5UHjAVP
-					pwqQxvPJVdEgXilehg4lQ2F4Yien6/ZSfWe3
-					yiPlw7WKjolezd3OWks7nfFNXSu9wVTQsaSH
-					J4rs66f3oovP6nBrKiqok85V8RJm3Tney+qN
-					UKsEcyuDEdmN7/CD/LXx9OFyKzrSbXnZyvcq
-					RiDCOhIaSUaSss2h3Q== )
+					20141019125642 20140919125642 22730 neergaard.me.
+					JlQPKy+yD84hXpsDwl1Zkvdi3V6PAr8y0d+x
+					W7VgrIqsvoSH8NVRMqU1Ii9v9vLeBZBzXFSh
+					kE0iVdAh1JjMLDJfUPoE+IG/ajGpw6aQzv8i
+					9030aycNarSyNu9LBT4bfYS4P2X3fwxKpwTU
+					s1Q8OnO8b7UrbxNxmExXhw/1FxW8gVSb3aaJ
+					hoDzPGnRJ5CN7K1+WH9a89Ty8UZbB2J0AlmO
+					FbbKHBDs5wB4ix0vyyWlKasOv1+v8MbSD0JO
+					5x1vcEbzsOMd815eptwiW9+DeOfnyUNUIbp/
+					7xZvrwN+hiCor8oAyhMH2GoylGm0uiT47zsG
+					O0AUJmlZj+RLqFWFCA== )
+5C3HLL7PEGCVB32178HDUBA7C6H6PMG3.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					8NI9R0T4B0H343T2H4IIVRE2EEJ45CDN
+					SRV RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					j2H5n3HgQZgLR2xw2DOwDGOnsWDaqfnUYgkj
+					FvIp9dVIkx2GbAlAtKQmYJ4lS9ChSTDRDCIT
+					AgMcFxyks0Vc/YV7Uc/VgzDYt2cIqEKKDNyZ
+					9t0eZ/Atk6mUuze+eQWTYoQv9fbb5fM2wEjL
+					UC95C2hUwk4fHyVA7SRuNFF3vHvzYda2C/iC
+					ZgLtUb/Ly6S3T67Aq8VVX72mihcuafVLDmdV
+					6Wtfs47tQdL6rxWAT7IpJl/n6nXjcHps5R9h
+					9WKhYp/IU68ZCMbOqBNREDK3gzFLO6cADP7Y
+					HdBi59sjNowPzeu3Xg5LCdqrvq1L1wioWKTD
+					1lL0D7d8ylCr6/4ylg== )
+CQ2ADSQ8BA2PMOBNBO36N004RV2IO13J.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					I7B7S208I5VPHD67BO4DN9O1H57KOF60 )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					OiSB+LpbSdYaQJ/RTWBzdZRWNv2YDPNf+Cs+
+					zRd01+Ir178zZkcambboHp5yk8CGS2tEWqI6
+					eP2viHNr/HQm95NScSlDVffB6uwYZ2TN7L+x
+					rpKqnrcuIT+oLnA/ZStGvC3RD3kMk3N/mWV9
+					RA+ZNUYLl155YHNZIZi/0BWytwFy44zgVV2D
+					MauyNDVVX/H2/tcH1rk30sQw2Zi2/eT70jsQ
+					H6fJkREvpZ35GR9TRyHtuli+FhEQNvV/5nA8
+					xEnluk0S+jVHPI+JbyIBCKTO7IXpJXnEbtqN
+					3Srn/PokL68iYecCokXlaaBk4O/WLN1SZ2hm
+					n3pRjADaJH6NQCGa8A== )
+APU81UI7N7CKFA2A6T50JDCJ8RKCJDBJ.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					BN1OD4M8M0V0VA6N30GD5EGO6UNEU4JO
+					CNAME RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					hp2LkyKM0E8sI7gGffgoFxGsGFLCdCEtATzq
+					0WEzkxVVNLWc4j/I5FeyR0kyBFPFF1/uflzQ
+					l6HSxxrCmEMw2dQTeb5qwFXIXSH/ocEBVbls
+					nP71UO2gxwhM2iVe2Sy6TuoeQBgeEVyyb7zP
+					mHIvtc8wg6jxLr7LHmS5wkCL8nzF9aJT9Kil
+					Fs5YfT6NCCHAA4CTqwX6qRqIdd2+kNixxNL8
+					Y3i1JJ3KS8N7L+PA7oUsBAafzrJHwBWti5O7
+					frXeI/jLeffhbmXskiJYiu+1hLT89EjCqKbX
+					myu0Rnpq1w8jaFqs5qc5Qx5dmerEQGJkPY4v
+					ys4YQgAwhISW9KFrTw== )
+9Q29DC9R39D9QR9P99DMLQABQTR0OHBL.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					APU81UI7N7CKFA2A6T50JDCJ8RKCJDBJ
+					RRSIG TLSA )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					Tltuu1zXKjNQ8msPoylCfKq2CD+DOdPI9zL1
+					l1hfuReB0MwHfPCjNwnvcsk8B3vMuw07vBlE
+					nbUWPEhPHkGyia6N4n1IkFnkgxroCss0QiUn
+					kxAbbkxju/TovKsoFGVs8OAyZlE5KNLez+wP
+					+yKBtvz013Md8v3CnX3ecaIqlMwfOZOopmNe
+					jWkvCMMCCha2mJlb6A49C2jG8Byw24KLPwmq
+					XA8/XsBb0opeav1KKtZ28bj9Ir6cVMZgd0FC
+					eDSIeL4EHxd6u9aHTWr6lrR0/M9eSoqHfg5a
+					pyrKWfwKR6Fxm50hlw6Is51pktJunVeLen1x
+					LnUQsU825/F2B7BIlw== )
+KKVK06TR4FGE9M3V1FTANKE9N248P0TL.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					NN94E98T0ARKE0REKCQKNLK2S8GBG0P7
+					SRV RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					6SuxDo6o+D/VxX1dt8Nh5ximGv/9u+drYXZE
+					G4rAY0sGmaJstlahJnhP+/RnUf+OmKLRdMhv
+					hR5O/mgdS8ao1HDzp5fBHSu4cgUJSlKlLyyn
+					1ezywN4Ncjr2cYHlR7K2XJ8c0dK1l1HxMYSq
+					1GdF+61c+XrO6avU8Vbh/ayxRcgmN+0qgn29
+					/gJXzx8aNQT4ziGAvyI5g2mOTeRhowcDvq7j
+					hFfB9kHbW7BTvfXr52soPSnw+QOMBbOiw66q
+					f1Ob5LTveouOKqV5SClFEh8NAE5Q3mwCW5zH
+					PHG8LY935gNuzKfRqIz2xgJopRKHXc+yY72P
+					Me2D5YiyA3mKK8ovig== )
+QMT829O7M5HJKO6GLEJ34CL2F4OCOHLK.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					S5MPJNJNS1J9QC37M81AVVMNHFJ01G0S
+					TXT RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					YcysDjGBx6D+oW//mLxVxUsqTL19/gjG4vH4
+					2hiuLaDL0TGWafacB8aZcUNtKSG9aTlyGMuN
+					gxdwt7uWRDVi+qIx8GI9+62SPTa+WnpBpfRW
+					7ADaL5BR6+ws0JylyNt9hTNVUtkMjEbWOVtX
+					TwJO9cWi6rCyi5LF14SqoZhReBWihMKjPZsZ
+					xEQzwbrDEhUrFzPiU/OnK1mc9qtYNh8AeRxV
+					SFaHmXIqFq05Asjbm30wFxshcqrPpK8NrlFT
+					mXlkUtlwvdNsri1QlGM7E9i70EFb7CzWJxpu
+					TTR6ZS9jpIAypj97JAaH0rA6fxp+d29FX2nB
+					yZYO0JxTPc3j4dhQ9Q== )
+QI2U66MP5V89EEOABU0BVQCAA105JVQ1.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					QMT829O7M5HJKO6GLEJ34CL2F4OCOHLK )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					u8Dxrvx1wbIMJeT7vM09P/kO1alIFPlKHkLE
+					5E7sA7wDxc6DYG4fxsnaIXnrktgipK9TBDZZ
+					pDctj8rXrbdAg80cgjbFrziF287MFOtlFbzH
+					BShv6MNJhUH3J7uNDv5sro/DBbJ8XV/YxJ9X
+					oyISiXRAOZzXIxZZt9VVyqDWAwMw6Lv0PTEt
+					wAHPF3DqOOG1Lue64hEJbGRsnahcYax9lR28
+					l+eL+KYbco5VgkG9NBccm2bBq3t2/8+U0Eml
+					9kJFdzC1LfmHsmSeUDq3ujsWPL8Kz7CLvYS+
+					zUFe0SMrNFz3wFgSPlp8DMHRgQ7Mhj7QJmrs
+					DYHbxcSKZapj5NyW2w== )
+NN94E98T0ARKE0REKCQKNLK2S8GBG0P7.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					QI2U66MP5V89EEOABU0BVQCAA105JVQ1
+					CNAME RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					6OwaW1uh+a8nq5ep8G4ftzeTyGiH11t6c6q7
+					gf24oprMmGuLyYLQoDgzndGiXlzCnqh1yKSo
+					xznSzgVJskRmDP/ToQoAVWC4ct2m4MYG8ee0
+					f/tuf0CAshPaGEydM6NU/6yFUeGvq1kcBqvC
+					MpFri1ed3XnuZMaySkKNRsHHgManKYjRMEqs
+					0v9jmjXTCm3ZHLj3dPFtgSD+i42ejDDRzFYt
+					LJiZstw3QiqkRWdIgrFfV+RUJuvvaNPE1gdL
+					Da8Cuaw6Y8tMFQ4aUA80Q0vv/FqB/Cxez26h
+					fk4nNTOhQ517v/Iv51BV4IPDuUny9DYb/7MG
+					8rOCHQ04sDQFZYdkDA== )
+S5MPJNJNS1J9QC37M81AVVMNHFJ01G0S.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					VDGHDD7BUTF4SLVCKMFSLK4UQQ0NOTLC
+					RRSIG TLSA )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					duTVpd9N4no5ahpshxYHMaHDUG/Fvz1RqzYN
+					68Cq85kCFHvbZmpggdwKV1QM3m+JpUuCodnN
+					nC2DpduAKZddrcdyrVOBGa0U5x6m/LGOfBeZ
+					IVhhcrrR1Qcl7siD+D2GXZjU4E5GWjzn32k4
+					QTa2lUi2PN8ByNg7TkDbkEm/S1mg6a1BeRzN
+					qO90mykW7AuPyZaOxAca6z6I1eX/KowHSPQK
+					/WWXDs9MqwBFXFkszDh5bwyjy2ev8xkni2mF
+					7q49fA2Rx74vgmd7ngYDiWBF49pdplTKNlTE
+					qT71LO5Iq3Ia36r55hEj2dWShshVJ7Ca3v/j
+					3+T7Pvp/e/raVY6HeQ== )
+I7B7S208I5VPHD67BO4DN9O1H57KOF60.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					KKVK06TR4FGE9M3V1FTANKE9N248P0TL )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					gyf650S6h7Q7H5BuxjLHneqYdsomR73YE70Z
+					faNbpiA54FSlJVtah7UbEvLwI4xs06f1aeXw
+					zngKi+zpKjImENEdl5K5HbqvHM80HjOdhrBy
+					1h0m/W1Osojavoig9fbrf+10squTxf9n3I9l
+					gufstmQrabAGQ9O8RqsIgaI69xB5Sco121AW
+					dh4fZQ1QM12f2YwEaIul4dmPiPoEg7cIWAtu
+					l+djvVYNl3sow5YOgc6wXg710jOGqI83kN54
+					NnDAp9BoHQKweF30PEvigplyKE2Kz81a4w5j
+					cUzhmj/QaZoVqIpiDKpOPElz4YaKt8l5RoMg
+					aNJUnBKq35McsZ0kmg== )
+VDGHDD7BUTF4SLVCKMFSLK4UQQ0NOTLC.neergaard.me. 3600 IN NSEC3 1 0 10 E647AEE888CF238B (
+					42IU6QUKAPL43G6873415RP1GDAUKA8U
+					TXT RRSIG )
+			3600	RRSIG	NSEC3 10 3 3600 (
+					20141019125642 20140919125642 22730 neergaard.me.
+					FRmrzHh1HhaD3P1bDMecCRgdEVtRpZhQg9jb
+					xbRKWkJs7xQxw664FlqqXtJGOThQFVtuo3Jp
+					rtLLBAAXmva4M3ack6+3EFb6zayYZbdisMqA
+					hVQTFrocriWs5VKu0svmQv9wIvNnq/h9/lnf
+					kanUQ+ec3vz40iQaVdc7CP9h0gllBJUW6GXV
+					kAJ0lQ4fyA7G2PunXxPT9wxsMXKG+tlG2F18
+					wrXanhRV4c44oqgh1pLVOkm7g9j76Yaatese
+					rdYfk00zoDWVRGtfqfkEGav9zSh7NoHsZ4V7
+					p3rFCXc6u+VmyM15RadHPVdHZlCBFdcxsCWe
+					qLP45MRuB31xomaS4A== )
