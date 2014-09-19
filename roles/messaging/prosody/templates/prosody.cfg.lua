@@ -67,8 +67,7 @@ storage = "internal"
 log = {
   info = "/var/log/prosody/prosody.log";
   error = "/var/log/prosody/prosody.err";
-  -- { levels = { "error" }; to = "syslog";  };
-  "*syslog";
+  { levels = { "warning" }; to = "syslog";  };
 }
 
 
