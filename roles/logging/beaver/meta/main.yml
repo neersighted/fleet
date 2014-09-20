@@ -2,4 +2,3 @@ dependencies:
   - role: packages/pip
     args:
       name: beaver
-      state: latest

@@ -8,4 +8,3 @@ dependencies:
   - role: packages/pip
     args:
       name: diamond
-      state: latest
