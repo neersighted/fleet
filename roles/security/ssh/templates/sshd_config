@@ -6,6 +6,8 @@ Protocol 2
 HostKey /etc/ssh/ssh_host_cert_key
 HostCertificate /etc/ssh/ssh_host_cert_key.pub
 TrustedUserCAKeys /etc/ssh/ssh_ca.pub
+AuthorizedKeysFile /etc/ssh/ssh_authorized_keys
+RevokedKeys /etc/ssh/ssh_revoked_keys
 
 SyslogFacility AUTH
 LogLevel INFO
@@ -19,7 +21,6 @@ PasswordAuthentication no
 ChallengeResponseAuthentication no
 HostbasedAuthentication no
 PubkeyAuthentication yes
-AuthorizedKeysFile /etc/ssh/authorized_keys
 
 X11Forwarding yes
 X11DisplayOffset 10
