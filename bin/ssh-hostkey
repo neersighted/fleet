@@ -4,11 +4,12 @@ source bin/common
 source bin/colors
 
 
-KEYS=files/tinc
+CA=files/ssh/ca
+KEYS=files/ssh/hosts
 
 host=$1
 pubkey=$KEYS/${host}.pub
-privkey=$KEYS/${host}.priv
+privkey=$KEYS/${host}
 
 if [ -z "${host}" ]; then
   eche "${bold}${red}====> Host not specified${reset}"
@@ -18,17 +19,17 @@ elif [ -f "${pubkey}" ]; then
   exit 1
 fi
 
-eche "${bold}${blue}====> Generate RSA key set [${green}${host}${blue}]${reset}"
+eche "${bold}${blue}====> Generate and sign SSH host key set [${green}${host}${blue}]${reset}"
 
 eche "${bold}${blue}----> Generate private key (${green}${privkey}${blue})${reset}"
-if ! openssl genrsa 4096 > ${privkey}; then
+if ! ssh-keygen -t rsa -b 4096 -N '' -C "${host}" -f "${privkey}"; then
   eche "${bold}${red}===> Key generation failed${reset}"
   exit 1
 fi
 
-eche "${bold}${blue}----> Extract public key (${green}${pubkey}${blue})${reset}"
-if ! openssl rsa -in ${privkey} -pubout > ${pubkey}; then
-  eche "${bold}${red}===> Key extraction failed${reset}"
+eche "${bold}${blue}----> Sign public key (${green}${pubkey}${blue})${reset}"
+if ! ssh-keygen -s "${CA}" -V +52w -h -I "${host}" -n "${host}" "${pubkey}"; then
+  eche "${bold}${red}===> Key signing failed${reset}"
   exit 1
 fi
 

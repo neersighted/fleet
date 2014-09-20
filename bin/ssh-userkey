@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+source bin/common
+source bin/colors
+
+
+CA=files/ssh/ca
+KEYS=files/ssh/users
+
+name=$1
+principals=$2
+pubkey=$KEYS/${name}.pub
+privkey=$KEYS/${name}
+
+if [ -z "${name}" ]; then
+  eche "${bold}${red}====> Name not specified${reset}"
+  exit 1
+elif [ -z "${principals}" ]; then
+  eche "${bold}${red}====> Principal(s) not specified${reset}"
+  exit 1
+elif [ -f "${pubkey}" ]; then
+  eche "${bold}${red}====> Key already exists${reset}"
+  exit 1
+fi
+
+eche "${bold}${blue}====> Generate and sign SSH user key set [${green}${name}:${principals}${blue}]${reset}"
+
+eche "${bold}${blue}----> Generate private key (${green}${privkey}${blue})${reset}"
+if ! ssh-keygen -t rsa -b 4096 -N '' -C "${name}" -f "${privkey}"; then
+  eche "${bold}${red}===> Key generation failed${reset}"
+  exit 1
+fi
+
+eche "${bold}${blue}----> Sign public key (${green}${pubkey}${blue})${reset}"
+if ! ssh-keygen -s "${CA}" -V +52w -I "${name}" -n "${principals}" "${pubkey}"; then
+  eche "${bold}${red}===> Key signing failed${reset}"
+  exit 1
+fi
+
+eche "${bold}${green}====> Key set created${reset}"

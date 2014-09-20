@@ -1,3 +1,0 @@
-- name: add ssh key for {{ user }}
-  tags: [auth_key, ssh, security]
-  authorized_key: user={{ user }} key='{{ key }}' state=present

@@ -65,9 +65,17 @@
 
     - role: security/sudo
     - role: security/ssh
+      ca: files/ssh/ca
+      host_keys: files/ssh/hosts
+      user_keys: files/ssh/users
     - role: packages/apt
       args:
         pkg: mosh
+
+
+    - role: packages/apt
+      args:
+        pkg: fish
 
 
     - role: accounts/group
@@ -84,29 +92,18 @@
       user: '%wheel'
       perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL'
 
-    - role: security/ssh/auth_key
-      user: root
-      key: "{{ lookup('file', '../.ssh/ansible.pub') }}"
-
     - role: accounts/user
       args:
         name: ansible
         group: deploy
         system: yes
-    - role: security/ssh/auth_key
-      user: ansible
-      key: "{{ lookup('file', '../.ssh/ansible.pub') }}"
-
     - role: accounts/user
       args:
         name: neersighted
         group: wheel
         groups: adm
-        shell: /bin/bash
+        shell: /bin/fish
         password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.'
-    - role: security/ssh/auth_key
-      user: neersighted
-      key: "{{ lookup('file', '../.ssh/neersighted.pub') }}"
 
 
     - role: mail/msmtp
@@ -208,9 +205,6 @@
         state: absent
         purge: yes
 
-    - role: packages/apt
-      args:
-        pkg: zsh
     - role: packages/apt
       args:
         pkg: bmon

@@ -1,8 +1,23 @@
-- name: disable password authentication
+- name: transfer public key
   tags: [ssh, security]
-  lineinfile: >
-    dest=/etc/ssh/sshd_config
-    regexp='^#?PasswordAuthentication'
-    line='PasswordAuthentication no'
-    state=present
+  copy: src={{ host_keys }}/{{ inventory_hostname }}-cert.pub dest=/etc/ssh/ssh_host_cert_key.pub
   notify: restart ssh
+
+- name: transfer private key
+  tags: [ssh, security]
+  copy: src={{ host_keys }}/{{ inventory_hostname }} dest=/etc/ssh/ssh_host_cert_key mode=600
+  notify: restart ssh
+
+- name: transfer ca public key
+  tags: [ssh, security]
+  copy: src={{ ca }}.pub dest=/etc/ssh/ssh_ca.pub
+  notify: restart ssh
+
+- name: configure sshd
+  tags: [ssh, security]
+  template: src=sshd_config dest=/etc/ssh/sshd_config
+  notify: restart ssh
+
+- name: enable and start ssh
+  tags: [ssh, security]
+  service: name=ssh state=started enabled=yes
