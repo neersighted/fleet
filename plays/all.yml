@@ -82,15 +82,15 @@
       args:
         name: deploy
         system: yes
-    - role: security/sudoer
+    - role: security/sudo/sudoer
       user: '%deploy'
       perms: 'ALL=(ALL) NOPASSWD: ALL'
     - role: accounts/group
       args:
         name: wheel
-    - role: security/sudoer
+    - role: security/sudo/sudoer
       user: '%wheel'
-      perms: 'ALL=(ALL) LOG_INPUT: LOG_OUTPUT: ALL'
+      perms: 'ALL=(ALL) NOPASSWD: LOG_INPUT: LOG_OUTPUT: ALL'
 
     - role: accounts/user
       args:
@@ -102,7 +102,7 @@
         name: neersighted
         group: wheel
         groups: adm
-        shell: /bin/fish
+        shell: /usr/bin/fish
         password: '$6$Y.0kHhqr$FNoswhl3YWuw4vskWw9HtIpZHiUmfd7wYC8jKaQsG2FYeEzVz7tPfbdmAxei7gvqdbQ9SIkc8YIpNcNQug9Dp.'
 
 
