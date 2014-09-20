@@ -4,28 +4,23 @@ source bin/common
 source bin/colors
 
 
-KEYS=files/tinc
+CA=files/ssh/ca
+KEYS=files/ssh/hosts
 
 host=$1
 pubkey=$KEYS/${host}.pub
-privkey=$KEYS/${host}.priv
+privkey=$KEYS/${host}
 
 if [ -f "${pubkey}" ]; then
   eche "${bold}${red}====> Key already exists${reset}"
   exit 1
 fi
 
-eche "${bold}${blue}====> Generate RSA keyset [${green}${host}${blue}]${reset}"
+eche "${bold}${blue}====> Generate and sign SSH keyset [${green}${host}${blue}]${reset}"
 
 eche "${bold}${blue}----> Generate private key (${green}${privkey}${blue})${reset}"
-if ! openssl genrsa 4096 > ${privkey}; then
+if ! ssh-keygen -t rsa -b 4096 -N '' -C "${host}" -f "${privkey}"; then
   eche "${bold}${red}===> Key generation failed${reset}"
-  exit 1
-fi
-
-eche "${bold}${blue}----> Extract public key (${green}${pubkey}${blue})${reset}"
-if ! openssl rsa -in ${privkey} -pubout > ${pubkey}; then
-  eche "${bold}${red}===> Key extraction failed${reset}"
   exit 1
 fi
 
