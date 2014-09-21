@@ -6,7 +6,7 @@ Protocol 2
 HostKey /etc/ssh/ssh_host_cert_key
 HostCertificate /etc/ssh/ssh_host_cert_key.pub
 TrustedUserCAKeys /etc/ssh/ssh_ca.pub
-AuthorizedKeysFile /etc/ssh/ssh_authorized_keys
+AuthorizedKeysFile .ssh/authorized_keys
 #RevokedKeys /etc/ssh/ssh_revoked_keys
 
 SyslogFacility AUTH
