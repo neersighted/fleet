@@ -72,10 +72,39 @@
       args:
         pkg: mosh
 
-
+    - role: packages/apt
+      args:
+        pkg: vim-nox
     - role: packages/apt
       args:
         pkg: fish
+    - role: packages/apt
+      args:
+        pkg: command-not-found
+
+    - role: packages/apt
+      args:
+        pkg: curl
+    - role: packages/apt
+      args:
+        pkg: git
+
+    - role: packages/apt
+      args:
+        pkg: htop
+    - role: packages/apt
+      args:
+        pkg: strace
+
+    - role: packages/apt
+      args:
+        pkg: bmon
+    - role: packages/apt
+      args:
+        pkg: socat
+    - role: packages/apt
+      args:
+        pkg: tcpdump
 
 
     - role: accounts/group
@@ -204,31 +233,3 @@
         pkg: fuse
         state: absent
         purge: yes
-
-    - role: packages/apt
-      args:
-        pkg: bmon
-    - role: packages/apt
-      args:
-        pkg: vim-nox
-    - role: packages/apt
-      args:
-        pkg: curl
-    - role: packages/apt
-      args:
-        pkg: git
-    - role: packages/apt
-      args:
-        pkg: strace
-    - role: packages/apt
-      args:
-        pkg: htop
-    - role: packages/apt
-      args:
-        pkg: bmon
-    - role: packages/apt
-      args:
-        pkg: socat
-    - role: packages/apt
-      args:
-        pkg: tcpdump
