@@ -7,7 +7,7 @@ HostKey /etc/ssh/ssh_host_cert_key
 HostCertificate /etc/ssh/ssh_host_cert_key.pub
 TrustedUserCAKeys /etc/ssh/ssh_ca.pub
 AuthorizedKeysFile /etc/ssh/ssh_authorized_keys
-RevokedKeys /etc/ssh/ssh_revoked_keys
+#RevokedKeys /etc/ssh/ssh_revoked_keys
 
 SyslogFacility AUTH
 LogLevel INFO
@@ -26,8 +26,8 @@ X11Forwarding yes
 X11DisplayOffset 10
 AcceptEnv LANG LC_*
 
-Banner /etc/issue.net
-PrintMotd yes
+#Banner /etc/issue.net
+PrintMotd no
 PrintLastLog yes
 
 LoginGraceTime 120
