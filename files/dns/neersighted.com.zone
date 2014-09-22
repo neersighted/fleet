@@ -5,7 +5,7 @@ $TTL 300
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. hostmaster.neersighted.com. (
-      1411268174 ; serial
+      1411351716 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire
@@ -76,14 +76,8 @@ oxygen AAAA 2600:3c01::f03c:91ff:fe73:cb9f
 ns2 A 74.207.242.71
 ns2 AAAA 2600:3c01::f03c:91ff:fe73:cb9f
 
-plutonium A 104.131.59.113
-plutonium AAAA 2604:a880:800:10::105:b000
-
 tungsten A 209.141.55.116
 tungsten AAAA 2605:6400:20:da::1
-
-uranium A 128.199.253.245
-uranium AAAA 2400:6180:0:d0::db:8000
 
 ns3 A 69.93.127.10 ; ns1.linode.com
 ns3 AAAA 2600:3c00::a ; ns1.linode.com
