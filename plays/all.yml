@@ -177,6 +177,16 @@
 
     - role: packages/apt
       args:
+        pkg: keyboard-configuration
+        state: absent
+        purge: yes
+    - role: packages/apt
+      args:
+        pkg: console-setup
+        state: absent
+        purge: yes
+    - role: packages/apt
+      args:
         pkg: nvi
         state: absent
         purge: yes
