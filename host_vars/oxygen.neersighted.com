@@ -19,4 +19,3 @@ network:
     vpn: fd00:dead:beef::1dea
   tinc:
     name: oxygen
-    entry: yes

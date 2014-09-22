@@ -19,4 +19,3 @@ network:
     vpn: fd00:dead:beef::1ced
   tinc:
     name: carbon
-    entry: yes

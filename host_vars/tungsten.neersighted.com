@@ -18,4 +18,3 @@ network:
     vpn: fd00:dead:beef::ba5e
   tinc:
     name: tungsten
-    entry: yes

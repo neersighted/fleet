@@ -19,4 +19,3 @@ network:
     vpn: fd00:dead:beef::cafe
   tinc:
     name: nitrogen
-    entry: yes

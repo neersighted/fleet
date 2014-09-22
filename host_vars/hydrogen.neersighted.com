@@ -21,4 +21,3 @@ network:
     vpn: fd00:dead:beef::b0de
   tinc:
     name: hydrogen
-    entry: false
