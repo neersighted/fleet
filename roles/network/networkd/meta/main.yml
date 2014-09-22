@@ -4,3 +4,8 @@ dependencies:
       pkg: ifupdown
       state: absent
       purge: yes
+  - role: packages/apt
+    args:
+      pkg: avahi-daemon
+      state: absent
+      purge: yes

@@ -8,3 +8,14 @@ dependencies:
   - role: packages/apt
     args:
       pkg: collectd-utils
+
+  - role: packages/apt
+    args:
+      pkg: sane-utils
+      state: absent
+      purge: yes
+  - role: packages/apt
+    args:
+      pkg: libsane
+      state: absent
+      purge: yes

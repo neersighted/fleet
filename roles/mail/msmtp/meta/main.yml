@@ -2,10 +2,30 @@ dependencies:
   - role: packages/apt
     args:
       pkg: bsd-mailx
-
   - role: packages/apt
     args:
       pkg: msmtp
   - role: packages/apt
     args:
       pkg: msmtp-mta
+
+  - role: packages/apt
+    args:
+      pkg: exim4
+      state: absent
+      purge: yes
+  - role: packages/apt
+    args:
+      pkg: exim4-base
+      state: absent
+      purge: yes
+  - role: packages/apt
+    args:
+      pkg: exim4-config
+      state: absent
+      purge: yes
+  - role: packages/apt
+    args:
+      pkg: exim4-daemon-light
+      state: absent
+      purge: yes

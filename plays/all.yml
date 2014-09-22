@@ -177,57 +177,12 @@
 
     - role: packages/apt
       args:
-        pkg: keyboard-configuration
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
-        pkg: console-setup
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
         pkg: nvi
         state: absent
         purge: yes
     - role: packages/apt
       args:
         pkg: sysstat
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
-        pkg: exim4
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
-        pkg: exim4-base
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
-        pkg: exim4-config
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
-        pkg: exim4-daemon-light
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
-        pkg: ntpdate
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
-        pkg: sane-utils
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
-        pkg: libsane
         state: absent
         purge: yes
     - role: packages/apt
@@ -243,10 +198,5 @@
     - role: packages/apt
       args:
         pkg: fuse
-        state: absent
-        purge: yes
-    - role: packages/apt
-      args:
-        pkg: avahi-daemon
         state: absent
         purge: yes

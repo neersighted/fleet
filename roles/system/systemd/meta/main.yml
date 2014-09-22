@@ -2,3 +2,19 @@ dependencies:
   - role: packages/apt
     args:
       pkg: systemd-sysv
+
+  - role: packages/apt
+    args:
+      pkg: kbd
+      state: absent
+      purge: yes
+  - role: packages/apt
+    args:
+      pkg: keyboard-configuration
+      state: absent
+      purge: yes
+  - role: packages/apt
+    args:
+      pkg: console-setup
+      state: absent
+      purge: yes
