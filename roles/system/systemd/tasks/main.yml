@@ -1,6 +1,6 @@
 - name: check if systemd is running
   tags: [systemd, system]
-  command: pidof systemd
+  command: test -d /run/systemd/system
   ignore_errors: yes
   register: systemd
   changed_when: false

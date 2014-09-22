@@ -1,0 +1,12 @@
+- name: configure networks
+  tags: [networkd, network]
+  with_items:
+    - eth0
+  template: src={{ item }}.network dest=/etc/systemd/network/{{ item }}.network
+  notify:
+    - reload systemd
+    - restart networkd
+
+- name: enable and start networkd
+  tags: [networkd, network]
+  service: name=systemd-networkd state=started enabled=yes

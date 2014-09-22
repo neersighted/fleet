@@ -1,0 +1,15 @@
+[Match]
+Name=eth0
+
+[Network]
+DHCP=no
+
+Gateway={{ network.ipv4.gateway }}
+{% for ip in network.ipv4.public %}
+Address={{ ip }}/{{ network.ipv4.netmask }}
+{% endfor %}
+
+Gateway={{ network.ipv6.gateway }}
+{% for ip in network.ipv6.public %}
+Address={{ ip }}/{{ network.ipv6.netmask }}
+{% endfor %}

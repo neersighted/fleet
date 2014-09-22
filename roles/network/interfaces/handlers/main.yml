@@ -1,5 +1,0 @@
-- name: restart network
-  shell: ifdown -a && ifup -a
-
-- name: restart ssh
-  service: name=ssh state=restarted

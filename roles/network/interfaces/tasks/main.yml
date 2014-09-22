@@ -1,6 +1,0 @@
-- name: configure interfaces
-  tags: [interfaces, network]
-  template: src=interfaces dest=/etc/network/interfaces
-  notify:
-    - restart network
-    - restart ssh

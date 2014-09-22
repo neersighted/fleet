@@ -1,0 +1,5 @@
+- name: reload systemd
+  command: systemctl daemon-reload
+
+- name: restart networkd
+  service: name=systemd-networkd state=restarted

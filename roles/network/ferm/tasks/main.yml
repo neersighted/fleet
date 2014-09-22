@@ -6,7 +6,9 @@
 - name: install ferm service
   tags: [ferm, network]
   copy: src=ferm.service dest=/etc/systemd/system/ferm.service
-  notify: reload systemd
+  notify:
+    - reload systemd
+    - reload ferm
 
 - name: enable and start ferm
   tags: [ferm, network]

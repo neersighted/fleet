@@ -57,9 +57,11 @@
           interface tinc0 ACCEPT;
         }
 
+    - role: network/networkd
+    - role: network/tc
+
     - role: network/tinc
       keys: files/tinc
-    - role: network/interfaces
     - role: network/resolvconf
 
 
@@ -231,5 +233,10 @@
     - role: packages/apt
       args:
         pkg: fuse
+        state: absent
+        purge: yes
+    - role: packages/apt
+      args:
+        pkg: avahi-daemon
         state: absent
         purge: yes

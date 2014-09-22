@@ -1,0 +1,10 @@
+- name: install tc service
+  tags: [tc, network]
+  template: src=tc.service dest=/etc/systemd/system/tc.service
+  notify:
+    - reload systemd
+    - restart tc
+
+- name: enable and start tc
+  tags: [tc, network]
+  service: name=tc state=started enabled=yes

@@ -1,8 +1,8 @@
 [Unit]
 Description=For Easy Rule Making
-After=systemd-sysctl.service
-Before=sysinit.target
 DefaultDependencies=no
+After=systemd-sysctl.service
+Before=network-pre.target
 
 [Service]
 Type=oneshot
@@ -13,4 +13,4 @@ ExecStop=/usr/sbin/ferm -F /etc/ferm/ferm.conf
 RemainAfterExit=yes
 
 [Install]
-WantedBy=multi-user.target
+RequiredBy=network-pre.target

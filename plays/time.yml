@@ -5,17 +5,14 @@
     - role: network/ferm/rule
       name: ntp
       rule: |
-        @hook pre   "tc class add dev eth0 parent 1:1 classid 1:123 htb rate 1mbps ceil 3mbps";
-        @hook pre   "tc qdisc add dev eth0 parent 1:123 handle 123: sfq perturb 10";
-        @hook pre   "tc filter add dev eth0 parent 1: proto ip prio 123 handle 123 fw classid 1:123";
-        @hook flush "tc filter del dev eth0 prio 123";
-        @hook flush "tc qdisc del dev eth0 parent 1:123 handle 123:";
-        @hook flush "tc class del dev eth0 parent 1:1 classid 1:123";
-
         domain (ip ip6) {
           table filter chain INPUT proto udp dport ntp ACCEPT;
           table mangle chain OUTPUT proto udp sport ntp MARK set-mark 123;
         }
+    - role: network/tc/child
+      mark: 123
+      rate: 1mbps
+      ceil: 3mbps
 
 
     - role: time/ntp/server

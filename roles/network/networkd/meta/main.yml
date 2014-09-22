@@ -1,0 +1,6 @@
+dependencies:
+  - role: packages/apt
+    args:
+      pkg: ifupdown
+      state: absent
+      purge: yes
