@@ -1,0 +1,20 @@
+[Unit]
+Description=Traffic Shaping (mark %i)
+Requires=tc.service
+After=tc.service
+
+[Service]
+Type=oneshot
+SyslogLevel=notice
+
+EnvironmentFile=/etc/tc/mark/%i
+ExecStart=/sbin/tc class add dev eth0 parent 1:1 classid 1:%i htb rate $RATE ceil $CEIL
+ExecStart=/sbin/tc qdisc add dev eth0 parent 1:%i handle %i: sfq perturb 10
+ExecStart=/sbin/tc filter add dev eth0 parent 1: prio %i handle %i fw classid 1:%i
+ExecStop=/sbin/tc filter del dev eth0 parent 1: prio %i
+ExecStop=/sbin/tc qdisc del dev eth0 parent 1:%i handle %i:
+ExecStop=/sbin/tc class del dev eth0 parent 1:1 classid 1:%i
+RemainAfterExit=yes
+
+[Install]
+WantedBy=network.target

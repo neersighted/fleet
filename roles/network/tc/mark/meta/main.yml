@@ -1,0 +1,3 @@
+dependencies:
+  - role: file/directory
+    path: /etc/tc/mark

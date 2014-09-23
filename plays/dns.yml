@@ -9,7 +9,7 @@
           table filter chain INPUT proto (tcp udp) dport domain ACCEPT;
           table mangle chain OUTPUT proto (tcp udp) sport domain MARK set-mark 53;
         }
-    - role: network/tc/child
+    - role: network/tc/mark
       mark: 53
       rate: 128kbps
       ceil: 512kbps

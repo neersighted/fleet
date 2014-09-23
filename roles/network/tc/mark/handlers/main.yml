@@ -1,0 +1,5 @@
+- name: reload systemd
+  command: systemctl daemon-reload
+
+- name: restart tc-mark@{{ mark }}
+  service: name=tc-mark@{{ mark }} state=restarted

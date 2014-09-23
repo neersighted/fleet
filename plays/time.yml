@@ -9,7 +9,7 @@
           table filter chain INPUT proto udp dport ntp ACCEPT;
           table mangle chain OUTPUT proto udp sport ntp MARK set-mark 123;
         }
-    - role: network/tc/child
+    - role: network/tc/mark
       mark: 123
       rate: 1mbps
       ceil: 3mbps

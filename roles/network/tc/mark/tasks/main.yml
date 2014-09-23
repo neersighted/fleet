@@ -1,0 +1,13 @@
+- name: configure tc-mark (for {{ mark }})
+  tags: [mark, tc, network]
+  template: src=tc-mark.conf dest=/etc/tc/mark/{{ mark }}
+  notify: restart tc-mark@{{ mark }}
+
+- name: install tc-mark service
+  tags: [mark, tc, network]
+  copy: src=tc-mark@.service dest=/etc/systemd/system/tc-mark@.service
+  notify: reload systemd
+
+- name: enable and start tc-mark (for {{ mark }})
+  tags: [mark, tc, network]
+  service: name=tc-mark@{{ mark }} state=started enabled=yes

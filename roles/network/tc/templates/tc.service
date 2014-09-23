@@ -1,5 +1,5 @@
 [Unit]
-Description=Linux Traffic Control
+Description=Traffic Shaping (root)
 After=network-pre.target
 
 [Service]

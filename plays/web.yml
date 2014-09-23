@@ -9,7 +9,7 @@
           table filter chain INPUT proto tcp dport (http https) ACCEPT;
           table mangle chain OUTPUT proto tcp sport (http https) MARK set-mark 80;
         }
-    - role: network/tc/child
+    - role: network/tc/mark
       mark: 80
       rate: 5mbps
       ceil: 15mbps
