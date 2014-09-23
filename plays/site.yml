@@ -4,6 +4,5 @@
 - include: mail.yml
 - include: metrics.yml
 - include: msg.yml
-- include: proxy.yml
 - include: time.yml
 - include: web.yml

@@ -3,8 +3,21 @@
   sudo: yes
   roles:
     - role: network/ferm/rule
+      name: ident
+      rule: domain (ip ip6) table filter chain INPUT proto tcp dport ident ACCEPT;
+    - role: network/ferm/rule
       name: xmpp
       rule: domain (ip ip6) table filter chain INPUT proto (tcp udp) dport (xmpp-server xmpp-client) ACCEPT;
+    - role: network/ferm/rule
+      name: quasselcore
+      rule: domain (ip ip6) table filter chain INPUT proto tcp dport 4242 ACCEPT;
+    - role: network/ferm/rule
+      name: nbnc
+      rule: domain (ip ip6) table filter chain INPUT proto tcp dport 6631:6639 ACCEPT;
+
+
+    - role: messaging/nidd
+      user: bjorn
 
     - role: messaging/prosody
       ssl:
@@ -20,3 +33,56 @@
         neergaard.me:
           cert: /etc/ssl/neergaard.me.pem
           key: /etc/ssl/neergaard.me.pem
+
+    - role: messaging/quasselcore
+
+    - role: messaging/nbnc
+      raddr: irc.esper.net
+      rport: 6697
+      lport: 6631
+      ssl: yes
+      noverify: yes
+      v6: yes
+      pass: espercorn lives forever
+    - role: messaging/nbnc
+      raddr: irc.freenode.net
+      rport: 6697
+      lport: 6632
+      ssl: yes
+      v6: yes
+      pass: free as in freedom
+    - role: messaging/nbnc
+      raddr: irc.oftc.net
+      rport: 6697
+      lport: 6633
+      ssl: yes
+      v6: yes
+      pass: freenode wannabe
+    - role: messaging/nbnc
+      raddr: irc.atheme.org
+      rport: 6697
+      lport: 6634
+      ssl: yes
+      noverify: yes
+      v6: yes
+      pass: why am i here
+    - role: messaging/nbnc
+      raddr: irc.irccloud.com
+      rport: 6697
+      lport: 6635
+      ssl: yes
+      v6: yes
+      pass: i want vip back
+    - role: messaging/nbnc
+      raddr: irc6.quakenet.org
+      lport: 6636
+      v6: yes
+      pass: use ssl damnit
+    - role: messaging/nbnc
+      raddr: irc.rizon.net
+      rport: 6697
+      lport: 6637
+      ssl: yes
+      noverify: yes
+      v6: yes
+      pass: yay ss13 drama

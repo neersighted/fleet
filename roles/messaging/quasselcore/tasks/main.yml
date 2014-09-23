@@ -1,0 +1,10 @@
+- name: install quasselcore service
+  tags: [quasselcore, messaging]
+  copy: src=quasselcore.service dest=/etc/systemd/system/quasselcore.service
+  notify:
+    - reload systemd
+    - restart quasselcore
+
+- name: enable and start quasselcore
+  tags: [quasselcore, messaging]
+  service: name=quasselcore state=started enabled=yes

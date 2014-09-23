@@ -1,20 +1,20 @@
 - name: install nbnc
-  tags: [nbnc, irc]
+  tags: [nbnc, messaging]
   copy: src=nbnc dest=/usr/local/bin/nbnc mode=0755
   notify: restart nbnc@{{ raddr }}
 
 - name: configure nbnc (for {{ raddr }})
-  tags: [nbnc, irc]
+  tags: [nbnc, messaging]
   template: src=nbnc.conf dest=/etc/nbnc.d/{{ raddr }}
   notify: restart nbnc@{{ raddr }}
 
 - name: install nbnc service (for {{ raddr}})
-  tags: [nbnc, irc]
+  tags: [nbnc, messaging]
   copy: src=nbnc@.service dest=/etc/systemd/system/nbnc@.service
   notify:
     - reload systemd
     - restart nbnc@{{ raddr }}
 
 - name: enable and start nbnc (for {{ raddr }})
-  tags: [nbnc, irc]
+  tags: [nbnc, messaging]
   service: name=nbnc@{{ raddr }} state=started enabled=yes

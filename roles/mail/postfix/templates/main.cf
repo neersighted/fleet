@@ -15,21 +15,10 @@ relayhost = [{{ relay.host }}]:{{ relay.port }}
 
 # Lock down the relay; try to reject spam.
 smtpd_helo_required = yes
-smtpd_helo_restrictions =
-  reject_invalid_helo_hostname,
-  reject_non_fqdn_helo_hostname,
-  reject_unknown_helo_hostname,
-  reject_rhsbl_helo zen.spamhaus.org,
-  permit
-smtpd_client_restrictions =
-  reject_rbl_client b.barracudacentral.org,
-  reject_unknown_client_hostname,
-  permit
 smtpd_sender_restrictions =
   reject_unknown_sender_domain,
   reject_unknown_address,
   reject_rhsbl_reverse_client dbl.spamhaus.org,
-  reject_rbl_client b.barracudacentral.org,
   permit
 smtpd_recipient_restrictions =
   reject_unauth_destination,

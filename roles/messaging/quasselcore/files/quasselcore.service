@@ -1,0 +1,20 @@
+[Unit]
+Description=Distributed IRC Client
+After=network.target
+
+[Service]
+Type=simple
+SyslogLevel=notice
+
+User=quasselcore
+Group=quassel
+ExecStart=/usr/bin/quasselcore \
+  --configdir=/var/lib/quassel \
+  --logfile=/var/log/quassel/core.log --loglevel=Info \
+  --listen=0.0.0.0,:: --port=4242
+
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

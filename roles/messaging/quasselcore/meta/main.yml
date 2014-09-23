@@ -1,0 +1,4 @@
+dependencies:
+  - role: packages/apt
+    args:
+      pkg: quassel-core
