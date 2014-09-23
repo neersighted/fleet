@@ -33,26 +33,6 @@
       name: localhost
       conf: files/web/localhost.conf
 
-    - role: web/elastichq
-    - role: web/nginx/site
-      name: elastichq.neersighted.com
-      conf: files/web/elastichq.neersighted.com.conf
-
-    - role: web/grafana
-    - role: web/nginx/site
-      name: grafana.neersighted.com
-      conf: files/web/grafana.neersighted.com.conf
-
-    - role: web/kibana
-    - role: web/nginx/site
-      name: kibana.neersighted.com
-      conf: files/web/kibana.neersighted.com.conf
-
-    - role: web/kopf
-    - role: web/nginx/site
-      name: kopf.neersighted.com
-      conf: files/web/kopf.neersighted.com.conf
-
     - role: web/nginx/site
       name: neer.io
       conf: files/web/neer.io.conf
@@ -65,3 +45,21 @@
     - role: web/nginx/site
       name: gapps.itvends.com
       conf: files/web/gapps.itvends.com.conf
+
+    - role: web/app/elastichq
+    - role: web/nginx/site
+      name: elastichq.neersighted.com
+      conf: files/web/elastichq.neersighted.com.conf
+    - role: web/app/grafana
+    - role: web/nginx/site
+      name: grafana.neersighted.com
+      conf: files/web/grafana.neersighted.com.conf
+    - role: web/app/kibana
+    - role: web/nginx/site
+      name: kibana.neersighted.com
+      conf: files/web/kibana.neersighted.com.conf
+    - role: web/app/kopf
+    - role: web/nginx/site
+      name: kopf.neersighted.com
+      conf: files/web/kopf.neersighted.com.conf
+

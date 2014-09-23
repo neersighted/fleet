@@ -1,7 +1,7 @@
 - name: extract kibana
-  tags: [kibana, web]
+  tags: [kibana, app, web]
   unarchive: src=kibana.tgz dest=/srv/web creates=/srv/web/kibana/config.js
 
 - name: configure kibana
-  tags: [kibana, web]
+  tags: [kibana, app, web]
   template: src=config.js dest=/srv/web/kibana/config.js

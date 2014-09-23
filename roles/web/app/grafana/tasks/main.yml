@@ -1,7 +1,7 @@
 - name: extract grafana
-  tags: [grafana, web]
+  tags: [grafana, app, web]
   unarchive: src=grafana.tgz dest=/srv/web creates=/srv/web/grafana/config.sample.js
 
 - name: configure grafana
-  tags: [grafana, web]
+  tags: [grafana, app, web]
   template: src=config.js dest=/srv/web/grafana/config.js

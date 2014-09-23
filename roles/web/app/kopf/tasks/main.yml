@@ -1,3 +1,3 @@
 - name: extract kopf
-  tags: [kopf, web]
+  tags: [kopf, app, web]
   unarchive: src=kopf.tgz dest=/srv/web creates=/srv/web/kopf/index.html
