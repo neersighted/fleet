@@ -3,15 +3,10 @@
   sudo_user: git
   git: repo=git://github.com/sitaramc/gitolite dest=/srv/git/gitolite accept_hostkey=yes
 
-- name: install gitolite
-  tags: [gitolite, storage]
-  sudo_user: git
-  command: /srv/git/gitolite/install
-
 - name: setup gitolite
   tags: [gitolite, storage]
   sudo_user: git
-  command: /srv/git/gitolite/src/gitolite setup -a {{ admin }}
+  command: /srv/git/gitolite/src/gitolite setup -a dummy creates=/srv/git/projects.list
 
 - name: purge config repository
   tags: [gitolite, storage]
@@ -27,15 +22,18 @@
   tags: [gitolite, storage]
   sudo_user: git
   template: src=gitolite.conf dest=/srv/git/.gitolite/conf/gitolite.conf
-  notify: recompile gitolite config
+  notify:
+    - recompile gitolite config
+    - setup gitolite
 
 - name: create keydir
   tags: [gitolite, storage]
   sudo_user: git
   file: path=/srv/git/.gitolite/keydir state=directory
 
-- name: install key
+- name: create users
   tags: [gitolite, storage]
   sudo_user: git
-  copy: content='{{ admin_key }}' dest=/srv/git/.gitolite/keydir/{{ admin }}.pub
+  with_dict: users
+  copy: content='{{ item.value }}' dest=/srv/git/.gitolite/keydir/{{ item.key }}.pub
   notify: reload gitolite keys

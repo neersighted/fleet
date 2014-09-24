@@ -14,7 +14,7 @@
     # CACHE                         =>  'Redis',
     # CACHE_TTL                     =>  600,
 
-    SITE_INFO                       =>  'Ask {{ admin }} for help',
+    SITE_INFO                       =>  '',
 
     DISPLAY_CPU_TIME                =>  1,
     CPU_TIME_WARN_LIMIT             =>  0.1,
@@ -61,7 +61,7 @@
 
             # 'expand-deny-messages',
 
-            'Shell {{ admin }}',
+            # 'Shell',
 
             'renice 10',
             'CpuTime',

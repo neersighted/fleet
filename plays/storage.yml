@@ -3,5 +3,5 @@
   sudo: yes
   roles:
     - role: storage/gitolite
-      admin: neersighted
-      admin_key: "{{ lookup('file', 'files/ssh/other/neersighted.pub') }}"
+      users:
+        neersighted: "{{ lookup('file', 'files/ssh/other/neersighted.pub') }}"
