@@ -1,0 +1,7 @@
+- name: Storage Servers (storage)
+  hosts: storage
+  sudo: yes
+  roles:
+    - role: storage/gitolite
+      admin: neersighted
+      admin_key: "{{ lookup('file', 'files/ssh/other/neersighted.pub') }}"

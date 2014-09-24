@@ -1,0 +1,41 @@
+- name: clone gitolite
+  tags: [gitolite, storage]
+  sudo_user: git
+  git: repo=git://github.com/sitaramc/gitolite dest=/srv/git/gitolite accept_hostkey=yes
+
+- name: install gitolite
+  tags: [gitolite, storage]
+  sudo_user: git
+  command: /srv/git/gitolite/install
+
+- name: setup gitolite
+  tags: [gitolite, storage]
+  sudo_user: git
+  command: /srv/git/gitolite/src/gitolite setup -a {{ admin }}
+
+- name: purge config repository
+  tags: [gitolite, storage]
+  sudo_user: git
+  file: path=/srv/git/repositories/gitolite-admin.git state=absent
+
+- name: configure gitolite
+  tags: [gitolite, storage]
+  sudo_user: git
+  template: src=gitolite.rc dest=/srv/git/.gitolite.rc
+
+- name: configure gitolite repos
+  tags: [gitolite, storage]
+  sudo_user: git
+  template: src=gitolite.conf dest=/srv/git/.gitolite/conf/gitolite.conf
+  notify: recompile gitolite config
+
+- name: create keydir
+  tags: [gitolite, storage]
+  sudo_user: git
+  file: path=/srv/git/.gitolite/keydir state=directory
+
+- name: install key
+  tags: [gitolite, storage]
+  sudo_user: git
+  copy: content='{{ admin_key }}' dest=/srv/git/.gitolite/keydir/{{ admin }}.pub
+  notify: reload gitolite keys

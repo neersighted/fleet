@@ -8,6 +8,14 @@ Type=forking
 SyslogLevel=notice
 
 PIDFile=/var/spool/postfix/pid/master.pid
+ExecStartPre=/bin/cp -f \
+  /etc/host.conf \
+  /etc/resolv.conf \
+  /etc/nsswitch.conf \
+  /etc/hosts \
+  /etc/services \
+  /etc/localtime \
+  /var/spool/postfix/etc
 ExecStart=/usr/sbin/postfix start
 ExecReload=/usr/sbin/postfix reload
 ExecStop=/usr/sbin/postfix stop

@@ -1,0 +1,9 @@
+dependencies:
+  - role: accounts/group
+    args:
+      name: git
+  - role: accounts/user
+    args:
+      name: git
+      group: git
+      home: /srv/git

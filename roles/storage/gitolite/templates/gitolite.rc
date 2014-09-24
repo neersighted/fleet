@@ -1,0 +1,85 @@
+%RC = (
+    UMASK                           =>  0077,
+
+    GIT_CONFIG_KEYS                 =>  '.*',
+
+    LOG_EXTRA                       =>  1,
+    LOG_DEST                        => 'syslog,normal',
+
+    ROLES => {
+        READERS                     =>  1,
+        WRITERS                     =>  1,
+    },
+
+    # CACHE                         =>  'Redis',
+    # CACHE_TTL                     =>  600,
+
+    SITE_INFO                       =>  'Ask {{ admin }} for help',
+
+    DISPLAY_CPU_TIME                =>  1,
+    CPU_TIME_WARN_LIMIT             =>  0.1,
+
+    HOSTNAME                        =>  "{{ inventory_hostname }}",
+
+    # LOCAL_CODE                      =>  "$ENV{HOME}/local",
+
+    ENABLE => [
+            'help',
+            'info',
+
+            'writable',
+            'perms',
+
+            'create',
+            'fork',
+            'D',
+
+            'desc',
+            'readme',
+
+            # 'mirror',
+            # 'sskm',
+
+
+            'upstream',
+            # 'partial-copy',
+
+            'ssh-authkeys',
+            # 'ssh-authkeys-split',
+
+            'git-config',
+            # 'repo-specific-hooks',
+
+            'set-default-roles',
+
+            'daemon',
+            'gitweb',
+            # 'cgit',
+
+            # 'no-create-on-read',
+            # 'no-auto-create',
+
+            # 'expand-deny-messages',
+
+            'Shell {{ admin }}',
+
+            'renice 10',
+            'CpuTime',
+
+
+            # 'Alias',
+            # 'Motd',
+            # 'Mirroring',
+
+            # 'continuation-lines',
+            # 'keysubdirs-as-groups',
+            # 'macros',
+
+            # 'Kindergarten',
+    ],
+
+);
+
+1;
+
+# vim: set syn=perl:

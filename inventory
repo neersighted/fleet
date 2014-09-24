@@ -21,6 +21,9 @@ nitrogen.neersighted.com
 carbon.neersighted.com
 oxygen.neersighted.com
 
+[storage]
+tungsten.neersighted.com
+
 
 [buyvm:children]
 buyvm-lv

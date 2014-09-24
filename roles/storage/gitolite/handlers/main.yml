@@ -1,0 +1,7 @@
+- name: recompile gitolite config
+  sudo_user: git
+  shell: /srv/git/gitolite/src/gitolite compile; /srv/git/gitolite/src/gitolite trigger POST_COMPILE
+
+- name: reload gitolite keys
+  sudo_user: git
+  shell: /srv/git/gitolite/src/gitolite trigger SSH_AUTHKEYS

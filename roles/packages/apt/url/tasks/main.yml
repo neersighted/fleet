@@ -1,7 +1,7 @@
 - name: download package {{ url|basename }} (from {{ url }})
   tags: [url, apt, packages]
-  get_url: url={{ url }} dest=/tmp/{{ url|basename }}
+  get_url: url={{ url }} dest=/var/cache/apt/archives/{{ url|basename }}
 
 - name: install package {{ url|basename }}
   tags: [url, apt, packages]
-  apt: deb=/tmp/{{ url|basename }}
+  apt: deb=/var/cache/apt/archives/{{ url|basename }}
