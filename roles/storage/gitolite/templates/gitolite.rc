@@ -17,7 +17,7 @@
     SITE_INFO                       =>  '',
 
     DISPLAY_CPU_TIME                =>  1,
-    CPU_TIME_WARN_LIMIT             =>  0.1,
+    CPU_TIME_WARN_LIMIT             =>  1,
 
     HOSTNAME                        =>  "{{ inventory_hostname }}",
 
