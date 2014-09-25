@@ -12,6 +12,8 @@ ExecStart=/usr/sbin/ntpd \
   -u ntp:ntp \
   -p /run/ntpd.pid
 
+PrivateTmp=yes
+
 Restart=always
 RestartSec=10
 

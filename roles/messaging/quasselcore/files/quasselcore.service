@@ -13,6 +13,9 @@ ExecStart=/usr/bin/quasselcore \
   --logfile=/var/log/quassel/core.log --loglevel=Info \
   --listen=0.0.0.0,:: --port=4242
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 Restart=always
 RestartSec=30
 

@@ -4,13 +4,16 @@ After=network.target
 
 [Service]
 Type=forking
-SyslogLevel=notice
+SyslogLevel=err
 
 PIDFile=/run/nginx.pid
 ExecStart=/usr/sbin/nginx
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGQUIT
 KillMode=mixed
+
+PrivateTmp=yes
+PrivateDevices=yes
 
 Restart=always
 RestartSec=30

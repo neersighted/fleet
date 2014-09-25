@@ -8,6 +8,9 @@ SyslogLevel=notice
 
 ExecStart=/usr/local/bin/statsite -f /etc/statsite/statsite.conf
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 Restart=always
 RestartSec=30
 

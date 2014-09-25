@@ -8,6 +8,9 @@ SyslogLevel=info
 
 ExecStart=/usr/local/bin/nidd {{ user }}
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 Restart=always
 RestartSec=30
 

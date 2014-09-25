@@ -12,5 +12,9 @@ ExecStart=/usr/sbin/ferm /etc/ferm/ferm.conf
 ExecStop=/usr/sbin/ferm -F /etc/ferm/ferm.conf
 RemainAfterExit=yes
 
+PrivateTmp=yes
+PrivateDevices=yes
+PrivateNetwork=yes
+
 [Install]
 RequiredBy=network-pre.target

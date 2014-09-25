@@ -11,6 +11,9 @@ ExecStart=/usr/bin/prosodyctl start
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStop=/usr/bin/prosodyctl stop
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 Restart=always
 RestartSec=30
 

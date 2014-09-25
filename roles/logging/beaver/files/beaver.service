@@ -11,6 +11,9 @@ ExecStart=/usr/local/bin/beaver -e \
   -c /etc/beaver.conf \
   -P /run/beaver.pid
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 Restart=always
 RestartSec=30
 

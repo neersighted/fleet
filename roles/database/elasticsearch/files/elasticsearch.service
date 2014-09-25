@@ -19,10 +19,10 @@ ExecStart=/usr/share/elasticsearch/bin/elasticsearch -d \
   -Des.default.path.data=/var/lib/elasticsearch \
   -Des.default.path.work=/tmp/elasticsearch
 
-PrivateTmp=yes
-PrivateDevices=yes
 LimitNOFILE=65535
 LimitMEMLOCK=infinity
+PrivateTmp=yes
+PrivateDevices=yes
 
 TimeoutStopSec=20
 Restart=always

@@ -20,6 +20,9 @@ ExecStart=/usr/sbin/postfix start
 ExecReload=/usr/sbin/postfix reload
 ExecStop=/usr/sbin/postfix stop
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 Restart=always
 RestartSec=30
 

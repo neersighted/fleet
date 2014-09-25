@@ -15,6 +15,9 @@ ExecStart=/usr/local/bin/nbnc \
   $NBNC_PROTO \
   $NBNC_PASS
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 Restart=always
 RestartSec=30
 

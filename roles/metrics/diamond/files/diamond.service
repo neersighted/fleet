@@ -10,6 +10,9 @@ PIDFile=/run/diamond.pid
 ExecStart=/usr/local/bin/diamond \
   -p /run/diamond.pid
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 Restart=always
 RestartSec=30
 

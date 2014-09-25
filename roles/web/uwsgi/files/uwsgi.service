@@ -11,9 +11,11 @@ ExecStart=/usr/bin/uwsgi \
   --autoload \
   --master --workers 2 --no-orphans \
   --emperor /etc/uwsgi
-
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGQUIT
+
+PrivateTmp=yes
+PrivateDevices=yes
 
 Restart=always
 RestartSec=30

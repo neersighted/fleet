@@ -9,6 +9,8 @@ SyslogLevel=notice
 ExecStart=/usr/local/bin/stash53 \
   -e {{ redis.host }}/{{ redis.port }} -O logstash:stash53 -P 0
 
+PrivateTmp=yes
+
 Restart=always
 RestartSec=30
 

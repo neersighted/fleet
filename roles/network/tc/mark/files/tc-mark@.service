@@ -16,5 +16,8 @@ ExecStop=/sbin/tc qdisc del dev eth0 parent 1:%i handle %i:
 ExecStop=/sbin/tc class del dev eth0 parent 1:1 classid 1:%i
 RemainAfterExit=yes
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 [Install]
 WantedBy=network.target
