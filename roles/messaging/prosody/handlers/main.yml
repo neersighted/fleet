@@ -2,7 +2,7 @@
   command: systemctl daemon-reload
 
 - name: reload tmpfiles
-  service: name=systemd-tmpfiles-setup state=restarted
+  command: systemd-tmpfiles --remove --create
 
 - name: reload prosody
   service: name=prosody state=reloaded

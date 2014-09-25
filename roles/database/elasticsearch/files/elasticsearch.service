@@ -1,0 +1,32 @@
+[Unit]
+Description=Real-Time Search Database
+After=network.target
+
+[Service]
+Type=forking
+SyslogLevel=notice
+
+User=elasticsearch
+Group=elasticsearch
+PIDFile=/run/elasticsearch/elasticsearch.pid
+Environment="ES_HEAP_SIZE=512m"
+ExecStart=/usr/share/elasticsearch/bin/elasticsearch -d \
+  -p /run/elasticsearch/elasticsearch.pid \
+  -Des.default.config=/etc/elasticsearch/elasticsearch.yml \
+  -Des.default.path.conf=/etc/elasticsearch \
+  -Des.default.path.home=/usr/share/elasticsearch \
+  -Des.default.path.logs=/var/log/elasticsearch \
+  -Des.default.path.data=/var/lib/elasticsearch \
+  -Des.default.path.work=/tmp/elasticsearch
+
+PrivateTmp=yes
+PrivateDevices=yes
+LimitNOFILE=65535
+LimitMEMLOCK=infinity
+
+TimeoutStopSec=20
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

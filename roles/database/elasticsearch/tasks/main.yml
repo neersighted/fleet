@@ -1,12 +1,19 @@
-- name: configure elasticsearch service
-  tags: [elasticsearch, database]
-  copy: src=elasticsearch.default dest=/etc/default/elasticsearch
-  notify: restart elasticsearch
-
 - name: configure elasticsearch
   tags: [elasticsearch, database]
   template: src=elasticsearch.yml dest=/etc/elasticsearch/elasticsearch.yml
   notify: restart elasticsearch
+
+- name: install elasticsearch tmpfiles
+  tags: [elasticsearch, messaging]
+  copy: src=elasticsearch.tmp dest=/etc/tmpfiles.d/elasticsearch.conf
+  notify: reload tmpfiles
+
+- name: install elasticsearch service
+  tags: [elasticsearch, database]
+  copy: src=elasticsearch.service dest=/etc/systemd/system/elasticsearch.service
+  notify:
+    - reload systemd
+    - restart elasticsearch
 
 - name: enable and start elasticsearch
   tags: [elasticsearch, database]
