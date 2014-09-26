@@ -1,4 +1,7 @@
 dependencies:
+  - role: file/directory
+    path: /etc/uwsgi/vassals.d
+
   - role: packages/apt
     args:
       pkg: uwsgi

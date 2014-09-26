@@ -1,3 +1,8 @@
+- name: configure uwsgi
+  tags: [uwsgi, web]
+  template: src=uwsgi.ini dest=/etc/uwsgi/uwsgi.ini
+  notify: restart uwsgi
+
 - name: install uwsgi service
   tags: [uwsgi, web]
   copy: src=uwsgi.service dest=/etc/systemd/system/uwsgi.service
