@@ -9,7 +9,6 @@ ExecStart=/usr/local/sbin/zramctl start
 ExecStop=/usr/local/sbin/zramctl stop
 
 PrivateTmp=yes
-PrivateDevices=yes
 PrivateNetwork=yes
 
 [Install]

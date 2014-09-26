@@ -9,7 +9,6 @@ SyslogLevel=notice
 User=elasticsearch
 Group=elasticsearch
 PIDFile=/run/elasticsearch/elasticsearch.pid
-Environment="ES_HEAP_SIZE=512m"
 ExecStart=/usr/share/elasticsearch/bin/elasticsearch -d \
   -p /run/elasticsearch/elasticsearch.pid \
   -Des.default.config=/etc/elasticsearch/elasticsearch.yml \

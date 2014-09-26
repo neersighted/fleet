@@ -11,7 +11,8 @@ Group=quassel
 ExecStart=/usr/bin/quasselcore \
   --configdir=/var/lib/quassel \
   --logfile=/var/log/quassel/core.log --loglevel=Info \
-  --listen=0.0.0.0,:: --port=4242
+  --listen=0.0.0.0,:: --port=4242 \
+  --norestore
 
 PrivateTmp=yes
 PrivateDevices=yes

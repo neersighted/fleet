@@ -15,5 +15,3 @@ network:
 discovery.zen.ping.multicast:
   enabled: yes
   address: {{ network.ipv4.vpn }}
-
-bootstrap.mlockall: yes
