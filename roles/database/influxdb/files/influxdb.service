@@ -6,6 +6,8 @@ After=network.target
 Type=simple
 SyslogLevel=notice
 
+User=influxdb
+Group=influxdb
 PIDFile=/opt/influxdb/shared/influxdb.pid
 ExecStart=/usr/bin/influxdb -pidfile /opt/influxdb/shared/influxdb.pid -config /opt/influxdb/shared/config.toml
 
