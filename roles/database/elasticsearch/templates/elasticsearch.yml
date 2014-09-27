@@ -1,13 +1,5 @@
-node:
-  name: {{ inventory_hostname }}
-  data: yes
-  master: yes
-cluster:
-  name: {{ cluster }}
-
-index:
-  number_of_shards: 2
-  number_of_replicas: 1
+node.name: {{ inventory_hostname }}
+cluster.name: {{ cluster }}
 
 network:
   bind_host: 0.0.0.0
