@@ -7,7 +7,7 @@ source bin/colors
 EVENT_PREFIX=deploy.fleet.
 
 target=$1; shift
-playbook=plays/${target}.yml
+playbook=playbooks/${target}.yml
 
 if [ -z "${target}" ]; then
   eche "${bold}${red}====> Playbook not specified${reset}"
