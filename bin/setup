@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-source bin/common
-source bin/colors
-
-git submodule update --init --recursive

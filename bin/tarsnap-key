@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+source bin/common
+source bin/colors
+
+
+KEYS=files/tarsnap
+
+host=$1
+user=$2
+pass=$3
+fullkey=$KEYS/${host}.tsk
+minkey=$KEYS/${host}-min.tsk
+
+if [ -z "${host}" ]; then
+  eche "${bold}${red}====> Host not specified${reset}"
+  exit 1
+elif [ -z "${user}" ]; then
+  eche "${bold}${red}====> Host not specified${reset}"
+  exit 1
+elif [ -z "${pass}" ]; then
+  eche "${bold}${red}====> Password not specified${reset}"
+  exit 1
+elif [ -f "${minkey}" ]; then
+  eche "${bold}${red}====> Key already exists${reset}"
+  exit 1
+fi
+
+eche "${bold}${blue}====> Generate Tarsnap machine key [${green}${host}${blue}]${reset}"
+
+eche "${bold}${blue}----> Generate full key (${green}${fullkey}${blue})${reset}"
+if ! echo "${pass}" | tarsnap-keygen --keyfile "${fullkey}" --user "${user}" --machine "${host}"; then
+  eche "${bold}${red}===> Key generation failed${reset}"
+  exit 1
+fi
+
+eche "${bold}${blue}----> Derive minimal key (${green}${minkey}${blue})${reset}"
+if ! tarsnap-keymgmt --outkeyfile "${minkey}" -w "${fullkey}"; then
+  eche "${bold}${red}===> Key derivation failed${reset}"
+  exit 1
+fi
+
+eche "${bold}${green}====> Key set created${reset}"
