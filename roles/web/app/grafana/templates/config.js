@@ -16,12 +16,12 @@ function (Settings) {
         type: 'elasticsearch',
         url: 'http://{{ elasticsearch.host }}:{{ elasticsearch.port }}',
         index: '{{ elasticsearch.index }}',
-        grafanaDB: yes
+        grafanaDB: true
       }
     },
 
     default_route: '/dashboard/file/default.json',
-    unsaved_changes_warning: yes,
+    unsaved_changes_warning: true,
 
     playlist_timespan: "1m",
     search: { max_results: 20 },

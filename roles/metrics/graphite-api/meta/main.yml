@@ -14,7 +14,7 @@ dependencies:
       name: influxdb
   - role: packages/pip
     args:
-      name: graphite-influxdb
+      name: 'git+https://github.com/vimeo/graphite-influxdb#egg=graphite-influxdb'
   - role: packages/pip
     args:
-      name: 'https://github.com/brutasse/graphite-api/archive/master.zip'
+      name: 'git+https://github.com/brutasse/graphite-api#egg=graphite-api'

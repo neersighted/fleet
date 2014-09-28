@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+source bin/common
+source bin/colors
+
+
+target=$1
+
+if [ -z "${target}" ]; then
+  eche "${bold}${red}====> Target not specified${reset}"
+  exit 1
+fi
+
+bin/ssh-hostkey $1
+bin/tinc-key $1
