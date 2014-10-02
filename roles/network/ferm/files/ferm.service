@@ -2,7 +2,7 @@
 Description=For Easy Rule Making
 DefaultDependencies=no
 After=systemd-sysctl.service
-Before=network-pre.target
+Before=sysinit.target network-pre.target
 
 [Service]
 Type=oneshot
