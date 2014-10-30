@@ -25,6 +25,9 @@
     # Prevent wrapping of sequence numbers.
     net.ipv4.tcp_timestamps: 1
 
+    # Use a superior qdisc to prevent bufferbloat.
+    net.core.default_qdisc: fq_codel
+
     # Enlarge the conntrack tables, lower timeouts.
     net.netfilter.nf_conntrack_max: 262272
   sysctl: name='{{ item.key }}' value='{{ item.value }}'

@@ -1,3 +1,6 @@
+elasticsearch:
+  host: localhost
+  port: 9200
 statsd:
   host: localhost
   port: 8125

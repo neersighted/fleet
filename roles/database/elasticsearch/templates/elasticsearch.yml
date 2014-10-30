@@ -1,9 +1,8 @@
 node.name: {{ inventory_hostname }}
 cluster.name: {{ cluster }}
 
-network:
-  bind_host: 0.0.0.0
-  publish_host: {{ network.ipv4.vpn }}
-discovery.zen.ping.multicast:
-  enabled: yes
-  address: {{ network.ipv4.vpn }}
+index:
+  number_of_shards: 2
+  number_of_replicas: 0
+
+http.cors.allow-origin: *

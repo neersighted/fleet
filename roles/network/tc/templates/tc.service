@@ -9,7 +9,7 @@ SyslogLevel=notice
 ExecStart=/sbin/tc qdisc add dev eth0 root handle 1: htb default f r2q 250
 ExecStart=/sbin/tc class add dev eth0 parent 1: classid 1:1 htb rate {{ network.speed }}
 ExecStart=/sbin/tc class add dev eth0 parent 1:1 classid 1:f htb rate {{ network.speed }}
-ExecStart=/sbin/tc qdisc add dev eth0 parent 1:f handle f: sfq
+ExecStart=/sbin/tc qdisc add dev eth0 parent 1:f handle f: fq_codel
 ExecStop=/sbin/tc qdisc del dev eth0 root
 RemainAfterExit=yes
 

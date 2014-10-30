@@ -9,7 +9,7 @@ dependencies:
       url: 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch'
   - role: packages/apt/add_repo
     args:
-      repo: 'deb http://packages.elasticsearch.org/elasticsearch/1.1/debian stable main'
+      repo: 'deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main'
 
   - role: packages/apt
     args:

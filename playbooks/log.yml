@@ -9,7 +9,3 @@
 
   - role: logging/logstash
     timezone: America/Los_Angeles
-    elasticsearch:
-      cluster: log
-    statsd:
-      host: nitrogen.neersighted.com.int

@@ -1,14 +1,10 @@
-LS_USER=logstash
+#LS_USER=logstash
 
-LS_HEAP_SIZE=512m
+#LS_HEAP_SIZE=512m
 #LS_OPEN_FILES=16384
 #LS_USE_GC_LOGGING="true"
 #LS_NICE=19
 #LS_OPTS=""
-LS_JAVA_OPTS="-Des.network.bind_host=0.0.0.0 \
-              -Des.network.publish_host={{ network.ipv4.vpn }} \
-              -Des.discovery.zen.ping.multicast.enabled=true \
-              -Des.discovery.zen.ping.multicast.address={{ network.ipv4.vpn }}"
 
 #LS_HOME=/var/lib/logstash
 #LS_CONF_DIR=/etc/logstash/conf.d
