@@ -1,11 +1,10 @@
-; GLOBALS
 $ORIGIN neergaard.me.
 $TTL 300
 
 
 ; AUTHORITY
 @ SOA ns1.neersighted.com. hostmaster.neersighted.com. (
-      1414644788 ; serial
+      1419093598 ; serial
       1h         ; refresh
       15m        ; retry
       2w         ; expire

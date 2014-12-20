@@ -21,14 +21,6 @@ nitrogen.neersighted.com
 carbon.neersighted.com
 oxygen.neersighted.com
 
-[storage]
-tungsten.neersighted.com
-
-
-[buyvm:children]
-buyvm-lv
-[buyvm-lv]
-tungsten.neersighted.com
 
 [linode:children]
 linode-dal
@@ -54,5 +46,4 @@ linode-dal
 [us-east:children]
 linode-new
 [us-west:children]
-buyvm-lv
 linode-fre

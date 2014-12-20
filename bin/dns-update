@@ -35,7 +35,7 @@ for path in $(git diff --cached --name-only | \
       salt=$(head -c 1000 /dev/urandom | sha1sum | cut -b 1-16)
 
       eche "${bold}${blue}----> Sign and update zone${reset}"
-      if ! dnssec-signzone -t -3 "${salt}" -o "${zone}" -K "${KEYS}" -d "${KEYS}" "${ZONES}/${zonefile}" 2>&1; then
+      if ! dnssec-signzone -t -3 "${salt}" -o "${zone}" -K "${KEYS}" -d "${KEYS}" -e +5529600 "${ZONES}/${zonefile}" 2>&1; then
         eche "${bold}${red}===> Signing failed${reset}"
         exit 1
       fi

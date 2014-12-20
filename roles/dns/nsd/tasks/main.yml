@@ -3,10 +3,6 @@
   template: src=nsd.conf dest=/etc/nsd/nsd.conf validate='nsd-checkconf %s'
   notify: restart nsd
 
-- name: assemble nsd.conf.d
-  tags: [nsd, dns]
-  assemble: src=/etc/nsd/nsd.conf.d dest=/etc/nsd/nsd.conf.d.conf
-
 - name: enable and start nsd
   tags: [nsd, dns]
   service: name=nsd state=started enabled=yes

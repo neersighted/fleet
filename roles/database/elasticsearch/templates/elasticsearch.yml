@@ -5,4 +5,5 @@ index:
   number_of_shards: 2
   number_of_replicas: 0
 
-http.cors.allow-origin: *
+http.cors.enabled: true
+http.cors.allow-origin: '*'
