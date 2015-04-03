@@ -1,0 +1,5 @@
+- name: get kernel version
+  tags: [kernel, system]
+  shell: dpkg -s linux-image-amd64|awk '/Depends/{sub(/linux-image-/,""); print $2}'
+  register: kernel_version
+  changed_when: false

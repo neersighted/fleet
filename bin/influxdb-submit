@@ -15,5 +15,5 @@ v = [{'name': event, 'columns': ['event', 'value'], 'points': [[event, value]]}]
 r = requests.post('http://localhost:8086/db/%s/series?u=root&p=root' % DATABASE, data=json.dumps(v))
 
 if r.status_code != 200:
-  print 'Failed to add point to influxdb -- aborting.'
+  print('Failed to add point to influxdb -- aborting.')
   sys.exit(1)
