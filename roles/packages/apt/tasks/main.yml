@@ -2,3 +2,4 @@
   tags: [apt, packages]
   action: apt
   args: args
+  notify: reload systemd

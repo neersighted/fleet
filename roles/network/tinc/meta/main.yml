@@ -2,6 +2,9 @@ dependencies:
   - role: file/directory
     path: /etc/tinc/hosts
 
+  - role: system/module
+    module: tun
+
   - role: packages/apt
     args:
       pkg: tinc
